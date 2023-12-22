@@ -5,12 +5,23 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    /* background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed; */
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Montserrat';
 }
+
+/* header style */
+#home-header{
+    background-image: url('/media/homepage_background.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 40% auto;
+    background-position-x: 85%;
+    background-position-y: 20%;
+    background-color: #d8d7dc;
+   }
 
 /* from Bulma */
 .icon {
