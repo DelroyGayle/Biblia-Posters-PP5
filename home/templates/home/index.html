@@ -3,29 +3,147 @@
 <!-- The file is based on the example shown in Code Institute's Boutique Ado Walkthrough -->
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100" id="home-header">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    Proclaiming the message of the Bible
-                </h1>
-                <h2 class="display-4 logo-font text-black">
-                    one poster at a time
-                </h2>
-                <div class="my-5">
-                    <h4>
-                        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                    </h4>
+<div class="container h-100" id="home-header">
+    <div class="row h-100">
+        <div class="col-7 col-md-6 my-auto">
+            <h1 class="display-4 logo-font text-black">
+                Proclaiming the message of the Bible
+            </h1>
+            <h2 class="display-4 logo-font text-black">
+                one poster at a time
+            </h2>
+            <div class="my-5">
+                <h4>
+                    <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- About Us section -->
+    <div class="about mt-5">
+        <div class="container">
+            <h1 class="text-center">About Us</h1>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img src="{% static 'img/aboutus.png' %}" class="img-fluid"
+                        alt="Who says a small poster can't start a big collection? by Anete Lusina">
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 desc">
+
+                    <p>
+                        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-{% endblock %}
+
+    <!-- Special Days section -->
+    <div class="special-days">
+        <div class="container">
+            <h1 class="text-center">Special Days<span class="newline discount-text">25% Discount!</span></h1>
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="{% static 'img/passover.jpg' %}" class="img-fluid"
+                                alt="Basin with a branch of hyssop depicting the Passover">
+                        </div>
+
+                        <div class="card-body">
+                            <h4 class="card-title">Feast of Passover</h4>
+                            <p class="card-text">
+
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                        <!-- In order to make all the card footers aligned -->
+                        <div class="card-footer text-muted">
+                            Passover (Hebrew: Pesach)<span class="newline">&nbsp;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="{% static 'img/pentecost.jpg' %}" class="img-fluid"
+                                alt="Men with flames of fire appearing above their heads depicting the Day of Pentecost">
+                        </div>
+
+                        <div class="card-body">
+                            <h4 class="card-title">Pentecost</h4>
+                            <p class="card-text">
+
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Pentecost (Hebrew: Shavuot)<span class="newline">AKA Feast of Weeks</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="{% static 'img/booths-tents.png' %}" class="img-fluid"
+                                alt="Tents in the Wilderness (desert) depicting the Feast of Booths">
+                        </div>
+
+                        <div class="card-body">
+                            <h4 class="card-title">Feast of Booths</h4>
+                            <p class="card-text">
+
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Feast of Booths (Hebrew: Sukkot)<span class="newline">AKA Feast of Tabernacles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter form -->
+    <div class="newsletter-form">
+        <div class="container">
+            <form>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <h2>Subscribe for our Newsletter</h>
+                            <p>to receive updates and scriptural content</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 right">
+
+
+                        <form class="form-inline">
+                            <div class="form-group mx-sm-3 mb-2">
+                                <input type="email" class="form-control form-control-lg"
+                                    placeholder="Your Email Address" name="email"
+                                    aria-label="Your Email Address (Required)" required>
+                                <button type="submit" class="btn btn-primary mb-2 pull-right">Subscribe</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    {% endblock %}

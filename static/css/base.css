@@ -1,27 +1,154 @@
 /* The file is based on the example shown in Code Institute's Boutique Ado Walkthrough */
 
+:root {
+    --main-fg-colour: #768dc3;
+    --main-bg-colour: #b5b9a6;
+    --main-title-colour: #3b4661;
+}
+
 html {
     height: 100%;
 }
 
 body {
     /* background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed; */
-    background-size: cover;
+    /* background-size: cover; */
     height: calc(100vh - 164px);
-    color: #555;
+    color: #000;
     font-family: 'Montserrat';
-}
-
-/* header style */
-#home-header{
+    background-color: #adffe4;
     background-image: url('/media/homepage_background.jpg');
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-repeat: no-repeat;
-    background-size: 40% auto;
+    background-size: 35% auto;
     background-position-x: 85%;
     background-position-y: 20%;
-    background-color: #d8d7dc;
-   }
+    background-color: #adffe4;
+}
+
+/* =========================== HOME PAGE =========================== */
+
+.navbar-style {
+	background: var(--main-bg-colour);
+}
+
+.nav-link , .navbar-brand {
+	color: --main-fg-colour;
+	cursor: pointer;
+}
+.nav-link {
+	margin-right: 1em !important;
+}
+.nav-link:hover {
+	background: var(--main-fg-colour);
+	color: var(--main-bg-colour);
+}
+
+.navbar-collapse {
+ justify-content: flex-end;
+}
+
+.navbar-toggler {
+  background:#fff !important;
+}
+
+.about{
+	margin: 4em 0;
+	padding: 1em;
+	position: relative;
+}
+
+.about h1{
+	color: var(--main-title-colour);
+	margin: 2em;
+}
+
+.about img{
+	height: 80%;
+    width: 80%;
+}
+
+.about span{
+	display: block;
+	color: #888;
+	position: absolute;
+	left: 115px;
+}
+
+.about .desc{
+	padding: 2em;
+	border-left:4px solid #10828C;
+}
+
+.about .desc h3{
+	color: #10828C;
+}
+
+.about .desc p{
+	line-height:2;
+    color: #000;
+}
+
+/* Special Days style */
+
+.newline::before{
+    content: "\a";
+    white-space: pre;
+}
+
+.discount-text {
+    color: #f97300
+}
+
+.special-days {
+	margin: 4em 0;
+	position: relative;	
+}
+
+.special-days h1 {
+	color: var(--main-title-colour);
+	margin: 2em;	
+}
+.special-days .card {
+	box-shadow: 0 0 20px #ccc;
+}
+
+.special-days .card img {
+	width: 100%;
+	height: 12em;
+}
+
+.special-days .card-title {
+	color: var(--main-title-colour);	 
+}
+
+.special-days .card-body{
+	padding: 1em;
+}
+
+.contact-form{
+	margin: 6em 0;
+	position: relative;		
+}
+
+.contact-form h1{
+	padding:2em 1px;
+	color: var(--main-title-colour);
+}
+.contact-form .right{
+	max-width: 600px;
+}
+.contact-form .right .btn-secondary{
+	background: var(--main-bg-colour);
+	color: #fff;
+	border:0;
+}
+.contact-form .right .form-control::placeholder{
+	color: #888;
+	font-size: 16px;
+}
+
+/* ================================================================= */
 
 /* from Bulma */
 .icon {
@@ -91,4 +218,5 @@ body {
     .header-container {
         padding-top: 164px;
     }
+
 }
