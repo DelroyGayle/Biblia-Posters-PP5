@@ -11,19 +11,20 @@ html {
 }
 
 body {
-    /* background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed; */
-    /* background-size: cover; */
     height: calc(100vh - 164px);
-    color: #000;
+    color: #555;
     font-family: 'Montserrat';
-    background-color: #adffe4;
-    background-image: url('/media/homepage_background.jpg');
-    /* background-attachment: fixed; */
-    background-repeat: no-repeat;
-    background-size: 35% auto;
-    background-position-x: 85%;
-    background-position-y: 20%;
-    background-color: #adffe4;
+}
+
+.the-hero-image {
+ background-image: url('/media/hero-image-unsplash.jpg');
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: center;
+}
+
+.header-padding {
+    padding-top: 364px;
 }
 
 /* =========================== HOME PAGE =========================== */
@@ -218,5 +219,16 @@ body {
     .header-container {
         padding-top: 164px;
     }
+}
 
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
 }
