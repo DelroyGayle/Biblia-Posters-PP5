@@ -70,6 +70,7 @@ body {
 	margin: 4em 0;
 	padding: 1em;
 	position: relative;
+    font-size: 120%;
 }
 
 .about h1{
@@ -78,8 +79,8 @@ body {
 }
 
 .about img{
-	height: 80%;
-    width: 80%;
+	height: 100%;
+    width: 100%;
 }
 
 .about span{
@@ -111,7 +112,7 @@ body {
 }
 
 .discount-text {
-    color:  #f9877a;
+    color: red;
 }
 
 .special-days {
