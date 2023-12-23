@@ -13,12 +13,17 @@ html {
 body {
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Montserrat';
+    font-family: Montserrat;
+}
+
+.hero-image-text {
+    font-family: Pacifo;
+    font-style: italic;
 }
 
 .the-hero-image {
  background-image: url('/media/hero-image-unsplash.jpg');
- background-attachment: fixed;
+ /* background-attachment: fixed; */
  background-size: cover;
  background-position: center;
 }
