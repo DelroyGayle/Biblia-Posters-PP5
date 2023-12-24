@@ -4,6 +4,7 @@
     --main-fg-colour: #768dc3;
     --main-bg-colour: #b5b9a6;
     --main-title-colour: #3b4661;
+    --header-gap-value: 64px;
 }
 
 html {
@@ -11,7 +12,7 @@ html {
 }
 
 body {
-    height: calc(100vh - 164px);
+    height: calc(100vh - var(--header-gap-value));
     color: #555;
     font-family: Montserrat;
     background-color: #adffe4;
@@ -41,7 +42,12 @@ body {
     color: white;
 }
 
+.remove-left-right-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
 
+/* TODO */
 .navbar-style {
 	background: var(--main-bg-colour);
 }
@@ -50,9 +56,11 @@ body {
 	color: --main-fg-colour;
 	cursor: pointer;
 }
+
 .nav-link {
 	margin-right: 1em !important;
 }
+
 .nav-link:hover {
 	background: var(--main-fg-colour);
 	color: var(--main-bg-colour);
@@ -66,7 +74,9 @@ body {
   background:#fff !important;
 }
 
-.about{
+/* ============= */
+
+.about {
 	margin: 4em 0;
 	padding: 1em;
 	position: relative;
@@ -75,7 +85,7 @@ body {
 
 .about h1{
 	color: var(--main-title-colour);
-	margin: 2em;
+	margin: 0 2em 2em 2em;
 }
 
 .about img{
@@ -122,8 +132,9 @@ body {
 
 .special-days h1 {
 	color: var(--main-title-colour);
-	margin: 2em;	
+    margin: -1em 2em 2em 2em;
 }
+
 .special-days .card {
 	box-shadow: 0 0 20px #ccc;
 }
@@ -201,7 +212,7 @@ body {
 .btn-black:active,
 .btn-black:focus {
     background: #222;
-    color: white;
+       color: white;
 }
 
 .text-black {
@@ -232,7 +243,7 @@ body {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: var(--header-gap-value);
     }
 }
 
