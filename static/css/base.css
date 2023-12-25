@@ -223,7 +223,33 @@ body {
     border: 1px solid black !important;
 }
 
-/* -------------------------------- Media Queries */
+/* ------------ Footer ------------ */
+
+#footer-style {
+    height: 400px;
+    background-color: #e4adff;
+}
+
+.f {
+    background-color: #e4adff;   
+}
+
+.social-networks {
+    margin-left: -45px;
+}
+
+.social-networks > li {
+    display:inline;
+}
+
+.social-networks i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 5%;
+    color: #3a3a3a;
+}
+
+/* -------------------------------- Media Queries -------------------------------- */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
