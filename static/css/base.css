@@ -152,6 +152,19 @@ body {
 	padding: 1em;
 }
 
+/* Found this solution at
+   https://www.shecodes.io/athena/7094-make-cards-the-same-height-using-bootstrap# */
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  
+  .card {
+    flex: 1 0 auto;
+  }
+  
 .contact-form{
 	margin: 6em 0;
 	position: relative;		
