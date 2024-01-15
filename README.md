@@ -1,39 +1,432 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Biblia Posters
+[]
+[View live website] 
 
-Welcome,
+## Table of Contents
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+1. [Introduction](#introduction)
+2. [Glossary](#glossary)
+3. [User Stories](#user-stories)
+4. [UX-User Experience](#ux-user-experience)
+   1. [Wireframes](#wireframes)
+   3. [Agile Design](#agile-design)
+   3. [Database Design](#database-design)
+   4. [Data Models](#data-models)
+   5. [Framework](#framework)
+5. [Features](#features)
+   1. ONE
+   2. [Background Image](#background-image)
+   3. [NavBar](#navbar)
+   4. [Home Page](#home-page)
+   5. CRUD
+   9. [Validation and Messages](#validation-and-messages)
+   10. [Registration](#registration)
+   11. [Login/Logout](#loginlogout)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+   
+6. [Technologies Used](#technologies-used)
+    1. [Languages](#languages)
+    2. [Libraries and Frameworks](#libraries-and-frameworks)
+7. [Future Features](#future-features)
+8. [Testing](#testing)
+    1. [Please Go To TESTING.md] 
+9. [Bugs](#bugs)
+     1. [Solved Bugs](#solved-bugs)
+     2. [Known Bugs](#known-bugs)
+10. [Deployment](#deployment)
+11. [Credits](#credits)
+12. [Acknowledgements](#acknowledgements)
 
-## Codeanywhere Reminders
+## Introduction
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+For my Code Institute Portfolio Project 5, 
+I would like to implement a E-Commerce website in order to sell Christian posters.
+The website would allow 
+- The user can view and list all the available posters
+- The user can sort posters by **Name** and by **Price**
+- The user can add one or more selected posters to a shopping bag
+- The user can view the total cost of their purchase
+- The user can edit the shoppong bag **before checkout** by removing or adding another posters
+- The user after a successful purchase would receive an email containing all the details about their purchase
+- The user can set up and edit their own profile
+- The user can add, edit and delete remarks regarding any posters **that the user has personally purchased**
+- The user can add and remove (delete) posters from their own wish list
+  
+## Business to Consumer (B2C)
 
-`python3 -m http.server`
+B2C is the process of selling products or services from businesses to individual consumers. In this case, **Biblia Posters** is the business and the posters are the products.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## Facebook Business Page
+## Glossary
+  
+----
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+## User Stories
 
-`http_server`
+* As **Developer** I can **set up the workspace** so that **I can implement the necessary tools and start writing the code**
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* As a **Site User** I can **use the NavBar** so that **I have the option to Create and Search for Posters**
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+* As a **Site User** I can **see a list of posters** so that **I can select the one that I want to view or amend**
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* As a **Site User** I can **create a poster** so that **I can make a poster TODO**
 
-To log into the Heroku toolbelt CLI:
+* As a **Site User** I can **click on a poster view button** so that **I can view the full text of the poster**
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* As a **Site User** I can **edit a poster** so that **TODO**
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* As a **Site User** I can **delete a poster** so that **TODO**
 
----
+* As a **Site User / Admin** I can **Register, Login and Logout** so that **I can access and manage my account**
 
-Happy coding!
+------
+
+## UX-User Experience
+
+### Wireframes
+
+<details>
+<summary>Home Page - Create a new Poster or Enter an Existing Poster</summary>
+<br/><br/>  
+
+   
+TODO
+</details>
+
+<details>
+<summary>TODO</summary>
+<br/><br/>  
+
+   
+TODO
+</details>
+
+<details>
+<summary>Poster Review Page</summary>
+<br/><br/>  
+
+    
+TODO
+</details>
+
+<details>
+<summary>View Page - The User has the option to Edit or Delete the Poster</summary>
+<br/><br/>  
+
+   
+TODO
+</details>
+
+
+
+------
+
+### Agile Design
+
+Agile Kanban Board</summary>
+
+The Kanban Project layout can be viewed [here](https://github.com/users/DelroyGayle/projects/4)
+
+*Twelve User Stories* were implemented - One User Story is assigned for Future Implementation
+
+<details>
+<summary>Here is the Kanban view of the Twelve User Stories that were implemented</summary>
+
+TODO
+
+</details>
+
+Epics, User Stories and their related Tasks are further explained in [TESTING.md]TODO
+
+### Database Design
+
+The site uses a Back-end database with the usage of [ElephantSQL Postgres](https://www.elephantsql.com/) for the deployed site
+<details>
+<summary>Database Schema Diagram</summary>
+<br/><br/>  
+
+TODO
+
+
+
+</details>
+
+----
+
+### Data Models
+
+The following data models were designed to represent the database usage for this project
+
+#### User Model
+
+The User Model contains information about the user. It is based upon Django's in-built authentication system
+- username
+- email
+- password
+
+#### Model
+
+
+#### Model
+
+
+   
+   
+#### Model/1
+
+####  Model/2
+
+####  Model/3
+
+### Framework
+
+
+
+## Features
+
+### HEADING
+
+#### Create Posters
+
+#### Edit Posters
+
+  
+### Background Image
+Some of the images of the Features shown may differ slightly since the *Background Image* was added later on.
+
+<details>
+   <summary>
+      The Background Image
+   </summary>
+
+   IMAGE
+
+</details>
+
+### NavBar
+
+The navigation menu bar only shows up for logged in users.<br/>
+From this point onwards, the user has the options to Create or Search for Posters.<br/>
+On the far left is **the Logo**.<br/>
+
+<details>
+   <summary>Logo</summary>
+
+ IMAGE
+
+
+</details>
+
+The logo acts as a *Home Button*. By clicking the logo, the user is returned to the Home Page.<br/>
+On the far right is the option to Logout.
+
+If a user is not logged in the user will not be able to do any shopping! <br/>None of the above options will appear to a user who is not logged in.
+
+<details>
+   <summary>Navigation Bar</summary>
+
+   IMAGE
+
+
+</details>
+
+### Home Page
+
+### Create ...
+
+
+#### Create ...
+
+
+### Search ...
+
+Note: the Search option is *case-insensitive* <br>
+Once the user has searched for the relevant poster, the user then has to click *View* to see the poster
+
+
+### View Posters
+
+### Edit Posters
+
+### Delete Posters
+
+
+### Validation and Messages
+
+
+
+------
+
+### Registration
+
+* In order for a user to be able to create, read, edit and delete TODO, the user will need to register on the site.
+* Registration is based upon Django's built-in authentication system.
+* When the user registers the user will get a success message to confirm.
+
+### Login/Logout
+
+* In order for a user to be able to create, read, edit and delete TODO, the user will need to <br/>log into the App using their username and password.
+* Login/Logout is based upon Django's built-in authentication system.
+* When the user logs in, the Home Page will appear to the user.
+* When the user logs out, the user will get a success message to confirm.
+
+## Technologies Used
+
+### Languages
+* [HTML5](https://en.wikipedia.org/wiki/HTML)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+  
+### Libraries and Frameworks
+
+* [Django](https://www.djangoproject.com/)   
+    * Django was used as the web framework.
+* [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+* [ElephantSQL Postgres](https://www.elephantsql.com/)
+    * ElephantSQL was used for the SQL Database setup
+* [Cloudinary](https://cloudinary.com/)
+    * Cloudinary was used for image management.
+
+#### Other tools and frameworks
+
+* [GitHub](https://github.com/) for hosting the site
+* [Gitpod](https://www.gitpod.io/) for editing the files
+* [Heroku](https://heroku.com) for the initial deployment of the site
+* [Render](https://render.com/) for the final deployment of the site
+* [Jquery](https://jquery.com/) for scripting purposes
+* [Balsamiq:](https://balsamiq.com/) was used to create the wireframes
+* [DrawSQL](https://drawsql.app/) was used to draw the SQL tables
+* [Am I Responsive](http://ami.responsivedesign.is/) was used for creating the multi-device mock-up shown at the top of this README.md file
+* [Tiny PNG](https://tinypng.com/) was used to reduce the file size of the background image
+* [Code Institute's GitHub full template](https://github.com/Code-Institute-Org/python-essentials-template) in order to run Django and Python on Heroku/Render
+
+#### requirements.txt
+
+```
+asgiref==3.7.2
+cloudinary==1.36.0
+dj-database-url==0.5.0
+dj3-cloudinary-storage==0.0.6
+Django==3.2.23
+django-allauth==0.41.0
+gunicorn==21.2.0
+oauthlib==3.2.2
+psycopg2==2.9.9
+PyJWT==2.8.0
+python-dateutil==2.8.2
+python3-openid==3.2.0
+pytz==2023.3.post1
+requests-oauthlib==1.3.1
+sqlparse==0.4.4
+urllib3==1.26.15
+whitenoise==5.3.0
+
+```
+------
+
+## Future Features
+
+## Testing
+
+Please refer to TODO
+
+## Code Validation
+
+------
+
+## Bugs
+
+### Solved Bugs
+
+### Known Bugs
+
+------
+
+## Deployment
+
+The project is deployed on Render.<br> 
+All credit goes to Sophia Iroegbu and her tutorial [How to Deploy a Django App on Render](https://www.freecodecamp.org/news/deploying-a-django-app-to-render/) which worked flawlessly.<br><br>
+These are the steps in order to deploy on Render:
+1. Regarding your project - ensure you have PostgreSQL Database setup - for my project, [ElephantSQL Postgres](https://www.elephantsql.com/) was used
+     + However alternatively there is an option to create a PostgreSQL database within Render
+2. Create a Render account - either via Github itself or use your own email address
+   - Either way, you will need to use your email address to confirm registration with Render
+3. Once you have signed up, then proceed to Set Up a PostgreSQL Database if no setup already exists <br>- *skip Steps 3,5,6 if you already have a Database setup*
+   - go to the Render dashboard and Click the **New +** button, hover over **PostgreSQL**, and click it
+   - Next, define your database settings by giving your *database instance* a unique name
+   - For **Region**, use **Frankfurt (EU Central)** if you are based in Europe
+   - Select the free tier and click on **Create Database**
+   - Once the status on your database shows **Available**, it means the database has been successfully created and is ready to use
+   - Scroll down this page to see your database settings. You will need the **External Database URL**
+4. Once the database is set up, you need to connect it to your Django project
+   - Install dj-database-url by running the command
+   - **pip install dj-database-url**
+5. If you created your Postgres Database setup within Render, <br>then head over to your database settings on Render and copy the **External Database URL**
+6. Copy this into your **env.py** i.e. **os.environ["DATABASE_URL"]="postgres:// ..."**
+- Note: There is no need to do this step, if **os.environ["DATABASE_URL"]** already contains the URL of a previous, working database
+7. Ensure that in your *settings.py* under your sitename the following settings are at the top of the file:
+  ```
+  import dj-database-url
+  import os
+
+  DATABASES = {
+	"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+  }
+   ```
+8. Confirm everything is installed correctly by running **pip3 install -r requirements.txt**
+9. Next, migrate your tables to your new database to ensure the connection was successful
+   - **python manage.py makemigrations**
+   - **python manage.py migrate**
+10. Create a folder in the root directory called **staticfiles**
+11. Populate this folder by running **python manage.py collectstatic --noinput**
+12. Push your codebase to your Git repo
+13. Head over to your Render dashboard. Click **New +** and **Select Web web-service-name**
+14. Connect your GitHub if you haven't already
+    - This is done by: **Search** for the repo you want to deploy and click the **Connect** button
+15. Give your **web web-service-name** a name and ensure you are connecting to the right branch
+   - Use the same **Region** as used earlier
+   - Build command should be: **pip install -r requirements.txt**
+   - Start command should be: **gunicorn \<sitename\>.wsgi**
+   - (Note: this would be the same entry that follows the word **web:** in a Heroku Procfile; although a Procfile is **not** needed by Render)
+   - Select the free tier and click on **Create Web Service**
+16. Copy the **\<web-service-name\>.com** name that was chosen - that is, *No https://, No URL* - simply **\<web-service-name\>.com**
+   - Enter that into ALLOWED_HOSTS
+   - The entry should be:
+   - ```
+     ALLOWED_HOSTS = ['\<web-service-name\>.com', ...]
+     Ensure
+     DEBUG = False
+     ```
+17. Push your codebase to your Git repo
+18. Once that is done, on the left hand column, click Environment
+   - This is where you enter the contents of **env.py**
+   - You do this by selecting by going to the **Secret Files** option
+   - Under **Filename**, enter **env.py**
+   - Under **Contents** copy and paste the contents of **env.py** into the box provided
+   - Then click **Save Changes**
+19. Everything should now be set up for deployment i.e. the database name, the 'secret' environment variables, <br>the *render.com web service name*
+20. At the top right of the Render Dashboard, click **Manual Deploy** then **Deploy latest commit**
+21. The date, time and *Building In progress* spinner will be displayed
+21. Ensure there are no errors. Render will display the message **Your service is live** in the log,<br>whilst above the log, the word **Live** will be shown in green
+22. Click the URL link of the form **https:\/\/\<web-service-name>.onrender.com/**
+
+### How to Fork the Repository
+1. Log in (or sign up) to Github.
+2. Go to the TODO repository on GitHub.
+3. Click the "Fork" button in the top right corner.
+
+### How to Clone the Repository
+1. Log in (or sign up) to Github.
+2. Go to the TODO repository on GitHub.
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+  
+## Credits
++ Used [Stack Overflow](https://stackoverflow.com/) to investigate various solutions especially
+   + TODO
+        
+## Acknowledgements
+
+
