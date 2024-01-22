@@ -152,7 +152,7 @@ body {
 	padding: 1em;
 }
 
-/* Found this solution at
+/* Found this solution regarding 'card-deck' and 'card' at
    https://www.shecodes.io/athena/7094-make-cards-the-same-height-using-bootstrap# */
 
 .card-deck {
@@ -161,9 +161,10 @@ body {
     align-items: stretch;
   }
   
-  .card {
+.card {
     flex: 1 0 auto;
-  }
+    overflow: hidden;
+}
   
 .contact-form{
 	margin: 6em 0;
@@ -174,14 +175,17 @@ body {
 	padding:2em 1px;
 	color: var(--main-title-colour);
 }
+
 .contact-form .right{
 	max-width: 600px;
 }
+
 .contact-form .right .btn-secondary{
 	background: var(--main-bg-colour);
 	color: #fff;
 	border:0;
 }
+
 .contact-form .right .form-control::placeholder{
 	color: #888;
 	font-size: 16px;
@@ -286,7 +290,6 @@ body {
     }
 }
 
-
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
@@ -295,5 +298,21 @@ body {
 
     body {
         height: calc(100vh - 116px);
+    }
+}
+
+/* Resize images and text of the Special Days section for mobiles */
+@media (max-width: 577px) {
+    .card-text p {
+        width: 10%;
+    }
+
+    .special-days .card img {
+        width: 13%;
+        height: 12em;
+    }
+
+    .mobile-cardtext-width {
+        width: 10%;
     }
 }
