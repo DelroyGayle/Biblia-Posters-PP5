@@ -63,22 +63,30 @@ B2C is the process of selling products or services from businesses to individual
 
 ## User Stories
 
-* As **Developer** I can **set up the workspace** so that **I can implement the necessary tools and start writing the code**
-
-* As a **Site User** I can **use the NavBar** so that **I have the option to Create and Search for Posters**
-
-* As a **Site User** I can **see a list of posters** so that **I can select the one that I want to view or amend**
-
-* As a **Site User** I can **create a poster** so that **I can make a poster TODO**
-
-* As a **Site User** I can **click on a poster view button** so that **I can view the full text of the poster**
-
-* As a **Site User** I can **edit a poster** so that **TODO**
-
-* As a **Site User** I can **delete a poster** so that **TODO**
-
-* As a **Site User / Admin** I can **Register, Login and Logout** so that **I can access and manage my account**
-
+* As a **Shopper** I can **view a list of posters** so that **I can select posters to purchase**
+* As a **Shopper** I can **view a specific category of posters** so that **I can select specific posters without the need to search throughout all the posters**
+* As a **Shopper** I can **view a poster's individual details** so that **I can identify the price, description, rating, image and remarks regarding the poster**
+* As a **Shopper** I can **view the total of my purchases** so that **I can check whether I am spending within my budget**
+* As a **Shopper** I can **sort the list of available posters** so that **I can quickly see the best rated and best priced posters**
+* As a **Shopper** I can **sort a specific category of poster** so that **I can quickly see the best rated and best priced poster in a particular named category**
+* As a **Shopper** I can **search for a poster by name or description** so that **I can find a specific poster that I would like to purchase**
+* As a **Shopper** I can **view items in the shopping bag** so that **easily identify all the items selected and the total cost of my purchase**
+* As a **Shopper** I can **adjust the quantity of individual items in the shopping bag** so that **I can make any changes to my purchase before checkout**
+* As a **Shopper** I can **easily enter the payment information** so that **check out speedily without any difficulty**
+* As a **Shopper** I can **make purchases using a industry-standard secure method** so that **I can have confidence that my purchases are safe**
+* As a **Shopper** I can **receive email confirmation of my order after checkout** so that **I can have a record of all my purchases for verification and audit purposes**
+* As a **Site User** I can **register for an account** so that **I can have a personal account for profile, remarks and wishlist purposes**
+* As a **Site User** I can **receive email confirmation after registering** so that **I can verify that my account registration was successful**
+* As a **Site User** I can **login or logout** so that **I can access my personal account information**
+* As a **Site User** I can **have a personalised user profile** so that **I can save my address/delivery details and see my personal order history**
+* As a **Site User** I can **add remarks regarding a poster that I have personally purchased** so that **inform potential customers of my views regarding the poster as well as the related customer service**
+* As a **Site User** I can **edit remarks that I have posted** so that **change, remove or add further details regarding the poster that I had purchased**
+* As a **Site User** I can **delete remarks that I have posted** so that **remove the remarked that I had previously made**
+* As a **Site User** I can **add posters to a wish list** so that **I can view any previously selected posters that I would like to purchase on a later occasion**
+* As a **Site User** I can **delete items from my wish list** so that **I can remove the poster that no longer needs to be on my wish list**
+* As **Admin** I can **add a poster** so that **I can add new posters to my store**
+* As **Admin** I can **edit a poster** so that **I can change the price, description, image and other details of a poster**
+* As **Admin** I can **delete a poster** so that **I can remove the poster that is no longer for sale**
 ------
 
 ## UX-User Experience
