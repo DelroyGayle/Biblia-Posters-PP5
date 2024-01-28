@@ -125,16 +125,31 @@ TODO
 
 ### Agile Design
 
-Agile Kanban Board</summary>
+The Kanban Project layout can be viewed [here](https://github.com/users/DelroyGayle/projects/6)
 
-The Kanban Project layout can be viewed [here](https://github.com/users/DelroyGayle/projects/4)
-
-*Twelve User Stories* were implemented - One User Story is assigned for Future Implementation
+*Twenty-seven User Stories* were implemented - TODO
 
 <details>
-<summary>Here is the Kanban view of the Twelve User Stories that were implemented</summary>
+<summary>Here is theAgile Kanban Board of the Twenty-Seven User Stories that were implemented</summary>
 
-TODO
+![Screenshot 2024-01-28 182649](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/85b48241-d116-4baf-91dc-d6fb1bf4f2de)
+
+![Screenshot 2024-01-28 182711](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d01790f5-1c31-42a8-b350-0c682e6c9cde)
+
+![Screenshot 2024-01-28 182728](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/1da699a5-aff9-4d2f-8143-3bc0e6dc3d97)
+
+![Screenshot 2024-01-28 182755](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b04b9349-cfd6-452e-9763-461c2d8f0064)
+
+![Screenshot 2024-01-28 182804](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/be982fff-fac9-4b0d-b953-9bf30b1d7129)
+
+
+
+
+
+
+
+
+
 
 </details>
 
@@ -297,12 +312,12 @@ Once the user has searched for the relevant poster, the user then has to click *
 * [Heroku](https://heroku.com) for the initial deployment of the site
 * [Render](https://render.com/) for the final deployment of the site
 * [Jquery](https://jquery.com/) for scripting purposes
-* [Balsamiq:](https://balsamiq.com/) was used to create the wireframes
+* [Figma](https://www.figma.com/) was used to create the wireframes
 * [DrawSQL](https://drawsql.app/) was used to draw the SQL tables
 * [Am I Responsive](http://ami.responsivedesign.is/) was used for creating the multi-device mock-up shown at the top of this README.md file
 * [Tiny PNG](https://tinypng.com/) was used to reduce the file size of the background image
 * [Code Institute's GitHub full template](https://github.com/Code-Institute-Org/python-essentials-template) in order to run Django and Python on Heroku/Render
-
+TODO REQ
 #### requirements.txt
 
 ```
