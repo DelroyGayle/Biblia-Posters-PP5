@@ -78,9 +78,9 @@ To meet this B2C requirement:
 * As a **Site User** I can **delete reviews that I have posted** so that **I can remove the review that I had previously made**
 * As a **Site User** I can **add posters to a wish list** so that **I can view any previously selected posters that I would like to purchase on a later occasion**
 * As a **Site User** I can **delete items from my wish list** so that **I can remove the poster that no longer needs to be on my wish list**
-* As **Admin** I can **add a poster** so that **I can add new posters to my store**
-* As **Admin** I can **edit a poster** so that **I can change the price, description, image and other poster criteria**
-* As **Admin** I can **delete a poster** so that **I can remove posters that are no longer for sale**
+* As an **Admin Site User** I can **add a poster** so that **I can add new posters to my store**
+* As an **Admin Site User** I can **edit a poster** so that **I can change the price, description, image and other poster criteria**
+* As an **Admin Site User** I can **delete a poster** so that **I can remove posters that are no longer for sale**
 ------
 
 ## UX-User Experience
