@@ -88,37 +88,21 @@ To meet this B2C requirement:
 ### Wireframes
 
 <details>
-<summary>Home Page - Create a new Poster or Enter an Existing Poster</summary>
+<summary>Home Page</summary>
 <br/><br/>  
 
-   
-TODO
+![Screenshot 2024-01-29 120059](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fdc9b8d4-88be-4302-a559-d3deb80171ab)
+
 </details>
 
 <details>
-<summary>TODO</summary>
+<summary>Posters Page - Showing the range of posters</summary>
 <br/><br/>  
 
-   
-TODO
+![Screenshot 2024-01-29 115538](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/27fe99f0-cadf-440f-b67d-77c015c44662)
+
+
 </details>
-
-<details>
-<summary>Poster Review Page</summary>
-<br/><br/>  
-
-    
-TODO
-</details>
-
-<details>
-<summary>View Page - The User has the option to Edit or Delete the Poster</summary>
-<br/><br/>  
-
-   
-TODO
-</details>
-
 
 
 ------
@@ -130,7 +114,7 @@ The Kanban Project layout can be viewed [here](https://github.com/users/DelroyGa
 *Twenty-seven User Stories* were implemented - TODO
 
 <details>
-<summary>Here is theAgile Kanban Board of the Twenty-Seven User Stories that were implemented</summary>
+<summary>Here is the Agile Kanban Board of the Twenty-Seven User Stories that were implemented</summary>
 
 ![Screenshot 2024-01-28 182649](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/85b48241-d116-4baf-91dc-d6fb1bf4f2de)
 
@@ -141,12 +125,6 @@ The Kanban Project layout can be viewed [here](https://github.com/users/DelroyGa
 ![Screenshot 2024-01-28 182755](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b04b9349-cfd6-452e-9763-461c2d8f0064)
 
 ![Screenshot 2024-01-28 182804](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/be982fff-fac9-4b0d-b953-9bf30b1d7129)
-
-
-
-
-
-
 
 
 
