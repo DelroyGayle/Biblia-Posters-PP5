@@ -1,84 +1,86 @@
 # Biblia Posters
-[]
+[] 	TODO
 [View live website] 
 
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Glossary](#glossary)
-3. [User Stories](#user-stories)
-4. [UX-User Experience](#ux-user-experience)
+2. [User Stories](#user-stories)
+3. [UX-User Experience](#ux-user-experience)
    1. [Wireframes](#wireframes)
-   3. [Agile Design](#agile-design)
+   2. [Agile Design](#agile-design)
    3. [Database Design](#database-design)
    4. [Data Models](#data-models)
    5. [Framework](#framework)
-5. [Features](#features)
+4. [Features](#features)
    1. ONE
    2. [Background Image](#background-image)
    3. [NavBar](#navbar)
    4. [Home Page](#home-page)
-   5. CRUD
+   5. CRUD TODO
    9. [Validation and Messages](#validation-and-messages)
    10. [Registration](#registration)
    11. [Login/Logout](#loginlogout)
-
-   
-6. [Technologies Used](#technologies-used)
+   12. [Facebook Business Page](#facebook-business-page)     
+5. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
     2. [Libraries and Frameworks](#libraries-and-frameworks)
-7. [Future Features](#future-features)
-8. [Testing](#testing)
+6. [Future Features](#future-features)
+7. [Testing](#testing)
     1. [Please Go To TESTING.md] 
-9. [Bugs](#bugs)
+8. [Bugs](#bugs)
      1. [Solved Bugs](#solved-bugs)
      2. [Known Bugs](#known-bugs)
-10. [Deployment](#deployment)
-11. [Credits](#credits)
-12. [Acknowledgements](#acknowledgements)
+9. [Deployment](#deployment)
+10. [Credits](#credits)
+11. [Acknowledgements](#acknowledgements)
 
 ## Introduction
 
 For my Code Institute Portfolio Project 5, 
-I would like to implement a E-Commerce website in order to sell Christian posters.
-The website would allow 
-- The user can view and list all the available posters
-- The user can sort posters by **Name** and by **Price**
-- The user can add one or more selected posters to a shopping bag
-- The user can view the total cost of their purchase
-- The user can edit the shoppong bag **before checkout** by removing or adding another posters
-- The user after a successful purchase would receive an email containing all the details about their purchase
-- The user can set up and edit their own profile
-- The user can add, edit and delete remarks regarding any posters **that the user has personally purchased**
-- The user can add and remove (delete) posters from their own wish list
-  
-## Business to Consumer (B2C)
+I would like to implement an E-Commerce online shop in order for shoppers to purchase Christian posters.
+This project is built from the perspective of a small business owner who wants a website to attract customers to his Guitar Tech business. 
+The website will operate as a Business to Consumer (B2C) E-Commerce site, allowing the selling of posters from the business, namely **Biblia Posters**, to individual consumers.
+To meet this B2C requirement:
+- the site will display a range of posters for customers to purchase
+- the site will have the necessary functionality to allow users to purchase the posters online
+- the site will allow users to subscribe to an email newsletter
+- the site will allow a user to set up their own profile to facilitate future purchases
+- the site will allow registered users to add posters to their own wish list for future purchases
+- the site will allow registered users to share reviews about their purchases and interactions with Biblia Poster
+- depending on a particular time of the year, the site will offer users discounts on events of special Biblical significance
 
-B2C is the process of selling products or services from businesses to individual consumers. In this case, **Biblia Posters** is the business and the posters are the products.
-
-## Facebook Business Page
-## Glossary
-  
 ----
 
 ## User Stories
 
-* As **Developer** I can **set up the workspace** so that **I can implement the necessary tools and start writing the code**
-
-* As a **Site User** I can **use the NavBar** so that **I have the option to Create and Search for Posters**
-
-* As a **Site User** I can **see a list of posters** so that **I can select the one that I want to view or amend**
-
-* As a **Site User** I can **create a poster** so that **I can make a poster TODO**
-
-* As a **Site User** I can **click on a poster view button** so that **I can view the full text of the poster**
-
-* As a **Site User** I can **edit a poster** so that **TODO**
-
-* As a **Site User** I can **delete a poster** so that **TODO**
-
-* As a **Site User / Admin** I can **Register, Login and Logout** so that **I can access and manage my account**
-
+* As a **Shopper** I can **view a list of posters** so that **I can select posters to purchase**
+* As a **Shopper** I can **view a specific category of posters** so that **I can select specific posters without the need to search throughout all the posters**
+* As a **Shopper** I can **view a poster's individual details** so that **I can identify the price, description, rating, image and reviews regarding the poster**
+* As a **Shopper** I can **view the total of my purchases** so that **I can check whether I am spending within my budget**
+* As a **Shopper** I can **sort the list of available posters** so that **I can quickly see the best rated and best priced posters**
+* As a **Shopper** I can **sort a specific category of poster** so that **I can quickly see the best rated and best priced poster in a particular named category**
+* As a **Shopper** I can **search for a poster by name or description** so that **I can find a specific poster that I would like to purchase**
+* As a **Shopper** I can **add items to the virtual shopping basket** so that **I can thereby purchase items online**
+* As a **Shopper** I can **view items in the virtual shopping bag** so that **I can identify all the items selected and the total cost of my purchase**
+* As a **Shopper** I can **adjust the quantity of individual items in the virtual shopping bag** so that **I can make any changes to my purchase before checkout**
+* As a **Shopper** I can **easily enter the payment information** so that **I can check out speedily without any difficulty**
+* As a **Shopper** I can **make purchases using a industry-standard secure method** so that **I can have confidence that my purchases are safe**
+* As a **Shopper** I can **receive email confirmation of my order after checkout** so that **I can have a record of all my purchases for verification and audit purposes**
+* As a **Shopper** I can **subscribe to an email newsletter** so that **I can receive updates of special offers and new deals**
+* As a **Shopper** I can **access a link to the Facebook business page** so that **I can inquire further information regarding this online shop**
+* As a **Site User** I can **register for an account** so that **I can have a personal account for profile, reviews and wishlist purposes**
+* As a **Site User** I can **receive email confirmation after registering** so that **I can verify that my account registration was successful**
+* As a **Site User** I can **login or logout** so that **I can access my personal account information**
+* As a **Site User** I can **have a personalised user profile** so that **I can save my address/delivery details and see my personal order history**
+* As a **Site User** I can **add a review regarding a poster that I have personally purchased** so that **I can inform potential customers of my views regarding the poster as well as any related customer service**
+* As a **Site User** I can **edit reviews that I have posted** so that **I can change, remove or add further details regarding the poster that I had purchased**
+* As a **Site User** I can **delete reviews that I have posted** so that **I can remove the review that I had previously made**
+* As a **Site User** I can **add posters to a wish list** so that **I can view any previously selected posters that I would like to purchase on a later occasion**
+* As a **Site User** I can **delete items from my wish list** so that **I can remove the poster that no longer needs to be on my wish list**
+* As an **Admin Site User** I can **add a poster** so that **I can add new posters to my store**
+* As an **Admin Site User** I can **edit a poster** so that **I can change the price, description, image and other poster criteria**
+* As an **Admin Site User** I can **delete a poster** so that **I can remove posters that are no longer for sale**
 ------
 
 ## UX-User Experience
@@ -86,53 +88,46 @@ B2C is the process of selling products or services from businesses to individual
 ### Wireframes
 
 <details>
-<summary>Home Page - Create a new Poster or Enter an Existing Poster</summary>
+<summary>Home Page</summary>
 <br/><br/>  
 
-   
-TODO
+![Screenshot 2024-01-29 120059](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fdc9b8d4-88be-4302-a559-d3deb80171ab)
+
 </details>
 
 <details>
-<summary>TODO</summary>
+<summary>Posters Page - Showing the range of posters</summary>
 <br/><br/>  
 
-   
-TODO
+![Screenshot 2024-01-29 115538](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/27fe99f0-cadf-440f-b67d-77c015c44662)
+
+
 </details>
-
-<details>
-<summary>Poster Review Page</summary>
-<br/><br/>  
-
-    
-TODO
-</details>
-
-<details>
-<summary>View Page - The User has the option to Edit or Delete the Poster</summary>
-<br/><br/>  
-
-   
-TODO
-</details>
-
 
 
 ------
 
 ### Agile Design
 
-Agile Kanban Board</summary>
+The Kanban Project layout can be viewed [here](https://github.com/users/DelroyGayle/projects/6)
 
-The Kanban Project layout can be viewed [here](https://github.com/users/DelroyGayle/projects/4)
-
-*Twelve User Stories* were implemented - One User Story is assigned for Future Implementation
+*Twenty-seven User Stories* were implemented - TODO
 
 <details>
-<summary>Here is the Kanban view of the Twelve User Stories that were implemented</summary>
+<summary>Here is the Agile Kanban Board of the Twenty-Seven User Stories that were implemented</summary>
 
-TODO
+![Screenshot 2024-01-28 182649](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/85b48241-d116-4baf-91dc-d6fb1bf4f2de)
+
+![Screenshot 2024-01-28 182711](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d01790f5-1c31-42a8-b350-0c682e6c9cde)
+
+![Screenshot 2024-01-28 182728](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/1da699a5-aff9-4d2f-8143-3bc0e6dc3d97)
+
+![Screenshot 2024-01-28 182755](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b04b9349-cfd6-452e-9763-461c2d8f0064)
+
+![Screenshot 2024-01-28 182804](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/be982fff-fac9-4b0d-b953-9bf30b1d7129)
+
+
+
 
 </details>
 
@@ -295,12 +290,12 @@ Once the user has searched for the relevant poster, the user then has to click *
 * [Heroku](https://heroku.com) for the initial deployment of the site
 * [Render](https://render.com/) for the final deployment of the site
 * [Jquery](https://jquery.com/) for scripting purposes
-* [Balsamiq:](https://balsamiq.com/) was used to create the wireframes
+* [Figma](https://www.figma.com/) was used to create the wireframes
 * [DrawSQL](https://drawsql.app/) was used to draw the SQL tables
 * [Am I Responsive](http://ami.responsivedesign.is/) was used for creating the multi-device mock-up shown at the top of this README.md file
 * [Tiny PNG](https://tinypng.com/) was used to reduce the file size of the background image
 * [Code Institute's GitHub full template](https://github.com/Code-Institute-Org/python-essentials-template) in order to run Django and Python on Heroku/Render
-
+TODO REQ
 #### requirements.txt
 
 ```
