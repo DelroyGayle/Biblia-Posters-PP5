@@ -131,6 +131,17 @@ body {
     color: red;
 }
 
+img {
+    width: 412px;
+    height: 270px;
+    max-height: 270px;
+    object-fit: cover;
+}
+.booths-img {
+    /* width: 288px;
+    height: 150px; */
+    object-fit: cover;
+}
 .special-days {
 	margin: 4em 0;
 	position: relative;	
@@ -540,9 +551,5 @@ input[name='q']::placeholder {
     .special-days .card img {
         width: 13%;
         height: 12em;
-    }
-
-    .mobile-cardtext-width {
-        width: 10%;
     }
 }
