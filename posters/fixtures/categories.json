@@ -1,0 +1,50 @@
+[
+  {
+    "pk": 1,
+    "model": "posters.category",
+    "fields": {
+      "name": "genesis",
+      "friendly_name": "Genesis"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "posters.category",
+    "fields": {
+      "name": "exodus",
+      "friendly_name": "Exodus"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "posters.category",
+    "fields": {
+      "name": "numbers",
+      "friendly_name": "Numbers"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "posters.category",
+    "fields": {
+      "name": "joshua",
+      "friendly_name": "Joshua"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "posters.category",
+    "fields": {
+      "name": "jesus",
+      "friendly_name": "Jesus"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "posters.category",
+    "fields": {
+      "name": "apostles",
+      "friendly_name": "The Apostles"
+    }
+  }
+]
