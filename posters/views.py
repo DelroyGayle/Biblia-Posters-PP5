@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import Poster
 
@@ -12,3 +12,14 @@ def all_posters(request):
     }
 
     return render(request, 'posters/posters.html', context)
+
+
+def poster_details(request, poster_id):
+    """ A view to show individual poster details """
+
+    poster = get_object_or_404(Poster, pk=poster_id)
+
+    context = {
+        'poster': poster,
+    }
+    return render(request, 'posters/poster_details.html', context)
