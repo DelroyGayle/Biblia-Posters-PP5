@@ -80,7 +80,7 @@ body {
   background:#fff !important;
 }
 
-/* ============= */
+/* ====== ABOUT US Styling ======= */
 
 .about {
 	margin: 4em 0;
@@ -89,24 +89,24 @@ body {
     font-size: 120%;
 }
 
-.about h1{
+.about h1 {
 	color: var(--main-title-colour);
 	margin: 0 2em 2em 2em;
 }
 
-.about img{
+.about img {
 	height: 100%;
     width: 100%;
 }
 
-.about span{
+.about span {
 	display: block;
 	color: #888;
 	position: absolute;
 	left: 115px;
 }
 
-.about .desc{
+.about .desc {
 	padding: 2em;
 	border-left:4px solid #10828C;
 }
@@ -120,9 +120,9 @@ body {
     color: #000;
 }
 
-/* Special Days style */
+/* Special Days styling */
 
-.newline::before{
+.newline::before {
     content: "\a";
     white-space: pre;
 }
@@ -156,22 +156,8 @@ body {
 	color: var(--main-title-colour);	 
 }
 
-.special-days .card-body{
+.special-days .card-body {
 	padding: 1em;
-}
-
-/* Found this solution regarding 'card-deck' and 'card' at
-   https://www.shecodes.io/athena/7094-make-cards-the-same-height-using-bootstrap# */
-
-.card-deck {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-  }
-  
-.card {
-    flex: 1 0 auto;
-    overflow: hidden;
 }
   
 .contact-form{
@@ -179,22 +165,22 @@ body {
 	position: relative;		
 }
 
-.contact-form h1{
+.contact-form h1 {
 	padding:2em 1px;
 	color: var(--main-title-colour);
 }
 
-.contact-form .right{
+.contact-form .right {
 	max-width: 600px;
 }
 
-.contact-form .right .btn-secondary{
+.contact-form .right .btn-secondary {
 	background: var(--main-bg-colour);
 	color: #fff;
 	border:0;
 }
 
-.contact-form .right .form-control::placeholder{
+.contact-form .right .form-control::placeholder {
 	color: #888;
 	font-size: 16px;
 }
@@ -437,15 +423,6 @@ input[name='q']::placeholder {
 
 /* ------------ Footer ------------ */
 
-#footer-style {
-    height: 400px;
-    background-color: #e4adff;
-}
-
-.f {
-    background-color: #e4adff;   
-}
-
 .social-networks {
     margin-left: -45px;
 }
@@ -466,18 +443,16 @@ input[name='q']::placeholder {
 /* For very large screens */
 
 @media (max-width: 1280px) {
-
     .card-image {
-    max-height: 216px;
+       max-height: 216px;
     } 
 }
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
-    max-width: 80%;
+       max-width: 80%;
   }
-
 }
 
 /* fixed top navbar only on medium and up */
@@ -546,13 +521,12 @@ input[name='q']::placeholder {
     }    
 }
 
-
-
 /* Resize images of the Special Days section for mobiles */
 @media (max-width: 577px) {
-
     .card-image {
         max-height: 280px;
         display: block;
+        margin-left: auto;
+        margin-right: auto;
     }  
 }
