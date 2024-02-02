@@ -290,7 +290,7 @@ Once the user has searched for the relevant poster, the user then has to click *
 * [Heroku](https://heroku.com) for the initial deployment of the site
 * [Render](https://render.com/) for the final deployment of the site
 * [Jquery](https://jquery.com/) for scripting purposes
-* [Figma](https://www.figma.com/) was used to create the wireframes
+* [Miro](https://miro.com/) was used to create the wireframes
 * [DrawSQL](https://drawsql.app/) was used to draw the SQL tables
 * [Am I Responsive](http://ami.responsivedesign.is/) was used for creating the multi-device mock-up shown at the top of this README.md file
 * [Tiny PNG](https://tinypng.com/) was used to reduce the file size of the background image
@@ -419,6 +419,8 @@ These are the steps in order to deploy on Render:
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
   
 ## Credits
++ Hero Image Photo of *Opened Bible on path during daytime photo* is by [Aaron Burden](https://unsplash.com/@aaronburden?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) at [Unsplash](https://unsplash.com/photos/opened-book-on-brown-field-during-daytime-4uX_r8OhJ_o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
++ Photo of man showing poster with inscription *Who says a small poster can't start a big collection?* is by Anete Lusina at [Pexels](https://www.pexels.com/photo/crop-man-showing-poster-with-inscription-on-white-background-6353838/)
 + Used [Stack Overflow](https://stackoverflow.com/) to investigate various solutions especially
    + TODO
         

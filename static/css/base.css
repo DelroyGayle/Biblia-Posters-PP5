@@ -59,7 +59,7 @@ body {
 }
 
 .nav-link , .navbar-brand {
-	color: --main-fg-colour;
+	color: var(--main-fg-colour);
 	cursor: pointer;
 }
 
@@ -393,7 +393,7 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
-/* Product Form */
+/* Poster Form */
 
 .btn-file {
     position: relative;
