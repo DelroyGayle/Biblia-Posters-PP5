@@ -14,9 +14,9 @@ html {
 
 body {
     height: calc(100vh - var(--header-gap-value));
-    color: #555;
+    color: #5d4f39;
     font-family: Montserrat;
-    background-color: #adffe4;
+    background-color:#adffe4;
 }
 
 /* =========================== HOME PAGE =========================== */
@@ -244,7 +244,9 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+    /* TODO */
+
+    background: #e0fff5;
 	z-index: -1;
 }
 
