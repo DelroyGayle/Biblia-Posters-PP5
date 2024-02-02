@@ -133,8 +133,8 @@ body {
 
 img {
     width: 412px;
-    height: 270px;
-    max-height: 270px;
+    height: 100%;
+    max-height: 216px;
     object-fit: cover;
 }
 .booths-img {
@@ -504,6 +504,14 @@ input[name='q']::placeholder {
         height: calc(100vh - var(--header-padding-value));
     }
 
+    /*todo*/
+    img {
+        /* width: 412px;
+        height: 100%; */
+        max-height: 156px;
+        /* object-fit: cover; */
+    }
+        
     .display-4.logo-font.text-black {
         font-size: 2rem;
     }
@@ -540,6 +548,16 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }    
 
+}
+
+/*todo*/
+@media (max-width: 768px) {
+    img {
+        /* width: 412px;
+        height: 100%; */
+        max-height: 270px;
+        /* object-fit: cover; */
+    }    
 }
 
 /* Resize images and text of the Special Days section for mobiles */
