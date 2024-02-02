@@ -27,7 +27,7 @@
     2. [Libraries and Frameworks](#libraries-and-frameworks)
 6. [Future Features](#future-features)
 7. [Testing](#testing)
-    1. [Please Go To TESTING.md] 
+    1. [Please Go To TESTING.md](https://github.com/DelroyGayle/Biblia-Posters-PP5/blob/main/TESTING.md)
 8. [Bugs](#bugs)
      1. [Solved Bugs](#solved-bugs)
      2. [Known Bugs](#known-bugs)
@@ -38,8 +38,8 @@
 ## Introduction
 
 For my Code Institute Portfolio Project 5, 
-I would like to implement an E-Commerce online shop in order for shoppers to purchase Christian posters.
-This project is built from the perspective of a small business owner who wants a website to attract customers to his Guitar Tech business. 
+I would like to implement an E-Commerce online shop in order for shoppers to purchase Christian and Biblical posters.
+This project is built from the perspective of a small business owner who wants a website to attract customers to my posters which depict different events shown in the Bible. 
 The website will operate as a Business to Consumer (B2C) E-Commerce site, allowing the selling of posters from the business, namely **Biblia Posters**, to individual consumers.
 To meet this B2C requirement:
 - the site will display a range of posters for customers to purchase
@@ -48,7 +48,7 @@ To meet this B2C requirement:
 - the site will allow a user to set up their own profile to facilitate future purchases
 - the site will allow registered users to add posters to their own wish list for future purchases
 - the site will allow registered users to share reviews about their purchases and interactions with Biblia Poster
-- depending on a particular time of the year, the site will offer users discounts on events of special Biblical significance
+- depending on particular time of the year which depict special Biblical significance, the site will offer users 25% discounts on purchases
 
 ----
 
@@ -131,7 +131,7 @@ The Kanban Project layout can be viewed [here](https://github.com/users/DelroyGa
 
 </details>
 
-Epics, User Stories and their related Tasks are further explained in [TESTING.md]TODO
+Epics, User Stories and their related Tasks are further explained in [TESTING.md](https://github.com/DelroyGayle/Biblia-Posters-PP5/blob/main/TESTING.md)
 
 ### Database Design
 
@@ -324,7 +324,7 @@ whitenoise==5.3.0
 
 ## Testing
 
-Please refer to TODO
+Please refer to [TESTING.md](https://github.com/DelroyGayle/Biblia-Posters-PP5/blob/main/TESTING.md)
 
 ## Code Validation
 
@@ -425,5 +425,6 @@ These are the steps in order to deploy on Render:
    + TODO
         
 ## Acknowledgements
++ Code Institute's Boutique Ado Walkthrough Project upon which this site is modelled upon.
 
 
