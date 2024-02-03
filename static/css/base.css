@@ -43,6 +43,7 @@ body {
     color: white;
 }
 
+/* todo */
 .remove-left-right-padding {
     padding-left: 0;
     padding-right: 0;
@@ -50,8 +51,8 @@ body {
 
 /* TODO banner */
 
-.hide-banner {
-    display: none;
+.hide-banner, .hide-logo {
+    visibility:hidden;
 }
 
 .navbar-colour {
@@ -78,6 +79,14 @@ body {
 
 .navbar-toggler {
   background:#fff !important;
+}
+
+.posters-mt {
+    margin-top: 7rem;
+}
+
+.poster-details-mt {
+    margin-top: 8rem;
 }
 
 /* ====== ABOUT US Styling ======= */
@@ -455,6 +464,17 @@ input[name='q']::placeholder {
   .container {
        max-width: 80%;
   }
+}
+
+/* Increase the margin-top in order that the drop-down menus do not obscure the images */
+@media (max-width: 992px) {
+    .posters-mt {
+        margin-top: 9rem;
+    }
+
+    .poster-details-mt {
+        margin-top: 11rem;
+    }
 }
 
 /* fixed top navbar only on medium and up */
