@@ -115,7 +115,8 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">TEST BANNER!</h4>                
+                {% now "jS F Y" as todays_date %}
+                <h4 class="logo-font my-1">{% firstof banner_text todays_date %}</h4>
             </div>            
         </div>
     </header>
