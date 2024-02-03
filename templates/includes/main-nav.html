@@ -17,11 +17,12 @@
                 Old Testament
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="old-testament-link">
-                <a href="" class="dropdown-item">Genesis</a>
-                <a href="" class="dropdown-item">Exodus</a>
-                <a href="" class="dropdown-item">Numbers</a>
-                <a href="" class="dropdown-item">Joshua</a>
-                <a href="" class="dropdown-item">All O.T. Posters</a>
+                <a href="{% url 'posters' %}?category=genesis" class="dropdown-item">Genesis</a>
+                <a href="{% url 'posters' %}?category=exodus" class="dropdown-item">Exodus</a>
+                <a href="{% url 'posters' %}?category=numbers" class="dropdown-item">Numbers</a>
+                <a href="{% url 'posters' %}?category=joshua" class="dropdown-item">Joshua</a>
+                <!--Comma separated list used for categories - ensure no spaces with the commas-->                
+                <a href="{% url 'posters' %}?category=genesis,exodus,numbers,joshua" class="dropdown-item">All O.T. Posters</a>
             </div>
         </li>
 
@@ -30,9 +31,10 @@
                 New Testament
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="new-testament-link">
-                <a href="" class="dropdown-item">Jesus</a>
-                <a href="" class="dropdown-item">The Apostles</a>
-                <a href="" class="dropdown-item">All N.T. Posters</a>
+                <a href="{% url 'posters' %}?category=jesus" class="dropdown-item">Jesus</a>
+                <a href="{% url 'posters' %}?category=apostles" class="dropdown-item">The Apostles</a>
+                <!--Comma separated list used for categories - ensure no spaces with the commas-->                
+                <a href="{% url 'posters' %}?category=jesus,apostles" class="dropdown-item">All N.T. Posters</a>
             </div>
         </li>
 

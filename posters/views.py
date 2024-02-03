@@ -2,15 +2,21 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 
-from .models import Poster
+from .models import Poster, Category
 
 def fetch_posters(request):
     """ A view to show all posters, including sorting and search queries """
 
     posters = Poster.objects.all()
     query = None
+    categories = None
 
     if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            posters = posters.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
         if 'query' in request.GET:
             query = request.GET['query']
             if not query:
@@ -28,6 +34,7 @@ def fetch_posters(request):
     context = {
         'posters': posters,
         'search_term': query,
+        'current_categories': categories,
     }
 
     return render(request, 'posters/posters.html', context)
