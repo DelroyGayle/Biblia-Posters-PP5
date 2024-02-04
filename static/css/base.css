@@ -6,6 +6,7 @@
     --main-title-colour: #3b4661;
     --header-gap-value: 164px;
     --header-padding-value: 116px;
+    --badge-colour: #e4adff;
 }
 
 html {
@@ -253,15 +254,13 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-    /* TODO */
-
     background: #e0fff5;
 	z-index: -1;
 }
 
 a.category-badge > span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
+    background: var(--badge-colour) !important;
+    color: #000 !important;
 }
 
 .btt-button {
