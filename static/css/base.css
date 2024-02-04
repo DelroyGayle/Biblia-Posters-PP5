@@ -52,8 +52,9 @@ body {
 
 /* TODO banner */
 
-.hide-banner, .hide-logo {
-    visibility:hidden;
+.hide-logo {
+    /* visibility:hidden; */
+    display:none;
 }
 
 .navbar-colour {

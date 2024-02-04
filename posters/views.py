@@ -22,6 +22,11 @@ def handle_sorting(request, the_sort_direction, posters):
         the_sort_key = 'lower_name'
         posters = posters.annotate(lower_name=Lower('name'))
 
+    # If category sort type has been selected, effectively perform
+    # posters.order_by(category__name)
+    if the_sort_key == 'category':
+        the_sort_key = 'category__name'
+
     # 2) Determine the direction of the sort whether ascending or descending
     if 'direction' in request.GET:
         the_sort_direction = request.GET['direction']

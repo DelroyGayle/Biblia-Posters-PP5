@@ -44,7 +44,7 @@
     "model": "posters.category",
     "fields": {
       "name": "apostles",
-      "friendly_name": "The Apostles"
+      "friendly_name": "Apostles"
     }
   }
 ]
