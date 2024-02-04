@@ -44,27 +44,27 @@ def fetch_posters(request):
             # 3) Perform the Sort
             posters = posters.order_by(the_sort_key)
 
-            # 4) Filter in regard to the selected category
-            if 'category' in request.GET:
-                categories = request.GET['category'].split(',')
-                posters = posters.filter(category__name__in=categories)
-                categories = Category.objects.filter(name__in=categories)
+        # 4) Filter in regard to the selected category
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            posters = posters.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
-            # 5) Filter in regard to the selected search query
-            if 'query' in request.GET:
-                query = request.GET['query']
-                if not query:
-                    # Null entry
-                    messages.error(request, "You did not enter any search criteria!")
-                    return redirect(reverse('posters'))
+        # 5) Filter in regard to the selected search query
+        if 'query' in request.GET:
+            query = request.GET['query']
+            if not query:
+            # Null entry
+                messages.error(request, "You did not enter any search criteria!")
+                return redirect(reverse('posters'))
                 
-                queries = Q(name__icontains=query) | Q(description__icontains=query)
-                posters = posters.filter(queries)
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            posters = posters.filter(queries)
 
-                # Check for no match
-                if not posters:
-                    messages.error(request, "There are no posters that match the search criteria!")
-                    return redirect(reverse('posters'))
+            # Check for no match
+            if not posters:
+                messages.error(request, "There are no posters that match the search criteria!")
+                return redirect(reverse('posters'))
 
     current_sorting = f'{the_sort_type}_{the_sort_direction}'
 
