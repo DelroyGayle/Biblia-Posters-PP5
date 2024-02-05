@@ -114,7 +114,66 @@
                     {% endfor %}
                 </div>
             </div>
+            <div class="backtotop-button shadow-sm rounded-0 border backtotop-border">
+                <a class="backtotop-link d-flex h-100">
+                    <i class="fas fa-arrow-up backtotop-colour mx-auto my-auto"></i>
+                </a>	
+            </div>
         </div>
         {% include 'includes/footer.html' %}
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.backtotop-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    
+    <script type="text/javascript">
+        /*
+        #sort-selector will have one of the following values
+            price_asc, price_desc, rating_asc, rating_desc,
+            name_asc, name_desc, category_asc, category_desc
+        OR
+            reset
+
+        If #sort-selector is NOT = 'reset' THEN
+            Split the value at the underscore _
+            e.g. for 'price_asc' ==> [price, asc]
+            set 'sort' to the first part e.g. sort = 'price'
+            set 'direction' to the second part e.g. direction = 'asc'
+            Use these values to create the search parameters for the current URL
+            i.e. /posters?sort=price&direction=asc
+
+        Otherwise, regarding 'reset'
+            # Remove the search parameters entirely
+            e.g. /posters
+        
+        Reload the page with the new URL
+        */
+
+        $('#sort-selector').change(function() {
+            let selector = $(this);
+            let currentUrl = new URL(window.location);
+
+            let selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                let sort = selectedVal.split("_")[0];
+                let direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}
