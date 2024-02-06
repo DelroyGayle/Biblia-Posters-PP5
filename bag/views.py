@@ -53,7 +53,13 @@ def adjust_bag(request, item_id):
 
 
 def remove_from_bag(request, item_id):
-    """Remove the item from the shopping bag"""
+    """
+    Remove the item from the shopping bag
+    Because this view will be posted to a JavaScript function,
+    an actual HTTP response is returned instead.
+    200 for Success
+    500 if an error occurs
+    """
 
     try:
         # Fetch the current contents of this session's shopping bag
@@ -66,4 +72,5 @@ def remove_from_bag(request, item_id):
         return HttpResponse(status=200)
 
     except Exception as e:
+        # An error has occurred - direct to a custom 500 page
         return HttpResponse(status=500)

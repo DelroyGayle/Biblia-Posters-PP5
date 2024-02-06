@@ -51,7 +51,6 @@ body {
 }
 
 /* TODO banner */
-
 .hide-logo {
     /* visibility:hidden; */
     display:none;
@@ -84,11 +83,11 @@ body {
 }
 
 .posters-mt {
-    margin-top: 7rem;
+    margin-top: 0rem; /* 7rem TODO */
 }
 
 .poster-details-mt {
-    margin-top: 8rem;
+    margin-top: 0rem; /* 8rem TODO */
 }
 
 /* ====== ABOUT US Styling ======= */
@@ -492,11 +491,11 @@ input[name='q']::placeholder {
 /* Increase the margin-top in order that the drop-down menus do not obscure the images */
 @media (max-width: 992px) {
     .posters-mt {
-        margin-top: 9rem;
+        margin-top: 0rem; /* 9rem TODO */
     }
 
     .poster-details-mt {
-        margin-top: 11rem;
+        margin-top: 0rem; /* 11rem TODO */
     }
 }
 
