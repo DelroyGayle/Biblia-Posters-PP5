@@ -1,5 +1,7 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import render, redirect, reverse
+from django.shortcuts import HttpResponse, get_object_or_404
 from django.contrib import messages
+from posters.models import Poster
 
 # Create your views here.
 
@@ -13,6 +15,7 @@ def view_bag(request):
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified item to the shopping bag """
 
+    theposter = get_object_or_404(Poster, pk=item_id)
     # Convert string value into an integer
     quantity = int(request.POST.get('quantity'))
     currentpage_url = request.POST.get('redirect_url')
@@ -23,9 +26,12 @@ def add_to_bag(request, item_id):
     # If the item already is in the bag update the quantity
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
+        messages.success(request, (f'Updated {theposter.name} quantity '
+                                   f'to {bag[item_id]}'))
     else:
         # Add item and its quantity to the bag
         bag[item_id] = quantity
+        messages.success(request, f'Added {theposter.name} to your bag')
 
     # Update session variable
     request.session['bag'] = bag
@@ -39,6 +45,7 @@ def adjust_bag(request, item_id):
     RANGE_MIN = 0
     RANGE_MAX = 99
 
+    theposter = get_object_or_404(Poster, pk=item_id)
     try:
         quantity = int(request.POST.get('quantity'))
 
@@ -64,9 +71,14 @@ def adjust_bag(request, item_id):
     # Update new quantity
     if quantity > 0:
         bag[item_id] = quantity
+        messages.success(request, (f'Updated {theposter.name} quantity '
+                                   f'to {bag[item_id]}'))
+
     else:
         # Zero entered therefore remove the item entirely
         bag.pop(item_id)
+        messages.success(request, (f'Removed {theposter.name} quantity '
+                                   'from your bag'))
 
     # Update session variable
     request.session['bag'] = bag
@@ -84,11 +96,14 @@ def remove_from_bag(request, item_id):
     """
 
     try:
+        theposter = get_object_or_404(Poster, pk=item_id)
         # Fetch the current contents of this session's shopping bag
         # Default value is {} if None
         bag = request.session.get('bag', {})
         # remove the item entirely
         bag.pop(item_id)
+        messages.success(request, (f'Removed {theposter.name} quantity '
+                                   'from your bag'))
         # Update session variable
         request.session['bag'] = bag
         return HttpResponse(status=200)
