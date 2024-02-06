@@ -82,7 +82,7 @@ User Tasks:
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T01 | Register, Login, Logout | Using Allauth incorporate Register/Login/Logout functionality. | That the above User Tasks are accomplished. | PASS |
+| T01 | Register, Login, Logout | Using Allauth incorporate Register/Login/Logout functionality | That the above User Tasks are accomplished | PASS |
 
 <details>
 
@@ -117,7 +117,7 @@ Confirm That the Email Address is Verified
 
 </details>
 
-### Epic: Viewing Posters which includes Menus, Categorisation, Searching and Sorting
+### Epic: Viewing Posters which includes Menus, Categorisation and Sorting
 
 This is broken down into the following
 
@@ -125,6 +125,8 @@ This is broken down into the following
   <summary>User Stories</summary>
 
    ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/63d0bf5f-f0b7-46df-b3aa-5544058c2684)
+
+   ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/9e9ea1e4-a20d-4400-98d7-122dbfbc291b)
 
 </details>
 
@@ -167,8 +169,7 @@ In this online shop there are *52 posters* available.
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T03 | Test the Responsiveness when Viewing Posters | Using the Inspect Tool, demonstrate the view of posters | All available (52) posters are to be shown regardless of the media size | PASS |
-
+| T03 | Responsiveness when Viewing Posters | Using the Inspect Tool, demonstrate the view of posters | All available (52) posters are to be shown regardless of the media size | PASS |
 
 <details>
 
@@ -196,17 +197,45 @@ In this online shop there are *52 posters* available.
 
 </details>
 
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T04 | When a Poster is selected, its details are displayed | From the View of Posters, click the image | The poster image is shown with description and rating | PASS |
+
+<details>
+
+<summary>View Poster Details - Desktop</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/627c0551-ee23-476c-b8c7-4db0f611747b)
+
+</details>
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T05 | View Available Posters | Click the Shop Now button from the Homepage | All available (52) posters are to be shown | PASS |
+
+<details>
+
+<summary>View Poster Details - Mobile</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d466b50b-0db2-44b4-bce5-1d69dccba24d)
+
+</details>
+
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T02 | View Available Posters | Click the Shop Now button from the Homepage | All available (52) posters are to be shown | PASS |
+
+
 <details>
 
 <summary></summary>
 
 </details>
 
-<details>
-
-<summary></summary>
-
-</details>
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T02 | View Available Posters | Click the Shop Now button from the Homepage | All available (52) posters are to be shown | PASS |
 
 <details>
 
@@ -214,31 +243,84 @@ In this online shop there are *52 posters* available.
 
 </details>
 
-<details>
-
-<summary></summary>
-
-</details>
-
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T02 | View Available Posters | Click the Shop Now button from the Homepage | All available (52) posters are to be shown | PASS |
    
 
+### Epic: Search for Posters
 
-![image]TODO
+<details>
+  <summary>User Story</summary>
+   
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/2d721ad9-5bd9-4fef-966d-85c6f0ec36d2)
 
 </details>
 
 **User Tasks:**
+1. A successful search consists of whether the search term appears in the Poster Name or the Poster Description
+2. Enter the search parameters via the URL to perform a search e.g. */posters/?query=**saul*** to bring up all the posters with the search term *saul* in them
+3. Use the Searchbar to enter the search term
+4. Both methods should show identical results
+5. Suitable messages when a null string is entered or null search results
+
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T02 | FEATURE  | STEPS | EXPECTED | PASS |
+| T0x | Search For Posters By Name | Either by using the URL or Searchbar test various search terms| Any posters with matching names displayed | PASS |
 
 <details>
-<summary>Screenshot</summary>
+<summary>/posters/?query=saul</summary>
 
-  ![image]TODO
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b3aaa659-f1c7-458a-be69-fbd421088da0)
   
 </details>
+
+<details>
+<summary>/posters/?query=ethio</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5c31210c-322d-40a0-a24d-3f6502d01575)
+  
+</details>
+
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T0x | Search For Posters By Description | Either by using the URL or Searchbar test various search terms| Any posters with matching descriptions displayed | PASS |
+
+<details>
+<summary>/posters/?query=BED matches the descriptions of these 2 posters</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fcca6530-f744-4103-832a-c2c1fcaef91a)
+
+View the description then *used CTRL-F and 'bed' to highlight that the searches were successful*
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5e59d029-1f07-484e-896f-83f2591af1dc)
+ 
+</details>
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T0x | Null Search Toast/Message Displayed | Enter nothing in the Searchbar | A suitable message ought to be displayed | PASS |
+
+<details>
+<summary>Null Entry in Searchbar</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e8160d1b-ba71-44c3-aa54-f54fcffbca2f)
+
+</details>
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T0x | Nonexistent Search Toast/Message Displayed | Enter a search term in the Searchbar that does not exist in any of the posters | A suitable message ought to be displayed | PASS |
+
+<details>
+<summary>/posters/?query=HELLO</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b93c8664-ba08-439a-a9b7-b392a15dc771)
+  
+</details>
+
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
