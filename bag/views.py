@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.contrib import messages
 
 # Create your views here.
 
@@ -35,7 +36,28 @@ def add_to_bag(request, item_id):
 def adjust_bag(request, item_id):
     """Adjust the quantity of the specified item to the specified amount"""
 
-    quantity = int(request.POST.get('quantity'))
+    RANGE_MIN = 0
+    RANGE_MAX = 99
+
+    try:
+        quantity = int(request.POST.get('quantity'))
+
+        # Is it a legal quantity i.e. within the 1-99 range?
+        if quantity > RANGE_MAX:
+            messages.error(request,
+                           f"Value must be less than or equal to {RANGE_MAX}")
+            return redirect(reverse('view_bag'))
+        elif quantity < RANGE_MIN:
+            messages.error(request,
+                           ("Value must be greater than or equal to "
+                            f"{RANGE_MIN}"))
+            return redirect(reverse('view_bag'))
+    except ValueError:
+        # Erroneous Input
+        messages.error(request,
+                       f"Please enter a number")
+        return redirect(reverse('view_bag'))
+
     # Fetch the current contents of this session's shopping bag
     # Default value is {} if None
     bag = request.session.get('bag', {})
