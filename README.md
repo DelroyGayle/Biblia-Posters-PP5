@@ -215,7 +215,15 @@ On the far left is **the Logo**.<br/>
 The logo acts as a *Home Button*. By clicking the logo, the user is returned to the Home Page.<br/>
 On the far right is the option to Logout.
 
-If a user is not logged in the user will not be able to do any shopping! <br/>None of the above options will appear to a user who is not logged in.
+
+details>
+
+<summary>Sample of a poster image: The_Resurrected_Jesus_Shows_His_Disciples_His_Pierced_Hands_And_Feet.jpg</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/6af9e35d-45e1-403a-a26e-9ac9ca2d3688)
+
+</details>
+
 
 <details>
    <summary>Navigation Bar</summary>
@@ -224,6 +232,157 @@ If a user is not logged in the user will not be able to do any shopping! <br/>No
 
 
 </details>
+
+### View Posters Details
+
+
+<details>
+
+<summary>View Poster Details - Desktop</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/627c0551-ee23-476c-b8c7-4db0f611747b)
+
+</details>
+
+<details>
+
+<summary>View Poster Details - Mobile</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d466b50b-0db2-44b4-bce5-1d69dccba24d)
+
+</details>
+
+### Search for Posters
+
+<details>
+<summary>/posters/?query=saul</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b3aaa659-f1c7-458a-be69-fbd421088da0)
+  
+</details>
+
+<details>
+<summary>/posters/?query=ethio</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5c31210c-322d-40a0-a24d-3f6502d01575)
+  
+</details>
+
+
+<details>
+<summary>/posters/?query=BED matches the descriptions of these 2 posters</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fcca6530-f744-4103-832a-c2c1fcaef91a)
+
+View the description then *used CTRL-F and 'bed' to highlight that the searches were successful*
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5e59d029-1f07-484e-896f-83f2591af1dc)
+ 
+</details>
+
+<details>
+<summary>Null Entry in Searchbar</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e8160d1b-ba71-44c3-aa54-f54fcffbca2f)
+  
+</details>
+
+<details>
+<summary>/posters/?query=HELLO</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b93c8664-ba08-439a-a9b7-b392a15dc771)
+  
+</details>
+
+### Menus
+
+#### Desktop
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/bb4703d0-5a32-4ab0-a2c7-e38ec6a60dfa)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ee394855-3c50-4063-8f2c-5ad980775a2e)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/645d144f-7761-44d6-922f-fc91df115687)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/dc754798-19a2-4616-954d-3e5885174fa3)
+
+#### Mobile
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/da618cdc-4a84-4029-a2e6-501da9de07c6)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/3621eacb-19f9-4b28-a762-9879dc0f90e8)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f5563f82-9402-4d22-b177-bafff950706e)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/bee3c71d-d1d5-42fe-825a-7719cf35d276)
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Categorisation
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/75d40fa7-1616-49cf-9113-66f37f20caea)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Home Page
 
@@ -264,6 +423,10 @@ Once the user has searched for the relevant poster, the user then has to click *
 * Login/Logout is based upon Django's built-in authentication system.
 * When the user logs in, the Home Page will appear to the user.
 * When the user logs out, the user will get a success message to confirm.
+* 
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/4e061c55-04bc-4ea5-a64f-8c2288a55dfc)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7b4b1f8c-8cee-4f1e-9c0d-ed3001947436)
 
 ## Technologies Used
 
