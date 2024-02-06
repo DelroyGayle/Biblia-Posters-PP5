@@ -109,43 +109,90 @@ Confirm That the Email Address is Verified
 
 <details>
 
-<summary>Go back to the normal url and Logout</summary>
+<summary>Go back to the App Name/ URL and Logout</summary>
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/4e061c55-04bc-4ea5-a64f-8c2288a55dfc)
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7b4b1f8c-8cee-4f1e-9c0d-ed3001947436)
 
+</details>
+
+### Epic: Viewing Posters which includes Menus, Categorisation, Searching and Sorting
+
+This is broken down into the following
+
+<details>
+  <summary>User Stories</summary>
+
+   ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/63d0bf5f-f0b7-46df-b3aa-5544058c2684)
+
+</details>
+
+User Tasks:
+1. When the user selects the *Shop Now* option, the user can see all available posters
+2. User has the option to view particular *categories* of posters using drop-down menus
+3. That all the above work correctly with responsiveness on different sized media
+
+In this online shop there are *52 posters* available.
+
+<details>
+
+<summary>Sample of a poster image: The_Resurrected_Jesus_Shows_His_Disciples_His_Pierced_Hands_And_Feet.jpg</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/6af9e35d-45e1-403a-a26e-9ac9ca2d3688)
 
 </details>
 
 
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T02 | View Available Posters | Click the Shop Now button from the Homepage | All available (52) posters are to be shown | PASS |
+
 <details>
 
-<summary></summary>
+<summary>Top of the page</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/0b94d27e-3d37-45c1-bd14-adc03e76b3da)
 
 </details>
 
 <details>
 
-<summary></summary>
+<summary>Bottom of the page</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/81d80de2-7054-4604-80b8-0afe0f23b57a)
+
+</details>
+
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T03 | Test the Responsiveness when Viewing Posters | Using the Inspect Tool, demonstrate the view of posters | All available (52) posters are to be shown regardless of the media size | PASS |
+
+
+<details>
+
+<summary>Large Screen</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/94007ffb-4603-4af9-a198-e7fe3d43f96c)
 
 </details>
 
 <details>
 
-<summary></summary>
+<summary>Tablet</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7d3d6e3b-4e59-48bc-9df7-76f646148dcc)
 
 </details>
 
 <details>
 
-<summary></summary>
+<summary>Mobile</summary>
 
-</details>
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/516cf97f-679a-451c-b0ba-50ea4b013495)
 
-<details>
-
-<summary></summary>
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/849b30ff-79fb-49b2-ac5d-5a077e429e7d)
 
 </details>
 
@@ -174,12 +221,7 @@ Confirm That the Email Address is Verified
 </details>
 
    
-### Epic: *TODO*
 
-This is broken down into the following
-
-<details>
-  <summary>User Stories</summary>
 
 ![image]TODO
 
