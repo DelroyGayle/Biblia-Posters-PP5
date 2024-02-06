@@ -257,20 +257,23 @@ details>
 <details>
 <summary>/posters/?query=saul</summary>
 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b3aaa659-f1c7-458a-be69-fbd421088da0)
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/0646712d-33e8-491a-9ecc-ef74159f91a9)
   
 </details>
 
 <details>
 <summary>/posters/?query=ethio</summary>
 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5c31210c-322d-40a0-a24d-3f6502d01575)
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/3bda67f6-038b-4116-8f18-4ed186f1b205)
   
 </details>
+*/posters/?query=BED* matched 5 posters 
 
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/4da87e73-00f3-477f-9994-895a5e3e8285)
 
 <details>
-<summary>/posters/?query=BED matches the descriptions of these 2 posters</summary>
+
+<summary>What follows are 2 posters where the match was in the descriptions</summary>
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fcca6530-f744-4103-832a-c2c1fcaef91a)
 
