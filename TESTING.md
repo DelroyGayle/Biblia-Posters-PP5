@@ -55,15 +55,16 @@ This test was performed before the authentication profile was added.
   
 ## Manual Testing 
 
-### Epic: *Register, Login and Logout*
+### Epic: *Register and Login*
 
 This is broken down into the following
 <details>
-  <summary>User Story</summary>
+  <summary>User Stories</summary>
 
-   ![image]TODO
-   
-  
+   ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/09e75a1c-7f1c-4d9c-bad2-25f12dd0886a)
+ 
+  ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/982af554-be3f-4d82-9699-e0fc75fba0b7)
+
 </details>
 
 Criteria:
@@ -73,16 +74,106 @@ Criteria:
 
 User Tasks:
 1. Update the Admin domain of the default site to **biblia.example.com**
-2. Demonstrate that the user can Register using a username and password
-3. Demonstrate that the user can Login to the site
-4. Demonstrate that the user can Logout from the site
+2. Demonstrate that the user can Register using a username, password and email address
+3. Verify that both the Django and Allauth acknowledge the user's email address
+4. Demonstrate that the user can Login to the site
+5. Demonstrate that the user can Logout from the site
 
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
 | T01 | Register, Login, Logout | Using Allauth incorporate Register/Login/Logout functionality. | That the above User Tasks are accomplished. | PASS |
 
+<details>
 
+<summary>Verify Registration</summary>
+
+Select the Register option
+In this example I registered the username **Tommy**
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7edc1c29-02b7-46c5-932f-380ba63288cb)
+
+Once the account is registered change the url ending to **/admin/account/emailaddress/**
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/324ee5ea-9144-40ff-abfc-426de3fa1102)
+
+Click to verify the email in the Admin Dashboard
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/89f40c3c-b4fb-4cec-8511-ff9ea6c35743)
+
+Confirm That the Email Address is Verified
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/a4e72bbe-d3e8-4ee0-8131-dd71b46710a5)
+
+</details>
+
+<details>
+
+<summary>Go back to the normal url and Logout</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/4e061c55-04bc-4ea5-a64f-8c2288a55dfc)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7b4b1f8c-8cee-4f1e-9c0d-ed3001947436)
+
+
+</details>
+
+
+<details>
+
+<summary></summary>
+
+</details>
+
+<details>
+
+<summary></summary>
+
+</details>
+
+<details>
+
+<summary></summary>
+
+</details>
+
+<details>
+
+<summary></summary>
+
+</details>
+
+<details>
+
+<summary></summary>
+
+</details>
+
+<details>
+
+<summary></summary>
+
+</details>
+
+<details>
+
+<summary></summary>
+
+</details>
+
+<details>
+
+<summary></summary>
+
+</details>
+
+<details>
+
+<summary></summary>
+
+</details>
+
+   
 ### Epic: *TODO*
 
 This is broken down into the following
@@ -153,6 +244,31 @@ User Tasks:
 TODO
 
 That the endpoints are protected - that only logged-in users can use the site
+
+----
+
+
+### Epic: *Register, Login and Logout*
+
+This is broken down into the following
+<details>
+  <summary>User Story</summary>
+
+   ![image]TODO
+   
+  
+</details>
+
+Criteria:
+1. Both Username and Email is necessary to login
+2. Verification by Email is mandatory
+3. Minimum username length is 4 characters
+
+User Tasks:
+1. Update the Admin domain of the default site to **biblia.example.com**
+2. Demonstrate that the user can Register using a username and password
+3. Demonstrate that the user can Login to the site
+4. Demonstrate that the user can Logout from the site
 
 
 ----
