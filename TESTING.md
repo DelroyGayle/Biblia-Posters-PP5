@@ -224,12 +224,195 @@ In this online shop there are *52 posters* available.
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T02 | View Available Posters | Click the Shop Now button from the Homepage | All available (52) posters are to be shown | PASS |
+| T06 | View All Available **Old Testament** Posters | Select from Menu, Old Testament then select **ALL O.T. Posters**  | All available OT posters are to be shown | PASS |
 
 
 <details>
 
-<summary></summary>
+<summary>Menu & Display</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fb28fafb-b018-42a3-8ee6-26bf023e50d7)
+
+<summary>All the Old Testament Posters</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/2f6bc6e8-d2dd-434e-96f7-d8bfebd738c6)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e20803a6-0c31-4679-b240-0573579802ac)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/eeb105d4-1521-4b8a-a577-ae254ae8c7e0)
+
+</details>
+
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T07 | View All Available **New Testament** Posters | Select from Menu, New Testament then select **ALL N.T. Posters**  | All available NT posters are to be shown | PASS |
+
+<details>
+
+<summary>Menu & Display</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/36b91986-bf54-434e-b8a9-11e7f2bf1926)
+
+
+<summary>All the New Testament Posters</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/a5f6c916-a501-488b-9522-cd8fef3cdb39)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/262df841-30cd-43c1-8379-fd958a51ea74)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7d0b2762-b03b-44f6-bfbe-5d03fa80e438)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f31eba18-bfe0-4eb7-ae98-a49e4c251a54)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7c2f09e3-bca3-4d63-a884-2adfce760a62)
+
+</details>
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T08 | View All **Genesis** Posters | Select from Menu, Old Testament then select **Genesis**  | All available Genesis posters are to be shown | PASS |
+
+<details>
+
+<summary>Display of Genesis Posters</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5d86495b-8305-4ad7-9db1-d54acb15bccf)
+
+</details>
+
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T09 | View All **Exodus** Posters | Select from Menu, Old Testament then select **Exodus**  | All available Exodus posters are to be shown | PASS |
+
+<details>
+
+<summary>Display of Exodus Posters</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b03189ae-150c-4b7e-b982-67369f499236)
+
+</details>
+
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T10 | View All **Numbers** Posters | Select from Menu, Old Testament then select **Numbers**  | All available Numbers posters are to be shown | PASS |
+
+<details>
+
+<summary>Display of Numbers Posters</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5f43584a-b9cf-4212-8457-667f979b6fd4)
+
+
+</details>
+
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T11 | View All **Joshua** Posters | Select from Menu, Old Testament then select **Joshua**  | All available Joshua posters are to be shown | PASS |
+
+<details>
+
+<summary>Display of Joshua Posters</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d125a5dd-2da9-48c8-8d85-0bca33ef07fc)
+
+
+</details>
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T12 | View All **Jesus** Posters | Select from Menu, New Testament then select **Jesus**  | All available Jesus posters are to be shown | PASS |
+
+<details>
+
+<summary>Display of Jesus Posters</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/a5f6c916-a501-488b-9522-cd8fef3cdb39)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/262df841-30cd-43c1-8379-fd958a51ea74)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7d0b2762-b03b-44f6-bfbe-5d03fa80e438)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f31eba18-bfe0-4eb7-ae98-a49e4c251a54)
+
+</details>
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T13 | View All **The Apostles** Posters | Select from Menu, Old Testament then select **Apostles**  | All available Apostles posters are to be shown | PASS |
+
+<details>
+
+<summary>Display of The Apostles Posters</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b9065ab6-2860-46ce-b867-3b4b0120d6f5)
+
+</details>
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T08 | View All Genesis Posters | Select from Menu, Old Testament then select **Genesis**  | All available Genesis posters are to be shown | PASS |
+
+<details>
+
+<summary>Display of Genesis Posters</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5d86495b-8305-4ad7-9db1-d54acb15bccf)
+
+</details>
+
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T08 | View All Genesis Posters | Select from Menu, Old Testament then select **Genesis**  | All available Genesis posters are to be shown | PASS |
+
+<details>
+
+<summary>Display of Genesis Posters</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5d86495b-8305-4ad7-9db1-d54acb15bccf)
+
+</details>
+
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T08 | View All Genesis Posters | Select from Menu, Old Testament then select **Genesis**  | All available Genesis posters are to be shown | PASS |
+
+<details>
+
+<summary>Display of Genesis Posters</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5d86495b-8305-4ad7-9db1-d54acb15bccf)
+
+</details>
+
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T08 | View All Genesis Posters | Select from Menu, Old Testament then select **Genesis**  | All available Genesis posters are to be shown | PASS |
+
+<details>
+
+<summary>Display of Genesis Posters</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5d86495b-8305-4ad7-9db1-d54acb15bccf)
+
+</details>
+
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T08 | View All Genesis Posters | Select from Menu, Old Testament then select **Genesis**  | All available Genesis posters are to be shown | PASS |
+
+<details>
+
+<summary>Display of Genesis Posters</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5d86495b-8305-4ad7-9db1-d54acb15bccf)
 
 </details>
 
