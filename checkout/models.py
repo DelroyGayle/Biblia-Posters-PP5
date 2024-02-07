@@ -52,7 +52,7 @@ class Order(models.Model):
         The sum function is used to sum up all the line-item total fields
         for all line items on this order.
         The result will be in a new field called lineitem_total_sum
-        TODO/PRINT
+        TODO/PRINT  print(aggregate_sum)
         """
         aggregate_sum = self.lineitems.aggregate(Sum('lineitem_total'))
         self.order_total = aggregate_sum['lineitem_total__sum']
