@@ -41,6 +41,7 @@ class Order(models.Model):
     def _generate_order_number(self):
         """
         Generate a random, unique order number using UUID
+        That is, a random string of 32 characters
         """
         return uuid.uuid4().hex.upper()
 
@@ -48,6 +49,10 @@ class Order(models.Model):
         """
         Update grand total each time a line item is added,
         accounting for delivery costs.
+        The sum function is used to sum up all the line-item total fields
+        for all line items on this order.
+        The result will be in a new field called lineitem_total_sum
+        TODO/PRINT
         """
         aggregate_sum = self.lineitems.aggregate(Sum('lineitem_total'))
         self.order_total = aggregate_sum['lineitem_total__sum']
@@ -58,7 +63,7 @@ class Order(models.Model):
     def save(self, *args, **kwargs):
         """
         Override the original save method to set the order number
-        if it hasn't been set already.
+        if it has not been set already.
         """
         if not self.order_number:
             self.order_number = self._generate_order_number()
@@ -94,11 +99,14 @@ class OrderLineItem(models.Model):
 
 class UserPurchasedPosters(models.Model):
     """
-    Model used to record 'by user' the posters that the user has purchased.
+    Model used to record 'by user' the posters that the user had purchased.
+    This is used to give verified purchasers the functionality
+    to add a review regarding the purchased poster.
     This is recorded in order to verify that the user has purchased a poster
     in order to allow the user to add a review about the purchased poster
     """
-    user = models.ForeignKey(User, null=False, blank=False,
-                             on_delete=models.CASCADE)
-    poster = models.ForeignKey(Poster, null=False, blank=False,
-                               on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    poster = models.OneToOneField(Poster, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'self.user.get_username() purchased SKU {self.poster.sku}'
