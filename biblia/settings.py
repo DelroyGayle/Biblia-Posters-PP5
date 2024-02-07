@@ -173,6 +173,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Delivery Cost is £3.00 regardless of the number of posters!
 DELIVERY_COST = Decimal(3.00)
 
+# Stripe
+STRIPE_CURRENCY = 'gbp'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
