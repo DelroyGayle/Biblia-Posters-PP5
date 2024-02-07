@@ -109,5 +109,5 @@ def remove_from_bag(request, item_id):
         return HttpResponse(status=200)
 
     except Exception as e:
-        # An error has occurred - direct to a custom 500 page
+        # An error has occurred, therefore display a custom 500 page TODO
         return HttpResponse(status=500)
