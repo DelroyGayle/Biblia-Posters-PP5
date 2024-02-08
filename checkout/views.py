@@ -51,18 +51,23 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
+            # Valid Order - Add Unique Stripe PID before saving
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_bag = json.dumps(bag)
             # Save the Order to the Database
-            order = order_form.save()
+            order.save()
 
             # Iterate through the Bag's Contents
             # Save each Order Line to the Database
-            for item_id, item_data in bag.items():
+            for item_id, item_quantity in bag.items():
                 try:
                     poster_instance = Poster.objects.get(id=item_id)
                     order_line_item = OrderLineItem(
                             order=order,
                             poster=poster_instance,
-                            quantity=item_data,
+                            quantity=item_quantity,
                         )
                     order_line_item.save()
 
