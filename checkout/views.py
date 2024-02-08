@@ -34,9 +34,9 @@ def checkout(request):
         if order_form.is_valid():
             # Save the Order to the Database
             order = order_form.save()
+
             # Iterate through the Bag's Contents
             # Save each Order Line to the Database
-            print(bag.items())
             for item_id, item_data in bag.items():
                 try:
                     poster_instance = Poster.objects.get(id=item_id)

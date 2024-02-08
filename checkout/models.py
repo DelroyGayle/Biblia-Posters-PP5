@@ -52,10 +52,14 @@ class Order(models.Model):
         The sum function is used to sum up all the line-item total fields
         for all line items on this order.
         The result will be in a new field called lineitem_total_sum
-        TODO/PRINT  print(aggregate_sum)
         """
+
         aggregate_sum = self.lineitems.aggregate(Sum('lineitem_total'))
-        self.order_total = aggregate_sum['lineitem_total__sum']
+        # EXAMPLE OF SUM: {'lineitem_total__sum': Decimal('42')}
+
+        # Prevent an error that if all the line items from an order
+        # are deleting the order total will be zero instead of none.
+        self.order_total = aggregate_sum['lineitem_total__sum'] or 0
         self.delivery_cost = settings.DELIVERY_COST
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
