@@ -20,7 +20,7 @@ def webhook(request):
     payload = request.body
     sig_header = request.META['HTTP_STRIPE_SIGNATURE']
     event = None
-    print("WEBHOOK0000")
+    print("WEBHOOK0000", wh_secret)
 
     try:
         print("WEBHOOK")
