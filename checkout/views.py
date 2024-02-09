@@ -32,76 +32,90 @@ def cache_checkout_data(request):
         return HttpResponse(content=e, status=400)
 
 
+def handle_POST_method(request):
+    """ Regarding Checkout, a POST Method has been requested """
+    bag = request.session.get('bag', {})
+
+    form_data = {
+        'full_name': request.POST['full_name'],
+        'email': request.POST['email'],
+        'phone_number': request.POST['phone_number'],
+        'country': request.POST['country'],
+        'postcode': request.POST['postcode'],
+        'city': request.POST['city'],
+        'street_address1': request.POST['street_address1'],
+        'street_address2': request.POST['street_address2'],
+        'county': request.POST['county'],
+    }
+    order_form = OrderForm(form_data)
+    if order_form.is_valid():
+        # Valid Order - Add Unique Stripe PID before saving
+        order = order_form.save(commit=False)
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        order.stripe_pid = pid
+        order.original_bag = json.dumps(bag)
+        # Save the Order to the Database
+        order.save()
+
+        # Iterate through the Bag's Contents
+        # Save each Order Line to the Database
+        for item_id, item_quantity in bag.items():
+            try:
+                poster_instance = Poster.objects.get(id=item_id)
+                order_line_item = OrderLineItem(
+                        order=order,
+                        poster=poster_instance,
+                        quantity=item_quantity,
+                    )
+                order_line_item.save()
+
+            except Poster.DoesNotExist:
+
+                messages.error(request, (
+                    "One of the posters in your bag was not "
+                    "found in our database. "
+                    f"ID Number {id}"
+                    "Please call us for assistance!")
+                )
+                # Invalid/Missing Poster therefore delete the Order
+                order.delete()
+                return redirect(reverse('view_bag'))
+
+        """
+        Check whether or not the user wants to save their
+        profile information to the session
+        """
+        request.session['save_info'] = ('save-info'
+                                        in request.POST)
+        # Success Page
+        return redirect(reverse('checkout_success',
+                                args=[order.order_number]))
+    else:
+
+        # Invalid Form
+        messages.error(request, ("There was an error with your form. ",
+                        "Please double check your information."))
+
+    return None
+
+
 def checkout(request):
+    """
+    Secure Checkout has been selected
+    This Method communicates with Stripe 
+    in order to perform a secure purchase of the order
+    """
     stripePublicKey = settings.STRIPE_PUBLIC_KEY
     stripeSecretKey = settings.STRIPE_SECRET_KEY
-
+    
     if request.method == 'POST':
-        # POST Method requested
-        bag = request.session.get('bag', {})
+        newpage = handle_POST_method(request)
+        if newpage:
+            # This will be the new page that the user will view
+            return newpage
 
-        form_data = {
-            'full_name': request.POST['full_name'],
-            'email': request.POST['email'],
-            'phone_number': request.POST['phone_number'],
-            'country': request.POST['country'],
-            'postcode': request.POST['postcode'],
-            'city': request.POST['city'],
-            'street_address1': request.POST['street_address1'],
-            'street_address2': request.POST['street_address2'],
-            'county': request.POST['county'],
-        }
-        order_form = OrderForm(form_data)
-        if order_form.is_valid():
-            # Valid Order - Add Unique Stripe PID before saving
-            order = order_form.save(commit=False)
-            pid = request.POST.get('client_secret').split('_secret')[0]
-            order.stripe_pid = pid
-            order.original_bag = json.dumps(bag)
-            # Save the Order to the Database
-            order.save()
-
-            # Iterate through the Bag's Contents
-            # Save each Order Line to the Database
-            for item_id, item_quantity in bag.items():
-                try:
-                    poster_instance = Poster.objects.get(id=item_id)
-                    order_line_item = OrderLineItem(
-                            order=order,
-                            poster=poster_instance,
-                            quantity=item_quantity,
-                        )
-                    order_line_item.save()
-
-                except Poster.DoesNotExist:
-
-                    messages.error(request, (
-                        "One of the posters in your bag was not "
-                        "found in our database. "
-                        f"ID Number {id}"
-                        "Please call us for assistance!")
-                    )
-                    # Invalid/Missing Poster therefore delete the Order
-                    order.delete()
-                    # return the user to the shopping bag page
-                    return redirect(reverse('view_bag'))
-
-            """
-            Check whether or not the user wants to save their
-            profile information to the session
-            """
-            request.session['save_info'] = ('save-info'
-                                            in request.POST)
-            # Success Page
-            return redirect(reverse('checkout_success',
-                                    args=[order.order_number]))
-
-        else:
-
-            # Invalid Form
-            messages.error(request, ("There was an error with your form. ",
-                           "Please double check your information."))
     else:
+
         # GET Method requested
         bag = request.session.get('bag', {})
         if not bag:
