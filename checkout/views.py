@@ -1,3 +1,4 @@
+# TODO
 from django.shortcuts import render, redirect, reverse
 from django.shortcuts import get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
@@ -94,80 +95,97 @@ def handle_POST_method(request):
 
         # Invalid Form
         messages.error(request, ("There was an error with your form. ",
-                        "Please double check your information."))
+                                 "Please double check your information."))
 
     return None
+
+
+def handle_GET_method(request, stripeSecretKey):
+    """ Regarding Checkout, a GET Method has been requested """
+
+    bag = request.session.get('bag', {})
+    if not bag:
+        messages.error(request,
+                       "There is nothing in your bag at the moment")
+        # redirect back to the posters page
+        newpage = redirect(reverse('posters'))
+        return (newpage,)  # Tuple of ONE item
+
+    current_bag = bag_contents(request)
+    total = current_bag['grand_total']
+    stripe_total = round(total * 100)
+    stripe.api_key = stripeSecretKey
+    intent = stripe.PaymentIntent.create(
+        amount=stripe_total,
+        currency=settings.STRIPE_CURRENCY,
+    )
+
+    # Attempt to prefill the form with any info
+    # the user maintains in their profile
+    if request.user.is_authenticated:
+        try:
+            profile = UserProfile.objects.get(user=request.user)
+
+            # Populate the Full Name from the User model
+            # if the Profile Full Name is null
+            the_fullname = profile.user.get_full_name()
+            if not the_fullname:
+                the_fullname = request.user.get_username()
+
+            # Populate the Email Address from the User model
+            # if the Profile Email Address is null
+            the_email = profile.user.email
+            if not the_email:
+                the_email = request.user.email
+
+            order_form = OrderForm(initial={
+                'full_name': the_fullname,
+                'email': the_email,
+                'phone_number': profile.default_phone_number,
+                'country': profile.default_country,
+                'postcode': profile.default_postcode,
+                'city': profile.default_city,
+                'street_address1': profile.default_street_address1,
+                'street_address2': profile.default_street_address2,
+                'county': profile.default_county,
+            })
+
+        except UserProfile.DoesNotExist:
+            order_form = OrderForm()
+
+    else:
+        order_form = OrderForm()
+
+    return (None, order_form, intent)
 
 
 def checkout(request):
     """
     Secure Checkout has been selected
-    This Method communicates with Stripe 
+    This Method communicates with Stripe
     in order to perform a secure purchase of the order
     """
     stripePublicKey = settings.STRIPE_PUBLIC_KEY
     stripeSecretKey = settings.STRIPE_SECRET_KEY
-    
+
     if request.method == 'POST':
+        # POST Method requested
         newpage = handle_POST_method(request)
         if newpage:
-            # This will be the new page that the user will view
+            # New Page returned therefore this will be
+            # the new page that the user will view
             return newpage
 
     else:
-
         # GET Method requested
-        bag = request.session.get('bag', {})
-        if not bag:
-            messages.error(request,
-                           "There is nothing in your bag at the moment")
-            # redirect back to the posters page
-            return redirect(reverse('posters'))
+        result = handle_GET_method(request, stripeSecretKey)
+        newpage, *two_parameters = result  # Unpack First Item Only
+        if newpage:
+            # New Page returned therefore this will be
+            # the new page that the user will view
+            return newpage
 
-        current_bag = bag_contents(request)
-        total = current_bag['grand_total']
-        stripe_total = round(total * 100)
-        stripe.api_key = stripeSecretKey
-        intent = stripe.PaymentIntent.create(
-            amount=stripe_total,
-            currency=settings.STRIPE_CURRENCY,
-        )
-
-        # Attempt to prefill the form with any info
-        # the user maintains in their profile
-        if request.user.is_authenticated:
-            try:
-                profile = UserProfile.objects.get(user=request.user)
-
-                # Populate the Full Name from the User model
-                # if the Profile Full Name is null
-                the_fullname = profile.user.get_full_name()
-                if not the_fullname:
-                    the_fullname = request.user.get_username()
-
-                # Populate the Email Address from the User model
-                # if the Profile Email Address is null
-                the_email = profile.user.email
-                if not the_email:
-                    the_email = request.user.email
-
-                order_form = OrderForm(initial={
-                    'full_name': the_fullname,
-                    'email': the_email,
-                    'phone_number': profile.default_phone_number,
-                    'country': profile.default_country,
-                    'postcode': profile.default_postcode,
-                    'city': profile.default_city,
-                    'street_address1': profile.default_street_address1,
-                    'street_address2': profile.default_street_address2,
-                    'county': profile.default_county,
-                })
-
-            except UserProfile.DoesNotExist:
-                order_form = OrderForm()
-
-        else:
-            order_form = OrderForm()
+        (order_form, intent) = two_parameters
 
     if not stripePublicKey:
         messages.warning(request, ("Stripe public key is missing. "
