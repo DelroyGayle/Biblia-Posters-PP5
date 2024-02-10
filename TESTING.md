@@ -72,7 +72,7 @@ Criteria:
 2. Verification by Email is mandatory
 3. Minimum username length is 4 characters
 
-User Tasks:
+**User Tasks:**
 1. Update the Admin domain of the default site to **biblia.example.com**
 2. Demonstrate that the user can Register using a username, password and email address
 3. Verify that both the Django and Allauth acknowledge the user's email address
@@ -93,7 +93,7 @@ In this example I registered the username **Tommy**
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7edc1c29-02b7-46c5-932f-380ba63288cb)
 
-Once the account is registered change the url ending to **/admin/account/emailaddress/**
+Once the account is registered change the Endpoint to **/admin/account/emailaddress/**
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/324ee5ea-9144-40ff-abfc-426de3fa1102)
 
@@ -130,7 +130,7 @@ This is broken down into the following
 
 </details>
 
-User Tasks:
+**User Tasks:**
 1. When the user selects the *Shop Now* option, the user can see all available posters
 2. User has the option to view particular *categories* of posters using drop-down menus
 3. Posters can be sorted by Price, Rating, Poster Name, and Category
@@ -272,7 +272,7 @@ In this online shop there are *52 posters* available.
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T08 | View All **Genesis** Posters | Select from Menu, Old Testament then select **Genesis**  | All available Genesis posters are to be shown - URL */posters/?category=genesis* | PASS |
+| T08 | View All **Genesis** Posters | Select from Menu, Old Testament then select **Genesis**  | All available Genesis posters are to be shown - Endpoint */posters/?category=genesis* | PASS |
 
 <details>
 
@@ -285,7 +285,7 @@ In this online shop there are *52 posters* available.
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T09 | View All **Exodus** Posters | Select from Menu, Old Testament then select **Exodus**  | All available Exodus posters are to be shown - URL */posters/?category=exodus* | PASS |
+| T09 | View All **Exodus** Posters | Select from Menu, Old Testament then select **Exodus**  | All available Exodus posters are to be shown - Endpoint */posters/?category=exodus* | PASS |
 
 <details>
 
@@ -298,7 +298,7 @@ In this online shop there are *52 posters* available.
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T10 | View All **Numbers** Posters | Select from Menu, Old Testament then select **Numbers**  | All available Numbers posters are to be shown - URL */posters/?category=numbers*| PASS |
+| T10 | View All **Numbers** Posters | Select from Menu, Old Testament then select **Numbers**  | All available Numbers posters are to be shown - Endpoint */posters/?category=numbers*| PASS |
 
 <details>
 
@@ -312,7 +312,7 @@ In this online shop there are *52 posters* available.
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T11 | View All **Joshua** Posters | Select from Menu, Old Testament then select **Joshua**  | All available Joshua posters are to be shown - URL */posters/?category=joshua* | PASS |
+| T11 | View All **Joshua** Posters | Select from Menu, Old Testament then select **Joshua**  | All available Joshua posters are to be shown - Endpoint */posters/?category=joshua* | PASS |
 
 <details>
 
@@ -325,7 +325,7 @@ In this online shop there are *52 posters* available.
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T12 | View All **Jesus** Posters | Select from Menu, New Testament then select **Jesus**  | All available Jesus posters are to be shown - URL */posters/?category=jesus* | PASS |
+| T12 | View All **Jesus** Posters | Select from Menu, New Testament then select **Jesus**  | All available Jesus posters are to be shown - Endpoint */posters/?category=jesus* | PASS |
 
 <details>
 
@@ -343,7 +343,7 @@ In this online shop there are *52 posters* available.
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T13 | View All **The Apostles** Posters | Select from Menu, New Testament then select **Apostles**  | All available Apostles posters are to be shown - URL */posters/?category=apostles* | PASS |
+| T13 | View All **The Apostles** Posters | Select from Menu, New Testament then select **Apostles**  | All available Apostles posters are to be shown - Endpoint */posters/?category=apostles* | PASS |
 
 <details>
 
@@ -368,11 +368,11 @@ There are two ways of sorting
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T14 | Sort Posters **By Price**, *Ascending Order* | Select from Menu, All Posters then select **By Price**  | Posters shown, cheapest at the top, lowest at the bottom - URL */posters/?sort=price&direction=asc* | PASS |
+| T14 | Sort Posters **By Price**, *Ascending Order* | Select from Menu, All Posters then select **By Price**  | Posters shown, cheapest at the top, lowest at the bottom - Endpoint */posters/?sort=price&direction=asc* | PASS |
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T15 | Sort Posters **By Price**, *Ascending Order* - Method 2 | From the Sort Selector, select **Price (low to high)**  | Posters shown, cheapest at the top, lowest at the bottom - URL */posters/?sort=price&direction=asc* | PASS |
+| T15 | Sort Posters **By Price**, *Ascending Order* - Method 2 | From the Sort Selector, select **Price (low to high)**  | Posters shown, cheapest at the top, lowest at the bottom - Endpoint */posters/?sort=price&direction=asc* | PASS |
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/8e40bde7-608d-43e7-82c1-8f500df8b8b1)
 
@@ -393,7 +393,7 @@ Most expensive at the bottom
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T16 | Sort Posters **By Price**, *Descending Order* | From the Sort Selector, select **Price (high to low)**  | Posters shown, most expensive at top, cheapest at the bottom - URL */posters/?sort=price&direction=desc* | PASS |
+| T16 | Sort Posters **By Price**, *Descending Order* | From the Sort Selector, select **Price (high to low)**  | Posters shown, most expensive at top, cheapest at the bottom - Endpoint */posters/?sort=price&direction=desc* | PASS |
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/3b8410dc-7de8-46dc-a270-b7c50bfdcc2d)
 
@@ -413,11 +413,11 @@ Cheapest at the bottom
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T17 | Sort Posters **By Rating**, *Descending Order* | Select from Menu, All Posters then select **By Rating** | Posters shown, highest rate at the top, lowest rating at the bottom - URL */?sort=rating&direction=desc* | PASS |
+| T17 | Sort Posters **By Rating**, *Descending Order* | Select from Menu, All Posters then select **By Rating** | Posters shown, highest rate at the top, lowest rating at the bottom - Endpoint */?sort=rating&direction=desc* | PASS |
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T18 | Sort Posters **By Rating**, *Descending Order* - Method 2 | From the Sort Selector, select **Rating (high to low)** | Posters shown, highest rate at the top, lowest rating at the bottom - URL */?sort=rating&direction=desc* | PASS |
+| T18 | Sort Posters **By Rating**, *Descending Order* - Method 2 | From the Sort Selector, select **Rating (high to low)** | Posters shown, highest rate at the top, lowest rating at the bottom - Endpoint */?sort=rating&direction=desc* | PASS |
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ff3b83b8-8320-4527-ab85-063c40ba69c6)
 
@@ -437,7 +437,7 @@ Lowest ratings at the bottom
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T19 | Sort Posters **By Rating**, *Ascending Order* | From the Sort Selector, select **Rating (low to high)** | Posters shown, lowest rating at the top, highest rating at the bottom - URL *?sort=rating&direction=asc* | PASS |
+| T19 | Sort Posters **By Rating**, *Ascending Order* | From the Sort Selector, select **Rating (low to high)** | Posters shown, lowest rating at the top, highest rating at the bottom - Endpoint *?sort=rating&direction=asc* | PASS |
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/bb10ad19-74e9-4022-9ec3-50c23de23218)
 
@@ -458,11 +458,11 @@ Highest ratings at the bottom
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T20 | Sort Posters **By Category**, *A-Z* | Select from Menu, All Posters then select **By Category**  | Posters shown in Alphabetical Order of Category - URL */posters/?sort=category&direction=asc* | PASS |
+| T20 | Sort Posters **By Category**, *A-Z* | Select from Menu, All Posters then select **By Category**  | Posters shown in Alphabetical Order of Category - Endpoint */posters/?sort=category&direction=asc* | PASS |
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T21 | Sort Posters **By Category**, *A-Z* - Method 2 | From the Sort Selector, select **Category (A-Z)**  | Posters shown in Alphabetical Order of Category - URL */posters/?sort=category&direction=asc* | PASS |
+| T21 | Sort Posters **By Category**, *A-Z* - Method 2 | From the Sort Selector, select **Category (A-Z)**  | Posters shown in Alphabetical Order of Category - Endpoint */posters/?sort=category&direction=asc* | PASS |
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ac51d05d-e79b-4a35-945e-e3a8c8653577)
 
@@ -477,7 +477,7 @@ Highest ratings at the bottom
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T22 | Sort Posters **By Category**, *Z-A* | From the Sort Selector, select **Category (Z-A)**  | Posters shown in Descending Alphabetical Order of Category - URL */posters/?sort=category&direction=desc* | PASS |
+| T22 | Sort Posters **By Category**, *Z-A* | From the Sort Selector, select **Category (Z-A)**  | Posters shown in Descending Alphabetical Order of Category - Endpoint */posters/?sort=category&direction=desc* | PASS |
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/952f6bbc-95cd-428d-b230-f47883b1fec9)
 
@@ -492,11 +492,11 @@ Highest ratings at the bottom
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T23 | Sort Posters with **All Posters**| Select from Menu, All Posters then select **All Posters**  | All **52** Posters shown - Default view - URL */posters/* | PASS |
+| T23 | Sort Posters with **All Posters**| Select from Menu, All Posters then select **All Posters**  | All **52** Posters shown - Default view - Endpoint */posters/* | PASS |
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T24 | Sort Posters with **All Posters** - Method 2 | From the Sort Selector, select **Sort by...**  | All **52** Posters shown - Default view - URL */posters/* | PASS |
+| T24 | Sort Posters with **All Posters** - Method 2 | From the Sort Selector, select **Sort by...**  | All **52** Posters shown - Default view - Endpoint */posters/* | PASS |
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/911f4bfa-feeb-4398-9356-a88ea1d278e2)
 
@@ -511,7 +511,7 @@ Highest ratings at the bottom
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T25 | Sort Posters **By Name**, *A-Z* | From the Sort Selector, select **Name (A-Z)**  | Posters shown in Alphabetical Order of Poster Name - URL */posters/?sort=name&direction=asc* | PASS |
+| T25 | Sort Posters **By Name**, *A-Z* | From the Sort Selector, select **Name (A-Z)**  | Posters shown in Alphabetical Order of Poster Name - Endpoint */posters/?sort=name&direction=asc* | PASS |
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fdcab32a-27a0-4287-8d12-b8fb3ad0b276)
 
@@ -525,7 +525,7 @@ Highest ratings at the bottom
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T26 | Sort Posters **By Name**, *Z-A* | From the Sort Selector, select **Name (Z-A)**  | Posters shown in Descending Alphabetical Order of Poster Name - URL */posters/?sort=Name&direction=desc* | PASS |
+| T26 | Sort Posters **By Name**, *Z-A* | From the Sort Selector, select **Name (Z-A)**  | Posters shown in Descending Alphabetical Order of Poster Name - Endpoint */posters/?sort=Name&direction=desc* | PASS |
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ecc78c53-de13-4ff9-b761-2c53ead26c7f)
 
@@ -538,17 +538,61 @@ Highest ratings at the bottom
 </details>
 
 
+### Epic: Shopping Bag Functionality
+
+This is broken down into the following
+
+<details>
+  <summary>User Stories</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e1062050-7c1c-40c3-b85e-df3fc6ef71c5)
+
+
+</details>
+
+**User Tasks:**
+1. When the user selects the Shopping Bag Icon ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ffa955a2-b5c9-457b-9db5-1d0de845e4d4)  <br> The user is taken to the shopping bag page whereby the user can see the bag contents.
+2. From the shopping bag page the user has options to continue to add further posters to the bag
+3. When use clicks Add To Bag ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/faac98c5-18d9-430d-978c-4df8c3a8d272)
+<br> The Shopping Bag is adjusted by the quantity of posters that the user has selected
+4. The quantities of Posters that have already been added to the bag can be increased or decreased
+5. Posters can be removed from the bag even to the point that the bag is empty
+6. The user can always see a running total each time, posters are added to or removed from the bag
+7. Validation is performed when entering poster quantities
 
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T08 | View All Genesis Posters | Select from Menu, Old Testament then select **Genesis**  | All available Genesis posters are to be shown | PASS |
+| T27 | Option to Keep Shopping after adding to the bag | On the Details page of a poster after entering adding poster to the bag, click KEEP SHOPPING  | The user is taken to the *Shopping* page | PASS |
+* After adding poster (ID 5) to the bag the endpoint is *bag/add/5/* and the bag was updated accordingly<br><br>
+* When ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/0bead797-ae67-49fe-a768-d6c1f8380dc7) was clicked
+<br> the endpoint was changed to *posters/* which reflects the *Shopping* page i.e. the view of all posters
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T28 | Validation of Quantities | On the Details page of a poster enter an illegal quantity  | The user would be informed that such quantities can to be entered | PASS |
 
 <details>
 
-<summary>Display of Genesis Posters</summary>
+<summary>Quantity Validation - Trying to enter a negative number</summary>
 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5d86495b-8305-4ad7-9db1-d54acb15bccf)
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/423164ab-94ed-4494-a963-1e181237374b)
+
+</details>
+
+<details>
+
+<summary>Quantity Validation - Trying to enter a number greater than 99</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e5b82ae3-4d96-4613-9480-4d7a9c871a26)
+
+</details>
+
+<details>
+
+<summary>Quantity Validation - Trying to enter a decimal number</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fb4f72fd-dd0c-4b92-9d7f-907260640ef7)
 
 </details>
 
@@ -617,7 +661,7 @@ Highest ratings at the bottom
 
 **User Tasks:**
 1. A successful search consists of whether the search term appears in the Poster Name or the Poster Description
-2. Enter the search parameters via the URL to perform a search e.g. */posters/?query=**saul*** to bring up all the posters with the search term *saul* in them
+2. Enter the search parameters via endpoints to perform a search e.g. */posters/?query=**saul*** to bring up all the posters with the search term *saul* in them
 3. Use the Searchbar to enter the search term
 4. Both methods should show identical results
 5. Suitable messages when a null string is entered or null search results
@@ -625,7 +669,7 @@ Highest ratings at the bottom
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T0x | Search For Posters By Name | Either by using the URL or Searchbar test various search terms| Any posters with matching names displayed | PASS |
+| T0x | Search For Posters By Name | Either by using the Endpoint or Searchbar test various search terms| Any posters with matching names displayed | PASS |
 
 <details>
 <summary>/posters/?query=saul</summary>
@@ -645,7 +689,7 @@ Highest ratings at the bottom
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T0x | Search For Posters By Description | Either by using the URL or Searchbar test various search terms| Any posters with matching descriptions displayed | PASS |
+| T0x | Search For Posters By Description | Either by using the Endpoint or Searchbar test various search terms| Any posters with matching descriptions displayed | PASS |
 
 */posters/?query=BED* matched 5 posters 
 
@@ -717,7 +761,7 @@ This is broken down into the following
 
 </details>
 
-User Tasks:
+**User Tasks:**
 1. Implement Navbar 
 2. Demonstrate TODO
 3. TODO
@@ -752,7 +796,7 @@ Criteria:
 2. Verification by Email is mandatory
 3. Minimum username length is 4 characters
 
-User Tasks:
+**User Tasks:**
 1. Update the Admin domain of the default site to **biblia.example.com**
 2. Demonstrate that the user can Register using a username and password
 3. Demonstrate that the user can Login to the site
