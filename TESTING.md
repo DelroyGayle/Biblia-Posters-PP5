@@ -537,6 +537,81 @@ Highest ratings at the bottom
 
 </details>
 
+### Epic: Search for Posters
+
+<details>
+  <summary>User Story</summary>
+   
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/2d721ad9-5bd9-4fef-966d-85c6f0ec36d2)
+
+</details>
+
+**User Tasks:**
+1. A successful search consists of whether the search term appears in the Poster Name or the Poster Description
+2. Enter the search parameters via endpoints to perform a search e.g. */posters/?query=**saul*** to bring up all the posters with the search term *saul* in them
+3. Use the Searchbar to enter the search term
+4. Both methods should show identical results
+5. Suitable messages when a null string is entered or null search results
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T27 | Search For Posters By Name | Either by using the Endpoint or Searchbar test various search terms| Any posters with matching names displayed | PASS |
+
+<details>
+<summary>/posters/?query=saul</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/0646712d-33e8-491a-9ecc-ef74159f91a9)
+  
+</details>
+
+<details>
+<summary>/posters/?query=ethio</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/3bda67f6-038b-4116-8f18-4ed186f1b205)
+
+</details>
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T28 | Search For Posters By Description | Either by using the Endpoint or Searchbar test various search terms| Any posters with matching descriptions displayed | PASS |
+
+*/posters/?query=BED* matched 5 posters 
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/4da87e73-00f3-477f-9994-895a5e3e8285)
+
+<details>
+
+<summary>What follows are 2 posters where the match was in the descriptions</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fcca6530-f744-4103-832a-c2c1fcaef91a)
+
+View the description then *used CTRL-F and 'bed' to highlight that the searches were successful*
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5e59d029-1f07-484e-896f-83f2591af1dc)
+ 
+</details>
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T29 | Null Search Toast/Message Displayed | Enter nothing in the Searchbar | A suitable message ought to be displayed | PASS |
+
+<details>
+<summary>Null Entry in Searchbar</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e8160d1b-ba71-44c3-aa54-f54fcffbca2f)
+
+</details>
+
+| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
+| ------------- | ------------- | -------------    | ------------- | ------------- |
+| T30 | Nonexistent Search Toast/Message Displayed | Enter a search term in the Searchbar that does not exist in any of the posters | A suitable message ought to be displayed | PASS |
+
+<details>
+<summary>/posters/?query=HELLO</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b93c8664-ba08-439a-a9b7-b392a15dc771)
+  
+</details>
 
 ### Epic: Shopping Bag Functionality
 
@@ -563,14 +638,14 @@ This is broken down into the following
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T27 | Option to Keep Shopping after adding to the bag | On the Details page of a poster after entering adding poster to the bag, click KEEP SHOPPING  | The user is taken to the *Shopping* page | PASS |
+| T31 | Option to Keep Shopping after adding to the bag | On the Details page of a poster after entering adding poster to the bag, click KEEP SHOPPING  | The user is taken to the *Shopping* page | PASS |
 * After adding poster (ID 5) to the bag the endpoint is *bag/add/5/* and the bag was updated accordingly<br><br>
 * When ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/0bead797-ae67-49fe-a768-d6c1f8380dc7) was clicked
 <br> the endpoint was changed to *posters/* which reflects the *Shopping* page i.e. the view of all posters
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T28 | Validation of Quantities | On the Details page of a poster enter an illegal quantity  | The user would be informed that such quantities can to be entered | PASS |
+| T32 | Validation of Quantities | On the Details page of a poster enter an illegal quantity  | The user would be informed that such quantities can to be entered | PASS |
 
 <details>
 
@@ -649,86 +724,6 @@ This is broken down into the following
 | ------------- | ------------- | -------------    | ------------- | ------------- |
 | T02 | View Available Posters | Click the Shop Now button from the Homepage | All available (52) posters are to be shown | PASS |
    
-
-### Epic: Search for Posters
-
-<details>
-  <summary>User Story</summary>
-   
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/2d721ad9-5bd9-4fef-966d-85c6f0ec36d2)
-
-</details>
-
-**User Tasks:**
-1. A successful search consists of whether the search term appears in the Poster Name or the Poster Description
-2. Enter the search parameters via endpoints to perform a search e.g. */posters/?query=**saul*** to bring up all the posters with the search term *saul* in them
-3. Use the Searchbar to enter the search term
-4. Both methods should show identical results
-5. Suitable messages when a null string is entered or null search results
-
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T0x | Search For Posters By Name | Either by using the Endpoint or Searchbar test various search terms| Any posters with matching names displayed | PASS |
-
-<details>
-<summary>/posters/?query=saul</summary>
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/0646712d-33e8-491a-9ecc-ef74159f91a9)
-  
-</details>
-
-<details>
-<summary>/posters/?query=ethio</summary>
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/3bda67f6-038b-4116-8f18-4ed186f1b205)
-
-  
-</details>
-
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T0x | Search For Posters By Description | Either by using the Endpoint or Searchbar test various search terms| Any posters with matching descriptions displayed | PASS |
-
-*/posters/?query=BED* matched 5 posters 
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/4da87e73-00f3-477f-9994-895a5e3e8285)
-
-<details>
-
-<summary>What follows are 2 posters where the match was in the descriptions</summary>
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fcca6530-f744-4103-832a-c2c1fcaef91a)
-
-View the description then *used CTRL-F and 'bed' to highlight that the searches were successful*
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5e59d029-1f07-484e-896f-83f2591af1dc)
- 
-</details>
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T0x | Null Search Toast/Message Displayed | Enter nothing in the Searchbar | A suitable message ought to be displayed | PASS |
-
-<details>
-<summary>Null Entry in Searchbar</summary>
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e8160d1b-ba71-44c3-aa54-f54fcffbca2f)
-
-</details>
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T0x | Nonexistent Search Toast/Message Displayed | Enter a search term in the Searchbar that does not exist in any of the posters | A suitable message ought to be displayed | PASS |
-
-<details>
-<summary>/posters/?query=HELLO</summary>
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b93c8664-ba08-439a-a9b7-b392a15dc771)
-  
-</details>
-
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
