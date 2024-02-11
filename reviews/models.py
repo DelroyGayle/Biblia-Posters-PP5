@@ -9,13 +9,15 @@ class Review(models.Model):
     """
     This model is used for storing and maintaining
     Poster Reviews
-    Only users who have purchased a particular poster
+    Only users who have purchased the poster in question
     can review it.
     """
+
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     poster = models.OneToOneField(Poster, on_delete=models.CASCADE)
+    user_displayed_name = models.CharField(max_length=40, blank=True)
     title = models.CharField(max_length=40)
-    review = models.TextField()
+    content = models.TextField()
     rating = models.PositiveIntegerField(default=5,
                                          validators=[MinValueValidator(0),
                                                      MaxValueValidator(5)])

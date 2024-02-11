@@ -6,9 +6,43 @@ class ReviewForm(forms.ModelForm):
 
     class Meta:
         model = Review
-        fields = '__all__'
+        exclude = ('user', 'poster')
 
     def __init__(self, *args, **kwargs):
+        """
+        Fetch the user's full name
+        Add placeholders and classes
+        and set autofocus on first field
+        """
         super().__init__(*args, **kwargs)
-        for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0'
+        placeholders = {
+            'user_displayed_name': (
+                'Amend as you wish or blank to post review anonymously'
+            ),
+            'title': 'Title of your review',
+            'content': 'Your review',
+            'rating': 'Your overall rating',
+        }
+
+        self.fields['user_displayed_name'].widget.attrs = (
+            {
+              'class': 'border-black rounded-0',
+              'placeholder': 'Blank to post review anonymously'}
+        )
+
+        self.fields['title'].widget.attrs = (
+            {
+              'class': 'border-black rounded-0',
+              'placeholder': 'Title of your review'}
+        )
+        self.fields['content'].widget.attrs = (
+            {
+              'class': 'border-black rounded-0',
+              'placeholder': 'Your review'}
+        )
+        self.fields['rating'].widget.attrs = (
+            {
+              'class': 'border-black rounded-0',
+              'placeholder': 'Your overall rating (0-5)'}
+        )
+        self.fields['user_displayed_name'].widget.attrs['autofocus'] = True
