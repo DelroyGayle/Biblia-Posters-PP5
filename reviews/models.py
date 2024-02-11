@@ -15,7 +15,7 @@ class Review(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     poster = models.OneToOneField(Poster, on_delete=models.CASCADE)
     title = models.CharField(max_length=40)
-    remark = models.TextField()
+    review = models.TextField()
     rating = models.PositiveIntegerField(default=5,
                                          validators=[MinValueValidator(0),
                                                      MaxValueValidator(5)])
