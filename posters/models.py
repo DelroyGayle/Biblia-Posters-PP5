@@ -16,6 +16,9 @@ class Category(models.Model):
 
 
 class Poster(models.Model):
+    """
+    This model is used for storing and maintaining Posters
+    """
     category = models.ForeignKey('Category', null=True, blank=True,
                                  on_delete=models.SET_NULL)
     sku = models.CharField(max_length=20, null=True, blank=True)
