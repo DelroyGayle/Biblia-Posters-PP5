@@ -15,6 +15,8 @@ class Review(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     poster = models.OneToOneField(Poster, on_delete=models.CASCADE)
+    created_at = models.DateField(auto_now=True)
+    amended_at = models.DateField(auto_now_add=True)
     user_displayed_name = models.CharField(max_length=40, blank=True)
     title = models.CharField(max_length=40)
     content = models.TextField()

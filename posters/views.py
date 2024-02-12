@@ -107,4 +107,6 @@ def poster_details(request, poster_id):
     context = {
         'poster': poster,
     }
+    request.session['poster_id'] = poster_id
+    request.session['current_poster_path'] = request.get_full_path()
     return render(request, 'posters/poster_details.html', context)

@@ -56,6 +56,10 @@ body {
     display:none;
 }
 
+.hide-text {
+    visibility: hidden;
+}
+
 .navbar-colour {
 	background-color: var(--main-bg-colour);
 }

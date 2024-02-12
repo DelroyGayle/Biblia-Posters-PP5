@@ -68,6 +68,12 @@
                         {% if 1 %}
                             <small>
                                 <i class="fas fa-commenting mr-1"></i>
+                                <a href="{% url 'add_review' %}" style="margin-left: 0.25rem;">Review - Add</a>
+                                <span style="visibility: hidden;"> | Delete</span>
+                            </small>
+                        {% else %}
+                            <small>
+                                <i class="fas fa-commenting mr-1"></i>
                                 <a href="" style="margin-left: 0.25rem;">Review - Edit</a> |
                                 <a class="text-danger" href="">Delete</a>
                             </small>
