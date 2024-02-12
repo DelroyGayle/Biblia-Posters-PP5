@@ -19,7 +19,7 @@ class Order(models.Model):
     """ Model used to record all orders """
     order_number = models.CharField(max_length=32,
                                     null=False, editable=False)
-    user_profile = models.ForeignKey(UserProfile, 
+    user_profile = models.ForeignKey(UserProfile,
                                      on_delete=models.SET_NULL,
                                      null=True, blank=True,
                                      related_name='orders')
@@ -111,6 +111,20 @@ class OrderLineItem(models.Model):
         return f'SKU {self.poster.sku} on order {self.order.order_number}'
 
 
+class Purchaser(models.Model):
+    """
+    Model used to record 'every user' that has purchased
+    a poster. This is an alternative model to be used
+    as a link to the User model
+    To handle deletions of Reviews and Wishlists
+    in the case that a 'user' has been deleted
+    """
+    purchaser = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'{self.purchaser.get_username()}'
+
+
 class UserPurchasedPosters(models.Model):
     """
     Model used to record 'by user' the posters that the user had purchased.
@@ -119,8 +133,13 @@ class UserPurchasedPosters(models.Model):
     This is recorded in order to verify that the user has purchased a poster
     in order to allow the user to add a review about the purchased poster
     """
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    poster = models.OneToOneField(Poster, on_delete=models.CASCADE)
+    user_id = models.CharField(max_length=150, null=True)
+    poster_id = models.IntegerField(null=True)
+
+    class Meta:
+        verbose_name_plural = "User Purchased Posters"
 
     def __str__(self):
-        return f'self.user.get_username() purchased SKU {self.poster.sku}'
+        theposter = get_object_or_404(Poster, pk=self.poster_id)
+        return (f'{self.user_id.get_username()} purchased SKU '
+                f'{self.poster_id.sku}')
