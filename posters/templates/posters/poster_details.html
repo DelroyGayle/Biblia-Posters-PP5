@@ -156,26 +156,24 @@
             <hr>
             {% for review in poster_reviews %}
             <div class="row">
-                <h3 class="col-12 mb-1">
-                    <strong>Review by {{ review.user }}</strong>
-                    <p>Review written</p>
+                <h2 class="col-12 mb-1">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <strong  style="color:brown;"> {{ review.user }}</strong>
+                    
                 </h3>
                 <div class="col-12 mb-1">
-                    {% if review.rating %}
-                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ review.rating }} / 5</small>
-                    {% else %}
-                    <small class="text-muted">No Rating</small>
-                    {% endif %}
+                    
+                    <i class="fas fa-star mr-1 style="color:yellow;"></i>{{ review.rating }} / 5</p>
+                    <h2>{{ review.title }}</h2>
                 </div>
-                <h2 class="col-12">
-                    {{ review.title }}
-                </h2>
+                    <p style="padding-left: 1rem;"><strong>Reviewed on 23rd January 2024</strong></p>
             </div>
-            <div class="col-12">
-                <p>{{ review.content }}</p>
-            </div>
+            <h5 style="margin-left: -1rem;" class="col-12">
+                {{ review.content }}
+            </h5>
+            <hr>
         </div>
-        <hr>
+        
         {% endfor %}
     </div>
     {% endif %}
