@@ -1,21 +1,49 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404
+from django.contrib.auth.models import User
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from posters.models import Poster
 from .forms import ReviewForm
 
+
+@login_required
 def add_review(request):
     """ Add a review """
     # TODO
-    poster_id = request.session.get('poster_id')
+
     current_poster_path = request.session.get('current_poster_path')
-    # _ = get_object_or_404(Poster, pk=poster_id)
-    form = ReviewForm(
-        initial={'user_displayed_name': request.user.get_username()}
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            # Update mandatory fields
+            the_username = request.user.get_username()
+            review.user = get_object_or_404(User, username=the_username)
+            poster_id = request.session.get('poster_id')
+            review.poster = get_object_or_404(Poster, pk=poster_id)
+            # trim the fields
+            review.user_displayed_name = review.user_displayed_name.strip()
+            review.title = review.title.strip()
+            review.content = review.content.strip()
+            print("REVIEW")
+            print(review)
+            # Save the new review
+            review.save()
+            messages.success(request, 'Successfully added review!')
+            return redirect(current_poster_path)
+        else:
+            messages.error(request, 'Failed to add review. Please ensure the form is valid.')
+    else:
+        form = ReviewForm(
+            initial={'user_displayed_name': request.user.get_username()}
     )
+
     template = 'reviews/add_review.html'
-    print("HELLO",current_poster_path )
     context = {
         'form': form,
         'poster_id': poster_id,
         'current_poster_path': current_poster_path
     }
 
-    return render(request, template, context)
+    return render(request, template, context)    
