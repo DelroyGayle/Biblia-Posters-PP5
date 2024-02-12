@@ -11,6 +11,7 @@ from .models import Order, OrderLineItem
 from posters.models import Poster
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
+from checkout.models import UserPurchasedPosters
 
 import stripe
 import json
@@ -60,6 +61,8 @@ def handle_POST_method(request):
 
         # Iterate through the Bag's Contents
         # Save each Order Line to the Database
+        # Keep a list of each poster purchased
+        posters_list = []
         for item_id, item_quantity in bag.items():
             try:
                 poster_instance = Poster.objects.get(id=item_id)
@@ -69,6 +72,8 @@ def handle_POST_method(request):
                         quantity=item_quantity,
                     )
                 order_line_item.save()
+                posters_list.append(item_id)  # TODO
+                print(posters_list)
 
             except Poster.DoesNotExist:
 
@@ -88,6 +93,17 @@ def handle_POST_method(request):
         """
         request.session['save_info'] = ('save-info'
                                         in request.POST)
+        
+        """
+        Save the list of all purchased posters
+        for Reviews purposes
+        """
+        if request.user.is_authenticated:
+            request.session['purchased_posters'] = posters_list
+        else:
+            # Just in case if it exists
+            del request.session['purchased_posters']
+        
         # Success Page
         return redirect(reverse('checkout_success',
                                 args=[order.order_number]))
@@ -202,6 +218,20 @@ def checkout(request):
     return render(request, template, context)
 
 
+def record_each_poster(request, user, purchased_posters):
+    """
+    Store a record of every poster purchased
+    by each registered user - for Reviews purposes
+    """
+
+    for eachposter in purchased_posters:
+        obj, created = UserPurchasedPosters.objects.get_or_create(
+                user_id = user,
+                poster_id = eachposter)
+    del request.session['purchased_posters']
+
+
+
 def checkout_success(request, order_number):
     """
     Handle successful checkouts
@@ -216,6 +246,13 @@ def checkout_success(request, order_number):
         # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
+        print("PROFILE/CHECKOUT", profile)
+        # Record the user with each poster purchased
+        purchased_posters = request.session.get('purchased_posters')
+        if purchased_posters:
+            username = request.user.get_username()
+            print("UP", request.user, username, purchased_posters)
+            record_each_poster(request, username, purchased_posters)
 
         # Save the user's info
         if save_info:

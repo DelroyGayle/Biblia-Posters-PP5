@@ -7,10 +7,10 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
-
+from django.shortcuts import get_object_or_404
 from django_countries.fields import CountryField
-
 from django.contrib.auth.models import User
+
 from posters.models import Poster
 from profiles.models import UserProfile
 
@@ -141,5 +141,6 @@ class UserPurchasedPosters(models.Model):
 
     def __str__(self):
         theposter = get_object_or_404(Poster, pk=self.poster_id)
-        return (f'{self.user_id.get_username()} purchased SKU '
-                f'{self.poster_id.sku}')
+        return (f'{self.user_id} purchased '
+                f'ID: {self.poster_id} '
+                f'SKU: {theposter.sku}')
