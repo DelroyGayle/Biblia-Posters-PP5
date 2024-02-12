@@ -13,6 +13,7 @@ def add_review(request):
     # TODO
 
     current_poster_path = request.session.get('current_poster_path')
+    poster_id = request.session.get('poster_id')
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
@@ -33,7 +34,12 @@ def add_review(request):
             messages.success(request, 'Successfully added review!')
             return redirect(current_poster_path)
         else:
-            messages.error(request, 'Failed to add review. Please ensure the form is valid.')
+            messages.error(request, (
+                'Failed to add review. '
+                'Please ensure the form is valid. '
+                'Rating must be a number in the range '
+                '0 to 5')
+            )
     else:
         form = ReviewForm(
             initial={'user_displayed_name': request.user.get_username()}
