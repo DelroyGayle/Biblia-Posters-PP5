@@ -72,8 +72,8 @@ def handle_POST_method(request):
                         quantity=item_quantity,
                     )
                 order_line_item.save()
-                posters_list.append(item_id)  # TODO
-                print(posters_list)
+                # Record the purchased poster
+                posters_list.append(item_id) 
 
             except Poster.DoesNotExist:
 
@@ -101,8 +101,8 @@ def handle_POST_method(request):
         if request.user.is_authenticated:
             request.session['purchased_posters'] = posters_list
         else:
-            # Just in case if it exists
-            del request.session['purchased_posters']
+            # Just in case it exists
+            request.session.pop('purchased_posters', None)
         
         # Success Page
         return redirect(reverse('checkout_success',
@@ -246,12 +246,10 @@ def checkout_success(request, order_number):
         # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
-        print("PROFILE/CHECKOUT", profile)
         # Record the user with each poster purchased
         purchased_posters = request.session.get('purchased_posters')
         if purchased_posters:
             username = request.user.get_username()
-            print("UP", request.user, username, purchased_posters)
             record_each_poster(request, username, purchased_posters)
 
         # Save the user's info
