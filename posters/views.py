@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Poster, Category
+from reviews.models import Review
 
 
 def handle_sorting(request, the_sort_direction, posters):
@@ -103,9 +104,12 @@ def poster_details(request, poster_id):
     """ A view to show individual poster details """
 
     poster = get_object_or_404(Poster, pk=poster_id)
+    poster_reviews = Review.objects.filter(poster=poster_id)
+    print(poster_reviews)
 
     context = {
         'poster': poster,
+        'poster_reviews': poster_reviews,
     }
     request.session['poster_id'] = poster_id
     request.session['current_poster_path'] = request.get_full_path()

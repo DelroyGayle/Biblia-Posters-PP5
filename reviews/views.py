@@ -3,7 +3,10 @@ from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+
 from posters.models import Poster
+from reviews.models import Review
+
 from .forms import ReviewForm
 
 
@@ -46,10 +49,12 @@ def add_review(request):
     )
 
     template = 'reviews/add_review.html'
+    poster_reviews = Review.objects.filter(poster=poster_id)
     context = {
         'form': form,
         'poster_id': poster_id,
-        'current_poster_path': current_poster_path
+        'current_poster_path': current_poster_path,
+        'poster_reviews': poster_reviews,
     }
 
     return render(request, template, context)    
