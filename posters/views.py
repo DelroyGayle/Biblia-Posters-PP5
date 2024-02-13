@@ -5,6 +5,7 @@ from django.db.models.functions import Lower
 
 from .models import Poster, Category
 from reviews.models import Review
+from checkout.models import UserPurchasedPosters
 
 
 def handle_sorting(request, the_sort_direction, posters):
@@ -109,23 +110,119 @@ def poster_details(request, poster_id):
               .order_by('-amended_at').values()
     )
 
-    if poster_reviews:
-        # Preprocess regarding dates and ratings
-        for i in range(len(poster_reviews)):
-            # Format the review date
-            poster_reviews[i]['amended_at'] = (poster_reviews[i]['amended_at']
-                                               .strftime('%d %B %Y'))
-            rating = poster_reviews[i]['rating']
-            # HTML for the golden ratings stars
-            if rating:
-                stars_html = (('<i class="fas fa-star mr-1" '
-                              'style=" color:goldenrod;"></i>') * rating)
-                poster_reviews[i]['rating'] = stars_html
+    (
+        add_review_possible,
+        update_review_possible,
+        reviews
+    ) = preprocess_reviews(poster_reviews, request, poster_id)
+
+    print(
+        add_review_possible,
+        update_review_possible,
+        reviews
+    )
 
     context = {
         'poster': poster,
         'poster_reviews': poster_reviews,
+        'add_review_possible': add_review_possible,
+        'update_review_possible': update_review_possible
     }
     request.session['poster_id'] = poster_id
     request.session['current_poster_path'] = request.get_full_path()
     return render(request, 'posters/poster_details.html', context)
+
+
+def preprocess_reviews(reviews, request, theposter_id):
+    """
+    Handles review's editing options
+    and how reviews are display on the Poster Details Page
+
+    1) If the user is NOT logged in then
+    NO reviews editing options are shown at all
+
+    Otherwise if the user is logged in
+    2) Has the user purchased the poster in question?
+    If NO,
+        NO reviews editing options are shown at all
+
+    If YES,
+    3) Has the user already written a review for this poster?
+        if NO,
+            Display the 'Review - Add' option
+        else
+
+    4)
+         Reorder the list so that the user's reviews APPEARS FIRST.
+         Display the 'Review - Edit|Delete' option
+
+    5) Format the Amend On Date and use this as the Review Date
+    6) Create the HTML to display golden ratings stars
+    """
+
+    add_review_possible = False
+    update_review_possible = False
+    review_index = -1
+    theposter_id = int(theposter_id)
+
+    if reviews:
+        # Preprocess regarding dates and ratings
+        for i in range(len(reviews)):
+            # Format the review date
+            reviews[i]['amended_at'] = (reviews[i]['amended_at']
+                                        .strftime('%d %B %Y'))
+            rating = reviews[i]['rating']
+            # HTML for the golden ratings stars
+            if rating:
+                stars_html = (('<i class="fas fa-star mr-1" '
+                              'style=" color:goldenrod;"></i>') * rating)
+                reviews[i]['rating'] = stars_html
+
+            print(100, request.user.is_authenticated, 
+            request.user.get_username(), reviews[i]['user'],
+            type(theposter_id), type(reviews[i]['poster']) )
+            # Has the user already written a review for this poster?
+            if (request.user.is_authenticated and 
+                request.user.get_username()==reviews[i]['user'] and
+                theposter_id==reviews[i]['poster']):
+                review_index = i
+
+    if not request.user.is_authenticated:
+        # User not logged in - show NO editing options
+        return (
+            add_review_possible,
+            update_review_possible,
+            reviews
+        )
+
+    # Has the user already written a review for this poster?
+    if review_index > -1:
+        """
+        Reorder the list so that the user's reviews APPEARS FIRST.
+        Display the 'Review - Edit|Delete' option
+        """
+        if review_index != 0:
+            update_review_possible = True
+            review = reviews.pop(review_index)
+            reviews.insert(0, review)
+
+        update_review_possible = True
+        return (
+            add_review_possible,
+            update_review_possible,
+            reviews
+        )
+
+    # Has the user purchased the poster in question?
+    username = request.user.get_username()
+    if (UserPurchasedPosters.objects.filter(user_id=username,
+                                            poster_id=theposter_id)
+                            .exists()):
+        # Display the 'Review - Add' option
+        add_review_possible = True
+
+    return (
+        add_review_possible,
+        update_review_possible,
+        reviews
+    )

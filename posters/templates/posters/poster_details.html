@@ -65,18 +65,19 @@
                     {% endif %}
                     <!-- Add Review, Delete Review -->
                     <div class="ml-auto">
-                        {% if 1 %}
-                        <small>
-                            <i class="fas fa-commenting mr-1"></i>
-                            <a href="{% url 'add_review' %}" style="margin-left: 0.25rem;">Review - Add</a>
-                            <span style="visibility: hidden;"> | Delete</span>
-                        </small>
-                        {% else %}
-                        <small>
-                            <i class="fas fa-commenting mr-1"></i>
-                            <a href="" style="margin-left: 0.25rem;">Review - Edit</a> |
-                            <a class="text-danger" href="">Delete</a>
-                        </small>
+                        {% if add_review_possible %}
+                            <small>
+                                <i class="fas fa-commenting mr-1"></i>
+                                <a href="{% url 'add_review' %}" style="margin-left: 0.25rem;">Review - Add</a>
+                                <span style="visibility: hidden;"> | Delete</span>
+                            </small>
+                        {% endif %}
+                        {% if update_review_possible %}
+                            <small>
+                                <i class="fas fa-commenting mr-1"></i>
+                                <a href="" style="margin-left: 0.25rem;">Review - Edit</a> |
+                                <a class="text-danger" href="">Delete</a>
+                            </small>
                         {% endif %}
                     </div>
                 </div>
@@ -159,7 +160,7 @@
                 <div class="row">
                     <h2 class="col-12 mb-1">
                         <i class="fa fa-user" aria-hidden="true"></i>
-                        <strong style="color:brown;"> {{ review.user }}</strong>
+                        <strong style="color:brown;"> {{ review.user_displayed_name |default:"Anonymous"|title }}</strong>
                     </h2>
                     <div class="col-12 mb-1">
                             {% if review.rating %}
