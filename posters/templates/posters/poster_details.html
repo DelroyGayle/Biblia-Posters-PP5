@@ -152,9 +152,9 @@
         <!-- List out all available reviews regarding current poster -->
         {% if poster_reviews %}
         <div class="col-12 offset-lg-4">
-            <hr>
+            <hr style="margin-left: 0; max-width: 50%;">
             <h2 class="logo-font mb-4">Reviews</h2>
-            <hr>
+            <hr style="margin-left: 0; max-width: 50%;">
 
             {% for review in poster_reviews %}
                 <div class="row">
@@ -172,10 +172,10 @@
                     <p style="padding-left: 1rem;"><strong>Reviewed on {{ review.amended_at }}</strong></p>
                 </div>
 
-                <h5 style="margin-left: -1rem; max-width: 50%;" class="col-12">
+                <h5 style="margin-left: -1rem;" class="col-12 col-lg-6">
                     {{ review.content }}
                 </h5>
-                <hr>
+                <hr  style="margin-left: 0; max-width: 50%;">
             {% endfor %}
         </div>
     </div>
