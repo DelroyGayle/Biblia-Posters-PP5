@@ -111,20 +111,6 @@ class OrderLineItem(models.Model):
         return f'SKU {self.poster.sku} on order {self.order.order_number}'
 
 
-class Purchaser(models.Model):
-    """
-    Model used to record 'every user' that has purchased
-    a poster. This is an alternative model to be used
-    as a link to the User model
-    To handle deletions of Reviews and Wishlists
-    in the case that a 'user' has been deleted
-    """
-    purchaser = models.OneToOneField(User, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return f'{self.purchaser.get_username()}'
-
-
 class UserPurchasedPosters(models.Model):
     """
     Model used to record 'by user' the posters that the user had purchased.

@@ -92,3 +92,21 @@ def edit_review(request, review_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """ Delete a review """
+    the_review = get_object_or_404(Review, pk=review_id)
+    current_poster_path = request.session.get('current_poster_path')
+    if request.method == 'POST':
+        the_review.delete()
+        messages.success(request, 'Review successfully deleted!')
+        return redirect(current_poster_path)
+
+    template = 'reviews/delete_review.html'
+    context = {
+        'review': the_review,
+        'current_poster_path': current_poster_path,
+    }        
+    return render(request, template, context)
