@@ -116,6 +116,7 @@ def poster_details(request, poster_id):
         reviews
     ) = preprocess_reviews(poster_reviews, request, poster_id)
 
+    # TODO
     print(
         add_review_possible,
         update_review_possible,
@@ -153,7 +154,7 @@ def preprocess_reviews(reviews, request, theposter_id):
         else
 
     4)
-         Reorder the list so that the user's reviews APPEARS FIRST.
+         Reorder the list so that the user's review APPEARS FIRST.
          Display the 'Review - Edit|Delete' option
 
     5) Format the Amend On Date and use this as the Review Date
@@ -178,9 +179,6 @@ def preprocess_reviews(reviews, request, theposter_id):
                               'style=" color:goldenrod;"></i>') * rating)
                 reviews[i]['rating'] = stars_html
 
-            print(100, request.user.is_authenticated, 
-            request.user.get_username(), reviews[i]['user'],
-            type(theposter_id), type(reviews[i]['poster']) )
             # Has the user already written a review for this poster?
             if (request.user.is_authenticated and 
                 request.user.get_username()==reviews[i]['user'] and
@@ -198,11 +196,10 @@ def preprocess_reviews(reviews, request, theposter_id):
     # Has the user already written a review for this poster?
     if review_index > -1:
         """
-        Reorder the list so that the user's reviews APPEARS FIRST.
+        Reorder the list so that the user's review APPEARS FIRST.
         Display the 'Review - Edit|Delete' option
         """
         if review_index != 0:
-            update_review_possible = True
             review = reviews.pop(review_index)
             reviews.insert(0, review)
 
