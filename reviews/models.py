@@ -16,7 +16,7 @@ class Review(models.Model):
     created_at = models.DateField(auto_now=True)
     amended_at = models.DateField(auto_now_add=True)
     user_displayed_name = models.CharField(max_length=40, blank=True)
-    title = models.CharField(max_length=40)
+    title = models.CharField(max_length=80)
     content = models.TextField()
     rating = models.PositiveIntegerField(default=5,
                                          validators=[MinValueValidator(0),

@@ -158,23 +158,22 @@
             <div class="row">
                 <h2 class="col-12 mb-1">
                     <i class="fa fa-user" aria-hidden="true"></i>
-                    <strong  style="color:brown;"> {{ review.user }}</strong>
-                    
-                </h3>
+                    <strong style="color:brown;"> {{ review.user }}</strong>
+                </h2>
                 <div class="col-12 mb-1">
-                    
-                    <i class="fas fa-star mr-1 style="color:yellow;"></i>{{ review.rating }} / 5</p>
+                    <i class="fas fa-star mr-1 style=" color:yellow;"></i>{{ review.rating }} / 5</p>
                     <h2>{{ review.title }}</h2>
                 </div>
-                    <p style="padding-left: 1rem;"><strong>Reviewed on 23rd January 2024</strong></p>
+                <p style="padding-left: 1rem;"><strong>Reviewed on 23rd January 2024</strong></p>
             </div>
             <h5 style="margin-left: -1rem;" class="col-12">
                 {{ review.content }}
             </h5>
             <hr>
-        </div>
         
+
         {% endfor %}
+    </div>
     </div>
     {% endif %}
 </div>
