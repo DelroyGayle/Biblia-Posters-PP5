@@ -17,6 +17,7 @@ def add_review(request):
 
     current_poster_path = request.session.get('current_poster_path')
     poster_id = request.session.get('poster_id')
+    print(poster_id, type(poster_id))
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
@@ -24,14 +25,16 @@ def add_review(request):
             # Update mandatory fields
             the_username = request.user.get_username()
             review.user = get_object_or_404(User, username=the_username)
-            poster_id = request.session.get('poster_id')
-            review.poster = get_object_or_404(Poster, pk=poster_id)
+            the_poster = get_object_or_404(Poster, pk=poster_id)
+            review.poster = the_poster.id
             # trim the fields
             review.user_displayed_name = review.user_displayed_name.strip()
             review.title = review.title.strip()
             review.content = review.content.strip()
             print("REVIEW")
             print(review)
+            print(review.user, type(review.user))
+            print(review.poster, type(review.poster))
             # Save the new review
             review.save()
             messages.success(request, 'Successfully added review!')

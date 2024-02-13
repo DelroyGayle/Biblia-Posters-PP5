@@ -4,7 +4,6 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 from posters.models import Poster
 
-
 class Review(models.Model):
     """
     This model is used for storing and maintaining
@@ -12,9 +11,8 @@ class Review(models.Model):
     Only users who have purchased the poster in question
     can review it.
     """
-
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    poster = models.OneToOneField(Poster, on_delete=models.CASCADE)
+    user = models.CharField(max_length=150, null=True)
+    poster = models.IntegerField(null=True)
     created_at = models.DateField(auto_now=True)
     amended_at = models.DateField(auto_now_add=True)
     user_displayed_name = models.CharField(max_length=40, blank=True)
