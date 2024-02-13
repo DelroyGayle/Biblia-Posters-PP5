@@ -17,7 +17,6 @@ def add_review(request):
 
     current_poster_path = request.session.get('current_poster_path')
     poster_id = request.session.get('poster_id')
-    print(poster_id, type(poster_id))
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
@@ -31,10 +30,6 @@ def add_review(request):
             review.user_displayed_name = review.user_displayed_name.strip()
             review.title = review.title.strip()
             review.content = review.content.strip()
-            print("REVIEW")
-            print(review)
-            print(review.user, type(review.user))
-            print(review.poster, type(review.poster))
             # Save the new review
             review.save()
             messages.success(request, 'Successfully added review!')
@@ -49,15 +44,14 @@ def add_review(request):
     else:
         form = ReviewForm(
             initial={'user_displayed_name': request.user.get_username()}
-    )
+        )
 
     template = 'reviews/add_review.html'
-    poster_reviews = Review.objects.filter(poster=poster_id)
+    # TODO
     context = {
         'form': form,
         'poster_id': poster_id,
         'current_poster_path': current_poster_path,
-        'poster_reviews': poster_reviews,
     }
 
-    return render(request, template, context)    
+    return render(request, template, context)

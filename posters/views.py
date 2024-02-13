@@ -104,8 +104,23 @@ def poster_details(request, poster_id):
     """ A view to show individual poster details """
 
     poster = get_object_or_404(Poster, pk=poster_id)
-    poster_reviews = Review.objects.filter(poster=poster_id)
-    print(poster_reviews)
+    poster_reviews = list(
+        Review.objects.filter(poster=poster_id)
+              .order_by('-amended_at').values()
+    )
+
+    if poster_reviews:
+        # Preprocess regarding dates and ratings
+        for i in range(len(poster_reviews)):
+            # Format the review date
+            poster_reviews[i]['amended_at'] = (poster_reviews[i]['amended_at']
+                                               .strftime('%d %B %Y'))
+            rating = poster_reviews[i]['rating']
+            # HTML for the golden ratings stars
+            if rating:
+                stars_html = (('<i class="fas fa-star mr-1" '
+                              'style=" color:goldenrod;"></i>') * rating)
+                poster_reviews[i]['rating'] = stars_html
 
     context = {
         'poster': poster,

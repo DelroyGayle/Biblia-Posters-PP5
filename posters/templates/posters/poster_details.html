@@ -16,13 +16,13 @@
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
                 {% if poster.image %}
-                <a href="{{ poster.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid" src="{{ poster.image.url }}" alt="{{ poster.name }}">
-                </a>
+                    <a href="{{ poster.image.url }}" target="_blank">
+                        <img class="card-img-top img-fluid" src="{{ poster.image.url }}" alt="{{ poster.name }}">
+                    </a>
                 {% else %}
-                <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ poster.name }}">
-                </a>
+                    <a href="">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ poster.name }}">
+                    </a>
                 {% endif %}
             </div>
         </div>
@@ -57,11 +57,11 @@
                 <div class="d-flex">
                     <!-- Poster Category -->
                     {% if poster.category %}
-                    <p class="small mt-1 mb-0">
-                        <a class="text-muted" href="{% url 'posters' %}?category={{ poster.category.name }}">
-                            <i class="fas fa-tag mr-1"></i>{{ poster.category.friendly_name }}
-                        </a>
-                    </p>
+                        <p class="small mt-1 mb-0">
+                            <a class="text-muted" href="{% url 'posters' %}?category={{ poster.category.name }}">
+                                <i class="fas fa-tag mr-1"></i>{{ poster.category.friendly_name }}
+                            </a>
+                        </p>
                     {% endif %}
                     <!-- Add Review, Delete Review -->
                     <div class="ml-auto">
@@ -83,9 +83,9 @@
                 <div class="d-flex">
                     <!-- Poster Category -->
                     {% if poster.rating %}
-                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ poster.rating }} / 5</small>
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ poster.rating }} / 5</small>
                     {% else %}
-                    <small class="text-muted">No Rating</small>
+                        <small class="text-muted">No Rating</small>
                     {% endif %}
 
                     <!-- Edit Poster, Delete Poster -->
@@ -154,26 +154,29 @@
             <hr>
             <h2 class="logo-font mb-4">Reviews</h2>
             <hr>
-            {% for review in poster_reviews %}
-            <div class="row">
-                <h2 class="col-12 mb-1">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <strong style="color:brown;"> {{ review.user }}</strong>
-                </h2>
-                <div class="col-12 mb-1">
-                    <i class="fas fa-star mr-1 style=" color:yellow;"></i>{{ review.rating }} / 5</p>
-                    <h2>{{ review.title }}</h2>
-                </div>
-                <p style="padding-left: 1rem;"><strong>Reviewed on 23rd January 2024</strong></p>
-            </div>
-            <h5 style="margin-left: -1rem;" class="col-12">
-                {{ review.content }}
-            </h5>
-            <hr>
-        
 
-        {% endfor %}
-    </div>
+            {% for review in poster_reviews %}
+                <div class="row">
+                    <h2 class="col-12 mb-1">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <strong style="color:brown;"> {{ review.user }}</strong>
+                    </h2>
+                    <div class="col-12 mb-1">
+                            {% if review.rating %}
+                                {% autoescape off %}{{ review.rating }}{% endautoescape %}
+                            {%endif %}
+
+                        <h2>{{ review.title }}</h2>
+                    </div>
+                    <p style="padding-left: 1rem;"><strong>Reviewed on {{ review.amended_at }}</strong></p>
+                </div>
+
+                <h5 style="margin-left: -1rem;" class="col-12">
+                    {{ review.content }}
+                </h5>
+                <hr>
+            {% endfor %}
+        </div>
     </div>
     {% endif %}
 </div>
