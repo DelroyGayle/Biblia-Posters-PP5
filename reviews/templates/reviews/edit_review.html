@@ -16,7 +16,7 @@
             <div class="col-12 col-md-6">
                 <hr>
                 <h2 class="logo-font mb-4">Review Management</h2>
-                <h5 class="text-muted">Add a Review</h5>
+                <h5 class="text-muted">Edit a Review</h5>
                 <p class="text-muted">Amend name as you wish or remove name to post review anonymously</p>
                 <hr>
             </div>
@@ -25,12 +25,12 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 
-                <form method="POST" action="{% url 'add_review' %}" class="form mb-2">
+                <form method="POST" action="{% url 'edit_review' review.id %}" class="form mb-2">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
                         <a class="btn btn-outline-black rounded-0" href='{{ current_poster_path }}'>Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Add Review</button>
+                        <button class="btn btn-black rounded-0" type="submit">Update Review</button>
                     </div>
                 </form>
             </div>            

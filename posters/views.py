@@ -113,21 +113,16 @@ def poster_details(request, poster_id):
     (
         add_review_possible,
         update_review_possible,
+        review_id,
         reviews
     ) = preprocess_reviews(poster_reviews, request, poster_id)
-
-    # TODO
-    print(
-        add_review_possible,
-        update_review_possible,
-        reviews
-    )
 
     context = {
         'poster': poster,
         'poster_reviews': poster_reviews,
         'add_review_possible': add_review_possible,
-        'update_review_possible': update_review_possible
+        'update_review_possible': update_review_possible,
+        'review_id': review_id,
     }
     request.session['poster_id'] = poster_id
     request.session['current_poster_path'] = request.get_full_path()
@@ -163,6 +158,7 @@ def preprocess_reviews(reviews, request, theposter_id):
 
     add_review_possible = False
     update_review_possible = False
+    review_id = False
     review_index = -1
     theposter_id = int(theposter_id)
 
@@ -180,9 +176,9 @@ def preprocess_reviews(reviews, request, theposter_id):
                 reviews[i]['rating'] = stars_html
 
             # Has the user already written a review for this poster?
-            if (request.user.is_authenticated and 
-                request.user.get_username()==reviews[i]['user'] and
-                theposter_id==reviews[i]['poster']):
+            if (request.user.is_authenticated and
+               request.user.get_username() == reviews[i]['user'] and
+               theposter_id == reviews[i]['poster']):
                 review_index = i
 
     if not request.user.is_authenticated:
@@ -190,6 +186,7 @@ def preprocess_reviews(reviews, request, theposter_id):
         return (
             add_review_possible,
             update_review_possible,
+            review_id,
             reviews
         )
 
@@ -203,10 +200,13 @@ def preprocess_reviews(reviews, request, theposter_id):
             review = reviews.pop(review_index)
             reviews.insert(0, review)
 
+        # Now the review in question is at index 0
+        review_id = reviews[0]['id']
         update_review_possible = True
         return (
             add_review_possible,
             update_review_possible,
+            review_id,
             reviews
         )
 
@@ -221,5 +221,6 @@ def preprocess_reviews(reviews, request, theposter_id):
     return (
         add_review_possible,
         update_review_possible,
+        review_id,
         reviews
     )

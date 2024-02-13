@@ -13,8 +13,6 @@ from .forms import ReviewForm
 @login_required
 def add_review(request):
     """ Add a review """
-    # TODO
-
     current_poster_path = request.session.get('current_poster_path')
     poster_id = request.session.get('poster_id')
     if request.method == 'POST':
@@ -47,10 +45,49 @@ def add_review(request):
         )
 
     template = 'reviews/add_review.html'
-    # TODO
     context = {
         'form': form,
-        'poster_id': poster_id,
+        'current_poster_path': current_poster_path,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_review(request, review_id):
+    """ Edit a review """
+
+    the_review = get_object_or_404(Review, pk=review_id)
+    current_poster_path = request.session.get('current_poster_path')
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=the_review)
+        if form.is_valid():
+            review = form.save(commit=False)
+            # trim the fields
+            review.user_displayed_name = review.user_displayed_name.strip()
+            review.title = review.title.strip()
+            review.content = review.content.strip()
+            # Update the review
+            review.save()
+            messages.success(request, 'Successfully updated review!')
+            return redirect(current_poster_path)
+        else:
+            messages.error(request, (
+                'Failed to update review. '
+                'Please ensure the form is valid. '
+                'Rating must be a number in the range '
+                '0 to 5')
+            )
+
+    else:
+        form = ReviewForm(instance=the_review)
+        messages.info(request, f'You are editing {the_review.title}')
+
+    template = 'reviews/edit_review.html'
+    context = {
+        'form': form,
+        'review': the_review,
         'current_poster_path': current_poster_path,
     }
 

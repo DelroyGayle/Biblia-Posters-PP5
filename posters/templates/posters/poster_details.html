@@ -75,7 +75,7 @@
                         {% if update_review_possible %}
                             <small>
                                 <i class="fas fa-commenting mr-1"></i>
-                                <a href="" style="margin-left: 0.25rem;">Review - Edit</a> |
+                                <a href="{% url 'edit_review' review_id %}" style="margin-left: 0.25rem;">Review - Edit</a> |
                                 <a class="text-danger" href="">Delete</a>
                             </small>
                         {% endif %}
@@ -91,7 +91,7 @@
 
                     <!-- Edit Poster, Delete Poster -->
                     <div class="ml-auto">
-                        {% if 1 %}
+                        {% if 0 %}
                         <small>
                             <i class="fas fa-pencil-square mr-3"></i>
                             <a href="" style="margin-left: -0.2rem;">Poster - Edit</a> |
