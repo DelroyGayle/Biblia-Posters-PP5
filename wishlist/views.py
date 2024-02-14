@@ -46,3 +46,16 @@ def my_wishlist(request):
         'posters': posters,
     }
     return render(request, 'wishlist/my_wishlist.html', context)
+
+
+@login_required
+def remove_from_wishlist_page(request, poster_id):
+    """ Remove poster from user's wishlist """
+    (Wishlist.objects.filter(user=request.user.id,
+                             poster=poster_id).delete()
+     )
+    # Show message WITHOUT displaying shopping bag contents
+    # messages.success(request, 'Poster removed from wishlist!')
+    #request.session['show_no_bag'] = True
+    # return render(request, 'wishlist/my_wishlist.html', {})
+    return my_wishlist(request)

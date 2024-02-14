@@ -58,39 +58,11 @@
                     </div>
                 </div>
 
-                <p class="mt-3">{{ poster.description }}</p>
-                <form class="form" action="" method="POST">
+                <form class="form" action="{% url 'add_to_bag' item.poster_id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12">
-                            <p class="mt-3"><strong>Quantity:</strong></p>
-                            <div class="form-group w-50">
-
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-black rounded-0"
-                                            data-item_id="{{ poster.id }}" id="decrement-qty_{{ poster.id }}">
-                                            <span class="icon">
-                                                <i class="fas fa-minus"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-
-
-                                    <div class="input-group-append">
-                                        <button class="increment-qty btn btn-black rounded-0"
-                                            data-item_id="{{ poster.id }}" id="increment-qty_{{ poster.id }}">
-                                            <span class="icon">
-                                                <i class="fas fa-plus"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <a href="{% url 'posters' %}" class="btn btn-outline-black rounded-0 mt-5">
+                            <a href="{% url 'remove_from_wishlist_page' item.poster.id %}" class="btn btn-outline-black rounded-0 mt-5">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
@@ -98,7 +70,10 @@
                             </a>
                             <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                         </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <input type="hidden" name="redirect_url" value="my_wishlist">
+                        <!-- When clicked, add ONE Poster to the Shopping Bag -->
+                        <!-- Then redisplay my_wishlist.html -->
+                        <input type="hidden" name="quantity" value="1">
                     </div>
                 </form>
             </div>
