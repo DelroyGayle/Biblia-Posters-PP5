@@ -154,7 +154,7 @@
         {% if poster_reviews %}
         <div class="col-12 offset-lg-4">
             <hr style="margin-left: 0; max-width: 50%;">
-            <h2 class="logo-font mb-4">Reviews</h2>
+            <h2 class="logo-font mb-4">Review{{ poster_reviews|length|pluralize }}</h2>
             <hr style="margin-left: 0; max-width: 50%;">
 
             {% for review in poster_reviews %}
