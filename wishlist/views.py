@@ -33,3 +33,16 @@ def remove_from_wishlist(request):
     messages.success(request, 'Poster removed from wishlist!')
     request.session['show_no_bag'] = True
     return redirect(reverse('poster_details', args=[poster_id]))
+
+
+@login_required
+def my_wishlist(request):
+    """ Display the user's wishlist """
+
+    # Retrieve the user's wishlist
+    posters = Wishlist.objects.filter(user=request.user.id).order_by('-created_at')
+
+    context = {
+        'posters': posters,
+    }
+    return render(request, 'wishlist/my_wishlist.html', context)
