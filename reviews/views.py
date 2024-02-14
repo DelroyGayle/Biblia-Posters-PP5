@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -15,6 +15,7 @@ def add_review(request):
     """ Add a review """
     current_poster_path = request.session.get('current_poster_path')
     poster_id = request.session.get('poster_id')
+
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
@@ -30,8 +31,10 @@ def add_review(request):
             review.content = review.content.strip()
             # Save the new review
             review.save()
+            # Show message WITHOUT displaying shopping bag contents
             messages.success(request, 'Successfully added review!')
-            return redirect(current_poster_path)
+            request.session['show_no_bag'] = True
+            return redirect(reverse('poster_details', args=[poster_id]))
         else:
             messages.error(request, (
                 'Failed to add review. '
@@ -59,6 +62,7 @@ def edit_review(request, review_id):
 
     the_review = get_object_or_404(Review, pk=review_id)
     current_poster_path = request.session.get('current_poster_path')
+    poster_id = request.session.get('poster_id')
 
     if request.method == 'POST':
         form = ReviewForm(request.POST, instance=the_review)
@@ -70,8 +74,10 @@ def edit_review(request, review_id):
             review.content = review.content.strip()
             # Update the review
             review.save()
+            # Show message WITHOUT displaying shopping bag contents
             messages.success(request, 'Successfully updated review!')
-            return redirect(current_poster_path)
+            request.session['show_no_bag'] = True
+            return redirect(reverse('poster_details', args=[poster_id]))
         else:
             messages.error(request, (
                 'Failed to update review. '
@@ -99,14 +105,18 @@ def delete_review(request, review_id):
     """ Delete a review """
     the_review = get_object_or_404(Review, pk=review_id)
     current_poster_path = request.session.get('current_poster_path')
+    poster_id = request.session.get('poster_id')
+
     if request.method == 'POST':
         the_review.delete()
         messages.success(request, 'Review successfully deleted!')
-        return redirect(current_poster_path)
+        # Show message WITHOUT displaying shopping bag contents
+        request.session['show_no_bag'] = True
+        return redirect(reverse('poster_details', args=[poster_id]))
 
     template = 'reviews/delete_review.html'
     context = {
         'review': the_review,
         'current_poster_path': current_poster_path,
-    }        
+    }
     return render(request, template, context)
