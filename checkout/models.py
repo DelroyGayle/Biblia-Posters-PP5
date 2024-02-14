@@ -128,5 +128,5 @@ class UserPurchasedPosters(models.Model):
     def __str__(self):
         theposter = get_object_or_404(Poster, pk=self.poster_id)
         return (f'{self.user_id} purchased '
-                f'ID: {self.poster_id} '
+                f'POSTER ID: {self.poster_id} '
                 f'SKU: {theposter.sku}')

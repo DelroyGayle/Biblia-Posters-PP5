@@ -6,6 +6,7 @@ from django.db.models.functions import Lower
 from .models import Poster, Category
 from reviews.models import Review
 from checkout.models import UserPurchasedPosters
+from wishlist.models import Wishlist
 
 
 def handle_sorting(request, the_sort_direction, posters):
@@ -117,12 +118,23 @@ def poster_details(request, poster_id):
         reviews
     ) = preprocess_reviews(poster_reviews, request, poster_id)
 
+    # Display wishlist option if user has registered
+    add_to_wishlist = False
+    if request.user.is_authenticated:
+        username = request.user.get_username()
+        # Add to wishlist or Remove from wishlist?
+        add_to_wishlist = not (Wishlist.objects.filter(user=request.user.id,
+                               poster=poster_id)
+                                       .exists()
+                               )
+
     context = {
         'poster': poster,
         'poster_reviews': poster_reviews,
         'add_review_possible': add_review_possible,
         'update_review_possible': update_review_possible,
         'review_id': review_id,
+        'add_to_wishlist': add_to_wishlist,
     }
     request.session['poster_id'] = poster_id
     request.session['current_poster_path'] = request.get_full_path()

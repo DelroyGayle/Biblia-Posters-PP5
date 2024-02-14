@@ -80,7 +80,7 @@ def handle_POST_method(request):
                 messages.error(request, (
                     "One of the posters in your bag was not "
                     "found in our database. "
-                    f"ID Number {id}"
+                    f"POSTER ID Number {id}"
                     "Please call us for assistance!")
                 )
                 # Invalid/Missing Poster therefore delete the Order

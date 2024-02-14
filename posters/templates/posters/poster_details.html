@@ -36,7 +36,7 @@
                         <p class="lead mb-0 text-left font-weight-bold">£{{ poster.price }}</p>
                     </div>
                     <!-- Add to Wishlist, Remove From Wishlist -->
-                    {% if 1 %}
+                    {% if request.user.is_authenticated %}
                     <div class="ml-auto">
                         <div class="d-flex">
                             <div>
@@ -47,8 +47,13 @@
                             <div class="ml-auto">
                                 <small>
                                     <!--TODO-->
-                                    <a href="" style="margin-left: 0.2rem;">Wishlist - Add</a> |
-                                    <a class="text-danger" href="">Delete</a>
+                                    {% if add_to_wishlist %}
+                                    <a href="{% url 'add_to_wishlist' %}" style="margin-left: 0.2rem;">Add to Wishlist</a>
+                                    <!-- This span is for alignment purposes for the above text -->
+                                    <span style="visibility: hidden;"> Delete</span>
+                                    {% else %}
+                                    <a class="text-danger" href="{% url 'remove_from_wishlist' %}" style="margin-left: 0.2rem;">Remove from Wishlist</a>
+                                    {% endif %}
                                 </small>
                             </div>
                         </div>
@@ -70,7 +75,8 @@
                             <small>
                                 <i class="fas fa-commenting mr-1"></i>
                                 <a href="{% url 'add_review' %}" style="margin-left: 0.25rem;">Review - Add</a>
-                                <span style="visibility: hidden;"> | Delete</span>
+                                    <!-- This span is for alignment purposes for the above text -->
+                                    <span style="visibility: hidden;"> | Delete</span>
                             </small>
                         {% endif %}
                         {% if update_review_possible %}
