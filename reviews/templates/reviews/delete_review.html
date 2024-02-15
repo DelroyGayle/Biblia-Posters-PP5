@@ -33,7 +33,7 @@
             <form method="POST" action="" class="form mb-2">
                 {% csrf_token %}
                 <input class="btn btn-danger rounded-0" type="submit" value="Yes" />
-                <a href="{{ current_poster_path }}">
+                <a href="{{ current_redirect_path }}">
                     <div class="btn btn-primary rounded-0">Cancel</div>
                 </a>
 

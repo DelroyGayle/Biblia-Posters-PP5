@@ -5,10 +5,13 @@ from .models import UserProfile
 from .forms import UserProfileForm
 
 from checkout.models import Order
+from posters.views import reset_session_variables
 
 
 def profile(request):
     """ Display the user's profile. """
+
+    reset_session_variables(request)  # Ensure Reset!    
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':

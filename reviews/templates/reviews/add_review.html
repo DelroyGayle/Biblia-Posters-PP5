@@ -29,7 +29,7 @@
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href='{{ current_poster_path }}'>Cancel</a>
+                        <a class="btn btn-outline-black rounded-0" href='{{ current_redirect_path }}'>Cancel</a>
                         <button class="btn btn-black rounded-0" type="submit">Add Review</button>
                     </div>
                 </form>

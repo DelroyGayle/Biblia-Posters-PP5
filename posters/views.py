@@ -9,6 +9,16 @@ from checkout.models import UserPurchasedPosters
 from wishlist.models import Wishlist
 
 
+def reset_session_variables(request):
+    """
+    Ensure these variables are reset at this stage
+    To avoiding page rendering issues
+    """
+    request.session.pop('backto_myreviews', None)
+    request.session.pop('current_redirect_path', None)
+    request.session.pop('purchased_posters', None)
+
+
 def handle_sorting(request, the_sort_direction, posters):
     """ Handle the logic regarding the sorting of posters"""
 
@@ -105,6 +115,7 @@ def fetch_posters(request):
 def poster_details(request, poster_id):
     """ A view to show individual poster details """
 
+    reset_session_variables(request)  # Ensure Reset!
     poster = get_object_or_404(Poster, pk=poster_id)
     poster_reviews = list(
         Review.objects.filter(poster=poster_id)
@@ -137,7 +148,7 @@ def poster_details(request, poster_id):
         'add_to_wishlist': add_to_wishlist,
     }
     request.session['poster_id'] = poster_id
-    request.session['current_poster_path'] = request.get_full_path()
+    request.session['current_redirect_path'] = request.get_full_path()
     return render(request, 'posters/poster_details.html', context)
 
 

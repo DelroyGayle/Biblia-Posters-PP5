@@ -37,6 +37,9 @@ def remove_from_wishlist(request):
 def my_wishlist(request):
     """ Display the user's wishlist """
 
+    from posters.views import reset_session_variables
+
+    reset_session_variables(request)  # Ensure Reset!
     # Retrieve the user's wishlist
     posters = (Wishlist.objects.filter(user=request.user.id)
                                .order_by('-created_at')
