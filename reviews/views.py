@@ -86,7 +86,8 @@ def edit_review(request, review_id):
 
     else:
         form = ReviewForm(instance=the_review)
-        messages.info(request, f'You are editing {the_review.title}')
+        # Convert the review title into title-case
+        messages.info(request, f'You are editing {the_review.title.title()}')
 
     template = 'reviews/edit_review.html'
     context = {

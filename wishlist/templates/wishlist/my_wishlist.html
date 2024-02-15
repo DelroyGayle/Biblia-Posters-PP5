@@ -82,39 +82,7 @@
                     </form>
                 </div>
             </div>
-
-            <!-- List out all available reviews regarding current poster -->
-            {% if poster_reviews %}
-            <div class="col-12 offset-lg-4">
-                <hr style="margin-left: 0; max-width: 50%;">
-                <h2 class="logo-font mb-4">Review{{ poster_reviews|length|pluralize }}</h2>
-                <hr style="margin-left: 0; max-width: 50%;">
-
-                {% for review in poster_reviews %}
-                <div class="row">
-                    <h2 class="col-12 mb-1">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                        <strong style="color:brown;"> {{ review.user_displayed_name |default:"Anonymous"|title
-                            }}</strong>
-                    </h2>
-                    <div class="col-12 mb-1">
-                        {% if review.rating %}
-                        {% autoescape off %}{{ review.rating }}{% endautoescape %}
-                        {%endif %}
-
-                        <h2>{{ review.title }}</h2>
-                    </div>
-                    <p style="padding-left: 1rem;"><strong>Reviewed on {{ review.amended_at }}</strong></p>
-                </div>
-
-                <h5 style="margin-left: -1rem;" class="col-12 col-lg-6">
-                    {{ review.content }}
-                </h5>
-                <hr style="margin-left: 0; max-width: 50%;">
-                {% endfor %}
-            </div>
-            {% endif %}
-        </div>
+       </div>
         <hr>
         {% endfor %}
         {% else %}
