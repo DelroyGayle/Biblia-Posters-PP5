@@ -65,9 +65,9 @@
                                 {% csrf_token %}
                                 <div class="form-row">
                                     <div class="col-12">
-                                        <!-- The Submit is for the DELETE action-->
+                                        <!-- The Submit is for the EDIT action-->
                                         <input type="submit" class="btn btn-primary rounded-0 text-uppercase my-1" value="Edit Review">
-                                        <!-- Whilst the href is for the EDIT action -->
+                                        <!-- Whilst the href is for the DELETE action -->
                                             <a href="{% url 'remove_review' review.id %}"
                                             class="btn btn-danger rounded-0 my-1">
                                             <span class="text-uppercase">Delete Review</span>

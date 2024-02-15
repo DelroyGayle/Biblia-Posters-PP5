@@ -1,0 +1,50 @@
+<!-- Based on delete-review.html
+    However in order to return to the correct page 
+    This page redirects to 'my_reviews'
+    which is the user's 'My Reviews' page
+-->
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <hr>
+            <h2 class="logo-font mb-4">Review Management</h2>
+            <h1>Are you sure you want to delete?</h1>
+            <hr>
+            {% comment %}
+                Convert the review title into title-case
+                Truncate the content to 40 words
+            {% endcomment %}
+            <h3>{{ review.title|title }}</h3>
+            <p>{{ review.content|truncatewords:40 }}</p>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form method="POST" action="" class="form mb-2">
+                {% csrf_token %}
+                <input class="btn btn-danger rounded-0" type="submit" value="Yes" />
+                <a href="{{ current_redirect_path }}">
+                    <div class="btn btn-primary rounded-0">Cancel</div>
+                </a>
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
