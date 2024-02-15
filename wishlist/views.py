@@ -17,7 +17,7 @@ def add_to_wishlist(request):
         Wishlist.objects.create(user=request.user, poster=the_poster)
     )
     messages.info(request, 'Poster added to wishlist!')
-    # Reshow the Poster Details Page
+    # Redisplay the Poster Details Page
     return redirect(reverse('poster_details', args=[poster_id]))
 
 
@@ -29,7 +29,7 @@ def remove_from_wishlist(request):
                              poster=poster_id).delete()
      )
     messages.info(request, 'Poster removed from wishlist!')
-    # Reshow the Poster Details Page
+    # Redisplay the Poster Details Page
     return redirect(reverse('poster_details', args=[poster_id]))
 
 

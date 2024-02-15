@@ -11,6 +11,29 @@ from .forms import ReviewForm
 
 
 @login_required
+def remove_from_wishlist(request):
+    """ Remove poster from user's wishlist """
+    poster_id = request.session.get('poster_id')
+    (Wishlist.objects.filter(user=request.user.id,
+                             poster=poster_id).delete()
+     )
+    messages.info(request, 'Poster removed from wishlist!')
+    # Redisplay the Poster Details Page
+    return redirect(reverse('poster_details', args=[poster_id]))
+
+
+@login_required
+def remove_from_wishlist_page(request, poster_id):
+    """ Remove poster from user's wishlist """
+    # (Wishlist.objects.filter(user=request.user.id,
+    #                          poster=poster_id).delete()
+    #  )
+    messages.info(request, 'Poster removed from wishlist!')
+    # Rerender the My Wishlist Page
+    return my_wishlist(request)
+
+
+@login_required
 def add_review(request):
     """ Add a review """
     current_redirect_path = request.session.get('current_redirect_path')
@@ -34,7 +57,7 @@ def add_review(request):
             messages.info(request, 'Successfully added review!')
             # Have you been directed here from the My Reviews page?
             if not request.session.get('backto_myreviews', None):
-                # No! Then Reshow the Poster Details Page
+                # No! Then Redisplay the Poster Details Page
                 return redirect(reverse('poster_details', args=[poster_id]))
             else:
                 # Yes! Redirect to the My Reviews page
@@ -84,7 +107,7 @@ def edit_review(request, review_id):
             messages.info(request, 'Successfully updated review!')
             # Was the source of the Edit Command from the My Reviews page?
             if not request.session.get('backto_myreviews', None):
-                # No! Then Reshow the Poster Details Page
+                # No! Then Redisplay the Poster Details Page
                 return redirect(reverse('poster_details', args=[poster_id]))
             else:
                 # Yes! Redirect to the My Reviews page
@@ -123,7 +146,7 @@ Therefore, I chose to reproduce very similar code
 when Editing is requested from the 'My Reviews' page
 """
 @login_required
-def edit_review_from_list(request, review_id, firsttime=True):
+def edit_review_from_list(request, review_id):
     """ Edit a review from the My Reviews page """
 
     the_review = get_object_or_404(Review, pk=review_id)
@@ -152,7 +175,7 @@ def delete_review(request, review_id):
     if request.method == 'POST':
         the_review.delete()
         messages.info(request, 'Review successfully deleted!')
-        # Reshow the Poster Details Page
+        # Redisplay the Poster Details Page
         return redirect(reverse('poster_details', args=[poster_id]))
 
     template = 'reviews/delete_review.html'
@@ -164,26 +187,23 @@ def delete_review(request, review_id):
 
 
 @login_required
-def remove_from_wishlist(request):
-    """ Remove poster from user's wishlist """
-    poster_id = request.session.get('poster_id')
-    (Wishlist.objects.filter(user=request.user.id,
-                             poster=poster_id).delete()
-     )
-    messages.info(request, 'Poster removed from wishlist!')
-    # Reshow the Poster Details Page
-    return redirect(reverse('poster_details', args=[poster_id]))
+def remove_from_reviews_page(request, review_id):
+    """ Delete a review from the My Reviews page """
+    the_review = get_object_or_404(Review, pk=review_id)
+    current_redirect_path = request.session.get('current_redirect_path')
 
+    if request.method == 'POST':
+        the_review.delete()
+        messages.info(request, 'Review successfully deleted!')
+        # Redisplay the My Reviews Page
+        return redirect(reverse('my_reviews'))
 
-@login_required
-def remove_from_wishlist_page(request, poster_id):
-    """ Remove poster from user's wishlist """
-    # (Wishlist.objects.filter(user=request.user.id,
-    #                          poster=poster_id).delete()
-    #  )
-    messages.info(request, 'Poster removed from wishlist!')
-    # Rerender the My Wishlist Page
-    return my_wishlist(request)
+    template = 'reviews/delete_review.html'
+    context = {
+        'review': the_review,
+        'current_redirect_path': current_redirect_path,
+    }
+    return render(request, template, context)
 
 
 def annotate_review(review):
