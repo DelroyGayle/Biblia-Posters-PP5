@@ -37,27 +37,26 @@
                     </div>
                     <!-- Add to Wishlist, Remove From Wishlist -->
                     {% if request.user.is_authenticated %}
-                    <div class="ml-auto">
-                        <div class="d-flex">
-                            <div>
-                                <small>
-                                    <i class="fas fa-heart mr-1"></i>
-                                </small>
-                            </div>
-                            <div class="ml-auto">
-                                <small>
-                                    <!--TODO-->
-                                    {% if add_to_wishlist %}
-                                    <a href="{% url 'add_to_wishlist' %}" style="margin-left: 0.2rem;">Add to Wishlist</a>
-                                    <!-- This span is for alignment purposes for the above text -->
-                                    <span style="visibility: hidden;"> Delete</span>
-                                    {% else %}
-                                    <a class="text-danger" href="{% url 'remove_from_wishlist' %}" style="margin-left: 0.2rem;">Remove from Wishlist</a>
-                                    {% endif %}
-                                </small>
+                        <div class="ml-auto">
+                            <div class="d-flex">
+                                <div>
+                                    <small>
+                                        <i class="fas fa-heart mr-1"></i>
+                                    </small>
+                                </div>
+                                <div class="ml-auto">
+                                    <small>
+                                        {% if add_to_wishlist %}
+                                            <a href="{% url 'add_to_wishlist' %}" style="margin-left: 0.2rem;">Add to Wishlist</a>
+                                            <!-- This span is for alignment purposes for the above text -->
+                                            <span style="visibility: hidden;"> Delete</span>
+                                        {% else %}
+                                            <a class="text-danger" href="{% url 'remove_from_wishlist' %}" style="margin-left: 0.2rem;">Remove from Wishlist</a>
+                                        {% endif %}
+                                    </small>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     {% endif %}
                 </div>
                 <div class="d-flex">
@@ -96,7 +95,7 @@
                         <small class="text-muted">No Rating</small>
                     {% endif %}
 
-                    <!-- Edit Poster, Delete Poster -->
+                    <!-- Edit Poster, Delete Poster TODO -->
                     <div class="ml-auto">
                         {% if 0 %}
                         <small>
@@ -158,36 +157,36 @@
 
         <!-- List out all available reviews regarding current poster -->
         {% if poster_reviews %}
-        <div class="col-12 offset-lg-4">
-            <hr style="margin-left: 0; max-width: 50%;">
-            <h2 class="logo-font mb-4">Review{{ poster_reviews|length|pluralize }}</h2>
-            <hr style="margin-left: 0; max-width: 50%;">
-
-            {% for review in poster_reviews %}
-                <div class="row">
-                    <h2 class="col-12 mb-1">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                        <strong style="color:brown;"> {{ review.user_displayed_name |default:"Anonymous"|title }}</strong>
-                    </h2>
-                    <div class="col-12 mb-1">
-                            {% if review.rating %}
-                                {% autoescape off %}{{ review.rating }}{% endautoescape %}
-                            {%endif %}
-
-                        {% comment %}Convert the review title into title-case{% endcomment %}
-                        <h2>{{ review.title|title }}</h2>
-                    </div>
-                    <p style="padding-left: 1rem;"><strong>Reviewed on {{ review.amended_at }}</strong></p>
-                </div>
-
-                <h5 style="margin-left: -1rem;" class="col-12 col-lg-6">
-                    {{ review.content }}
-                </h5>
+            <div class="col-12 offset-lg-4">
                 <hr style="margin-left: 0; max-width: 50%;">
-            {% endfor %}
-        </div>
+                <h2 class="logo-font mb-4">Review{{ poster_reviews|length|pluralize }}</h2>
+                <hr style="margin-left: 0; max-width: 50%;">
+
+                {% for review in poster_reviews %}
+                    <div class="row">
+                        <h2 class="col-12 mb-1">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <strong style="color:brown;"> {{ review.user_displayed_name |default:"Anonymous"|title }}</strong>
+                        </h2>
+                        <div class="col-12 mb-1">
+                                {% if review.rating %}
+                                    {% autoescape off %}{{ review.rating }}{% endautoescape %}
+                                {%endif %}
+
+                            {% comment %}Convert the review title into title-case{% endcomment %}
+                            <h2>{{ review.title|title }}</h2>
+                        </div>
+                        <p style="padding-left: 1rem;"><strong>Reviewed on {{ review.amended_at }}</strong></p>
+                    </div>
+
+                    <h5 style="margin-left: -1rem;" class="col-12 col-lg-6">
+                        {{ review.content }}
+                    </h5>
+                    <hr style="margin-left: 0; max-width: 50%;">
+                {% endfor %}
+            </div>
+        {% endif %}
     </div>
-    {% endif %}
 </div>
 {% include 'includes/footer.html' %}
 </div>

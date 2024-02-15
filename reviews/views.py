@@ -118,3 +118,61 @@ def delete_review(request, review_id):
         'current_poster_path': current_poster_path,
     }
     return render(request, template, context)
+
+
+
+
+@login_required
+def remove_from_wishlist(request):
+    """ Remove poster from user's wishlist """
+    poster_id = request.session.get('poster_id')
+    (Wishlist.objects.filter(user=request.user.id,
+                             poster=poster_id).delete()
+     )
+    messages.info(request, 'Poster removed from wishlist!')
+    # Reshow the Poster Details Page
+    return redirect(reverse('poster_details', args=[poster_id]))
+
+def annotate_review(review):
+    """
+    Add some new fields to the user's reviews list
+    before displaying the list on the 'My Reviews' page
+    """
+    the_poster = get_object_or_404(Poster, pk=review['poster'])
+    print(the_poster.image, the_poster.image.url)
+    return review | {'poster_id': review['poster'],
+                     'poster_name': the_poster.name,
+                     'image': the_poster.image,
+                     'image_url': the_poster.image.url}
+
+@login_required
+def my_reviews(request):
+    """ Display the user's reviews """
+
+    username = request.user.get_username()
+    reviews = (Review.objects.filter(user=username)
+                               .order_by('-amended_at')
+               )
+
+    #print(list(reviews.values()))
+
+    # Reconfigure the list
+    if reviews:
+        reviews = [annotate_review(review) for review in reviews.values()]  # TODO
+        print("DONE", reviews)
+
+    context = {
+        'reviews': reviews,
+    }
+    return render(request, 'reviews/my_reviews.html', context)
+
+
+@login_required
+def remove_from_wishlist_page(request, poster_id):
+    """ Remove poster from user's wishlist """
+    # (Wishlist.objects.filter(user=request.user.id,
+    #                          poster=poster_id).delete()
+    #  )
+    messages.info(request, 'Poster removed from wishlist!')
+    # Rerender the My Wishlist Page
+    return my_wishlist(request)
