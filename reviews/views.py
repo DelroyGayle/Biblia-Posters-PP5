@@ -31,9 +31,8 @@ def add_review(request):
             review.content = review.content.strip()
             # Save the new review
             review.save()
-            # Show message WITHOUT displaying shopping bag contents
-            messages.success(request, 'Successfully added review!')
-            request.session['show_no_bag'] = True
+            messages.info(request, 'Successfully added review!')
+            # Reshow the Poster Details Page
             return redirect(reverse('poster_details', args=[poster_id]))
         else:
             messages.error(request, (
@@ -74,9 +73,8 @@ def edit_review(request, review_id):
             review.content = review.content.strip()
             # Update the review
             review.save()
-            # Show message WITHOUT displaying shopping bag contents
-            messages.success(request, 'Successfully updated review!')
-            request.session['show_no_bag'] = True
+            messages.info(request, 'Successfully updated review!')
+            # Reshow the Poster Details Page
             return redirect(reverse('poster_details', args=[poster_id]))
         else:
             messages.error(request, (
@@ -109,9 +107,8 @@ def delete_review(request, review_id):
 
     if request.method == 'POST':
         the_review.delete()
-        messages.success(request, 'Review successfully deleted!')
-        # Show message WITHOUT displaying shopping bag contents
-        request.session['show_no_bag'] = True
+        messages.info(request, 'Review successfully deleted!')
+        # Reshow the Poster Details Page
         return redirect(reverse('poster_details', args=[poster_id]))
 
     template = 'reviews/delete_review.html'

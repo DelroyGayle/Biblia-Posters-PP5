@@ -18,7 +18,11 @@
             <h2 class="logo-font mb-4">Review Management</h2>
             <h1>Are you sure you want to delete?</h1>
             <hr>
-            <h3>{{ review.title }}</h3>
+            {% comment %}
+                Convert the review title into titlecase
+                Truncate the content to 40 words
+            {% endcomment %}
+            <h3>{{ review.title|title }}</h3>
             <p>{{ review.content|truncatewords:40 }}</p>
             <hr>
         </div>

@@ -174,7 +174,8 @@
                                 {% autoescape off %}{{ review.rating }}{% endautoescape %}
                             {%endif %}
 
-                        <h2>{{ review.title }}</h2>
+                        {% comment %}Convert the review title into titlecase {% endcomment %}
+                        <h2>{{ review.title|title }}</h2>
                     </div>
                     <p style="padding-left: 1rem;"><strong>Reviewed on {{ review.amended_at }}</strong></p>
                 </div>

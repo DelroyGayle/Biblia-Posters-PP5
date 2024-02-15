@@ -16,9 +16,8 @@ def add_to_wishlist(request):
     wishlist = (
         Wishlist.objects.create(user=request.user, poster=the_poster)
     )
-    messages.success(request, 'Poster added to wishlist!')
-    # Show message WITHOUT displaying shopping bag contents
-    request.session['show_no_bag'] = True
+    messages.info(request, 'Poster added to wishlist!')
+    # Reshow the Poster Details Page
     return redirect(reverse('poster_details', args=[poster_id]))
 
 
@@ -29,9 +28,8 @@ def remove_from_wishlist(request):
     (Wishlist.objects.filter(user=request.user.id,
                              poster=poster_id).delete()
      )
-    # Show message WITHOUT displaying shopping bag contents
-    messages.success(request, 'Poster removed from wishlist!')
-    request.session['show_no_bag'] = True
+    messages.info(request, 'Poster removed from wishlist!')
+    # Reshow the Poster Details Page
     return redirect(reverse('poster_details', args=[poster_id]))
 
 
@@ -40,7 +38,9 @@ def my_wishlist(request):
     """ Display the user's wishlist """
 
     # Retrieve the user's wishlist
-    posters = Wishlist.objects.filter(user=request.user.id).order_by('-created_at')
+    posters = (Wishlist.objects.filter(user=request.user.id)
+                               .order_by('-created_at')
+               )
 
     context = {
         'posters': posters,
@@ -54,8 +54,6 @@ def remove_from_wishlist_page(request, poster_id):
     (Wishlist.objects.filter(user=request.user.id,
                              poster=poster_id).delete()
      )
-    # Show message WITHOUT displaying shopping bag contents
-    messages.success(request, 'Poster removed from wishlist!')
-    request.session['show_no_bag'] = True
-    return render(request, 'wishlist/my_wishlist.html', {})
+    messages.info(request, 'Poster removed from wishlist!')
+    # Rerender the My Wishlist Page
     return my_wishlist(request)

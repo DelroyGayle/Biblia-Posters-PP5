@@ -128,12 +128,6 @@ def poster_details(request, poster_id):
                                        .exists()
                                )
 
-    if request.session.get('show_no_bag', None):
-        del request.session['show_no_bag']
-        show_no_bag = True
-    else:
-        show_no_bag = False
-
     context = {
         'poster': poster,
         'poster_reviews': poster_reviews,
@@ -141,7 +135,6 @@ def poster_details(request, poster_id):
         'update_review_possible': update_review_possible,
         'review_id': review_id,
         'add_to_wishlist': add_to_wishlist,
-        'show_no_bag': show_no_bag,
     }
     request.session['poster_id'] = poster_id
     request.session['current_poster_path'] = request.get_full_path()
