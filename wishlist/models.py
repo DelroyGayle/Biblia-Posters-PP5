@@ -13,7 +13,7 @@ class Wishlist(models.Model):
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     poster = models.ForeignKey(Poster, on_delete=models.CASCADE)
-    created_at = models.DateField(auto_now=True)
+    created_at = models.DateField(auto_now_add=True)
 
     def __str__(self):
         username = self.user.get_username()

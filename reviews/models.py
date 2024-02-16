@@ -13,8 +13,8 @@ class Review(models.Model):
     """
     user = models.CharField(max_length=150, null=True)
     poster = models.IntegerField(null=True)
-    created_at = models.DateField(auto_now=True)
-    amended_at = models.DateField(auto_now_add=True)
+    created_at = models.DateField(auto_now_add=True)
+    amended_at = models.DateField(auto_now=True)
     user_displayed_name = models.CharField(max_length=40, blank=True)
     title = models.CharField(max_length=80)
     content = models.TextField()
