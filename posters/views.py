@@ -261,10 +261,11 @@ def add_poster(request):
             messages.success(request, 'Successfully added poster!')
             return redirect(reverse('add_poster'))
         else:
-            messages.error(request, 'Failed to add poster. Please ensure the form is valid.')
+            messages.error(request, ('Failed to add poster. '
+                                     'Please ensure the form is valid.'))
     else:
         form = PosterForm()
-        
+
     template = 'posters/add_poster.html'
     context = {
         'form': form,
@@ -272,3 +273,27 @@ def add_poster(request):
 
     return render(request, template, context)
 
+
+def edit_poster(request, poster_id):
+    """ Edit a poster in the store """
+    poster = get_object_or_404(Poster, pk=poster_id)
+    if request.method == 'POST':
+        form = PosterForm(request.POST, request.FILES, instance=poster)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated poster!')
+            return redirect(reverse('poster_details', args=[poster.id]))
+        else:
+            messages.error(request, ('Failed to update poster. '
+                                     'Please ensure the form is valid.'))
+    else:
+        form = PosterForm(instance=poster)
+        messages.info(request, f'You are editing {poster.name}')
+
+    template = 'posters/edit_poster.html'
+    context = {
+        'form': form,
+        'poster': poster,
+    }
+
+    return render(request, template, context)
