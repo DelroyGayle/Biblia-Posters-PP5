@@ -95,9 +95,9 @@
                         <small class="text-muted">No Rating</small>
                     {% endif %}
 
-                    <!-- Edit Poster, Delete Poster TODO -->
+                    <!-- Edit Poster, Delete Poster -->
                     <div class="ml-auto">
-                        {% if 0 %}
+                        {% if request.user.is_superuser %}
                         <small>
                             <i class="fas fa-pencil-square mr-3"></i>
                             <a href="" style="margin-left: -0.2rem;">Poster - Edit</a> |

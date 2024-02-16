@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.contrib.auth.decorators import login_required
 
 from .models import Poster, Category
 from reviews.models import Review
@@ -252,6 +253,7 @@ def preprocess_reviews(reviews, request, theposter_id):
     )
 
 
+@login_required
 def add_poster(request):
     """ Add a poster to the store """
     if request.method == 'POST':
@@ -274,6 +276,7 @@ def add_poster(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_poster(request, poster_id):
     """ Edit a poster in the store """
     poster = get_object_or_404(Poster, pk=poster_id)
@@ -299,6 +302,7 @@ def edit_poster(request, poster_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_poster(request, poster_id):
     """ Delete a poster from the store """
     poster = get_object_or_404(Poster, pk=poster_id)
