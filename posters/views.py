@@ -284,7 +284,7 @@ def edit_poster(request, poster_id):
         form = PosterForm(request.POST, request.FILES, instance=poster)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully deleted poster!')
+            messages.success(request, 'Successfully updated poster!')
             return redirect(reverse('poster_details', args=[poster.id]))
         else:
             messages.error(request, ('Failed to update poster. '
