@@ -6,6 +6,7 @@
     --main-title-colour: #3b4661;
     --header-gap-value: 164px;
     --header-padding-value: 94px;
+    --header-365px-padding-value: 116px;
     --badge-colour: #e4adff;
 }
 
@@ -568,6 +569,17 @@ input[name='q']::placeholder {
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }    
+}
+
+/* Larger padding for mobiles < 365px */
+@media (max-width: 365px) {
+    .header-container {
+        padding-top: var(--header-365px-padding-value);
+    }
+
+    body {
+        height: calc(100vh - var(--header-365px-padding-value));
+    }
 }
 
 /* Resize images of the Special Days section for mobiles */
