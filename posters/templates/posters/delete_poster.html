@@ -15,15 +15,11 @@
     <div class="row">
         <div class="col-12 col-md-6">
             <hr>
-            <h2 class="logo-font mb-4">Review Management</h2>
+            <h2 class="logo-font mb-4">Poster Management</h2>
             <h1>Are you sure you want to delete?</h1>
             <hr>
-            {% comment %}
-                Convert the review title into title-case
-                Truncate the content to 40 words
-            {% endcomment %}
-            <h3>{{ review.title|title }}</h3>
-            <p>{{ review.content|truncatewords:40 }}</p>
+            <h3>{{ poster.name }}</h3>
+            <p>{{ poster.description|truncatewords:40 }}</p>
             <hr>
         </div>
     </div>
@@ -33,14 +29,7 @@
             <form method="POST" action="" class="form mb-2">
                 {% csrf_token %}
                 <input class="btn btn-danger rounded-0" type="submit" value="Yes" />
-                <!-- Redirect to the user's 'My Reviews' page -->
-                {% if back_to_myreviews %}
-                    <a href="{% url 'my_reviews' %}">
-                {% else %}
-                <!-- Redirect to the Poster Details page that the (now deleted) review was assocated with -->
-                    <a href="{{ current_redirect_path }}">
-                {% endif %}
-
+                <a href="{% url 'posters' %}">
                     <div class="btn btn-primary rounded-0">Cancel</div>
                 </a>
 
