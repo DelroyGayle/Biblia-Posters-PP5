@@ -33,7 +33,14 @@
             <form method="POST" action="" class="form mb-2">
                 {% csrf_token %}
                 <input class="btn btn-danger rounded-0" type="submit" value="Yes" />
-                <a href="{{ current_redirect_path }}">
+                <!-- Redirect to the user's 'My Reviews' page -->
+                {% if back_to_myreviews %}
+                    <a href="{%url 'my_reviews' %}">
+                {% else %}
+                <!-- Redirect to the Poster Details page that the (now deleted) review was assocated with -->
+                    <a href="{{ current_redirect_path }}">
+                {% endif %}
+
                     <div class="btn btn-primary rounded-0">Cancel</div>
                 </a>
 

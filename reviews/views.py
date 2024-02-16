@@ -171,7 +171,6 @@ def delete_review(request, review_id):
     the_review = get_object_or_404(Review, pk=review_id)
     current_redirect_path = request.session.get('current_redirect_path')
     poster_id = request.session.get('poster_id')
-    print("CRP", current_redirect_path)
 
     if request.method == 'POST':
         the_review.delete()
@@ -180,7 +179,6 @@ def delete_review(request, review_id):
         return redirect(reverse('poster_details', args=[poster_id]))
 
     template = 'reviews/delete_review.html'
-    print("CRP2", current_redirect_path)
     context = {
         'review': the_review,
         'current_redirect_path': current_redirect_path,
@@ -193,7 +191,6 @@ def remove_from_reviews_page(request, review_id):
     """ Delete a review from the My Reviews page """
     the_review = get_object_or_404(Review, pk=review_id)
     current_redirect_path = request.session.get('current_redirect_path')
-    print("RM", request.method, current_redirect_path, request.path)
 
     if request.method == 'POST':
         the_review.delete()
@@ -204,7 +201,7 @@ def remove_from_reviews_page(request, review_id):
     template = 'reviews/delete_review.html'
     context = {
         'review': the_review,
-        'current_redirect_path': 'my_reviews',
+        'back_to_myreviews': True,
     }
     return render(request, template, context)
 

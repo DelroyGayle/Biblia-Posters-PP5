@@ -17,6 +17,7 @@ def reset_session_variables(request):
     request.session.pop('backto_myreviews', None)
     request.session.pop('current_redirect_path', None)
     request.session.pop('purchased_posters', None)
+    request.session.pop('back_to_myreviews', None)
 
 
 def handle_sorting(request, the_sort_direction, posters):
