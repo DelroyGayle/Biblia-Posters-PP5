@@ -8,6 +8,8 @@ from reviews.models import Review
 from checkout.models import UserPurchasedPosters
 from wishlist.models import Wishlist
 
+from .forms import PosterForm
+
 
 def reset_session_variables(request):
     """
@@ -248,3 +250,25 @@ def preprocess_reviews(reviews, request, theposter_id):
         review_id,
         reviews
     )
+
+
+def add_poster(request):
+    """ Add a poster to the store """
+    if request.method == 'POST':
+        form = PosterForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added poster!')
+            return redirect(reverse('add_poster'))
+        else:
+            messages.error(request, 'Failed to add poster. Please ensure the form is valid.')
+    else:
+        form = PosterForm()
+        
+    template = 'posters/add_poster.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+

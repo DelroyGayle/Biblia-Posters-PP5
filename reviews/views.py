@@ -71,7 +71,9 @@ def add_review(request):
                 'Rating must be a number in the range '
                 '0 to 5')
             )
+
     else:
+
         form = ReviewForm(
             initial={'user_displayed_name': request.user.get_username()}
         )
@@ -114,6 +116,7 @@ def edit_review(request, review_id):
                 return redirect(reverse('my_reviews'))
 
         else:
+
             # Invalid Form
 
             messages.error(request, (
@@ -124,6 +127,7 @@ def edit_review(request, review_id):
             )
 
     else:
+
         form = ReviewForm(instance=the_review)
         # Convert the review title into title-case
         messages.info(request, f'You are editing {the_review.title.title()}')

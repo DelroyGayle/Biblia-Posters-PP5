@@ -11,7 +11,7 @@ from posters.views import reset_session_variables
 def profile(request):
     """ Display the user's profile. """
 
-    reset_session_variables(request)  # Ensure Reset!    
+    reset_session_variables(request)  # Ensure Reset!
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
@@ -19,8 +19,12 @@ def profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
+        else:
+            messages.error(request,
+                           'Update failed. Please ensure the form is valid.')
+    else:
+        form = UserProfileForm(instance=profile)
 
-    form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'
