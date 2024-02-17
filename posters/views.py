@@ -131,12 +131,11 @@ def poster_details(request, poster_id):
         update_review_possible,
         review_id,
         reviews
-    ) = preprocess_reviews(poster_reviews, request, poster_id)
+    ) = preprocess_reviews(poster_reviews, request, poster, poster_id)
 
     # Display wishlist option if user has registered
     add_to_wishlist = False
     if request.user.is_authenticated:
-        username = request.user.get_username()
         # Add to wishlist or Remove from wishlist?
         add_to_wishlist = not (Wishlist.objects.filter(user=request.user.id,
                                poster=poster_id)
@@ -156,7 +155,7 @@ def poster_details(request, poster_id):
     return render(request, 'posters/poster_details.html', context)
 
 
-def preprocess_reviews(reviews, request, theposter_id):
+def preprocess_reviews(reviews, request, theposter, theposter_id):
     """
     Handles review's editing options
     and how reviews are display on the Poster Details Page
@@ -238,9 +237,8 @@ def preprocess_reviews(reviews, request, theposter_id):
         )
 
     # Has the user purchased the poster in question?
-    username = request.user.get_username()
-    if (UserPurchasedPosters.objects.filter(user_id=username,
-                                            poster_id=theposter_id)
+    if (UserPurchasedPosters.objects.filter(user=request.user,
+                                            poster=theposter)
                             .exists()):
         # Display the 'Review - Add' option
         add_review_possible = True

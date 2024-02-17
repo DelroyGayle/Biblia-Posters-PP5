@@ -206,7 +206,6 @@ def annotate_review(review):
 @login_required
 def display_myreviews(request):
     """ Display the user's My Reviews Page """
-    username = request.user.get_username()
     reviews = (Review.objects.filter(user=request.user.id)
                              .order_by('-amended_at')
                )

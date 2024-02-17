@@ -1,4 +1,3 @@
-# TODO
 from django.shortcuts import render, redirect, reverse
 from django.shortcuts import get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
@@ -12,6 +11,8 @@ from posters.models import Poster
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from checkout.models import UserPurchasedPosters
+
+from checkout.common import Common
 
 import stripe
 import json
@@ -73,7 +74,7 @@ def handle_POST_method(request):
                     )
                 order_line_item.save()
                 # Record the purchased poster
-                posters_list.append(item_id) 
+                posters_list.append(poster_instance)
 
             except Poster.DoesNotExist:
 
@@ -93,17 +94,20 @@ def handle_POST_method(request):
         """
         request.session['save_info'] = ('save-info'
                                         in request.POST)
-        
+
         """
         Save the list of all purchased posters
         for Reviews purposes
         """
         if request.user.is_authenticated:
-            request.session['purchased_posters'] = posters_list
+            # Indicate that Purchased Posters have been found
+            Common.purchased_posters_list = posters_list
+            request.session['purchased_posters'] = True
         else:
-            # Just in case it exists
+            # Just in case these have exists or have values
+            Common.purchased_posters_list = None
             request.session.pop('purchased_posters', None)
-        
+
         # Success Page
         return redirect(reverse('checkout_success',
                                 args=[order.order_number]))
@@ -218,18 +222,16 @@ def checkout(request):
     return render(request, template, context)
 
 
-def record_each_poster(request, user, purchased_posters):
+def record_each_poster(request):
     """
     Store a record of every poster purchased
     by each registered user - for Reviews purposes
     """
 
-    for eachposter in purchased_posters:
+    for eachposter in Common.purchased_posters_list:
         obj, created = UserPurchasedPosters.objects.get_or_create(
-                user_id = user,
-                poster_id = eachposter)
-    del request.session['purchased_posters']
-
+                user=request.user,
+                poster=eachposter)
 
 
 def checkout_success(request, order_number):
@@ -249,8 +251,10 @@ def checkout_success(request, order_number):
         # Record the user with each poster purchased
         purchased_posters = request.session.get('purchased_posters')
         if purchased_posters:
-            username = request.user.get_username()
-            record_each_poster(request, username, purchased_posters)
+            record_each_poster(request)
+            # Reset
+            request.session.pop('purchased_posters', None)
+            Common.purchased_posters_list = None
 
         # Save the user's info
         if save_info:

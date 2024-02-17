@@ -116,17 +116,18 @@ class UserPurchasedPosters(models.Model):
     Model used to record 'by user' the posters that the user had purchased.
     This is used to give verified purchasers the functionality
     to add a review regarding the purchased poster.
-    This is recorded in order to verify that the user has purchased a poster
-    in order to allow the user to add a review about the purchased poster
+    Therefore, when a user purchases a poster, the 'user and poster'
+    is recorded. So that, subsequently the user can be checked that the user
+    is indeed a 'verified purchaser'.
     """
-    user_id = models.CharField(max_length=150, null=True)
-    poster_id = models.IntegerField(null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    poster = models.ForeignKey(Poster, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name_plural = "User Purchased Posters"
 
     def __str__(self):
-        theposter = get_object_or_404(Poster, pk=self.poster_id)
+        theposter = get_object_or_404(Poster, pk=self.poster.id)
         return (f'{self.user_id} purchased '
-                f'POSTER ID: {self.poster_id} '
+                f'POSTER ID: {self.poster.id} '
                 f'SKU: {theposter.sku}')
