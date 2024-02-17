@@ -179,6 +179,19 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Delivery Cost is £3.00 regardless of the number of posters!
 DELIVERY_COST = Decimal(3.00)
 
+SPECIAL_DAYS_NAMES = (
+    'PASSOVER',
+    'PENTECOST',
+    'FEAST OF BOOTHS'
+)
+
+"""
+0.75 Represents 25% Discount
+i.e.
+(100 - Percent) / 100
+"""
+DISCOUNT_FACTOR = 0.75
+
 # Stripe
 STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')

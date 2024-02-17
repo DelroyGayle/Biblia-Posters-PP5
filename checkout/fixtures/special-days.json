@@ -1,0 +1,11 @@
+
+[
+  {
+    "model": "checkout.specialdays",
+    "pk": 1,
+    "fields": {
+      "special_days_firstday": "2024-02-17",
+      "special_days_lastday": "2024-02-17"
+    }
+  }
+]

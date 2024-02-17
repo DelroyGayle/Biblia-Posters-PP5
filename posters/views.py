@@ -195,6 +195,12 @@ def preprocess_reviews(reviews, request, theposter, theposter_id):
             reviews[i]['amended_at'] = (reviews[i]['amended_at']
                                         .strftime('%d %B %Y'))
             rating = reviews[i]['rating']
+            # Defensive Programming
+            if rating < 0:
+                rating = 0
+            elif rating > 5:
+                rating = 5
+
             # HTML for the golden ratings stars
             if rating:
                 stars_html = (('<i class="fas fa-star mr-1" '
