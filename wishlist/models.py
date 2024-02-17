@@ -21,4 +21,3 @@ class Wishlist(models.Model):
         return (f'{username} listed '
                 f'POSTER ID: {theposter.id} '
                 f'Name: {theposter.name}')
-

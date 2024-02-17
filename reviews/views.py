@@ -11,29 +11,6 @@ from .forms import ReviewForm
 
 
 @login_required
-def remove_from_wishlist(request):
-    """ Remove poster from user's wishlist """
-    poster_id = request.session.get('poster_id')
-    (Wishlist.objects.filter(user=request.user.id,
-                             poster=poster_id).delete()
-     )
-    messages.info(request, 'Poster removed from wishlist!')
-    # Redisplay the Poster Details Page
-    return redirect(reverse('poster_details', args=[poster_id]))
-
-
-@login_required
-def remove_from_wishlist_page(request, poster_id):
-    """ Remove poster from user's wishlist """
-    # (Wishlist.objects.filter(user=request.user.id,
-    #                          poster=poster_id).delete()
-    #  )
-    messages.info(request, 'Poster removed from wishlist!')
-    # Rerender the My Wishlist Page
-    return my_wishlist(request)
-
-
-@login_required
 def add_review(request):
     """ Add a review """
     current_redirect_path = request.session.get('current_redirect_path')
@@ -44,10 +21,10 @@ def add_review(request):
         if form.is_valid():
             review = form.save(commit=False)
             # Update mandatory fields
-            the_username = request.user.get_username()
-            review.user = get_object_or_404(User, username=the_username)
+            the_user = get_object_or_404(User, pk=request.user.id)
             the_poster = get_object_or_404(Poster, pk=poster_id)
-            review.poster = the_poster.id
+            review.user = the_user
+            review.poster = the_poster
             # Trim the fields
             review.user_displayed_name = review.user_displayed_name.strip()
             review.title = review.title.strip()
@@ -143,12 +120,16 @@ def edit_review(request, review_id):
 
 
 """
-With regards to Editing Reviews being selected from two sources
+With regards to Editing/Deleting Reviews
+that had been selected from two different sources
+(Either the Poster Detail Page or from the My Reviews Page)
 I tried 'DRY'
 However, it was becoming too convoluted
 Therefore, I chose to reproduce very similar code
-when Editing is requested from the 'My Reviews' page
+when Editing/Deleting is requested from the 'My Reviews' page
 """
+
+
 @login_required
 def edit_review_from_list(request, review_id):
     """ Edit a review from the My Reviews page """
@@ -215,8 +196,8 @@ def annotate_review(review):
     Add some new fields to the user's reviews list
     before displaying the list on the 'My Reviews' page
     """
-    the_poster = get_object_or_404(Poster, pk=review['poster'])
-    return review | {'poster_id': review['poster'],
+    the_poster = get_object_or_404(Poster, pk=review['poster_id'])
+    return review | {'poster_id': the_poster.id,
                      'poster_name': the_poster.name,
                      'image': the_poster.image,
                      'image_url': the_poster.image.url}
@@ -226,13 +207,14 @@ def annotate_review(review):
 def display_myreviews(request):
     """ Display the user's My Reviews Page """
     username = request.user.get_username()
-    reviews = (Review.objects.filter(user=username)
-                               .order_by('-amended_at')
+    reviews = (Review.objects.filter(user=request.user.id)
+                             .order_by('-amended_at')
                )
 
     # Reconfigure the list
     if reviews:
-        reviews = [annotate_review(review) for review in reviews.values()]  # TODO
+        reviews = [annotate_review(review)
+                   for review in reviews.values()]
 
     context = {
         'reviews': reviews,
@@ -251,7 +233,7 @@ def my_reviews(request):
         return display_myreviews(request)
 
     """
-    POST Method: In this context, the 'Edit Review' button 
+    POST Method: In this context, the 'Edit Review' button
     has been selected. Therefore, call the above
     Edit Review method, however, need to redirect the view
     back to the 'My Reviews' page

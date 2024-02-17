@@ -204,8 +204,8 @@ def preprocess_reviews(reviews, request, theposter_id):
 
             # Has the user already written a review for this poster?
             if (request.user.is_authenticated and
-               request.user.get_username() == reviews[i]['user'] and
-               theposter_id == reviews[i]['poster']):
+               request.user.id == reviews[i]['user_id'] and
+               theposter_id == reviews[i]['poster_id']):
                 review_index = i
 
     if not request.user.is_authenticated:
