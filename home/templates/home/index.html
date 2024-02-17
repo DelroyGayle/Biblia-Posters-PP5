@@ -160,7 +160,17 @@
                 </div>
             </form>
         </div>
+        <div class="backtotop-button shadow-sm rounded-0 border backtotop-border">
+            <a class="backtotop-link d-flex h-100">
+                <i class="fas fa-arrow-up backtotop-colour mx-auto my-auto"></i>
+            </a>	
+        </div>
     </div>
     {% include 'includes/footer.html' %}
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script src="{% static 'js/myapp.js' %}"></script>
 {% endblock %}
