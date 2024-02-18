@@ -3,6 +3,21 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from posters.models import Poster
 from bag.models import SpecialDays
+from django.db.models import F, DateTimeField
+ # TODO
+import datetime
+from django.db.models.functions import Trunc
+# TODO DG
+from django.db.models.functions import (
+       ExtractDay,
+       ExtractMonth,
+       ExtractQuarter,
+       ExtractWeek,
+       ExtractIsoWeekDay,
+       ExtractWeekDay,
+       ExtractIsoYear,
+       ExtractYear,
+   )
 
 """A context processor to return the contents of the shopping bag """
 def bag_contents(request):
@@ -44,7 +59,7 @@ def bag_contents(request):
         'delivery_cost': settings.DELIVERY_COST
     }
     # TODO USE Common
-    # REMOVE DF
+    # REMOVE DG
     if 'special_day_today' in request.session:
         context |= {'discount_factor': settings.DISCOUNT_FACTOR}
 
@@ -60,7 +75,7 @@ The relevants date ranges are stored in the 'SpecialDays' database
 """
 
 def checkfor_special_days(request):
-    from datetime import date, timedelta
+    from datetime import date, timedelta, datetime
 
     # TODO DG
     todays_date = date.today()
@@ -72,7 +87,15 @@ def checkfor_special_days(request):
     # print(todays_date + timedelta(minutes=30))
     # print(todays_date + timedelta(minutes=-30))
 
+    todays_date2 = datetime.today()
+    print(todays_date2.strftime('%Y-%m-%d'))
+    print(todays_date2.strftime('%Y-%m-%d %H:%M:%S'))
+    print(datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S'))
+
+    todays_date = datetime.today()
+
     # TODO DG
+    print(100)
     print(SpecialDays.objects.filter(special_days_firstday__lte=todays_date, 
                         special_days_lastday__gte=todays_date))
     print(SpecialDays.objects.filter(special_days_firstday__lte=todays_date, 
@@ -81,8 +104,34 @@ def checkfor_special_days(request):
                         special_days_lastday__gte=todays_date).exists())
     print(SpecialDays.objects.filter(special_days_firstday__lte=todays_date, 
                         special_days_lastday__gte=todays_date).first())
+    print(101)
+    print(SpecialDays.objects.annotate(lastday_name=F('special_days_lastday'),
+    duration=F('special_days_lastday') - F('special_days_firstday'))
+    .filter(special_days_firstday__lte=todays_date, 
+                        special_days_lastday__gte=todays_date).all().values())    
 
-    print(todays_date.strftime('%d %B %Y %I:%M'), (date(2024,2,17) + timedelta(minutes=1445)).strftime('%d %B %Y %I:%M'))
+    print(102)                    
+    # todays_date = date.today()
+    # print(datetime.combine(todays_date, timedelta(minutes=45)))
+
+    # print(SpecialDays.objects.annotate(lastday_name=datetime.combine(F('special_days_lastday'), datetime.min.time()))
+    # .filter(special_days_firstday__lte=todays_date, 
+    #                      special_days_lastday__gte=todays_date).all().values()) 
+
+    x = datetime.now()
+    print(x)                        
+
+    print(103, (date(2024, 2, 18) + timedelta(1)).strftime('%d %B %Y %I:%M%p'))
+    print(104, (date(2024, 2, 18) + timedelta(hours=1)).strftime('%d %B %Y %I:%M%p'))
+    print(105, (date(2024, 2, 18) + timedelta(1)).strftime('%d %B %Y %I:%M%p'))
+    print(106, (date(2024, 2, 18) + timedelta(hours=1)).strftime('%d %B %Y %I:%M%p'))
+    print(SpecialDays.objects.annotate(
+          year=ExtractYear("special_days_lastday"),
+          month=ExtractMonth("special_days_lastday"),
+          day=ExtractDay("special_days_lastday"),
+          duration=F('special_days_lastday') - F('special_days_firstday')
+      ).query)
+    # print(todays_date.strftime('%d %B %Y %I:%M'), (date(2024,2,17) + timedelta(minutes=14)).strftime('%d %B %Y %I:%M'))
     if (SpecialDays.objects.filter(special_days_firstday__lte=todays_date + timedelta(minutes=45), 
         special_days_lastday__gte=todays_date + timedelta(minutes=45)).first()):
         print("FIRST EXISTS")
