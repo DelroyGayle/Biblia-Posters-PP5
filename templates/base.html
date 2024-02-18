@@ -119,12 +119,22 @@
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
-                {% now "jS F Y" as todays_date %}
-                <h4 class="logo-font my-1">{% firstof banner_text todays_date %}</h4>
-            </div>            
-        </div>
+        <!-- # TODO DG -->
+        {% if not special_days_banner %}
+            <div id="delivery-banner" class="row text-center">
+                <div class="col bg-black text-white">
+                    {% now "jS F Y" as todays_date %}
+                    <h4 class="logo-font my-1">{% firstof banner_text todays_date %}{{ special_days_banner }}</h4>
+                </div>            
+            </div>
+        {% else %}
+            <div id="delivery-banner" class="row text-center">
+                <div class="col bg-success text-white">
+                    {% now "jS F Y" as todays_date %}
+                    <h4 class="logo-font my-1">{% firstof banner_text todays_date %}{{ special_days_banner }}</h4>
+                </div>            
+            </div>
+        {% endif %}    
     </header>
 
     {% if messages %}
@@ -157,6 +167,5 @@
     </script>
     {% endblock %}
 
-    
   </body>
 </html>

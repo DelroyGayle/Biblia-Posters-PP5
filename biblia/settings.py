@@ -89,6 +89,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'bag.context_processors.bag_contents',
+                'bag.context_processors.checkfor_special_days',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
@@ -180,9 +181,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DELIVERY_COST = Decimal(3.00)
 
 SPECIAL_DAYS_NAMES = (
-    'PASSOVER',
-    'PENTECOST',
-    'FEAST OF BOOTHS'
+    'Passover',
+    'Pentecost',
+    'Feast Of Booths'
 )
 
 """
@@ -190,7 +191,9 @@ SPECIAL_DAYS_NAMES = (
 i.e.
 (100 - Percent) / 100
 """
-DISCOUNT_FACTOR = 0.75
+DISCOUNT_FACTOR = Decimal(0.75)
+
+# TODO DG
 
 # Stripe
 STRIPE_CURRENCY = 'gbp'

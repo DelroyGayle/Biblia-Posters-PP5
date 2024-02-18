@@ -1,7 +1,6 @@
 from django.contrib import admin
 from .models import Order, OrderLineItem
 from .models import UserPurchasedPosters
-from .models import SpecialDays
 
 class OrderLineItemAdminInline(admin.TabularInline):
     model = OrderLineItem
@@ -30,5 +29,4 @@ class OrderAdmin(admin.ModelAdmin):
     ordering = ('-date',)
 
 admin.site.register(UserPurchasedPosters)
-admin.site.register(SpecialDays)
 

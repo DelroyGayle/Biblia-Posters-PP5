@@ -24,6 +24,7 @@
         <div class="row">
             <div class="col">
                 {% if bag_items %}
+                    <!-- This is the refactored 'mobile' view as demonstrated in the Boutique Ado Walkthrough -->
                     <div class="d-block d-md-none">
                         <div class="row">
                             <div class="col">
@@ -46,7 +47,8 @@
                                 </div>
                                 <div class="col-12 col-sm-6 order-sm-last">
                                     <p class="my-0">Price Each: £{{ item.poster.price }}</p>
-                                    <p><strong>Subtotal: </strong>£{{ item.poster.price | calc_subtotal:item.quantity }}</p>
+                                        <p><strong>Subtotal: </strong>
+                                            £{% calc_subtotal_3args item.poster.price item.quantity discount_factor %}</p>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     {% include "bag/quantity_form.html" %}
@@ -73,6 +75,7 @@
                                 </tr>
                             </thead>
 
+                            <!-- This is the Desktop View of the Shopping Bag -->
                             {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
@@ -88,7 +91,8 @@
                                         {% include "bag/quantity_form.html" %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0 text-right">£{{ item.poster.price | calc_subtotal:item.quantity }}</p>
+                                        <p class="my-0 text-right">
+                                            £{% calc_subtotal_3args item.poster.price item.quantity discount_factor %}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
