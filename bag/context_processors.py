@@ -8,6 +8,7 @@ import datetime
 from datetime import date
 from datetime import timedelta
 from django.utils import timezone
+from django.db.models import Q
 
  # TODO
 import datetime
@@ -202,13 +203,59 @@ def checkfor_special_days(request):
     queryset = (SpecialDays.objects.filter(special_days_firstday__lte=todays_date, 
                         special_days_lastday__gte=todays_date).first())
 
-    queryset = SpecialDays.objects.filter(special_days_firstday__lte=todays_date).first()
+    #is_equal = Q(special_days_firstday == special_days_lastday)
+    #is_not_equal = Q(special_days_firstday != special_days_lastday)
+  
+    when_ranges_equal = Q(special_days_firstday=F('special_days_lastday'))
+    range_start_lessthan_todays_date = Q(special_days_firstday__lte=todays_date)
+    range_end_greaterthan_todays_date = Q(range_end_when_equal__gte=todays_date)
+
+    queryset = SpecialDays.objects.annotate(
+                 range_start_when_equal=ExpressionWrapper(F("special_days_firstday") - timedelta(seconds=1800), 
+                                       output_field=DateTimeField()),
+                 range_end_when_equal=ExpressionWrapper(F("special_days_lastday") + timedelta(hours=24), 
+                                output_field=DateTimeField()),
+                 range_end_when_not_equal=ExpressionWrapper(F("special_days_lastday") + timedelta(hours=24, seconds=1800),
+                            output_field=DateTimeField())).filter(when_ranges_equal &
+                            Q(special_days_firstday__lte=todays_date) & range_end_greaterthan_todays_date)
+                            # .filter(range_start_when_equal__lte=todays_date)
+
+##### AGAIN
+
+  
+    when_ranges_equal = Q(special_days_firstday=F('special_days_lastday'))
+    range_start_lessthan_todays_date = Q(earlier_by_30mins__lte=todays_date)
+    range_end_greaterthan_todays_date = Q(range_end_when_equal__gte=todays_date)
+
+    queryset = SpecialDays.objects.annotate(
+                 earlier_by_30mins =ExpressionWrapper(F("special_days_firstday") - timedelta(seconds=1800), 
+                                       output_field=DateTimeField()),
+                 later_by_1day30mins = ExpressionWrapper(F("special_days_lastday") + timedelta(hours=24, seconds=1800),
+                                        output_field=DateTimeField()),
+                 later_by_30mins=ExpressionWrapper(F("special_days_lastday") + timedelta(seconds=1800), 
+                                output_field=DateTimeField())).filter((when_ranges_equal &
+                            range_start_lessthan_todays_date & Q(later_by_1day30mins__gte=todays_date)) | 
+                            (~when_ranges_equal &
+                            range_start_lessthan_todays_date & Q(later_by_30mins__gte=todays_date)))
+                            # .filter(range_start_when_equal__lte=todays_date)
+
+
+    print(200)
+    print(queryset.query)
+    print(queryset.values())
+#                             .first()
+
+  
+    # queryset = (SpecialDays.objects.filter(special_days_firstday__lte=todays_date, 
+    #                     special_days_lastday__gte=todays_date).first())
+
+
     if not queryset:
         request.session['today_checked'] = False
         request.session['special_day_today'] = False
         return {}
 
-    the_index = queryset.special_days_id
+    the_index = queryset.first().id
     the_name = settings.SPECIAL_DAYS_NAMES[the_index]
     the_name = 'Feast of Booths' # TODO DG
     the_banner = f' - {the_name} - 25% Discount Today!'
