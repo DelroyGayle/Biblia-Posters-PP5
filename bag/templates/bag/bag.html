@@ -50,7 +50,8 @@
                                         <p><strong>Subtotal: </strong>
                                             £{% calc_subtotal_3args item.poster.price item.quantity discount_factor %}</p>
                                 </div>
-                                <div class="col-12 col-sm-6">
+                                <!-- mb-5 to raise the 'remove' link above the BackToTop button -->
+                                <div class="col-12 col-sm-6 mb-5">
                                     {% include "bag/quantity_form.html" %}
                                 </div>
                             </div>

@@ -12,7 +12,7 @@ from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from checkout.models import UserPurchasedPosters
 
-from checkout.common import Common
+from biblia.common import Common
 
 import stripe
 import json

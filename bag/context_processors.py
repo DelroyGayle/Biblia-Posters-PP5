@@ -2,29 +2,12 @@ from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from posters.models import Poster
-import datetime
-from datetime import date
-from datetime import timedelta
-
-# TODO
-import datetime
-from django.db.models.functions import Trunc
-# TODO DG
-from django.db.models.functions import (
-       ExtractDay,
-       ExtractMonth,
-       ExtractQuarter,
-       ExtractWeek,
-       ExtractIsoWeekDay,
-       ExtractWeekDay,
-       ExtractIsoYear,
-       ExtractYear,
-   )
 
 """A context processor to return the contents of the shopping bag """
 
 
 def bag_contents(request):
+    from biblia.common import Common
 
     bag_items = []
     total = Decimal(0)
@@ -33,10 +16,18 @@ def bag_contents(request):
     # Initialise to {} if empty!
     bag = request.session.get('bag', {})
     # TODO DG
-    if 'special_day_today' in request.session:
+    # if 'special_day_today' in request.session:
+    #     discount_factor = settings.DISCOUNT_FACTOR
+    # else:
+    #     discount_factor = 1
+    
+    if Common.special_day_today:
+        # Apply discount if it is a 'Special Day' Today
         discount_factor = settings.DISCOUNT_FACTOR
     else:
+        # Otherwise no discount
         discount_factor = 1
+    print('DFS', discount_factor, Common.special_day_today)
 
     # tally up the total cost and poster count
     # Calculate and record the subtotal
@@ -55,17 +46,15 @@ def bag_contents(request):
 
     grand_total = total + (settings.DELIVERY_COST
                            if total > 0 else 0)
+
     context = {
         'bag_items': bag_items,
         'total': total,
         'poster_count': poster_count,
         'grand_total': grand_total,
-        'delivery_cost': settings.DELIVERY_COST
+        'delivery_cost': settings.DELIVERY_COST,
+        'discount_factor': discount_factor,
     }
-    # TODO USE Common
-    # REMOVE DG
-    if 'special_day_today' in request.session:
-        context |= {'discount_factor': settings.DISCOUNT_FACTOR}
 
     return context
 
@@ -85,6 +74,9 @@ def checkfor_special_days(request):
 
     from bag.models import SpecialDays
     from django.db.models import F, DateTimeField, ExpressionWrapper
+    from datetime import timedelta
+
+    from biblia.common import Common
 
     todays_date = timezone.now()
 
@@ -108,9 +100,28 @@ def checkfor_special_days(request):
 
     result = queryset.first()
 
+    print("R0", Common.today_checked, Common.special_day_today, result)
+
+    # TEST - DISCOUNT ALWAYS ON
+
+    Common.today_checked = True
+    Common.special_day_today = True
+
+    the_name = 'Feast of Booths'  # TODO DG
+    the_banner = f' - {the_name} - 25% Discount Today!'
+
+
+    context = {
+                'special_days_name': the_name,
+                'special_days_banner': the_banner,
+    }
+    return context
+
     if not result:
-        request.session['today_checked'] = False
-        request.session['special_day_today'] = False
+        # request.session['today_checked'] = False  # TODO DG
+        # request.session['special_day_today'] = False
+        Common.today_checked = False
+        Common.special_day_today = False
         return {}
 
     the_index = queryset.first().id
@@ -118,8 +129,10 @@ def checkfor_special_days(request):
     the_name = settings.SPECIAL_DAYS_NAMES[the_index]
     the_name = 'Feast of Booths'  # TODO DG
     the_banner = f' - {the_name} - 25% Discount Today!'
-    request.session['today_checked'] = True
-    request.session['special_day_today'] = True
+    # request.session['today_checked'] = True
+    # request.session['special_day_today'] = True
+    Common.today_checked = True
+    special_day_today = True
 
     context = {
                 'special_days_name': the_name,

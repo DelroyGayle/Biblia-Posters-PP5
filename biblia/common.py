@@ -6,6 +6,8 @@ class Common:
 
 # Class Variables
     purchased_posters_list = None
+    today_checked = None
+    special_day_today = None
 
     def __init__(self):
         pass
