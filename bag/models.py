@@ -8,9 +8,9 @@ class SpecialDays(models.Model):
     Model used to record the range of days
     whereby 25% Discount is offered
     """
-    special_days_firstday = models.DateField()
-    special_days_lastday = models.DateField()
-    special_days_id = models.IntegerField(null=False, blank=False,
+    special_days_firstday = models.DateTimeField()
+    special_days_lastday = models.DateTimeField()
+    special_days_id = models.IntegerField(null=False,
                                           default=0)
 
     class Meta:

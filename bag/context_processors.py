@@ -3,7 +3,12 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from posters.models import Poster
 from bag.models import SpecialDays
-from django.db.models import F, DateTimeField
+from django.db.models import F, DateTimeField, ExpressionWrapper, DurationField
+import datetime
+from datetime import date
+from datetime import timedelta
+from django.utils import timezone
+
  # TODO
 import datetime
 from django.db.models.functions import Trunc
@@ -75,10 +80,11 @@ The relevants date ranges are stored in the 'SpecialDays' database
 """
 
 def checkfor_special_days(request):
-    from datetime import date, timedelta, datetime
+    import datetime
 
     # TODO DG
-    todays_date = date.today()
+    todays_date = datetime.date.today()
+    print("TODAYS", todays_date)
     # print(todays_date, type(todays_date))
     # print(todays_date + timedelta(days=1))
     # print(todays_date + timedelta(days=-1))
@@ -87,12 +93,13 @@ def checkfor_special_days(request):
     # print(todays_date + timedelta(minutes=30))
     # print(todays_date + timedelta(minutes=-30))
 
-    todays_date2 = datetime.today()
+    todays_date2 = datetime.datetime.today()
     print(todays_date2.strftime('%Y-%m-%d'))
     print(todays_date2.strftime('%Y-%m-%d %H:%M:%S'))
-    print(datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S'))
+    print(datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S'))
 
-    todays_date = datetime.today()
+    todays_date = timezone.now()
+    print(todays_date, 200)
 
     # TODO DG
     print(100)
@@ -104,11 +111,13 @@ def checkfor_special_days(request):
                         special_days_lastday__gte=todays_date).exists())
     print(SpecialDays.objects.filter(special_days_firstday__lte=todays_date, 
                         special_days_lastday__gte=todays_date).first())
-    print(101)
-    print(SpecialDays.objects.annotate(lastday_name=F('special_days_lastday'),
-    duration=F('special_days_lastday') - F('special_days_firstday'))
-    .filter(special_days_firstday__lte=todays_date, 
-                        special_days_lastday__gte=todays_date).all().values())    
+    # print(101)
+    # print(SpecialDays.objects.annotate(lastday_name=F('special_days_lastday'),
+    # duration=F('special_days_lastday') - F('special_days_firstday'),
+    # thelast = (F('special_days_lastday') + datetime.timedelta(hours=23, minutes=59, seconds=59)),
+    #             output_field=DateTimeField())
+    # .filter(special_days_firstday__lte=todays_date, 
+    #                     special_days_lastday__gte=todays_date).all().values())    
 
     print(102)                    
     # todays_date = date.today()
@@ -118,20 +127,72 @@ def checkfor_special_days(request):
     # .filter(special_days_firstday__lte=todays_date, 
     #                      special_days_lastday__gte=todays_date).all().values()) 
 
-    x = datetime.now()
-    print(x)                        
+    # x = datetime.now()
+    # print(x)                        
 
-    print(103, (date(2024, 2, 18) + timedelta(1)).strftime('%d %B %Y %I:%M%p'))
-    print(104, (date(2024, 2, 18) + timedelta(hours=1)).strftime('%d %B %Y %I:%M%p'))
-    print(105, (date(2024, 2, 18) + timedelta(1)).strftime('%d %B %Y %I:%M%p'))
-    print(106, (date(2024, 2, 18) + timedelta(hours=1)).strftime('%d %B %Y %I:%M%p'))
+    # print(103, (date(2024, 2, 18) + timedelta(1)).strftime('%d %B %Y %I:%M%p'))
+    # print(104, (date(2024, 2, 18) + timedelta(hours=1)).strftime('%d %B %Y %I:%M%p'))
+    # print(105, (date(2024, 2, 18) + timedelta(1)).strftime('%d %B %Y %I:%M%p'))
+    # print(106, (date(2024, 2, 18) + timedelta(hours=1)).strftime('%d %B %Y %I:%M%p'))
+    print(104)
     print(SpecialDays.objects.annotate(
           year=ExtractYear("special_days_lastday"),
           month=ExtractMonth("special_days_lastday"),
           day=ExtractDay("special_days_lastday"),
-          duration=F('special_days_lastday') - F('special_days_firstday')
-      ).query)
+          duration=F('special_days_lastday') - timezone.now(),
+          date1=ExpressionWrapper(F("special_days_firstday") - timedelta(seconds=1800), 
+                            output_field=DateTimeField()),
+          date2=ExpressionWrapper(F("special_days_lastday") + timedelta(seconds=1800), 
+                            output_field=DateTimeField()),
+          date3=ExpressionWrapper(F("special_days_lastday") + timedelta(hours=23, seconds=59*60), 
+                            output_field=DateTimeField()),
+          date4=ExpressionWrapper(F("special_days_lastday") + timedelta(hours=23, seconds=59*60) + timedelta(seconds=1800), 
+                            output_field=DateTimeField())).values())
+    # print(SpecialDays.objects.annotate(
+    #       year=ExtractYear("special_days_lastday"),
+    #       month=ExtractMonth("special_days_lastday"),
+    #       day=ExtractDay("special_days_lastday"),
+    #       duration=F('special_days_lastday') - F('special_days_firstday')
+    #   ).query)
     # print(todays_date.strftime('%d %B %Y %I:%M'), (date(2024,2,17) + timedelta(minutes=14)).strftime('%d %B %Y %I:%M'))
+
+    print(SpecialDays.objects.annotate(
+          year=ExtractYear("special_days_lastday"),
+          month=ExtractMonth("special_days_lastday"),
+          day=ExtractDay("special_days_lastday"),
+          duration=F('special_days_lastday') - timezone.now(),
+          date1=ExpressionWrapper(F("special_days_firstday") - timedelta(seconds=1800), 
+                            output_field=DateTimeField()),
+          date2=ExpressionWrapper(F("special_days_lastday") + timedelta(seconds=1800), 
+                            output_field=DateTimeField()),
+          date3=ExpressionWrapper(F("special_days_lastday") + timedelta(hours=23, seconds=59*60), 
+                            output_field=DateTimeField()),
+          date4=ExpressionWrapper(F("special_days_lastday") + timedelta(hours=23, seconds=59*60) + timedelta(seconds=1800), 
+                            output_field=DateTimeField())).query)
+
+    print((SpecialDays.objects.annotate(
+          date1=ExpressionWrapper(F("special_days_firstday") - timedelta(seconds=1800), 
+                            output_field=DateTimeField()),
+          date4=ExpressionWrapper(F("special_days_lastday") + timedelta(hours=23, seconds=59*60) + timedelta(seconds=1800), 
+                            output_field=DateTimeField()))
+            .filter(date1__lte=todays_date, date4__gte=todays_date).query))                            
+    print(105)
+
+    if (SpecialDays.objects.annotate(
+        #   year=ExtractYear("special_days_lastday"),
+        #   month=ExtractMonth("special_days_lastday"),
+        #   day=ExtractDay("special_days_lastday"),
+        #   duration=F('special_days_lastday') - timezone.now(),
+          date1=ExpressionWrapper(F("special_days_firstday") - timedelta(seconds=1800), 
+                            output_field=DateTimeField()),
+          date4=ExpressionWrapper(F("special_days_lastday") + timedelta(hours=23, seconds=59*60) + timedelta(seconds=1800), 
+                            output_field=DateTimeField()))
+            .filter(date1__lte=todays_date, date4__gte=todays_date).first()):
+        print("FIRST EXISTS")
+    else:
+        print("NONE")
+
+
     if (SpecialDays.objects.filter(special_days_firstday__lte=todays_date + timedelta(minutes=45), 
         special_days_lastday__gte=todays_date + timedelta(minutes=45)).first()):
         print("FIRST EXISTS")
@@ -141,6 +202,7 @@ def checkfor_special_days(request):
     queryset = (SpecialDays.objects.filter(special_days_firstday__lte=todays_date, 
                         special_days_lastday__gte=todays_date).first())
 
+    queryset = SpecialDays.objects.filter(special_days_firstday__lte=todays_date).first()
     if not queryset:
         request.session['today_checked'] = False
         request.session['special_day_today'] = False
