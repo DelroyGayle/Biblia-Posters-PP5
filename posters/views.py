@@ -62,6 +62,12 @@ def fetch_posters(request):
     categorising, sorting and search queries
     """
 
+    from biblia.common import Common
+
+    # Check if today is a Special Day
+    if not Common.today_checked:
+        _ = checkfor_special_days(request)
+
     # Retrieve all the available posters
     posters = Poster.objects.all()
 
@@ -119,7 +125,12 @@ def fetch_posters(request):
 def poster_details(request, poster_id):
     """ A view to show individual poster details """
 
-    reset_session_variables(request)  # Ensure Reset!
+    from biblia.common import Common
+
+    # Check if today is a Special Day
+    if not Common.today_checked:
+        _ = checkfor_special_days(request)
+
     poster = get_object_or_404(Poster, pk=poster_id)
     poster_reviews = list(
         Review.objects.filter(poster=poster_id)

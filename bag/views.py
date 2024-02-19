@@ -15,6 +15,12 @@ def view_bag(request):
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified item to the shopping bag """
 
+    from biblia.common import Common
+
+    # Check if today is a Special Day
+    if not Common.today_checked:
+        _ = checkfor_special_days(request)
+
     theposter = get_object_or_404(Poster, pk=item_id)
     # Convert string value into an integer
     quantity = int(request.POST.get('quantity'))

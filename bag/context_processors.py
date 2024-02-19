@@ -9,25 +9,19 @@ from posters.models import Poster
 def bag_contents(request):
     from biblia.common import Common
 
-    bag_items = []
-    total = Decimal(0)
-    poster_count = 0
-    # Fetch the shopping bag's contents
-    # Initialise to {} if empty!
-    bag = request.session.get('bag', {})
-    # TODO DG
-    # if 'special_day_today' in request.session:
-    #     discount_factor = settings.DISCOUNT_FACTOR
-    # else:
-    #     discount_factor = 1
-    
     if Common.special_day_today:
         # Apply discount if it is a 'Special Day' Today
         discount_factor = settings.DISCOUNT_FACTOR
     else:
         # Otherwise no discount
         discount_factor = 1
-    print('DFS', discount_factor, Common.special_day_today)
+
+    bag_items = []
+    total = Decimal(0)
+    poster_count = 0
+    # Fetch the shopping bag's contents
+    # Initialise to {} if empty!
+    bag = request.session.get('bag', {})
 
     # tally up the total cost and poster count
     # Calculate and record the subtotal
@@ -118,8 +112,6 @@ def checkfor_special_days(request):
     return context
 
     if not result:
-        # request.session['today_checked'] = False  # TODO DG
-        # request.session['special_day_today'] = False
         Common.today_checked = False
         Common.special_day_today = False
         return {}
@@ -129,8 +121,7 @@ def checkfor_special_days(request):
     the_name = settings.SPECIAL_DAYS_NAMES[the_index]
     the_name = 'Feast of Booths'  # TODO DG
     the_banner = f' - {the_name} - 25% Discount Today!'
-    # request.session['today_checked'] = True
-    # request.session['special_day_today'] = True
+
     Common.today_checked = True
     special_day_today = True
 
@@ -146,4 +137,4 @@ def checkfor_special_days(request):
     #     'delivery_cost': settings.DELIVERY_COST
     # } TODO DG
 
-    return {}  # {'todays_date': todays_date} # TODO DG
+    return {}   # TODO DG
