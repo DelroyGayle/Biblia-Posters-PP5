@@ -8,6 +8,7 @@ class Common:
     purchased_posters_list = None
     today_checked = None
     special_day_today = None
+    special_days_queryset = None
 
     def __init__(self):
         pass

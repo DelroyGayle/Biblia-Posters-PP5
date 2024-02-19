@@ -3,10 +3,10 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from posters.models import Poster
 
-"""A context processor to return the contents of the shopping bag """
-
 
 def bag_contents(request):
+    """A context processor to return the contents of the shopping bag """
+
     from biblia.common import Common
 
     if Common.special_day_today:
@@ -53,24 +53,34 @@ def bag_contents(request):
     return context
 
 
-"""
-A context processor to check if today is a 'special day!'
-For this Project, the Special Days are defined
-as Passover, Pentecost and the Feast of Booths
+def define_special_days_queryset(request):
+    """
+    This Queryset is used to determine whether
+    Today's Date is a Special Day
 
-The relevants date ranges are stored in the 'SpecialDays' database
-"""
+    The Query checks whether Today's Date is between the range of
+    'special_days_firstday' and 'special_days_lastday'
+    However, a tolerance of 30 minutes is given for both of these
+    time values to cater for the user either
+    1) coming to the website minutes before midnight
+    just prior to when the Specials Days Range starts
+    2) or coming to the website minutes before midnight
+    just prior to when the Specials Days Range ends
+    """
 
-
-def checkfor_special_days(request):
-    from django.utils import timezone
     from django.db.models import Q
+    from django.db.models import F, DateTimeField, ExpressionWrapper
+    from django.utils import timezone
 
     from bag.models import SpecialDays
-    from django.db.models import F, DateTimeField, ExpressionWrapper
+
     from datetime import timedelta
 
     from biblia.common import Common
+
+    if Common.special_days_queryset is not None:
+        # Queryset has already been set up
+        return
 
     todays_date = timezone.now()
 
@@ -91,8 +101,23 @@ def checkfor_special_days(request):
                 .filter(range_start_lessthan_todays_date
                         & range_end_greaterthan_todays_date)
                 )
+    Common.special_days_queryset = queryset
 
-    result = queryset.first()
+
+def checkfor_special_days(request):
+    """
+    A context processor to check if today is a 'special day!'
+    For this Project, the Special Days are defined
+    as Passover, Pentecost and the Feast of Booths
+
+    The relevants date ranges are stored in the 'SpecialDays' database
+    """
+
+    from biblia.common import Common
+
+    define_special_days_queryset(request)
+
+    result = Common.special_days_queryset.first()
 
     print("R0", Common.today_checked, Common.special_day_today, result)
 
@@ -104,12 +129,13 @@ def checkfor_special_days(request):
     the_name = 'Feast of Booths'  # TODO DG
     the_banner = f' - {the_name} - 25% Discount Today!'
 
-
     context = {
                 'special_days_name': the_name,
                 'special_days_banner': the_banner,
     }
     return context
+
+    # TODO
 
     if not result:
         Common.today_checked = False
@@ -130,11 +156,3 @@ def checkfor_special_days(request):
                 'special_days_banner': the_banner,
     }
     return context
-
-    #     'total': total,
-    #     'poster_count': poster_count,
-    #     'grand_total': grand_total,
-    #     'delivery_cost': settings.DELIVERY_COST
-    # } TODO DG
-
-    return {}   # TODO DG
