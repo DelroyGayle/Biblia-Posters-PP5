@@ -225,18 +225,14 @@ def checkfor_special_days(request):
   
     when_ranges_equal = Q(special_days_firstday=F('special_days_lastday'))
     range_start_lessthan_todays_date = Q(earlier_by_30mins__lte=todays_date)
-    range_end_greaterthan_todays_date = Q(range_end_when_equal__gte=todays_date)
+    range_end_greaterthan_todays_date = Q(later_by_1day30mins__gte=todays_date)
 
     queryset = SpecialDays.objects.annotate(
                  earlier_by_30mins =ExpressionWrapper(F("special_days_firstday") - timedelta(seconds=1800), 
                                        output_field=DateTimeField()),
                  later_by_1day30mins = ExpressionWrapper(F("special_days_lastday") + timedelta(hours=24, seconds=1800),
-                                        output_field=DateTimeField()),
-                 later_by_30mins=ExpressionWrapper(F("special_days_lastday") + timedelta(seconds=1800), 
-                                output_field=DateTimeField())).filter((when_ranges_equal &
-                            range_start_lessthan_todays_date & Q(later_by_1day30mins__gte=todays_date)) | 
-                            (~when_ranges_equal &
-                            range_start_lessthan_todays_date & Q(later_by_30mins__gte=todays_date)))
+                                        output_field=DateTimeField())).filter(
+                                            range_start_lessthan_todays_date & range_end_greaterthan_todays_date)
                             # .filter(range_start_when_equal__lte=todays_date)
 
 
