@@ -47,6 +47,10 @@ class Order(models.Model):
     original_bag = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False,
                                   blank=False, default='')
+    # Use this line to inform the user the reason for the 25% discount
+    # Which 'Special Days' has occurred
+    special_days_discount_name = models.CharField(max_length=40, null=True,
+                                                  blank=True, default='')
 
     def _generate_order_number(self):
         """
@@ -81,6 +85,7 @@ class Order(models.Model):
         """
         if not self.order_number:
             self.order_number = self._generate_order_number()
+        print("SELF", self.order_number)
         super().save(*args, **kwargs)
 
     def __str__(self):

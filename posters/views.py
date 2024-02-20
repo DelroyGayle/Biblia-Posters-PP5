@@ -20,7 +20,6 @@ def reset_session_variables(request):
     request.session.pop('backto_myreviews', None)
     request.session.pop('current_redirect_path', None)
     request.session.pop('purchased_posters', None)
-    request.session.pop('back_to_myreviews', None)
 
 
 def handle_sorting(request, the_sort_direction, posters):
@@ -63,10 +62,12 @@ def fetch_posters(request):
     """
 
     from biblia.common import Common
+    from biblia.common import checkfor_special_days
+
 
     # Check if today is a Special Day
     if not Common.today_checked:
-        _ = checkfor_special_days(request)
+        checkfor_special_days(request)
 
     # Retrieve all the available posters
     posters = Poster.objects.all()
@@ -126,10 +127,12 @@ def poster_details(request, poster_id):
     """ A view to show individual poster details """
 
     from biblia.common import Common
+    from biblia.common import checkfor_special_days
+
 
     # Check if today is a Special Day
     if not Common.today_checked:
-        _ = checkfor_special_days(request)
+        checkfor_special_days(request)
 
     poster = get_object_or_404(Poster, pk=poster_id)
     poster_reviews = list(

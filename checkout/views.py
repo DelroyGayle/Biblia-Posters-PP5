@@ -37,6 +37,9 @@ def cache_checkout_data(request):
 
 def handle_POST_method(request):
     """ Regarding Checkout, a POST Method has been requested """
+
+    from biblia.common import Common
+
     bag = request.session.get('bag', {})
 
     form_data = {
@@ -57,6 +60,11 @@ def handle_POST_method(request):
         pid = request.POST.get('client_secret').split('_secret')[0]
         order.stripe_pid = pid
         order.original_bag = json.dumps(bag)
+        if Common.special_day_today:
+            print(400, request.session['special_days_name'])
+            order.special_days_discount_name = (
+                   request.session['special_days_name'])
+            print(401, order.special_days_discount_name)
         # Save the Order to the Database
         order.save()
 
@@ -240,9 +248,12 @@ def reset_special_days_variables():
     So that a new check is made for whether 
     the day of a new order is a special day
     """
-    today_checked = None
-    special_day_today = None
-    special_days_queryset = None
+    from biblia.common import Common
+
+    Common.today_checked = None
+    Common.special_day_today = None
+    Common.special_days_queryset = None
+    Common.infoline = None
 
 
 def checkout_success(request, order_number):
@@ -283,7 +294,8 @@ def checkout_success(request, order_number):
                 user_profile_form.save()
 
     # Reset the fields that handle Special Days
-    reset_special_days_variables()
+    print(201)
+    # reset_special_days_variables()
 
     messages.success(request, ('Order successfully processed! '
                                f'Your order number is {order_number}. '
@@ -295,8 +307,10 @@ def checkout_success(request, order_number):
         del request.session['bag']
 
     template = 'checkout/checkout_success.html'
+    # 'order_infoline' informing the user about the 25% Discount
     context = {
         'order': order,
+        'order_infoline': Common.infoline
     }
 
     # return the user to the successful order page

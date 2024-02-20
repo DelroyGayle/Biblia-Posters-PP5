@@ -16,10 +16,12 @@ def add_to_bag(request, item_id):
     """ Add a quantity of the specified item to the shopping bag """
 
     from biblia.common import Common
+    from biblia.common import checkfor_special_days
 
+    context_update = None
     # Check if today is a Special Day
     if not Common.today_checked:
-        _ = checkfor_special_days(request)
+        context_update = checkfor_special_days(request)
 
     theposter = get_object_or_404(Poster, pk=item_id)
     # Convert string value into an integer

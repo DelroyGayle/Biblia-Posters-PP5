@@ -7,14 +7,15 @@ def index(request):
     """ A view to return the index page """
 
     from posters.views import reset_session_variables
-    from bag.context_processors import checkfor_special_days
-
+    
     from biblia.common import Common
+    from biblia.common import checkfor_special_days
+
 
     reset_session_variables(request)  # Ensure Reset!
 
     # Check if today is a Special Day
     if not Common.today_checked:
-        _ = checkfor_special_days(request)
+        checkfor_special_days(request)
 
     return render(request, 'home/index.html')

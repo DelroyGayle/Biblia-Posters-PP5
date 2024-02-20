@@ -102,6 +102,7 @@ class StripeWH_Handler:
                     grand_total=grand_total,
                     original_bag=bag,
                     stripe_pid=pid,
+                    special_days_discount_name="",
                 )
                 order_exists = True
                 break
