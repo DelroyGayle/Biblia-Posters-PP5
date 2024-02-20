@@ -234,6 +234,17 @@ def record_each_poster(request):
                 poster=eachposter)
 
 
+def reset_special_days_variables():
+    """
+    After each successful order reset these fields
+    So that a new check is made for whether 
+    the day of a new order is a special day
+    """
+    today_checked = None
+    special_day_today = None
+    special_days_queryset = None
+
+
 def checkout_success(request, order_number):
     """
     Handle successful checkouts
@@ -270,6 +281,9 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
+
+    # Reset the fields that handle Special Days
+    reset_special_days_variables()
 
     messages.success(request, ('Order successfully processed! '
                                f'Your order number is {order_number}. '

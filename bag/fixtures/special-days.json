@@ -1,11 +1,119 @@
-
 [
-  {
-    "model": "bag.specialdays",
-    "pk": 1,
-    "fields": {
-      "special_days_firstday": "2024-02-18",
-      "special_days_lastday": "2024-02-18"
+    {
+        "model": "bag.specialdays",
+        "pk": 1,
+        "fields": {
+            "special_days_firstday": "2024-04-22",
+            "special_days_lastday": "2024-04-30",
+            "special_days_id": 0
+        }
+    },
+    {
+        "model": "bag.specialdays",
+        "pk": 2,
+        "fields": {
+            "special_days_firstday": "2025-04-12",
+            "special_days_lastday": "2025-04-20",
+            "special_days_id": 0
+        }
+    },
+    {
+        "model": "bag.specialdays",
+        "pk": 3,
+        "fields": {
+            "special_days_firstday": "2026-04-01",
+            "special_days_lastday": "2026-04-09",
+            "special_days_id": 0
+        }
+    },
+    {
+        "model": "bag.specialdays",
+        "pk": 4,
+        "fields": {
+            "special_days_firstday": "2027-04-21",
+            "special_days_lastday": "2027-04-29",
+            "special_days_id": 0
+        }
+    },
+    {
+        "model": "bag.specialdays",
+        "pk": 5,
+        "fields": {
+            "special_days_firstday": "2024-06-12",
+            "special_days_lastday": "2024-06-13",
+            "special_days_id": 1
+        }
+    },
+    {
+        "model": "bag.specialdays",
+        "pk": 6,
+        "fields": {
+            "special_days_firstday": "2025-06-02",
+            "special_days_lastday": "2025-06-03",
+            "special_days_id": 1
+        }
+    },
+    {
+        "model": "bag.specialdays",
+        "pk": 7,
+        "fields": {
+            "special_days_firstday": "2026-05-22",
+            "special_days_lastday": "2026-05-23",
+            "special_days_id": 1
+        }
+    },
+    {
+        "model": "bag.specialdays",
+        "pk": 8,
+        "fields": {
+            "special_days_firstday": "2027-06-11",
+            "special_days_lastday": "2027-06-12",
+            "special_days_id": 1
+        }
+    },
+    {
+        "model": "bag.specialdays",
+        "pk": 9,
+        "fields": {
+            "special_days_firstday": "2024-10-16",
+            "special_days_lastday": "2024-10-23",
+            "special_days_id": 2
+        }
+    },
+    {
+        "model": "bag.specialdays",
+        "pk": 10,
+        "fields": {
+            "special_days_firstday": "2025-10-06",
+            "special_days_lastday": "2025-10-13",
+            "special_days_id": 2
+        }
+    },
+    {
+        "model": "bag.specialdays",
+        "pk": 11,
+        "fields": {
+            "special_days_firstday": "2026-09-25",
+            "special_days_lastday": "2026-10-02",
+            "special_days_id": 2
+        }
+    },
+    {
+        "model": "bag.specialdays",
+        "pk": 12,
+        "fields": {
+            "special_days_firstday": "2027-10-15",
+            "special_days_lastday": "2027-10-22",
+            "special_days_id": 2
+        }
+    },
+    {
+        "model": "bag.specialdays",
+        "pk": 13,
+        "fields": {
+            "special_days_firstday": "2024-02-18",
+            "special_days_lastday": "2024-02-18",
+            "special_days_id": 0
+        }
     }
-  }
 ]
