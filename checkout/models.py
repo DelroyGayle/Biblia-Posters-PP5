@@ -109,7 +109,10 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        self.lineitem_total = self.poster.price * self.quantity
+        from decimal import Decimal        
+
+        discount_factor = kwargs.pop('discount_factor', Decimal(1))
+        self.lineitem_total = self.poster.price * self.quantity * discount_factor
         super().save(*args, **kwargs)
 
     def __str__(self):

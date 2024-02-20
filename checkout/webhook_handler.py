@@ -86,6 +86,9 @@ class StripeWH_Handler:
 
         order_exists = False
         attempt = 1
+        # Compare the Order details data with Stripe's data
+        # They ought to match!
+        # 5 Attempts to find a match!
         while attempt <= 5:
 
             try:
@@ -102,7 +105,6 @@ class StripeWH_Handler:
                     grand_total=grand_total,
                     original_bag=bag,
                     stripe_pid=pid,
-                    special_days_discount_name="",
                 )
                 order_exists = True
                 break
@@ -122,6 +124,8 @@ class StripeWH_Handler:
                          'SUCCESS: Verified order already in database'),
                 status=200)
         else:
+            # No matching Order found therefore create a new order
+            # with the data that has come from Stripe
             order = None
 
             try:

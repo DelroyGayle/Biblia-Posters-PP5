@@ -53,7 +53,7 @@ def bag_contents(request):
     return context
 
 
-def x__define_special_days_queryset(request):
+def define_special_days_queryset(request):
     """
     This Queryset is used to determine whether
     Today's Date is a Special Day
@@ -104,7 +104,7 @@ def x__define_special_days_queryset(request):
     Common.special_days_queryset = queryset
 
 
-def x__checkfor_special_days(request):
+def checkfor_special_days(request):
     """
     A context processor to check if today is a 'special day!'
     For this Project, the Special Days are defined
@@ -128,13 +128,7 @@ def x__checkfor_special_days(request):
 
     the_name = 'Feast of Booths'  # TODO DG
     the_banner = f' - {the_name} - 25% Discount Today!'
-    # TODO REPEATED BELOW
 
-    # Add an info line regarding the 25% Discount
-    Common.infoline =  (f'{the_name} '
-                    '25% Discount has been applied to the order')
-    request.session['special_days_name'] =  the_name
-    print(100, request.session['special_days_name'], Common.infoline)
     context = {
                 'special_days_name': the_name,
                 'special_days_banner': the_banner,
@@ -153,12 +147,9 @@ def x__checkfor_special_days(request):
     the_name = settings.SPECIAL_DAYS_NAMES[the_index]
     the_name = 'Feast of Booths'  # TODO DG
     the_banner = f' - {the_name} - 25% Discount Today!'
-    # Add an info line regarding the 25% Discount
-    Common.infoline =  (f'{the_name} '
-                    '25% Discount has been applied to all prices')
 
     Common.today_checked = True
-    Common.special_day_today = True
+    special_day_today = True
 
     context = {
                 'special_days_name': the_name,

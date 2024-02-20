@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.conf import settings
 
 from bag.context_processors import bag_contents
+
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from posters.models import Poster
@@ -38,9 +39,13 @@ def cache_checkout_data(request):
 def handle_POST_method(request):
     """ Regarding Checkout, a POST Method has been requested """
 
-    from biblia.common import Common
-
     bag = request.session.get('bag', {})
+    if Common.special_day_today:
+        # Apply discount if it is a 'Special Day' Today
+        discount_factor = settings.DISCOUNT_FACTOR
+    else:
+        # Otherwise no discount
+        discount_factor = 1  
 
     form_data = {
         'full_name': request.POST['full_name'],
@@ -80,7 +85,7 @@ def handle_POST_method(request):
                         poster=poster_instance,
                         quantity=item_quantity,
                     )
-                order_line_item.save()
+                order_line_item.save(discount_factor=discount_factor)
                 # Record the purchased poster
                 posters_list.append(poster_instance)
 
@@ -248,7 +253,6 @@ def reset_special_days_variables():
     So that a new check is made for whether 
     the day of a new order is a special day
     """
-    from biblia.common import Common
 
     Common.today_checked = None
     Common.special_day_today = None

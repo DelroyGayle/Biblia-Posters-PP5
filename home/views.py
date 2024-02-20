@@ -6,11 +6,11 @@ from django.shortcuts import render
 def index(request):
     """ A view to return the index page """
 
+    from bag.context_processors import checkfor_special_days
+
     from posters.views import reset_session_variables
     
     from biblia.common import Common
-    from biblia.common import checkfor_special_days
-
 
     reset_session_variables(request)  # Ensure Reset!
 

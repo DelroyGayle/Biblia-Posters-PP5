@@ -89,7 +89,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'bag.context_processors.bag_contents',
-                #  'bag.context_processors.checkfor_special_days', TODO
+                'bag.context_processors.checkfor_special_days',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',

@@ -4,6 +4,10 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from django.contrib.auth.decorators import login_required
 
+from bag.context_processors import checkfor_special_days
+
+from biblia.common import Common
+
 from .models import Poster, Category
 from reviews.models import Review
 from checkout.models import UserPurchasedPosters
@@ -60,11 +64,7 @@ def fetch_posters(request):
     A view to show all posters, including
     categorising, sorting and search queries
     """
-
-    from biblia.common import Common
-    from biblia.common import checkfor_special_days
-
-
+        
     # Check if today is a Special Day
     if not Common.today_checked:
         checkfor_special_days(request)
@@ -125,10 +125,6 @@ def fetch_posters(request):
 
 def poster_details(request, poster_id):
     """ A view to show individual poster details """
-
-    from biblia.common import Common
-    from biblia.common import checkfor_special_days
-
 
     # Check if today is a Special Day
     if not Common.today_checked:
