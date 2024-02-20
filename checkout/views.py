@@ -298,8 +298,8 @@ def checkout_success(request, order_number):
                 user_profile_form.save()
 
     # Reset the fields that handle Special Days
-    print(201)
-    # reset_special_days_variables()
+    print(201, Common.special_day_today, Common.infoline)
+    reset_special_days_variables()
 
     messages.success(request, ('Order successfully processed! '
                                f'Your order number is {order_number}. '

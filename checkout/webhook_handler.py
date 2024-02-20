@@ -7,6 +7,8 @@ from .models import Order, OrderLineItem
 from posters.models import Poster
 from profiles.models import UserProfile
 
+from biblia.common import Common
+
 import stripe
 import json
 import time
@@ -18,15 +20,17 @@ class StripeWH_Handler:
     def __init__(self, request):
         self.request = request
 
-    def _send_confirmation_email(self, order):
+    def _send_confirmation_email(self, order, asterisk='', infoline=''):
         """Send the user a confirmation email"""
+        print("AI2", asterisk, infoline)
         customer_email = order.email
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
             {'order': order})
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
-            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL,
+            'asterisk': asterisk, 'infoline': infoline})
 
         send_mail(
             subject,
@@ -118,7 +122,19 @@ class StripeWH_Handler:
             # because it was already created by the form.
             # Therefore send the email before returning
             # the response to Stripe
-            self._send_confirmation_email(order)
+
+            # If today's date is a Special Day,
+            # Add an addition infoline explaining the 25% discount
+            print(402, order.special_days_discount_name)
+            if order.special_days_discount_name != '':
+                asterisk = '[*]'
+                infoline = (f'{asterisk} '
+                            f'{order.special_days_discount_name} 25% Discount has been applied to the order')
+                print("AI", asterisk, infoline, order.special_days_discount_name)
+            else:
+                asterisk = ''
+                infoline = ''
+            self._send_confirmation_email(order, asterisk, infoline)
             return HttpResponse(
                 content=(f'Webhook received: {event["type"]} | '
                          'SUCCESS: Verified order already in database'),
