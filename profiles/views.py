@@ -27,7 +27,8 @@ def profile(request):
     else:
         form = UserProfileForm(instance=profile)
 
-    orders = profile.orders.all()
+    # Show orders with the recent at the top
+    orders = profile.orders.order_by('-date')
 
     template = 'profiles/profile.html'
     context = {
@@ -42,15 +43,26 @@ def profile(request):
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
+    # If today's date is a Special Day,
+    # Add an infoline explaining the 25% discount
+
+    if order.special_days_discount_name != '':
+        infoline = (f'{order.special_days_discount_name}'
+                    ' 25% Discount has been applied to the order')
+    else:
+        infoline = ''
+
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
         'A confirmation email was sent on the order date.'
     ))
 
     template = 'checkout/checkout_success.html'
+    # 'infoline' informing the user about the 25% Discount
     context = {
         'order': order,
         'from_profile': True,
+        'infoline': infoline
     }
 
     return render(request, template, context)

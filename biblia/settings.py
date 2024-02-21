@@ -192,6 +192,8 @@ i.e.
 (100 - Percent) / 100
 """
 DISCOUNT_FACTOR = Decimal(0.75)
+UK_ISO_3166_VALUE = 'GB'
+
 
 # TODO DG
 

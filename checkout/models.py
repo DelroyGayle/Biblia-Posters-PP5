@@ -30,7 +30,8 @@ class Order(models.Model):
     phone_number = models.CharField(max_length=20,
                                     null=False, blank=False)
     country = CountryField(blank_label='Country *',
-                           null=False, blank=False)
+                           null=False, blank=False,
+                           default=settings.UK_ISO_3166_VALUE)
     postcode = models.CharField(max_length=20,
                                 null=True, blank=False)
     city = models.CharField(max_length=40, null=False, blank=False)
