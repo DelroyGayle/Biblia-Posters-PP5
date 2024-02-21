@@ -45,7 +45,7 @@ def handle_POST_method(request):
         discount_factor = settings.DISCOUNT_FACTOR
     else:
         # Otherwise no discount
-        discount_factor = 1  
+        discount_factor = 1
 
     form_data = {
         'full_name': request.POST['full_name'],
@@ -66,10 +66,8 @@ def handle_POST_method(request):
         order.stripe_pid = pid
         order.original_bag = json.dumps(bag)
         if Common.special_day_today:
-            print(400, request.session['special_days_name'])
             order.special_days_discount_name = (
                    request.session['special_days_name'])
-            print(401, order.special_days_discount_name)
         # Save the Order to the Database
         order.save()
 
@@ -250,14 +248,13 @@ def record_each_poster(request):
 def reset_special_days_variables():
     """
     After each successful order reset these fields
-    So that a new check is made for whether 
-    the day of a new order is a special day
+    So that a new check is made of
+    whether the day of a new order is a special day
     """
 
     Common.today_checked = None
     Common.special_day_today = None
     Common.special_days_queryset = None
-    Common.infoline = None
 
 
 def checkout_success(request, order_number):
@@ -298,8 +295,16 @@ def checkout_success(request, order_number):
                 user_profile_form.save()
 
     # Reset the fields that handle Special Days
-    print(201, Common.special_day_today, Common.infoline)
     reset_special_days_variables()
+
+    # If today's date is a Special Day,
+    # Add an infoline explaining the 25% discount
+
+    if order.special_days_discount_name != '':
+        infoline = (f'{order.special_days_discount_name}'
+                    ' 25% Discount has been applied to the order')
+    else:
+        infoline = ''
 
     messages.success(request, ('Order successfully processed! '
                                f'Your order number is {order_number}. '
@@ -311,10 +316,10 @@ def checkout_success(request, order_number):
         del request.session['bag']
 
     template = 'checkout/checkout_success.html'
-    # 'order_infoline' informing the user about the 25% Discount
+    # 'infoline' informing the user about the 25% Discount
     context = {
         'order': order,
-        'order_infoline': Common.infoline
+        'infoline': infoline
     }
 
     # return the user to the successful order page

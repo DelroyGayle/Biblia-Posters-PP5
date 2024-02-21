@@ -119,9 +119,7 @@ def checkfor_special_days(request):
 
     result = Common.special_days_queryset.first()
 
-    print("R0", Common.today_checked, Common.special_day_today, result)
-
-    # TEST - DISCOUNT ALWAYS ON
+    # TEST - DISCOUNT ALWAYS ON TODO DG
 
     Common.today_checked = True
     Common.special_day_today = True
@@ -143,7 +141,7 @@ def checkfor_special_days(request):
         return {}
 
     the_index = queryset.first().id
-    print("ID", the_index)
+    print("ID", the_index)  # TODO
     the_name = settings.SPECIAL_DAYS_NAMES[the_index]
     the_name = 'Feast of Booths'  # TODO DG
     the_banner = f' - {the_name} - 25% Discount Today!'

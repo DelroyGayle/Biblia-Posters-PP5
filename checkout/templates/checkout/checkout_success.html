@@ -166,8 +166,9 @@
                         <p class="mb-0 text-black font-weight-bold">Order Total</p>
                     </div>
                     <div class="col-12 col-md-8 text-md-right">
-                        <p class="mb-0">£{{ order.order_total }}</p>
-                        {% if order_infoline %}<p style="color: red;">&nbsp;*</p>{% endif %}
+                        <p class="mb-0">£{{ order.order_total }}
+                            {% if infoline %}<span class="mb-0 text-danger font-weight-bold">&nbsp;*</span>{% endif %}
+                        </p>
                     </div>
                 </div>
 
@@ -189,10 +190,12 @@
                     </div>
                 </div>
 
-                {% if order_infoline %}
+                {% if infoline %}
                     <div class="row">
-                        <div class="col-12 col-md-4">
-                            <p class="mb-0 text-black font-weight-bold">{{ order_info_line }}</p>
+                        <div class="col-12">
+                            <p class="mb-0 text-black font-weight-bold"><span class="mb-0 text-danger font-weight-bold">*&nbsp;</span>
+                                {{ infoline }}
+                            </p>
                         </div>
                     </div>
                 {% endif %}

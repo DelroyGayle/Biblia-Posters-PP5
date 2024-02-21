@@ -22,7 +22,7 @@ class StripeWH_Handler:
 
     def _send_confirmation_email(self, order, asterisk='', infoline=''):
         """Send the user a confirmation email"""
-        print("AI2", asterisk, infoline)
+
         customer_email = order.email
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
@@ -124,16 +124,15 @@ class StripeWH_Handler:
             # the response to Stripe
 
             # If today's date is a Special Day,
-            # Add an addition infoline explaining the 25% discount
-            print(402, order.special_days_discount_name)
+            # Add an infoline explaining the 25% discount
             if order.special_days_discount_name != '':
-                asterisk = '[*]'
+                asterisk = '*'
                 infoline = (f'{asterisk} '
                             f'{order.special_days_discount_name} 25% Discount has been applied to the order')
-                print("AI", asterisk, infoline, order.special_days_discount_name)
             else:
                 asterisk = ''
                 infoline = ''
+
             self._send_confirmation_email(order, asterisk, infoline)
             return HttpResponse(
                 content=(f'Webhook received: {event["type"]} | '

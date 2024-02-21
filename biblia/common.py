@@ -88,15 +88,11 @@ def checkfor_special_days(request):
     Common.today_checked = True
     Common.special_day_today = True
 
-    the_name = 'Feast of Booths'  # TODO DG
+    the_name = 'Pentecost'  # TODO DG
     the_banner = f' - {the_name} - 25% Discount Today!'
     # TODO REPEATED BELOW
 
-    # Add an info line regarding the 25% Discount
-    Common.infoline =  (f'{the_name} '
-                    '25% Discount has been applied to the order')
     request.session['special_days_name'] =  the_name
-    print(100, request.session['special_days_name'], Common.infoline)
     context = {
                 'special_days_name': the_name,
                 'special_days_banner': the_banner,
@@ -115,9 +111,6 @@ def checkfor_special_days(request):
     the_name = settings.SPECIAL_DAYS_NAMES[the_index]
     the_name = 'Feast of Booths'  # TODO DG
     the_banner = f' - {the_name} - 25% Discount Today!'
-    # Add an info line regarding the 25% Discount
-    Common.infoline =  (f'{the_name} '
-                    '25% Discount has been applied to all prices')
 
     Common.today_checked = True
     Common.special_day_today = True

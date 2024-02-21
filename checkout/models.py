@@ -85,7 +85,6 @@ class Order(models.Model):
         """
         if not self.order_number:
             self.order_number = self._generate_order_number()
-        print("SELF", self.order_number)
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -109,10 +108,11 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        from decimal import Decimal        
+        from decimal import Decimal
 
         discount_factor = kwargs.pop('discount_factor', Decimal(1))
-        self.lineitem_total = self.poster.price * self.quantity * discount_factor
+        self.lineitem_total = (self.poster.price * self.quantity
+                                                 * discount_factor)
         super().save(*args, **kwargs)
 
     def __str__(self):
