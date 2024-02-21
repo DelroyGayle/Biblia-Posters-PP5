@@ -25,4 +25,7 @@ class SpecialDays(models.Model):
             models.CheckConstraint(check=models.Q(special_days_lastday__gte=(
                 F('special_days_firstday'))),
                                    name='check_date_range'),
+            models.CheckConstraint(check=(
+                                   models.Q(special_days_id__range=(0, 2))),
+                                   name='special_days_id_within_range'),
         ]

@@ -149,6 +149,11 @@ def checkfor_special_days(request):
     Common.special_day_today = True
 
     the_index = queryset.first().id
+
+    # Defensive - default 0
+    if (the_index + 1 > len(SPECIAL_DAYS_NAMES) or
+        the_index < 0):
+        the_index = 0
     print("ID", the_index)  # TODO DEFENSIVE
     the_name = settings.SPECIAL_DAYS_NAMES[the_index]
     the_banner = f' - {the_name} - 25% Discount Today!'

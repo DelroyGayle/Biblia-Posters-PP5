@@ -278,7 +278,9 @@ def add_poster(request):
             return redirect(reverse('poster_details', args=[poster.id]))
         else:
             messages.error(request, ('Failed to add poster. '
-                                     'Please ensure the form is valid.'))
+                                     'Please ensure the form is valid. '
+                                     'Rating must be a number in the range '
+                                     '0 to 5'))
     else:
         form = PosterForm()
 
@@ -302,7 +304,9 @@ def edit_poster(request, poster_id):
             return redirect(reverse('poster_details', args=[poster.id]))
         else:
             messages.error(request, ('Failed to update poster. '
-                                     'Please ensure the form is valid.'))
+                                     'Please ensure the form is valid. '
+                                     'Rating must be a number in the range '
+                                     '0 to 5'))
     else:
         form = PosterForm(instance=poster)
         messages.info(request, f'You are editing {poster.name}')
