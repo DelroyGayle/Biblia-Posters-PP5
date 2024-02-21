@@ -119,42 +119,25 @@ def checkfor_special_days(request):
 
     result = Common.special_days_queryset.first()
 
-    # TODO
-    # the_index = queryset.first().id
-    the_index = 0
-
-    # TEST - DISCOUNT ALWAYS ON TODO DG
-
-    Common.today_checked = True
-    Common.special_day_today = True
-
-    the_name = 'Passover'  # TODO DG
-    the_banner = f' - {the_name} - 25% Discount Today!'
-    request.session['special_days_name'] = the_name
-    context = {
-                'special_days_name': the_name,
-                'special_days_banner': the_banner,
-    }
-    return context
-
-    # TODO DG
-
     if not result:
+        # Not A 'Special Day' - Apply No Discount
         Common.today_checked = False
         Common.special_day_today = False
-        request.session.pop('special_days_namers', None)
+        request.session.pop('special_days_names', None)
         return {}
 
+    # Special Day - Apply Discount to purchases i.e. 25%
     Common.today_checked = True
     Common.special_day_today = True
 
-    the_index = queryset.first().id
+    # Identify which Special Day
+    the_index = result.special_days_id
 
-    # Defensive - default 0
-    if (the_index + 1 > len(SPECIAL_DAYS_NAMES) or
+    # Defensive Programming - default 0
+    if (the_index + 1 > len(settings.SPECIAL_DAYS_NAMES) or
         the_index < 0):
         the_index = 0
-    print("ID", the_index)  # TODO DEFENSIVE
+
     the_name = settings.SPECIAL_DAYS_NAMES[the_index]
     the_banner = f' - {the_name} - 25% Discount Today!'
     request.session['special_days_name'] = the_name
