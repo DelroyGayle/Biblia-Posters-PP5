@@ -16,9 +16,11 @@
         <div class="col">
             <hr>
             <h2 class="logo-font mb-4">Your Wishlist</h2>
+            {% if posters %}
             <h3>
-                {% if posters %}{{ posters|length }} Poster{{ posters|length|pluralize }} {% endif %}
+                {{ posters|length }} Poster{{ posters|length|pluralize }}
             </h3>
+            {% endif %}
             <hr>
         </div>
     </div>

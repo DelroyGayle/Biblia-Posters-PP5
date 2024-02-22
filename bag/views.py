@@ -19,7 +19,6 @@ def add_to_bag(request, item_id):
 
     from biblia.common import Common
 
-    # TODO
     # Check if today is a Special Day
     if not Common.today_checked:
         _ = checkfor_special_days(request)

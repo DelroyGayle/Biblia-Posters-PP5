@@ -52,7 +52,8 @@
                                 </div>
                                 <!-- mb-5 to raise the 'remove' link above the BackToTop button -->
                                 <div class="col-12 col-sm-6 mb-5">
-                                    {% include "bag/quantity_form.html" %}
+                                    <!-- Numbered 1 to pass HTML Validation-->
+                                    {% include "bag/quantity-form1.html" %}
                                 </div>
                             </div>
                             <div class="row"><div class="col"><hr></div></div>
@@ -89,7 +90,8 @@
                                         <p class="my-0">£{{ item.poster.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        {% include "bag/quantity_form.html" %}
+                                    <!-- Numbered 2 to pass HTML Validation-->
+                                    {% include "bag/quantity-form2.html" %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0 text-right">
@@ -134,10 +136,25 @@
         form.submit();
     })
 
+    // For elements attached to class remove1-item    
     // Remove item and reload on click
-    $('.remove-item').click(function(e) {
+    $('.remove1-item').click(function(e) {
         let csrfToken = "{{ csrf_token }}";
-        let itemId = $(this).attr('id').split('remove_')[1];
+        let itemId = $(this).attr('id').split('remove1_')[1];
+        let url = `/bag/remove/${itemId}/`;
+        let data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+
+    // For elements attached to class remove2-item    
+    // Remove item and reload on click
+    $('.remove2-item').click(function(e) {
+        let csrfToken = "{{ csrf_token }}";
+        let itemId = $(this).attr('id').split('remove2_')[1];
         let url = `/bag/remove/${itemId}/`;
         let data = {'csrfmiddlewaretoken': csrfToken};
 

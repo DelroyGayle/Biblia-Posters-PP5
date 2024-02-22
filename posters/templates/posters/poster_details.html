@@ -118,7 +118,7 @@
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <button class="decrement-qty btn btn-black rounded-0"
-                                            data-item_id="{{ poster.id }}" id="decrement-qty_{{ poster.id }}">
+                                            data-item_id="{{ poster.id }}" id="decrement-qty0_{{ poster.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
                                             </span>
@@ -126,11 +126,11 @@
                                     </div>
 
                                     <input class="form-control qty_input" type="number" name="quantity" value="1"
-                                        min="1" max="99" data-item_id="{{ poster.id }}" id="id_qty_{{ poster.id }}">
+                                        min="1" max="99" data-item_id="{{ poster.id }}" id="id_qty0_{{ poster.id }}">
 
                                     <div class="input-group-append">
                                         <button class="increment-qty btn btn-black rounded-0"
-                                            data-item_id="{{ poster.id }}" id="increment-qty_{{ poster.id }}">
+                                            data-item_id="{{ poster.id }}" id="increment-qty0_{{ poster.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>
                                             </span>
@@ -194,7 +194,6 @@
     </div>
 </div>
 {% include 'includes/footer.html' %}
-</div>
 {% endblock %}
 
 {% block postloadjs %}

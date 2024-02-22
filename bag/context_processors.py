@@ -63,9 +63,9 @@ def define_special_days_queryset(request):
     However, a tolerance of 30 minutes is given for both of these
     time values to cater for the user either
     1) coming to the website minutes before midnight
-    just prior to when the Specials Days Range starts
+    just prior to when the Special Days Range starts
     2) or coming to the website minutes before midnight
-    just prior to when the Specials Days Range ends
+    just prior to when the Special Days Range ends
     """
 
     from django.db.models import Q

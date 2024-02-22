@@ -4,13 +4,40 @@
     function handleEnableDisable(itemId) {
         const RANGE_MIN = 2
         const RANGE_MAX = 98
-        let currentValue = parseInt($(`#id_qty_${itemId}`).val());
+        
+        let matched = false;
+        let i, id_name;
+        for (i=0; i<2; i++) {
+            id_name = `#id_qty${i}_${itemId}`
+            console.log(i,id_name)
+            console.log($(id_name).length)
+            if ($(id_name).length > 0) {
+                matched = true;
+                currentValue = parseInt($(id_name).val());
+                break;
+            }
+        }
+        if (!matched) {
+            return
+        }
+        // let currentValue = parseInt($(`#id_qty_${itemId}`).val());
+
         // For every one of these two conditions that are 'true'
         // 'Disable' the property else 'Enable' the property
         let minusDisabled = currentValue < RANGE_MIN;
         let plusDisabled = currentValue > RANGE_MAX;
-        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
-        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
+
+        switch(i) {
+            case 0:
+                $(`#decrement-qty0_${itemId}`).prop('disabled', minusDisabled);
+                $(`#increment-qty0_${itemId}`).prop('disabled', plusDisabled);
+            case 1:
+                $(`#decrement-qty1_${itemId}`).prop('disabled', minusDisabled);
+                $(`#increment-qty1_${itemId}`).prop('disabled', plusDisabled);
+            default:
+                $(`#decrement-qty2_${itemId}`).prop('disabled', minusDisabled);
+                $(`#increment-qty2_${itemId}`).prop('disabled', plusDisabled);
+        }
     }
 
     // Ensure proper enabling/disabling of all inputs on page load

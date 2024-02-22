@@ -16,9 +16,11 @@
         <div class="col">
             <hr>
             <h2 class="logo-font mb-4">Your Reviews</h2>
+            {% if reviews %}
             <h3>
-                {% if reviews %}{{ reviews|length }} review{{ reviews|length|pluralize }} {% endif %}
+                {{ reviews|length }} review{{ reviews|length|pluralize }}
             </h3>
+            {% endif %}
             <hr>
         </div>
     </div>

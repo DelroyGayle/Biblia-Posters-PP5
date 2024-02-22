@@ -45,15 +45,12 @@ body {
     color: white;
 }
 
-/* todo */
 .remove-left-right-padding {
     padding-left: 0;
     padding-right: 0;
 }
 
-/* TODO banner */
 .hide-logo {
-    /* visibility:hidden; */
     display:none;
 }
 
@@ -88,11 +85,11 @@ body {
 }
 
 .posters-mt {
-    margin-top: 0rem; /* 7rem TODO 0 */
+    margin-top: 0;
 }
 
 .poster-details-mt {
-    margin-top: 0rem; /* 8rem TODO 0 */
+    margin-top: 0;
 }
 
 /* ====== ABOUT US Styling ======= */
@@ -291,7 +288,9 @@ a.category-badge > span.badge:hover {
 
 .backtotop-link,
 .update-link,
-.remove-item {
+.remove-item,
+.remove1-item,
+.remove2-item {
     cursor: pointer;
 }
 
@@ -311,7 +310,7 @@ input[name='q']::placeholder {
 
 .message-container {
     position: fixed;
-    top: -36px; /* 72px TODO */
+    top: -36px;
     right: 15px;
     z-index: 99999999999;
     color: red;
@@ -491,17 +490,6 @@ input[name='q']::placeholder {
   .container {
        max-width: 80%;
   }
-}
-
-/* Increase the margin-top in order that the drop-down menus do not obscure the images */
-@media (max-width: 992px) {
-    .posters-mt {
-        margin-top: 0rem; /* 9rem TODO 0 */
-    }
-
-    .poster-details-mt {
-        margin-top: 0rem; /* 11rem TODO 0 */
-    }
 }
 
 /* fixed top navbar only on medium and up */
