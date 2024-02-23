@@ -30,9 +30,9 @@ SECRET_KEY = ('django-insecure-^mq(is8dy6v+rqitv*'
               'wme1aw@qx)7c**jq-#+c5jolgk*jqa4#')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['https://biblia-posters-dg-869e3a15ddae.herokuapp.com/', 'localhost',
+ALLOWED_HOSTS = ['biblia-posters-dg-869e3a15ddae.herokuapp.com', 'localhost',
                  '8000-delroygayle-bibliaposte-dlbeacwiw6l.ws-eu108.gitpod.io']
 
 # Application definition
