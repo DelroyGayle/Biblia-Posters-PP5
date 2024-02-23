@@ -64,7 +64,7 @@ def fetch_posters(request):
     A view to show all posters, including
     categorising, sorting and search queries
     """
-        
+
     # Check if today is a Special Day
     if not Common.today_checked:
         checkfor_special_days(request)
@@ -131,10 +131,9 @@ def poster_details(request, poster_id):
         checkfor_special_days(request)
 
     poster = get_object_or_404(Poster, pk=poster_id)
-    poster_reviews = list(
-        Review.objects.filter(poster=poster_id)
-              .order_by('-amended_at').values()
-    )
+    queryset = Review.objects.filter(poster=poster_id)
+    poster_reviews = (list(queryset.order_by('-amended_at').values())
+                      if queryset.exists() else [])
 
     (
         add_review_possible,
