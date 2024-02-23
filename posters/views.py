@@ -274,7 +274,7 @@ def add_poster(request):
         form = PosterForm(request.POST, request.FILES)
         if form.is_valid():
             poster = form.save()
-            messages.success(request, 'Successfully added poster!')
+            messages.info(request, 'Successfully added poster!')
             return redirect(reverse('poster_details', args=[poster.id]))
         else:
             messages.error(request, ('Failed to add poster. '
@@ -300,7 +300,7 @@ def edit_poster(request, poster_id):
         form = PosterForm(request.POST, request.FILES, instance=poster)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated poster!')
+            messages.info(request, 'Successfully updated poster!')
             return redirect(reverse('poster_details', args=[poster.id]))
         else:
             messages.error(request, ('Failed to update poster. '
@@ -326,7 +326,7 @@ def delete_poster(request, poster_id):
     poster = get_object_or_404(Poster, pk=poster_id)
     if request.method == 'POST':
         poster.delete()
-        messages.success(request, 'Poster successfully deleted!')
+        messages.info(request, 'Poster successfully deleted!')
         return redirect(reverse('posters'))
 
     context = {'poster': poster}
