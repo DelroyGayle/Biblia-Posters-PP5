@@ -58,6 +58,7 @@ To meet this B2C requirement:
 ## User Stories
 <details>
 <summary>The User Stories that were implemented for this Project</summary
+									
 * As a **Shopper** I can **view a list of posters** so that **I can select posters to purchase**
 * As a **Shopper** I can **view a specific category of posters** so that **I can select specific posters without the need to search throughout all the posters**
 * As a **Shopper** I can **view a poster's individual details** so that **I can identify the price, description, rating, image and reviews regarding the poster**
@@ -85,6 +86,7 @@ To meet this B2C requirement:
 * As an **Admin Site User** I can **add a poster** so that **I can add new posters to my store**
 * As an **Admin Site User** I can **edit a poster** so that **I can change the price, description, image and other poster criteria**
 * As an **Admin Site User** I can **delete a poster** so that **I can remove posters that are no longer for sale**
+
 </details>
 ------
 
