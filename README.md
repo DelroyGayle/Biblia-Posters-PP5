@@ -1,6 +1,6 @@
 # Biblia Posters
-[] 	TODO
-[View live website] 
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/666391ca-4019-4c59-b134-703c52fef409)
+[View live website](https://biblia-posters-dg-869e3a15ddae.herokuapp.com/)
 
 ## Table of Contents
 
@@ -12,6 +12,8 @@
    3. [Database Design](#database-design)
    4. [Data Models](#data-models)
    5. [Framework](#framework)
+   6. [Colours](#colours)
+   7. [Typography](#typography)
 4. [Features](#features)
    1. ONE
    2. [Background Image](#background-image)
@@ -38,8 +40,9 @@
 ## Introduction
 
 For my Code Institute Portfolio Project 5, 
-I would like to implement an E-Commerce online shop in order for shoppers to purchase Christian and Biblical posters.
-This project is built from the perspective of a small business owner who wants a website to attract customers to my posters which depict different events shown in the Bible. 
+I would like to implement an E-Commerce online shop in order for shoppers to purchase Biblical and Christian posters.
+This project is built from the perspective of a small business owner who wants a website to attract customers to the owner's collection of posters which depict different events shown in the Bible.
+The owner will also operate as the Admin Site User so that the user can perform CRUD functions relating to posters, special days dates and shoppers' reviews. 
 The website will operate as a Business to Consumer (B2C) E-Commerce site, allowing the selling of posters from the business, namely **Biblia Posters**, to individual consumers.
 To meet this B2C requirement:
 - the site will display a range of posters for customers to purchase
@@ -48,7 +51,7 @@ To meet this B2C requirement:
 - the site will allow a user to set up their own profile to facilitate future purchases
 - the site will allow registered users to add posters to their own wish list for future purchases
 - the site will allow registered users to share reviews about their purchases and interactions with Biblia Poster
-- depending on particular time of the year which depict special Biblical significance, the site will offer users 25% discounts on purchases
+- depending on particular times of the year which depict special Biblical significance, the site will offer users 25% discounts on purchases
 
 ----
 
@@ -108,10 +111,14 @@ To meet this B2C requirement:
 ------
 
 ### Agile Design
+**Agile** was used as the management approach of this project. I used Github's tools namely *Milestones, Issues and Projects* resulting in the project into twenty-seven weighted user stores dividing them up into the following categories as described by the (https://en.wikipedia.org/wiki/MoSCoW_method)[MoSCoW priority level system].
+* Must-Have
+* Should-Have
+* Could-Have
 
-The Kanban Project layout can be viewed [here](https://github.com/users/DelroyGayle/projects/6)
+Continuing with Agile methodology, I then categorised the user stories into *Epics*; that is, a collection of user stories linked with various *tasks* to implement a particular feature.
 
-*Twenty-seven User Stories* were implemented - TODO
+The Kanban Project layout showing the *Twenty-seven User Stories* can be viewed [here](https://github.com/users/DelroyGayle/projects/6)
 
 <details>
 <summary>Here is the Agile Kanban Board of the Twenty-Seven User Stories that were implemented</summary>
@@ -125,8 +132,6 @@ The Kanban Project layout can be viewed [here](https://github.com/users/DelroyGa
 ![Screenshot 2024-01-28 182755](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b04b9349-cfd6-452e-9763-461c2d8f0064)
 
 ![Screenshot 2024-01-28 182804](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/be982fff-fac9-4b0d-b953-9bf30b1d7129)
-
-
 
 
 </details>
@@ -174,6 +179,36 @@ The User Model contains information about the user. It is based upon Django's in
 ####  Model/3
 
 ### Framework
+
+### Colours
+
+Besides Bootstrap 4 colours of black and red, I have chosen TODO
+
+### Typography
+
+The fonts I have chosen to use are 
+1. [Montserrat](https://fonts.google.com/specimen/Montserrat) - I like the clarity of this particular font.
+2. [Pacifico](https://fonts.google.com/specimen/Pacifico) - I like the boldness of this particular font.
+
+### Imagery
+
+Imagery
+The source for my images are the following Stock image sites
+
+
+1. [Unspash](https://unsplash.com)
+   The *Hero Image* by [Aaron Burden](https://unsplash.com/@aaronburden?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) is a photo of an *Opened Bible on a path during the daytime*.<br>
+This informs the site user that this website has a biblical theme<br> with a view of drawing the user to follow the path to find out more about what this website has to offer.
+
+2. [Pexels](https://www.pexels.com)
+  The next photo on the *Home Page* is of a man showing a poster with the inscription *Who says a small poster can't start a big collection?* by [Anete Lusina](https://www.pexels.com/@anete-lusina/).<br>
+This informs the site that this website's purpose is in regards to posters.
+
+3. Free
+
+4. 
+
+5. Freepik
 
 
 
@@ -831,10 +866,8 @@ These are the steps in order to deploy on Render:
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
   
 ## Credits
-+ Hero Image Photo of *Opened Bible on path during daytime photo* is by [Aaron Burden](https://unsplash.com/@aaronburden?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) at [Unsplash](https://unsplash.com/photos/opened-book-on-brown-field-during-daytime-4uX_r8OhJ_o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
-+ Photo of man showing poster with inscription *Who says a small poster can't start a big collection?* is by Anete Lusina at [Pexels](https://www.pexels.com/photo/crop-man-showing-poster-with-inscription-on-white-background-6353838/)
-+ Used [Stack Overflow](https://stackoverflow.com/) to investigate various solutions especially
-   + TODO
++ Hero Image Photo of an *Opened Bible on a path during daytime* is by [Aaron Burden](https://unsplash.com/@aaronburden?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) at [Unsplash](https://unsplash.com/photos/opened-book-on-brown-field-during-daytime-4uX_r8OhJ_o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
++ Photo of a man showing poster with the inscription *Who says a small poster can't start a big collection?* is by Anete Lusina(https://www.pexels.com/@anete-lusina/) at [Pexels](https://www.pexels.com/photo/crop-man-showing-poster-with-inscription-on-white-background-6353838/)
         
 ## Acknowledgements
 + Code Institute's Boutique Ado Walkthrough Project upon which this site is modelled upon.
