@@ -203,19 +203,19 @@ Imagery
 The source for my images are the following Stock image sites
 
 
-1. [Unspash](https://unsplash.com)
+1. [Unspash](https://unsplash.com)<br>
    The *Hero Image* by [Aaron Burden](https://unsplash.com/@aaronburden?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) is a photo of an *Opened Bible on a path during the daytime*.<br>
 This informs the site user that this website has a biblical theme<br> with a view of drawing the user to follow the path to find out more about what this website has to offer.
 
-2. [Pexels](https://www.pexels.com)
+2. [Pexels](https://www.pexels.com)<br>
   The next photo on the *Home Page* is of a man showing a poster with the inscription *Who says a small poster can't start a big collection?* by [Anete Lusina](https://www.pexels.com/@anete-lusina/).<br>
 This informs the site that this website's purpose is in regards to posters.
 
-3. [Free Bible Images](https://www.freebibleimages.org/)
+3. [Free Bible Images](https://www.freebibleimages.org/)<br>
    I used this website as the source of the images of the fifty-two posters and the three images depicting *Passover, Pentecost and the Feast of Booths* on the *Home Page*.
 
-4. [Freepik](Freepik.com)
-   I used these two images for the 404 and 500 pages.
+4. [Freepik](Freepik.com)<br>
+   I used two images from this site for the 404 and 500 pages.
 
 ## Features
 
@@ -223,12 +223,20 @@ This informs the site that this website's purpose is in regards to posters.
 
 **Desktop navigation bar and hero image**
 
-The navigation bar shows the *BIBLIA* **POSTERS** Logo which acts as a link to the Home Page. The rest of the bar are links to all the other pages, namely
-* All available Posters
-* All available Old Testament Posters
-* All available New Testament Posters
-* The Login status of the user.
-* and the link to the *live* virtual Shopping Bag showing its total value
+The navigation bar shows the *BIBLIA* **POSTERS** Logo which acts as a *Home Button*. By clicking this logo, the user is returned to the Home Page.<br>The rest of the bar are links to 
+* All available Posters for sale which are further divided into
+* * All available Old Testament Posters
+* * All available New Testament Posters
+<br>On the right hand side of the navigation bar is a dropdown menu for
+* Unregistered users to register
+* The option for the user to Login
+* For registered users to
+* * See a list of all the reviews that the author has authored
+  * See the user's wishlist
+  * In addition, the Site Admin user can add, edit and delete posters
+* What follows next is the link to the *live* virtual Shopping Bag showing its total value
+
+<br>In the middle of the Navigation Bar is the Search Bar whereby the user can perform a (*case insensitive*) search for a Poster by name or description.
 
 ### HEADING
 
@@ -237,37 +245,7 @@ The navigation bar shows the *BIBLIA* **POSTERS** Logo which acts as a link to t
 #### Edit Posters
 
   
-### Background Image
-Some of the images of the Features shown may differ slightly since the *Background Image* was added later on.
-
 <details>
-   <summary>
-      The Background Image
-   </summary>
-
-   IMAGE
-
-</details>
-
-### NavBar
-
-The navigation menu bar only shows up for logged in users.<br/>
-From this point onwards, the user has the options to Create or Search for Posters.<br/>
-On the far left is **the Logo**.<br/>
-
-<details>
-   <summary>Logo</summary>
-
- IMAGE
-
-
-</details>
-
-The logo acts as a *Home Button*. By clicking the logo, the user is returned to the Home Page.<br/>
-On the far right is the option to Logout.
-
-
-details>
 
 <summary>Sample of a poster image: The_Resurrected_Jesus_Shows_His_Disciples_His_Pierced_Hands_And_Feet.jpg</summary>
 
