@@ -218,7 +218,7 @@ function handleEnableDisable_value_unknown(itemId) {
         return;
     }
 
-    // Enable/Disable -/+ buttons accordingly depinding on their values
+    // Enable/Disable -/+ buttons accordingly depending on their values
     // the elements that are related BOTH to #id_qty1_ and #id_qty2_
     enable_disable_buttons(itemId, currentValue);
     return;
@@ -316,7 +316,7 @@ function handleEnableDisable_value_known(itemId, currentValue, incOrDec) {
     // Enable/Disable the increment buttons depending on the updated value
     currentValue = parseInt($(`#id_qty${matched_num}_${itemId}`).val());
 
-    // Enable/Disable -/+ buttons accordingly depinding on their values
+    // Enable/Disable -/+ buttons accordingly depending on their values
     // the elements that are related BOTH to #id_qty1_ and #id_qty2_
     enable_disable_buttons(itemId, currentValue);
     return;

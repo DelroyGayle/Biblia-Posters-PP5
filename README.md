@@ -189,7 +189,8 @@ The User Model contains information about the user. It is based upon Django's in
 
 ### Colours
 
-Besides Bootstrap 4 colours of black and red, I have chosen TODO
+Besides Bootstrap 4 colours of *text-danger*, black and white, I have chosen to use #adffe4* for the Home Page;
+#adffe4 and its triadic colours xxx for the other pages.
 
 ### Typography
 
@@ -209,13 +210,13 @@ This informs the site user that this website has a biblical theme<br> with a vie
 
 2. [Pexels](https://www.pexels.com)<br>
   The next photo on the *Home Page* is of a man showing a poster with the inscription *Who says a small poster can't start a big collection?* by [Anete Lusina](https://www.pexels.com/@anete-lusina/).<br>
-This informs the site that this website's purpose is in regards to posters.
+<br>This informs the site that this website's purpose is in regards to posters.
 
 3. [Free Bible Images](https://www.freebibleimages.org/)<br>
-   I used this website as the source of the images of the fifty-two posters and the three images depicting *Passover, Pentecost and the Feast of Booths* on the *Home Page*.
+   I used this website as the source of the images of the fifty-two posters and the three images <br>depicting *Passover, Pentecost and the Feast of Booths* on the *Home Page*.
 
 4. [Freepik](Freepik.com)<br>
-   I used two images from this site for the 404 and 500 pages.
+   I used two images from this site for the 404 page and the 500 page.
 
 ## Features
 
@@ -226,7 +227,7 @@ This informs the site that this website's purpose is in regards to posters.
 The navigation bar shows the *BIBLIA* **POSTERS** Logo which acts as a *Home Button*. By clicking this logo, the user is returned to the Home Page.<br>The rest of the bar are links to 
 * All available Posters for sale which are further divided into
 * * All available Old Testament Posters
-* * All available New Testament Posters
+* * All available New Testament Posters<br>
 <br>On the right hand side of the navigation bar is a dropdown menu for
 * Unregistered users to register
 * The option for the user to Login
