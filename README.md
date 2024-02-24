@@ -56,7 +56,8 @@ To meet this B2C requirement:
 ----
 
 ## User Stories
-
+<details>
+<summary>The User Stories that were implemented for this Project</summary
 * As a **Shopper** I can **view a list of posters** so that **I can select posters to purchase**
 * As a **Shopper** I can **view a specific category of posters** so that **I can select specific posters without the need to search throughout all the posters**
 * As a **Shopper** I can **view a poster's individual details** so that **I can identify the price, description, rating, image and reviews regarding the poster**
@@ -84,6 +85,7 @@ To meet this B2C requirement:
 * As an **Admin Site User** I can **add a poster** so that **I can add new posters to my store**
 * As an **Admin Site User** I can **edit a poster** so that **I can change the price, description, image and other poster criteria**
 * As an **Admin Site User** I can **delete a poster** so that **I can remove posters that are no longer for sale**
+</details>
 ------
 
 ## UX-User Experience
@@ -111,10 +113,13 @@ To meet this B2C requirement:
 ------
 
 ### Agile Design
-**Agile** was used as the management approach of this project. I used Github's tools namely *Milestones, Issues and Projects* resulting in the project into twenty-seven weighted user stores dividing them up into the following categories as described by the (https://en.wikipedia.org/wiki/MoSCoW_method)[MoSCoW priority level system].
-* Must-Have
-* Should-Have
-* Could-Have
+**Agile** was used as the management approach of this project. I used Github's tools namely *Milestones, Issues and Projects* resulting in the project into twenty-seven weighted user stores dividing them up into the following categories as described by the [MoSCoW prioritisation technique](https://en.wikipedia.org/wiki/MoSCoW_method)].
+* ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/da0e9b7b-1a08-4519-bc96-3b6f4e7dfdbc)
+
+* ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7501b331-f0c6-4a76-8e7f-9fa7ab4e7bf9)
+
+* ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ceed0497-29f6-4c32-bd04-2cf39a51f34e)
+
 
 Continuing with Agile methodology, I then categorised the user stories into *Epics*; that is, a collection of user stories linked with various *tasks* to implement a particular feature.
 
@@ -204,15 +209,24 @@ This informs the site user that this website has a biblical theme<br> with a vie
   The next photo on the *Home Page* is of a man showing a poster with the inscription *Who says a small poster can't start a big collection?* by [Anete Lusina](https://www.pexels.com/@anete-lusina/).<br>
 This informs the site that this website's purpose is in regards to posters.
 
-3. Free
+3. [Free Bible Images](https://www.freebibleimages.org/)
+   I used this website as the source of the images of the fifty-two posters and the three images depicting *Passover, Pentecost and the Feast of Booths* on the *Home Page*.
 
-4. 
-
-5. Freepik
-
-
+4. [Freepik](Freepik.com)
+   I used these two images for the 404 and 500 pages.
 
 ## Features
+
+### Navigation
+
+**Desktop navigation bar and hero image**
+
+The navigation bar shows the *BIBLIA* **POSTERS** Logo which acts as a link to the Home Page. The rest of the bar are links to all the other pages, namely
+* All available Posters
+* All available Old Testament Posters
+* All available New Testament Posters
+* The Login status of the user.
+* and the link to the *live* virtual Shopping Bag showing its total value
 
 ### HEADING
 
@@ -867,7 +881,7 @@ These are the steps in order to deploy on Render:
   
 ## Credits
 + Hero Image Photo of an *Opened Bible on a path during daytime* is by [Aaron Burden](https://unsplash.com/@aaronburden?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) at [Unsplash](https://unsplash.com/photos/opened-book-on-brown-field-during-daytime-4uX_r8OhJ_o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
-+ Photo of a man showing poster with the inscription *Who says a small poster can't start a big collection?* is by Anete Lusina(https://www.pexels.com/@anete-lusina/) at [Pexels](https://www.pexels.com/photo/crop-man-showing-poster-with-inscription-on-white-background-6353838/)
++ Photo of a man showing poster with the inscription *Who says a small poster can't start a big collection?* is by [Anete Lusina](https://www.pexels.com/@anete-lusina/) at [Pexels](https://www.pexels.com/photo/crop-man-showing-poster-with-inscription-on-white-background-6353838/)
         
 ## Acknowledgements
 + Code Institute's Boutique Ado Walkthrough Project upon which this site is modelled upon.
