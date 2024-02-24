@@ -31,5 +31,5 @@ urlpatterns = [
     path('wishlist/', include('wishlist.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'boutique_ado.views.handler404'
-handler500 = 'boutique_ado.views.handler500'
+handler404 = 'biblia.views.handler404'
+handler500 = 'biblia.views.handler500'
