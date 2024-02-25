@@ -475,6 +475,14 @@ input[name='q']::placeholder {
     color: #3a3a3a;
 }
 
+/* -------------------------------- 404/500 Page Image -------------------------------- */
+
+.error-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
 /* -------------------------------- Media Queries -------------------------------- */
 
 /* For very large screens */

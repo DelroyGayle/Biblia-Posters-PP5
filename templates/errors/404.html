@@ -6,32 +6,36 @@
         <div class="col"></div>
     </div>
 </div>
-<div class="container-fluid">
+<div class="container mb-2">
     <div class="row">
-        <div class="col-12">
-            <div class="image-container">
-                <img class="card-img-top img-fluid" src="{% static 'img/404.jpg' %}" alt="404 image from Freepik.com">
-            </div>
-        </div>
-        <div class="col-12">
-            <div class="mb-5 mt-md-5">
-                <h1 class="display-4 logo-font text-black text-center">404 - There is nothing to see here!</h1>
-                <div class="my-5">
-                    <h4 class="text-center">
-                        <a href="{% url 'posters' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                            Return to shop
-                        </a>
-                    </h4>
+        <div class="col-md-6">
+            <div class="card">
+                <img src="{% static 'img/404.jpg' %}" alt="404 image from Freepik.com" class="error-img-top img-fluid">
+                <div class="card-body">
+                    <h1 class="display-4 logo-font text-black text-center">404 - There is nothing to see here!</h1>
+                    <div class="my-5">
+                        <h4 class="text-center">
+                            <a href="{% url 'posters' %}"
+                                class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
+                                Return to shop
+                            </a>
+                        </h4>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12">
-            <br><br><br>
-            <p class="card-text mt-5">Image by <a
-                    href="https://www.freepik.com/free-vector/hand-drawn-404-error_1587605.htm">Freepik</a></p>
-        </div>
-    </div>
 </div>
 {% endblock %}
+
+<div class="row">
+    <div class="col-md-6 col-lg-4">
+        <div class="card"><img alt="Card image cap" class="card-img-top img-fluid" src="img/brownie.jpg" />
+            <div class="card-block">
+                <h4 class="card-title">Brownie Delight</h4>
+
+                <p class="card-text">Our customer favorite chocolate ice cream jam packed with pieces of brownies and
+                    fudge</p>
+            </div>
+        </div>
+    </div>

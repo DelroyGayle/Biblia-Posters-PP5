@@ -206,11 +206,11 @@ The source for my images are the following Stock image sites
 
 1. [Unspash](https://unsplash.com)<br>
    The *Hero Image* by [Aaron Burden](https://unsplash.com/@aaronburden?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) is a photo of an *Opened Bible on a path during the daytime*.<br>
-This informs the site user that this website has a biblical theme<br> with a view of drawing the user to follow the path to find out more about what this website has to offer.
+This informs the site user that this website has a biblical theme with a view of drawing the user to follow the path to find out more about what this website has to offer.
 
 2. [Pexels](https://www.pexels.com)<br>
-  The next photo on the *Home Page* is of a man showing a poster with the inscription *Who says a small poster can't start a big collection?* by [Anete Lusina](https://www.pexels.com/@anete-lusina/).<br>
-<br>This informs the site that this website's purpose is in regards to posters.
+  The next photo on the *Home Page* is of a man showing a poster with the inscription<br> *Who says a small poster can't start a big collection?* by [Anete Lusina](https://www.pexels.com/@anete-lusina/).<br>
+This informs the site that this website's purpose is in regards to posters.
 
 3. [Free Bible Images](https://www.freebibleimages.org/)<br>
    I used this website as the source of the images of the fifty-two posters and the three images <br>depicting *Passover, Pentecost and the Feast of Booths* on the *Home Page*.
@@ -227,15 +227,19 @@ This informs the site user that this website has a biblical theme<br> with a vie
 The navigation bar shows the *BIBLIA* **POSTERS** Logo which acts as a *Home Button*. By clicking this logo, the user is returned to the Home Page.<br>The rest of the bar are links to 
 * All available Posters for sale which are further divided into
 * * All available Old Testament Posters
-* * All available New Testament Posters<br>
-<br>On the right hand side of the navigation bar is a dropdown menu for
+* * All available New Testament Posters
+
+
+On the right hand side of the navigation bar is a dropdown menu for
 * Unregistered users to register
 * The option for the user to Login
 * For registered users to
 * * See a list of all the reviews that the author has authored
   * See the user's wishlist
   * In addition, the Site Admin user can add, edit and delete posters
-* What follows next is the link to the *live* virtual Shopping Bag showing its total value
+
+
+What follows next is the link to the *live* virtual Shopping Bag showing its total value
 
 <br>In the middle of the Navigation Bar is the Search Bar whereby the user can perform a (*case insensitive*) search for a Poster by name or description.
 
