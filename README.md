@@ -189,8 +189,7 @@ The User Model contains information about the user. It is based upon Django's in
 
 ### Colours
 
-Besides Bootstrap 4 colours of *text-danger*, black and white, I have chosen to use #adffe4* for the Home Page;
-#adffe4 and its triadic colours xxx for the other pages.
+Besides Bootstrap 4 colours of *text-danger*, black and white;<br> the main background colours are *#e0fff5* for the homepage and *#adffe4* as the basis. For the foreground colours I have used *#adffe4's* related triadic colours. xxx
 
 ### Typography
 
@@ -215,8 +214,6 @@ This informs the site that this website's purpose is in regards to posters.
 3. [Free Bible Images](https://www.freebibleimages.org/)<br>
    I used this website as the source of the images of the fifty-two posters and the three images <br>depicting *Passover, Pentecost and the Feast of Booths* on the *Home Page*.
 
-4. [Freepik](Freepik.com)<br>
-   I used two images from this site for the 404 page and the 500 page.
 
 ## Features
 
@@ -241,7 +238,7 @@ On the right hand side of the navigation bar is a dropdown menu for
 
 What follows next is the link to the *live* virtual Shopping Bag showing its total value
 
-<br>In the middle of the Navigation Bar is the Search Bar whereby the user can perform a (*case insensitive*) search for a Poster by name or description.
+<br>In the middle of the Navigation Bar is the Search Bar whereby the user can perform a (*case insensitive*) search for a Poster by title or description.
 
 ### HEADING
 
@@ -725,7 +722,7 @@ Once the user has searched for the relevant poster, the user then has to click *
     * Django was used as the web framework.
 * [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 * [ElephantSQL Postgres](https://www.elephantsql.com/)
-    * ElephantSQL was used for the SQL Database setup
+    * ElephantSQL was used for hosting the SQL Database
 * [Cloudinary](https://cloudinary.com/)
     * Cloudinary was used for image management.
 
@@ -733,36 +730,42 @@ Once the user has searched for the relevant poster, the user then has to click *
 
 * [GitHub](https://github.com/) for hosting the site
 * [Gitpod](https://www.gitpod.io/) for editing the files
+* TODO
 * [Heroku](https://heroku.com) for the initial deployment of the site
 * [Render](https://render.com/) for the final deployment of the site
 * [Jquery](https://jquery.com/) for scripting purposes
 * [Miro](https://miro.com/) was used to create the wireframes
 * [DrawSQL](https://drawsql.app/) was used to draw the SQL tables
 * [Am I Responsive](http://ami.responsivedesign.is/) was used for creating the multi-device mock-up shown at the top of this README.md file
-* [Tiny PNG](https://tinypng.com/) was used to reduce the file size of the background image
+* [Favicon](https://favicon.io/) was used to generate the Favicon 
+* [Privacy Policy Generator](https://www.privacypolicygenerator.info/) was used to produce the Privacy Policy
 * [Code Institute's GitHub full template](https://github.com/Code-Institute-Org/python-essentials-template) in order to run Django and Python on Heroku/Render
 TODO REQ
 #### requirements.txt
 
 ```
 asgiref==3.7.2
-cloudinary==1.36.0
+boto3==1.34.21
+botocore==1.34.21
 dj-database-url==0.5.0
-dj3-cloudinary-storage==0.0.6
 Django==3.2.23
 django-allauth==0.41.0
+django-countries==7.2.1
+django-crispy-forms==1.14.0
+django-storages==1.14.2
 gunicorn==21.2.0
+jmespath==1.0.1
 oauthlib==3.2.2
+Pillow==10.1.0
 psycopg2==2.9.9
 PyJWT==2.8.0
-python-dateutil==2.8.2
 python3-openid==3.2.0
 pytz==2023.3.post1
 requests-oauthlib==1.3.1
+s3transfer==0.10.0
 sqlparse==0.4.4
+stripe==7.10.0
 urllib3==1.26.15
-whitenoise==5.3.0
-
 ```
 ------
 
