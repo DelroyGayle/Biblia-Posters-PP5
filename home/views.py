@@ -19,3 +19,10 @@ def index(request):
         checkfor_special_days(request)
 
     return render(request, 'home/index.html')
+
+
+def privacy(request):
+    """
+    A view to the Privacy page
+    """
+    return render(request, "home/privacy.html")
