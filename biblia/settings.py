@@ -32,8 +32,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY','')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True # False # 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['biblia-posters-dg-869e3a15ddae.herokuapp.com', 'localhost',
-                 '8000-delroygayle-bibliaposte-dlbeacwiw6l.ws-eu108.gitpod.io']
+ALLOWED_HOSTS = ['biblia-posters-dg-869e3a15ddae.herokuapp.com',
+                 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -221,7 +221,6 @@ SPECIAL_DAYS_NAMES = (
 """
 DISCOUNT_FACTOR = Decimal(0.75)
 UK_ISO_3166_VALUE = 'GB'
-
 
 # Stripe
 STRIPE_CURRENCY = 'gbp'

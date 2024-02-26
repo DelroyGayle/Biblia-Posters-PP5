@@ -106,14 +106,5 @@
             "special_days_lastday": "2027-10-22",
             "special_days_id": 2
         }
-    },
-    {
-        "model": "bag.specialdays",
-        "pk": 13,
-        "fields": {
-            "special_days_firstday": "2024-02-18",
-            "special_days_lastday": "2024-02-18",
-            "special_days_id": 0
-        }
     }
 ]

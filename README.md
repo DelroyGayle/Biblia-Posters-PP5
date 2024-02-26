@@ -40,7 +40,7 @@
 ## Introduction
 
 For my Code Institute Portfolio Project 5, 
-I would like to implement an E-Commerce online shop in order for shoppers to purchase Biblical and Christian posters.
+I would like to implement an E-Commerce online store in order for shoppers to purchase Biblical and Christian posters.
 This project is built from the perspective of a small business owner who wants a website to attract customers to the owner's collection of posters which depict different events shown in the Bible.
 The owner will also operate as the Admin Site User so that the user can perform CRUD functions relating to posters, special days dates and shoppers' reviews. 
 The website will operate as a Business to Consumer (B2C) E-Commerce site, allowing the selling of posters from the business, namely **Biblia Posters**, to individual consumers.
@@ -788,7 +788,7 @@ Please refer to [TESTING.md](https://github.com/DelroyGayle/Biblia-Posters-PP5/b
 ------
 
 ## Deployment
-
+TODO
 The project is deployed on Render.<br> 
 All credit goes to Sophia Iroegbu and her tutorial [How to Deploy a Django App on Render](https://www.freecodecamp.org/news/deploying-a-django-app-to-render/) which worked flawlessly.<br><br>
 These are the steps in order to deploy on Render:
@@ -870,8 +870,10 @@ These are the steps in order to deploy on Render:
 ## Credits
 + Hero Image Photo of an *Opened Bible on a path during daytime* is by [Aaron Burden](https://unsplash.com/@aaronburden?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) at [Unsplash](https://unsplash.com/photos/opened-book-on-brown-field-during-daytime-4uX_r8OhJ_o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 + Photo of a man showing poster with the inscription *Who says a small poster can't start a big collection?* is by [Anete Lusina](https://www.pexels.com/@anete-lusina/) at [Pexels](https://www.pexels.com/photo/crop-man-showing-poster-with-inscription-on-white-background-6353838/)
++ All the images used for the Posters and the images of Passover, Pentecost and Feast of Booths were sourced from [Free Bible Images](https://www.freebibleimages.org/)
         
 ## Acknowledgements
 + Code Institute's Boutique Ado Walkthrough Project upon which this site is modelled upon.
++ Code Institute's Tutor Support for the great patience towards me with my myriad of issues. Thank You!
 
 

@@ -136,7 +136,7 @@ This is broken down into the following
 3. Posters can be sorted by Price, Rating, Poster Name, and Category
 4. That all the above work correctly with responsiveness on different sized media
 
-In this online shop there are *52 posters* available.
+In this online store there are *52 posters* available.
 
 <details>
 
