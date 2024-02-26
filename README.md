@@ -1,5 +1,6 @@
 # Biblia Posters
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/666391ca-4019-4c59-b134-703c52fef409)
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/19dca679-1308-464b-9ddd-ec8575c1c3d5)
+
 [View live website](https://biblia-posters-dg-869e3a15ddae.herokuapp.com/)
 
 ## Table of Contents
