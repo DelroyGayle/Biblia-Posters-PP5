@@ -587,8 +587,8 @@ input[name='q']::placeholder {
 }
 
 /* For very small mobiles, reduce the font size of the Navbar to suit the screen size */
-@media (max-width: 310px) {
-    .small280 {
+@media (max-width: 325px) {
+    .small325 {
         font-size: 50%;
     }  
 }
