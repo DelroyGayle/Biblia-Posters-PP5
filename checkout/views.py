@@ -173,7 +173,8 @@ def handle_GET_method(request, stripeSecretKey):
                 'full_name': the_fullname,
                 'email': the_email,
                 'phone_number': profile.default_phone_number,
-                'country': profile.default_country,
+                'country': (profile.default_country
+                            or settings.UK_ISO_3166_VALUE),
                 'postcode': profile.default_postcode,
                 'city': profile.default_city,
                 'street_address1': profile.default_street_address1,
