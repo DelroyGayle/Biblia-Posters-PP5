@@ -39,12 +39,20 @@ This was performed using Code Institute's [PEP8 Linter](https://pep8ci.herokuapp
 ## Lighthouse
 
 I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility and SEO of the website.
-This test was performed before the authentication profile was added.
 
 <details>
   <summary>Lighthouse Report</summary>
 
-    TODO
+   Home Page
+
+   ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/4dff288c-a0e5-4164-ab34-8bf57e32655e)
+
+   Posters Page ... **/posters/**
+
+   ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/67459201-10e3-4275-bc77-c587434762bc)
+
+
+    
 
 </details>
 
