@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/accounts/login/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/bag/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/?sort=price&amp;direction=asc</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/?sort=category&amp;direction=asc</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/?category=genesis</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/?category=exodus</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/?category=numbers</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/?category=joshua</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/?category=genesis,exodus,numbers,joshua</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/?category=jesus</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/?category=apostles</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/?category=jesus,apostles</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/privacy/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/29/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/5/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/22/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/28/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/51/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/25/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/7/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/50/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/46/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/43/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/52/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/37/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/35/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/3/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/15/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/16/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/17/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/30/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/11/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/21/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/2/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/14/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/20/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/1/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/24/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/32/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/33/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/36/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/40/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/42/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/45/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/47/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/48/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/49/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/13/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/9/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/12/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/38/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/39/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/8/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/41/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/6/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/10/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/26/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/27/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/23/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/19/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/18/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/31/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/44/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/4/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://biblia-posters-dg-869e3a15ddae.herokuapp.com/posters/34/</loc>
+  <lastmod>2024-02-26T15:40:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

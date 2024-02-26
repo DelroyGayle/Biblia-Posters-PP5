@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /checkout/
+Disallow: /profile/
+Sitemap: http://biblia-posters-dg-869e3a15ddae.herokuapp.com/sitemap.xml
