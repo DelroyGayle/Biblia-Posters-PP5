@@ -24,12 +24,10 @@
    	5. [Footer](#footer)
    2. [Toast Messages](#toast-messages)
    3. [Menus](#menus)
-   4. Categorisation(categorisation)
-   5. Viewing(#viewing)
-   6. Sorting(#sorting)
-   7. Searching(#searching)
-   8. [Registration](#registration)
-   9. [Login/Logout](#loginlogout)
+   4. Sorting(#sorting)
+   5. Searching(#searching)
+   6. [Registration](#registration)
+   7. [Login/Logout](#loginlogout)
 6. [User Walkthrough](#user-walkthrough)
 7. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
@@ -471,7 +469,7 @@ Feedback is delivered at all times to the user via the usage of Bootstrap Toast 
 
 </details>
 
-**Old Testament - Genesis**
+#### Old Testament - Genesis
 
 <details>
 
@@ -482,7 +480,7 @@ Feedback is delivered at all times to the user via the usage of Bootstrap Toast 
 </details>
 
 
-**Old Testament - Exodus**
+#### Old Testament - Exodus
 
 <details>
 
@@ -493,7 +491,7 @@ Feedback is delivered at all times to the user via the usage of Bootstrap Toast 
 </details>
 
 
-**Old Testament - Numbers**
+#### Old Testament - Numbers
 
 <details>
 
@@ -505,7 +503,7 @@ Feedback is delivered at all times to the user via the usage of Bootstrap Toast 
 </details>
 
 
-**Old Testament - Joshua**
+#### Old Testament - Joshua
 
 <details>
 
@@ -516,7 +514,7 @@ Feedback is delivered at all times to the user via the usage of Bootstrap Toast 
 
 </details>
 
-**View All The Old Testament**
+#### All The Old Testament Posters
 
 <details>
 
@@ -534,7 +532,7 @@ Feedback is delivered at all times to the user via the usage of Bootstrap Toast 
 
 </details
 
-**New Testament - Jesus**
+#### New Testament - Jesus
 
 <details>
 
@@ -550,7 +548,7 @@ Feedback is delivered at all times to the user via the usage of Bootstrap Toast 
 
 </details>
 
-**New Testament - Apostles**
+#### New Testament - Apostles
 
 <details>
 
@@ -560,7 +558,7 @@ Feedback is delivered at all times to the user via the usage of Bootstrap Toast 
 
 </details>
 
-**View All The New Testament**
+#### All The New Testament Posters
 
 <details>
 
@@ -583,7 +581,168 @@ Feedback is delivered at all times to the user via the usage of Bootstrap Toast 
 
 </details>
 
+### Sorting
+
+#### Sort By Price
+
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/8e40bde7-608d-43e7-82c1-8f500df8b8b1)
+
+<details>
+
+<summary>Price in ascending order</summary>
+
+Cheapest at the top
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/34cf62ea-5c37-4215-83a1-4df720f4a1f1)
+
+Most expensive at the bottom
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/9dedb441-2e98-4664-9c6c-a3a7cc9c9a65)
+
+</details>
+
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/3b8410dc-7de8-46dc-a270-b7c50bfdcc2d)
+
+<details>
+
+<summary>Price in descending order</summary>
+
+Most expensive at the top
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7b62e745-6247-43e7-9cd3-2f081948964a)
+
+Cheapest at the bottom
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/41bf0347-ff8d-4225-85e8-b478a6515b1b)
+
+</details>
+
+#### Sort By Rating
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ff3b83b8-8320-4527-ab85-063c40ba69c6)
+
+<details>
+
+<summary>Rating in descending order</summary>
+
+Highest ratings at the top
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/109db7e9-3c41-4267-95bb-36518f824e9d)
+
+Lowest ratings at the bottom
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/243b55c9-347e-4769-a05c-780041731fc4)
+
+</details>
+
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/bb10ad19-74e9-4022-9ec3-50c23de23218)
+
+<details>
+
+<summary>Rating in ascending order</summary>
+
+Lowest ratings at the top
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e95ee491-62f7-4ef5-8775-4f8ba2411ac6)
+
+Highest ratings at the bottom
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/097d785c-489c-4a40-8c27-ec1e661f5b12)
+
+</details>
+
+#### Sort By Name
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fdcab32a-27a0-4287-8d12-b8fb3ad0b276)
+
+<details>
+
+<summary>Name in Alphabetical Order i.e. Abraham, ...</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/51d1847d-71ed-4b95-8fab-0f9e954ab72d)
+
+</details>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ecc78c53-de13-4ff9-b761-2c53ead26c7f)
+
+<details>
+
+<summary>Name in Descending Alphabetical Order i.e. Zacchaeus then Timbrels ...</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/54d39419-0ffa-4b9e-994f-69305e5103d1)
+
+</details>
+
+#### Sort By Category
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ac51d05d-e79b-4a35-945e-e3a8c8653577)
+
+<details>
+
+<summary>Category in Alphabetical Order i.e. Apostles, ...</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/6bb76e41-4c54-40dc-90ae-dd31448562d0)
+
+</details>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/952f6bbc-95cd-428d-b230-f47883b1fec9)
+
+<details>
+
+<summary>Category in Descending Alphabetical Order i.e. Numbers then Joshua ...</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ccbbfa40-f228-424b-bb74-f33f45a1e31a)
+
+</details>
+
+#### Sort By...
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/911f4bfa-feeb-4398-9356-a88ea1d278e2)
+
+<details>
+	<summary>This option shows all 52 Posters</summary>
+
+ ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/2f6bc6e8-d2dd-434e-96f7-d8bfebd738c6)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e20803a6-0c31-4679-b240-0573579802ac)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/eeb105d4-1521-4b8a-a577-ae254ae8c7e0)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/a5f6c916-a501-488b-9522-cd8fef3cdb39)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/262df841-30cd-43c1-8379-fd958a51ea74)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7d0b2762-b03b-44f6-bfbe-5d03fa80e438)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f31eba18-bfe0-4eb7-ae98-a49e4c251a54)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7c2f09e3-bca3-4d63-a884-2adfce760a62)
+
+</details>
+
+
 ### HEADING
+
+**This option shows all 52 Posters**
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/2f6bc6e8-d2dd-434e-96f7-d8bfebd738c6)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e20803a6-0c31-4679-b240-0573579802ac)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/eeb105d4-1521-4b8a-a577-ae254ae8c7e0)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/a5f6c916-a501-488b-9522-cd8fef3cdb39)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/262df841-30cd-43c1-8379-fd958a51ea74)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7d0b2762-b03b-44f6-bfbe-5d03fa80e438)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f31eba18-bfe0-4eb7-ae98-a49e4c251a54)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7c2f09e3-bca3-4d63-a884-2adfce760a62)
 
 #### Create Posters
 
@@ -695,180 +854,6 @@ View the description then *used CTRL-F and 'bed' to highlight that the searches 
 </details>
 
 
-#### Demonstration of Each Method
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T14 | Sort Posters **By Price**, *Ascending Order* | Select from Menu, All Posters then select **By Price**  | Posters shown, cheapest at the top, lowest at the bottom - URL */posters/?sort=price&direction=asc* | PASS |
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T15 | Sort Posters **By Price**, *Ascending Order* - Method 2 | From the Sort Selector, select **Price (low to high)**  | Posters shown, cheapest at the top, lowest at the bottom - URL */posters/?sort=price&direction=asc* | PASS |
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/8e40bde7-608d-43e7-82c1-8f500df8b8b1)
-
-<details>
-
-<summary>Price in ascending order</summary>
-
-Cheapest at the top
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/34cf62ea-5c37-4215-83a1-4df720f4a1f1)
-
-Most expensive at the bottom
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/9dedb441-2e98-4664-9c6c-a3a7cc9c9a65)
-
-</details>
-
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T16 | Sort Posters **By Price**, *Descending Order* | From the Sort Selector, select **Price (high to low)**  | Posters shown, most expensive at top, cheapest at the bottom - URL */posters/?sort=price&direction=desc* | PASS |
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/3b8410dc-7de8-46dc-a270-b7c50bfdcc2d)
-
-<details>
-
-<summary>Price in descending order</summary>
-
-Most expensive at the top
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7b62e745-6247-43e7-9cd3-2f081948964a)
-
-Cheapest at the bottom
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/41bf0347-ff8d-4225-85e8-b478a6515b1b)
-
-</details>
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T17 | Sort Posters **By Rating**, *Descending Order* | Select from Menu, All Posters then select **By Rating** | Posters shown, highest rate at the top, lowest rating at the bottom - URL */?sort=rating&direction=desc* | PASS |
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T18 | Sort Posters **By Rating**, *Descending Order* - Method 2 | From the Sort Selector, select **Rating (high to low)** | Posters shown, highest rate at the top, lowest rating at the bottom - URL */?sort=rating&direction=desc* | PASS |
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ff3b83b8-8320-4527-ab85-063c40ba69c6)
-
-<details>
-
-<summary>Rating in descending order</summary>
-
-Highest ratings at the top
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/109db7e9-3c41-4267-95bb-36518f824e9d)
-
-Lowest ratings at the bottom
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/243b55c9-347e-4769-a05c-780041731fc4)
-
-</details>
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T19 | Sort Posters **By Rating**, *Ascending Order* | From the Sort Selector, select **Rating (low to high)** | Posters shown, lowest rating at the top, highest rating at the bottom - URL *?sort=rating&direction=asc* | PASS |
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/bb10ad19-74e9-4022-9ec3-50c23de23218)
-
-<details>
-
-<summary>Rating in ascending order</summary>
-
-Lowest ratings at the top
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e95ee491-62f7-4ef5-8775-4f8ba2411ac6)
-
-Highest ratings at the bottom
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/097d785c-489c-4a40-8c27-ec1e661f5b12)
-
-</details>
-
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T20 | Sort Posters **By Category**, *A-Z* | Select from Menu, All Posters then select **By Category**  | Posters shown in Alphabetical Order of Category - URL */posters/?sort=category&direction=asc* | PASS |
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T21 | Sort Posters **By Category**, *A-Z* - Method 2 | From the Sort Selector, select **Category (A-Z)**  | Posters shown in Alphabetical Order of Category - URL */posters/?sort=category&direction=asc* | PASS |
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ac51d05d-e79b-4a35-945e-e3a8c8653577)
-
-<details>
-
-<summary>Category in Alphabetical Order i.e. Apostles, ...</summary>
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/6bb76e41-4c54-40dc-90ae-dd31448562d0)
-
-</details>
-
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T22 | Sort Posters **By Category**, *Z-A* | From the Sort Selector, select **Category (Z-A)**  | Posters shown in Descending Alphabetical Order of Category - URL */posters/?sort=category&direction=desc* | PASS |
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/952f6bbc-95cd-428d-b230-f47883b1fec9)
-
-<details>
-
-<summary>Category in Descending Alphabetical Order i.e. Numbers then Joshua ...</summary>
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ccbbfa40-f228-424b-bb74-f33f45a1e31a)
-
-</details>
-
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T23 | Sort Posters with **All Posters**| Select from Menu, All Posters then select **All Posters**  | All **52** Posters shown - Default view - URL */posters/* | PASS |
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T24 | Sort Posters with **All Posters** - Method 2 | From the Sort Selector, select **Sort by...**  | All **52** Posters shown - Default view - URL */posters/* | PASS |
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/911f4bfa-feeb-4398-9356-a88ea1d278e2)
-
-<details>
-
-<summary>All 52 Posters - Default View</summary>
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/627c0551-ee23-476c-b8c7-4db0f611747b)
-
-</details>
-
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T25 | Sort Posters **By Name**, *A-Z* | From the Sort Selector, select **Name (A-Z)**  | Posters shown in Alphabetical Order of Poster Name - URL */posters/?sort=name&direction=asc* | PASS |
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fdcab32a-27a0-4287-8d12-b8fb3ad0b276)
-
-<details>
-
-<summary>Name in Alphabetical Order i.e. Abraham, ...</summary>
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/51d1847d-71ed-4b95-8fab-0f9e954ab72d)
-
-</details>
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T26 | Sort Posters **By Name**, *Z-A* | From the Sort Selector, select **Name (Z-A)**  | Posters shown in Descending Alphabetical Order of Poster Name - URL */posters/?sort=Name&direction=desc* | PASS |
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ecc78c53-de13-4ff9-b761-2c53ead26c7f)
-
-<details>
-
-<summary>Name in Descending Alphabetical Order i.e. Zacchaeus then Timbrels ...</summary>
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/54d39419-0ffa-4b9e-994f-69305e5103d1)
-
-</details>
-
-
 
 ### Home Page
 
@@ -919,6 +904,8 @@ Once the user has searched for the relevant poster, the user then has to click *
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/4e061c55-04bc-4ea5-a64f-8c2288a55dfc)
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7b4b1f8c-8cee-4f1e-9c0d-ed3001947436)
+
+. Categorisation(categorisation)
 
 ## User Walkthrough
 
