@@ -746,7 +746,7 @@ What follows is a sample of the *case-insensitive* searches and their results.
 
 <details>
 
-<summary>What follows are 2 posters where the match was in the descriptions</summary>
+<summary>What follows are two posters where the match for 'BED' was in the descriptions</summary>
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fcca6530-f744-4103-832a-c2c1fcaef91a)
 (I viewed the description then *used CTRL-F and 'bed' to highlight that the search was indeed successful*)
@@ -791,6 +791,101 @@ What follows is a sample of the *case-insensitive* searches and their results.
 ------
 
 ## User Walkthrough
+
+After a user clicks the **Shop Now** button the *All Posters** page is displayed showing all available 52 posters
+
+<details>
+	<summary>All Posters Page</summary>
+
+ ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/2f6bc6e8-d2dd-434e-96f7-d8bfebd738c6)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e20803a6-0c31-4679-b240-0573579802ac)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/eeb105d4-1521-4b8a-a577-ae254ae8c7e0)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/a5f6c916-a501-488b-9522-cd8fef3cdb39)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/262df841-30cd-43c1-8379-fd958a51ea74)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7d0b2762-b03b-44f6-bfbe-5d03fa80e438)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f31eba18-bfe0-4eb7-ae98-a49e4c251a54)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7c2f09e3-bca3-4d63-a884-2adfce760a62)
+
+</details>
+
+### Unregistered
+
+To select a Poster the user clicks an the image for example after clicking
+
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/1dda5b39-fe4c-4331-b5ba-f7b02ac2dbc8)
+
+This then would be displayed
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/573e8fd4-04ac-4795-85fc-958ca365203e)
+
+The User has the option to adjust the quantity e.g. changed from one to two
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/128045ad-e6e0-4c85-80b6-3f31ad03137a)
+
+Click *ADD TO BAG*
+
+A message is instantly showed to illustrate an updated Shopping Bag
+In this case 2 X £5 = total of £10 *excluding* delivery
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/2c34adca-1e3c-4759-9f88-4ca4513df31b)
+
+However including the delivery cost of £3 gives a total of £13
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/1a62557e-216d-4318-a6c5-19c7a0b384f4)
+
+When the user clicks the Shopping Bag total in blue the user is taken to the *Shopping Bag* page
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ec59c42f-4095-4547-93d5-0206ba306e2d)
+
+Which shows 
+* the poster(s) (and description(s)) being purchased
+* The price of the individual poster
+* The Quantity selected
+* The Subtotal
+* Bag Total and Delivery
+* Grand Total
+
+(The user also has the option of to leave the Shopping Bag and contining shopping by clicking *KEEP SHOPPING*)
+
+Click *SECURE CHECKOUT*
+
+* On the left the user is shown a form to add the delivery address
+* On the right an Order Summary is given
+* The user is given a reminder to *create an account* in future to save the address details or
+* if the user is a registered user, to login in order to use the *saved profile address details*
+  
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7dcd212d-faa9-4a96-9c18-cb1f5433079f)
+
+* The Stripe test card number is *4242 4242 4242 4242*<br>
+* Any CVC and  Any suitable date in the future can be used for the expiration date
+* Followed by any **five-digit** postal code
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d9b7cfb1-008a-4b3f-b095-141ce610e440)
+
+Once the transaction is being acted on, a blue rotating spinner will be displayed on a blue overlay
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/da381165-eb93-40fa-a1c8-9b405b1163ce)
+
+
+After a successful transaction, a Success toast message will be showed in the top right corner
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/6f9980e4-d039-4e83-89dd-a56a30fa2317)
+
+With the Shopping Bag reset to zero
+
+Whilst on the left of the page is a **THANK YOU** showing the details received and a message indicating that a confirmation email of the order would be sent to the user's email
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/6967161d-c0f9-4c95-ae63-86ccbca56ffe)
+
+
 
 ### HEADING
 
