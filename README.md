@@ -870,7 +870,7 @@ Click *SECURE CHECKOUT*
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7dcd212d-faa9-4a96-9c18-cb1f5433079f)
 
 * The Stripe test card number is *4242 4242 4242 4242*<br>
-* Any CVC and  Any suitable date in the future can be used for the expiration date
+* Any CVC and  any suitable date in the future can be used for the expiration date
 * Followed by any **five-digit** postal code
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d9b7cfb1-008a-4b3f-b095-141ce610e440)
@@ -903,7 +903,7 @@ Whilst on the left of the page is a **THANK YOU** showing the details received a
 
 * The user then needs to enter a unique email, a unique username and a unique password
 
-* Once the *allauth* system verifies that the entered details are correct a message will be displayed to indicate that a confirmation email has been sent to the user
+* Once the *allauth* system verifies that the entered details are correct, a message will be displayed to indicate that a confirmation email has been sent to the user
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/55a7ec77-d22a-4010-929f-e9eed609e98b)
 
@@ -1007,87 +1007,108 @@ With the Shopping Bag reset to zero
 
 ## Reviews 
 
+<details>
+	<summary>Review functionality</summary>
+	
 ### Add a Review
-* As a registered user the user now has the option to _add, edit and delete reviews_ regarding any posts that they have purchased
-* To Add a Review a form is shown for the user to enter
-* * Display Name
-  * Title
-  * Content
-  * Rating
-* Please note: if the Displayed Name is blanked out, the reviewer's name will be displayed as **Anonymous**
+* As a registered user, the user has the option to _add, edit and delete reviews_ regarding any posts that they have purchased
+* When the user views the *Details* page of a poster, the option is shown as **Review - Add**
 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ecbd8003-01b3-42a7-8ba2-2c842676d7d7)
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/77cf78d9-16c6-4dfe-aecb-3eed604d5dda)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b0bf0d49-6e2b-49c9-8c41-da902eadc5f5)
+
+
+* To Add a Review,  a form is shown for the user to enter
+* * User displayed name
+  * Title of the review
+  * Content
+  * Rating - integers in the range 0 to 5
+* Please note: if the *User displayed name* is blank, the reviewer's name will be displayed as **Anonymous**
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b5c07fec-33f1-4399-99f6-91705c282fe8)
 
 * A message is shown when a Review is added
+* The *User displayed name* and the Review Title are shown in *title-case*
+* If a nonzero rating was given, the said number of stars are shown
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/6f49f975-b930-4c3c-b5b6-9c8bfafe7a1c)
 
-* From that point onwards, when any poster views the details of a poster and scrolls down, they can than see the review(s) left by shoppers
+* From that point onwards, when any shopper who views the details of a poster and scrolls down pass the *ADD TO BAG* button, the user will then be able to see the review(s) left by shoppers (including one written by the user)
 * Please note: the review date always reflects the date the review was created
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d7f7a7ea-2c15-43c3-aaa3-9324d4d9817b)
 
+Once a user has written a review, any time the user revisits the poster, there is now the option to **Review - Edit | Delete**
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/286ab5ef-79cd-40d4-8fe5-0edcd56a27aa)
 
 ### Edit a Review
 
-When the author of a review clicks the Edit option either from the Poster Details page or the *My Reviews* page, a message would be displayed to inform the user what poster they are editing followed by a filled-in form of the Review details 
+When the author of a review clicks the Edit option either from the *Poster Details* page or the *My Reviews* page, a message would be displayed to inform the user the title of the poster, the user is currently editing 
+* The form with the current Review details are shown
 
-TODO
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5a0f9998-ad9a-46eb-ac08-4097b3fe4c17)
 
-In this scenario, the use has blanked out their name
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/52da2cde-57a5-4106-a601-9d12e494e9d6)
 
+Any changes can now be made to the review e.g.
+1) Blank out the reviewer's name
+   
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/77a42e35-55f3-483a-b3ad-496feb2f5fcb)
 
+* Click *Update Review*
 * Message showing a successful update
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/9c37590b-a3fb-4380-a26c-5b0c56346129)
 
-* The Review is updated with the new details. In this scenario, the user is now shown as an *Anonymous* reviewer
+* The Review is updated with the new details. The user is now shown as an *Anonymous* reviewer
 * Please note: the review date always reflects the date the review was updated
   
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f876bef6-6ffd-40cb-9ac8-8251a15dbc9e)
 
+2) Name changed to Jimmy and Zero rating given
 
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/41b12fe2-9347-4552-a6d6-3064b4cfe095)
 
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/73a53fe8-1b8a-4fa9-a511-918eff64f43b)
 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f3aa8086-f204-4955-8a12-8cb2fd0ff523)
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/0c69691b-fa7e-4070-931a-b72105491d50)
-
-
-
-<details>
-	<summary>Wishlist functionality</summary>
-
-Message when poster added to wishlist
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f5ce495b-c144-40ff-acc7-d5d239e58edf)
-
-Message when poster removed from wishlist
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/222524c6-d6ce-4eed-8151-b40eeb5c22f8)
-
-User's *My Wishlist* Page
-* On this page, a user has the option to added a poster on their wishlist to the Shopping Bag
-* The option to remove the poster from their wishlist
-
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/8b38a444-f0c3-4cee-963a-e582f402eac9)
-
-Empty User's Wishlist Page
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/cf2f1c96-dd3a-49cf-a393-efaf5d3504a9)
- 
+	
 </details>
+
 
 
 ## Wishlist
 
-* As a registered user the user now has the options to add posters to their wishlist and remove posters from their wishlist
+* As a registered user, the user now has the options to add posters to their wishlist and remove posters from their wishlist
 
 
 <details>
 	<summary>Wishlist functionality</summary>
+
+### Add to Wishlist
+
+* The registered user has the option to **Add to Wishlist** on the *Details* page of a poster
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/90b8003e-4f79-4d62-a846-e79608a29344)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f620a711-b8ac-4b7f-80ba-ab69114b7c42)
+
+* Once clicked, the user is alerted that the addition has been done
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/dab751c1-e924-4ce8-83ef-fd273ef2a0d5)
+
+### Remove from Wishlist
+
+* The same option toggles to a **Remove from Wishlist** option
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/991713f9-f068-44f0-8339-a0dcb3379b67)
+
+* Once clicked, the user is alerted that the removal has been done
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/bd9c81ea-a9e0-4d7e-8163-4d0ab72842f7)
+
+* The option toggles back to the **Add to Wishlist** option
 
 Message when poster added to wishlist
 
@@ -1098,7 +1119,7 @@ Message when poster removed from wishlist
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/222524c6-d6ce-4eed-8151-b40eeb5c22f8)
 
 User's *My Wishlist* Page
-* On this page, a user has the option to added a poster on their wishlist to the Shopping Bag
+* On this page, a user has the option to add a poster which is on their wishlist to the Shopping Bag
 * The option to remove the poster from their wishlist
 
 
