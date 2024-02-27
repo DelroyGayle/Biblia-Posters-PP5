@@ -28,22 +28,24 @@
    5. [Searching](#searching)
    6. [Registration](#registration)
    7. [Login/Logout](#loginlogout)
-6. [User Walkthrough](#user-walkthrough)
-7. [Technologies Used](#technologies-used)
+6. [User Walkthroughs](#user-walkthroughs)
+7. Reviews
+8. Wishlist
+9. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
     2. [Libraries and Frameworks](#libraries-and-frameworks)
     3. [requirements.txt](requirements-txt)
-8. [Future Features](#future-features)
-9. [Testing](#testing)
+10. [Future Features](#future-features)
+11. [Testing](#testing)
     1. [Please Go To TESTING.md](https://github.com/DelroyGayle/Biblia-Posters-PP5/blob/main/TESTING.md)
     2. [Bugs](#bugs)
      1. [Solved Bugs](#solved-bugs)
      2. [Known Bugs](#known-bugs)
-10. [Deployment](#deployment)
-11. [How to Fork the Repository]
-12. [How to Clone the Repository]
-13. [Credits](#credits)
-14. [Acknowledgements](#acknowledgements)
+12. [Deployment](#deployment)
+13. [How to Fork the Repository]
+14. [How to Clone the Repository]
+15. [Credits](#credits)
+16. [Acknowledgements](#acknowledgements)
 
 ## Introduction
 
@@ -238,8 +240,9 @@ The *custom* models that I designed are
 * This database holds:
 * * the date the range starts - **special_days_firstday** beginning at midnight
 * * The date the range ends - **special_days_lastday** beginning at midnight
-  * *special_days_id* is a number signifying which set of Special Days - *0 for Passover, 1 for Pentecost and 2 for the Feast of Booths.*
-* 
+  * **special_days_id** is the ID number signifying which 'Special Day' - *0 for Passover, 1 for Pentecost and 2 for the Feast of Booths.*
+  * See [Special Days](#special-days) for further details.
+  
 
 
 ----
@@ -740,7 +743,7 @@ What follows is a sample of the *case-insensitive* searches and their results.
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/3bda67f6-038b-4116-8f18-4ed186f1b205)
   
 </details>
-<strong>/posters/?query=BED_</strong> matched 5 posters 
+/posters/?query=BED matched 5 posters 
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/4da87e73-00f3-477f-9994-895a5e3e8285)
 
@@ -790,7 +793,9 @@ What follows is a sample of the *case-insensitive* searches and their results.
 
 ------
 
-## User Walkthrough
+## User Walkthroughs
+
+What follow are sample walkthroughs showing the functionality of the **Biblia Posters** website
 
 After a user clicks the **Shop Now** button the *All Posters** page is displayed showing all available 52 posters
 
@@ -815,14 +820,14 @@ After a user clicks the **Shop Now** button the *All Posters** page is displayed
 
 </details>
 
-### Unregistered
+### A Typical Shopper - Unregistered
 
 To select a Poster the user clicks an the image for example after clicking
 
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/1dda5b39-fe4c-4331-b5ba-f7b02ac2dbc8)
 
-This then would be displayed
+This would be then displayed
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/573e8fd4-04ac-4795-85fc-958ca365203e)
 
@@ -875,7 +880,7 @@ Once the transaction is being acted on, a blue rotating spinner will be displaye
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/da381165-eb93-40fa-a1c8-9b405b1163ce)
 
 
-After a successful transaction, a Success toast message will be showed in the top right corner
+After a successful transaction, a Success message will be showed in the top right corner
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/6f9980e4-d039-4e83-89dd-a56a30fa2317)
 
@@ -885,6 +890,225 @@ Whilst on the left of the page is a **THANK YOU** showing the details received a
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/6967161d-c0f9-4c95-ae63-86ccbca56ffe)
 
+
+### A Typical Shopper who chooses to Register
+
+* Select the Register option
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/4dbb2acf-cef8-4641-8aef-6635e76e2c68)
+
+* The Signup page would be displayed
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c4390b8e-8560-4c72-9cf1-935655b60d61)
+
+* The user then needs to enter a unique email, a unique username and a unique password
+
+* Once the *allauth* system verifies that the entered details are correct a message will be displayed to indicate that a confirmation email has been sent to the user
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/55a7ec77-d22a-4010-929f-e9eed609e98b)
+
+<details>
+	<summary>Sample of a registration confirmation email</summary>
+
+Subject: [example.com] Please Confirm Your E-mail Address
+From: biblia@example.com
+To: jsm30171@zslsz.com
+Date: Mon, 26 Feb 2024 11:15:03 -0000
+Message-ID: ...
+
+Hello from example.com!
+
+You're receiving this e-mail because user james has given yours as an e-mail address to connect their account.
+
+To confirm this is correct, go to .../accounts/confirm-email/MQ:1reYwp:qI9yPIO-fWF4Fblsa9yTsN4X04zcx9phpLnEPCaLQ0w/
+
+Thank you from example.com!
+
+example.com
+
+-------------------------------------------------------------------------------
+
+</details>
+
+* Within the email would be given an *allauth* generated link.
+* When the user clicks the link they would be directed to the confirmation page which displays
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c961e371-e5eb-408e-a013-1dc51fb45e9a)
+
+* The user clicks *Confirm*
+* The *Sign In* Page would then be displayed with a Success message in the top-righthand corner
+
+  ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/635378c1-e149-4199-bb18-d30c262b445a)
+
+  ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/57ffa7fe-5534-4eb2-9b6d-5f03a4a5b138)
+
+* The user can now sign-in - a message indicating a successful sign-in will be displayed
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c949dbac-e19e-439b-a1f4-8baa24b0d09e)
+
+* Now when a user makes a purchase they have the checkbox option to save the delivery address to their profile
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f28bd6a2-ce83-48e2-a18e-aa98585c6ced)
+
+
+
+<details>
+	<summary>Sample of an order confirmation email</summary>
+
+Subject: Biblia Posters Confirmation for Order Number
+ 0988506B9202410C9A1DB1D803E7450E
+From: biblia@example.com
+To: jsm30171@zslsz.com
+Date: Mon, 26 Feb 2024 11:37:51 -0000
+Message-ID: ...
+
+Hello James Smith!
+
+This is a confirmation of your order at Biblia Posters. Your order information is below:
+
+Order Number: 0988506B9202410C9A1DB1D803E7450E
+Order Date: Feb. 26, 2024, 11:37 a.m.
+
+Order Total: £9.00 
+Delivery: £3.00
+Grand Total: £12.00
+
+
+Your order will be shipped to 123 Any Street in London, GB.
+
+We have got your phone number on file as 00123-456789.
+
+If you have any questions, feel free to contact us at biblia@example.com.
+
+Thank you for your order!
+
+Sincerely,
+
+Biblia Posters
+
+-------------------------------------------------------------------------------
+
+</details>
+
+
+
+With the Shopping Bag reset to zero
+
+* As a registered user, a record of each purchase order is recorded for the user's perusal
+* The most recent shown at the top
+* A tooltip is displayed when hoovered over the truncated order number which displays the full order number
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c1755582-6f95-4981-8beb-cda6e5d3fd55)
+
+* If the user was to click the *order number url* the *past* purchase order would be displayed
+* With an accompanying message indicating that this is a *past* confirmed order and that an email had been sent e.g.
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e9ca760f-d995-414f-89aa-33ebe3b66bf2)
+
+## Reviews 
+
+### Add a Review
+* As a registered user the user now has the option to _add, edit and delete reviews_ regarding any posts that they have purchased
+* To Add a Review a form is shown for the user to enter
+* * Display Name
+  * Title
+  * Content
+  * Rating
+* Please note: if the Displayed Name is blanked out, the reviewer's name will be displayed as **Anonymous**
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ecbd8003-01b3-42a7-8ba2-2c842676d7d7)
+
+* A message is shown when a Review is added
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/6f49f975-b930-4c3c-b5b6-9c8bfafe7a1c)
+
+* From that point onwards, when any poster views the details of a poster and scrolls down, they can than see the review(s) left by shoppers
+* Please note: the review date always reflects the date the review was created
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d7f7a7ea-2c15-43c3-aaa3-9324d4d9817b)
+
+
+### Edit a Review
+
+When the author of a review clicks the Edit option either from the Poster Details page or the *My Reviews* page, a message would be displayed to inform the user what poster they are editing followed by a filled-in form of the Review details 
+
+TODO
+
+In this scenario, the use has blanked out their name
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/77a42e35-55f3-483a-b3ad-496feb2f5fcb)
+
+* Message showing a successful update
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/9c37590b-a3fb-4380-a26c-5b0c56346129)
+
+* The Review is updated with the new details. In this scenario, the user is now shown as an *Anonymous* reviewer
+* Please note: the review date always reflects the date the review was updated
+  
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f876bef6-6ffd-40cb-9ac8-8251a15dbc9e)
+
+
+
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f3aa8086-f204-4955-8a12-8cb2fd0ff523)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/0c69691b-fa7e-4070-931a-b72105491d50)
+
+
+
+<details>
+	<summary>Wishlist functionality</summary>
+
+Message when poster added to wishlist
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f5ce495b-c144-40ff-acc7-d5d239e58edf)
+
+Message when poster removed from wishlist
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/222524c6-d6ce-4eed-8151-b40eeb5c22f8)
+
+User's *My Wishlist* Page
+* On this page, a user has the option to added a poster on their wishlist to the Shopping Bag
+* The option to remove the poster from their wishlist
+
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/8b38a444-f0c3-4cee-963a-e582f402eac9)
+
+Empty User's Wishlist Page
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/cf2f1c96-dd3a-49cf-a393-efaf5d3504a9)
+ 
+</details>
+
+
+## Wishlist
+
+* As a registered user the user now has the options to add posters to their wishlist and remove posters from their wishlist
+
+
+<details>
+	<summary>Wishlist functionality</summary>
+
+Message when poster added to wishlist
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f5ce495b-c144-40ff-acc7-d5d239e58edf)
+
+Message when poster removed from wishlist
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/222524c6-d6ce-4eed-8151-b40eeb5c22f8)
+
+User's *My Wishlist* Page
+* On this page, a user has the option to added a poster on their wishlist to the Shopping Bag
+* The option to remove the poster from their wishlist
+
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/8b38a444-f0c3-4cee-963a-e582f402eac9)
+
+Empty User's Wishlist Page
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/cf2f1c96-dd3a-49cf-a393-efaf5d3504a9)
+ 
+</details>
 
 
 ### HEADING
