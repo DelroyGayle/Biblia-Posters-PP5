@@ -8,4 +8,3 @@ def handler404(request, exception):
 def handler500(request, *args, **argv):
 	""" Error Handler 500 - Internal Server Error """
 	return render(request, '500.html', status=500)
-

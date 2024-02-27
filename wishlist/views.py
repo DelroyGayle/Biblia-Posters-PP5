@@ -13,9 +13,7 @@ def add_to_wishlist(request):
     poster_id = request.session.get('poster_id')
     the_poster = get_object_or_404(Poster, pk=poster_id)
     # Create and Save to Wishlist
-    wishlist = (
-        Wishlist.objects.create(user=request.user, poster=the_poster)
-    )
+    Wishlist.objects.create(user=request.user, poster=the_poster)
     messages.info(request, 'Poster added to wishlist!')
     # Redisplay the Poster Details Page
     return redirect(reverse('poster_details', args=[poster_id]))
@@ -44,7 +42,7 @@ def my_wishlist(request):
     posters = (Wishlist.objects.filter(user=request.user.id)
                                .order_by('-created_at')
                )
-
+    
     context = {
         'posters': posters,
     }

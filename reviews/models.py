@@ -4,6 +4,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 from posters.models import Poster
 
+
 class Review(models.Model):
     """
     This model is used for storing and maintaining

@@ -7,8 +7,6 @@ from .models import Order, OrderLineItem
 from posters.models import Poster
 from profiles.models import UserProfile
 
-from biblia.common import Common
-
 import stripe
 import json
 import time
@@ -30,7 +28,7 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL,
-            'asterisk': asterisk, 'infoline': infoline})
+             'asterisk': asterisk, 'infoline': infoline})
 
         send_mail(
             subject,
@@ -128,7 +126,8 @@ class StripeWH_Handler:
             if order.special_days_discount_name != '':
                 asterisk = '*'
                 infoline = (f'{asterisk} '
-                            f'{order.special_days_discount_name} 25% Discount has been applied to the order')
+                            f'{order.special_days_discount_name} '
+                            '25% Discount has been applied to the order')
             else:
                 asterisk = ''
                 infoline = ''

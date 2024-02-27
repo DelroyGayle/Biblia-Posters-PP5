@@ -874,7 +874,7 @@ These are the steps in order to deploy on Render:
 + All the images used for the Posters and the images of Passover, Pentecost and Feast of Booths were sourced from [Free Bible Images](https://www.freebibleimages.org/)
         
 ## Acknowledgements
-+ Code Institute's Boutique Ado Walkthrough Project upon which this site is modelled upon.
++ Code Institute's Boutique Ado Walkthrough Project upon which this project is modelled upon.
 + Code Institute's Tutor Support for the great patience towards me with my myriad of issues. Thank You!
 
 

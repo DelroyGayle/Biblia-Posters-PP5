@@ -52,14 +52,12 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
    ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/67459201-10e3-4275-bc77-c587434762bc)
 
 
-    
-
 </details>
 
 ## Additional Testing Comments
 + Carried out tests of the program on both the local terminal and the Code Institute Heroku terminal.
 + Chrome DevTools was used throughout the development process for testing purposes.
-+ Added Custom [404]TODO and [500]TODO pages just in case such errors occur.
++ Added Custom *404 and 500* pages in case any errors occur.
   
 ## Manual Testing 
 

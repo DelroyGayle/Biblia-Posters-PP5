@@ -135,7 +135,7 @@ def checkfor_special_days(request):
 
     # Defensive Programming - default 0
     if (the_index + 1 > len(settings.SPECIAL_DAYS_NAMES) or
-        the_index < 0):
+       the_index < 0):
         the_index = 0
 
     the_name = settings.SPECIAL_DAYS_NAMES[the_index]

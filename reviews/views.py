@@ -175,7 +175,6 @@ def delete_review(request, review_id):
 def remove_from_reviews_page(request, review_id):
     """ Delete a review from the My Reviews page """
     the_review = get_object_or_404(Review, pk=review_id)
-    current_redirect_path = request.session.get('current_redirect_path')
 
     if request.method == 'POST':
         the_review.delete()

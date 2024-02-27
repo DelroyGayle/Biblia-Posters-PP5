@@ -8,6 +8,6 @@ urlpatterns = [
     path('edit_poster/<int:poster_id>/',
          views.edit_poster, name='edit_poster'),
     path('delete_poster/<int:poster_id>/',
-        views.delete_poster, name='delete_poster'),
+         views.delete_poster, name='delete_poster'),
     path('reviews/', include('reviews.urls')),
 ]
