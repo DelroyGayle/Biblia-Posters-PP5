@@ -13,4 +13,5 @@ class SpecialDaysAdmin(admin.ModelAdmin):
 
     ordering = ('special_days_firstday',)
 
+
 admin.site.register(SpecialDays, SpecialDaysAdmin)

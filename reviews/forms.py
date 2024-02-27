@@ -15,7 +15,7 @@ class ReviewForm(forms.ModelForm):
         and set autofocus on first field
         """
         super().__init__(*args, **kwargs)
- 
+
         self.fields['user_displayed_name'].widget.attrs = (
             {
               'class': 'border-black rounded-0',

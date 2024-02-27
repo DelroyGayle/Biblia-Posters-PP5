@@ -33,5 +33,3 @@ urlpatterns = [
 
 handler404 = 'biblia.views.handler404'
 handler500 = 'biblia.views.handler500'
-
-

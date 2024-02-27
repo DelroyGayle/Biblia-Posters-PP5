@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Order, OrderLineItem
 from .models import UserPurchasedPosters
 
+
 class OrderLineItemAdminInline(admin.TabularInline):
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
@@ -28,6 +29,6 @@ class OrderAdmin(admin.ModelAdmin):
 
     ordering = ('-date',)
 
+
 admin.site.register(Order, OrderAdmin)
 admin.site.register(UserPurchasedPosters)
-

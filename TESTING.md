@@ -32,9 +32,67 @@ This was performed using [JSHint](https://jshint.com/)
 
 ## Python Validation
 
-This was performed using Code Institute's [PEP8 Linter](https://pep8ci.herokuapp.com/)
+I used both Code Institute's [PEP8 Linter](https://pep8ci.herokuapp.com/) and *python3 -m flake8*.<br>
+However I had a very bad UX after making **ALL** the changes pointed out by Flake8. That is, my *Checkout Functionality* failed to worked! So I had to revert. Therefore, I light of this, I have chosen to leave the following migration files and system-generated/imported code intact:
 
-- No issues flagged during Python validation
+<details>
+ 
+ <details>
+  <summary>Flask8 flagged code</summary>
+
+```
+
+    ./.devcontainer/build-assets/http_server.py:22:80: E501 line too long (80 > 79 characters)
+    ./.devcontainer/build-assets/make_url.py:10:39: E231 missing whitespace after ','
+    ./.devcontainer/build-assets/make_url.py:11:36: E231 missing whitespace after ','
+    ./.devcontainer/build-assets/make_url.py:12:39: E231 missing whitespace after ','
+    ./.devcontainer/build-assets/make_url.py:14:59: W292 no newline at end of file
+    ./bag/context_processors.py:87:5: F841 local variable 'when_ranges_equal' is assigned to but never used
+    ./bag/migrations/0001_initial.py:19:80: E501 line too long (117 > 79 characters)
+    ./bag/migrations/0001_initial.py:22:80: E501 line too long (171 > 79 characters)
+    ./bag/migrations/0001_initial.py:31:80: E501 line too long (175 > 79 characters)
+    ./bag/migrations/0001_initial.py:35:80: E501 line too long (135 > 79 characters)
+    ./bag/models.py:2:1: F401 'django.db.models.CheckConstraint' imported but unused
+    ./bag/models.py:2:1: F401 'django.db.models.Q' imported but unused
+    ./bag/tests.py:1:1: F401 'django.test.TestCase' imported but unused
+    ./bag/views.py:119:5: F841 local variable 'e' is assigned to but never used
+    ./biblia/common.py:49:5: F841 local variable 'when_ranges_equal' is assigned to but never used
+    ./biblia/settings.py:16:5: F401 'env' imported but unused
+    ./biblia/settings.py:147:80: E501 line too long (91 > 79 characters)
+    ./biblia/settings.py:150:80: E501 line too long (81 > 79 characters)
+    ./biblia/settings.py:153:80: E501 line too long (82 > 79 characters)
+    ./biblia/settings.py:156:80: E501 line too long (83 > 79 characters)
+    ./biblia/urls.py:34:1: F811 redefinition of unused 'handler404' from line 20
+    ./biblia/urls.py:35:1: F811 redefinition of unused 'handler500' from line 20
+    ./checkout/apps.py:8:9: F401 'checkout.signals' imported but unused
+    ./checkout/tests.py:1:1: F401 'django.test.TestCase' imported but unused
+    ./checkout/webhooks.py:28:5: F841 local variable 'e' is assigned to but never used
+    ./checkout/webhooks.py:31:5: F841 local variable 'e' is assigned to but never used
+    ./home/admin.py:1:1: F401 'django.contrib.admin' imported but unused
+    ./home/models.py:1:1: F401 'django.db.models' imported but unused
+    ./home/tests.py:1:1: F401 'django.test.TestCase' imported but unused
+    ./home/urls.py:1:1: F401 'django.contrib.admin' imported but unused
+    ./posters/tests.py:1:1: F401 'django.test.TestCase' imported but unused
+    ./profiles/admin.py:1:1: F401 'django.contrib.admin' imported but unused
+    ./profiles/migrations/0001_initial.py:21:80: E501 line too long (117 > 79 characters)
+    ./profiles/migrations/0001_initial.py:22:80: E501 line too long (97 > 79 characters)
+    ./profiles/migrations/0001_initial.py:23:80: E501 line too long (111 > 79 characters)
+    ./profiles/migrations/0001_initial.py:24:80: E501 line too long (93 > 79 characters)
+    ./profiles/migrations/0001_initial.py:25:80: E501 line too long (89 > 79 characters)
+    ./profiles/migrations/0001_initial.py:26:80: E501 line too long (100 > 79 characters)
+    ./profiles/migrations/0001_initial.py:27:80: E501 line too long (100 > 79 characters)
+    ./profiles/migrations/0001_initial.py:28:80: E501 line too long (91 > 79 characters)
+    ./profiles/migrations/0001_initial.py:29:80: E501 line too long (121 > 79 characters)
+    ./profiles/tests.py:1:1: F401 'django.test.TestCase' imported but unused
+    ./reviews/migrations/0001_initial.py:22:80: E501 line too long (117 > 79 characters)
+    ./reviews/migrations/0001_initial.py:25:80: E501 line too long (85 > 79 characters)
+    ./reviews/migrations/0001_initial.py:28:80: E501 line too long (170 > 79 characters)
+    ./reviews/migrations/0001_initial.py:29:80: E501 line too long (112 > 79 characters)
+    ./reviews/migrations/0001_initial.py:30:80: E501 line too long (118 > 79 characters)
+    ./reviews/tests.py:1:1: F401 'django.test.TestCase' imported but unused
+    ./wishlist/tests.py:1:1: F401 'django.test.TestCase' imported but unused
+ ```
+</details>
 
 ## Lighthouse
 

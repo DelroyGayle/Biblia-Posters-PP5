@@ -70,7 +70,7 @@ def adjust_bag(request, item_id):
     except ValueError:
         # Erroneous Input
         messages.error(request,
-                       f"Please enter a number")
+                       "Please enter a number")
         return redirect(reverse('view_bag'))
 
     # Fetch the current contents of this session's shopping bag

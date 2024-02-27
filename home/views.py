@@ -9,7 +9,7 @@ def index(request):
     from bag.context_processors import checkfor_special_days
 
     from posters.views import reset_session_variables
-    
+
     from biblia.common import Common
 
     reset_session_variables(request)  # Ensure Reset!

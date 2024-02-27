@@ -42,7 +42,7 @@ def my_wishlist(request):
     posters = (Wishlist.objects.filter(user=request.user.id)
                                .order_by('-created_at')
                )
-    
+
     context = {
         'posters': posters,
     }
