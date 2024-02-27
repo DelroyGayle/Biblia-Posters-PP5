@@ -54,6 +54,16 @@ To meet this B2C requirement:
 - the site will allow registered users to share reviews about their purchases and interactions with Biblia Poster
 - depending on particular times of the year which depict special Biblical significance, the site will offer users 25% discounts on purchases
 
+As a marketing strategy I have set up a [Facebook Business Page](https://www.facebook.com/profile.php?id=61556537234433) in order to promote **Biblia Posters** to a wider audience.
+
+<details>
+	<summary>Biblia Posters Facebook Business Page</summary>
+	![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7884b3cd-6040-4998-bf38-dc1e5d687e8c)
+
+ 	![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b7d30edb-d2d9-433f-be0f-809de52610bb)
+ 	
+</details>
+
 ----
 
 ## User Stories
@@ -156,7 +166,6 @@ The site uses a Back-end database with the usage of [ElephantSQL Postgres](https
 TODO
 
 
-
 </details>
 
 ----
@@ -190,7 +199,15 @@ The User Model contains information about the user. It is based upon Django's in
 
 ### Colours
 
-Besides Bootstrap 4 colours of *text-danger*, black and white;<br> the main background colours are *#e0fff5* for the homepage and *#adffe4* as the basis. For the foreground colours I have used *#adffe4's* related triadic colours. xxx
+Besides Bootstrap 4 colours of *text-danger*, black and white;<br> the main background colours are *#e0fff5* for the homepage and *#adffe4* as the basis.<br> For the foreground colours I have used *#adffe4's* related triadic colours. 
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5ebea128-4c43-4511-9b15-ac63f7543396)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/34ef5b0a-33b4-4b42-8207-f39badde7034)
+
+
+
+
+
 
 ### Typography
 
@@ -875,6 +892,6 @@ These are the steps in order to deploy on Render:
         
 ## Acknowledgements
 + Code Institute's Boutique Ado Walkthrough Project upon which this project is modelled upon.
-+ Code Institute's Tutor Support for the great patience towards me with my myriad of issues. Thank You!
++ Code Institute's Tutor Support for their great patience towards me with my myriad of issues. Thank You!
 
 
