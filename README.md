@@ -54,7 +54,9 @@ To meet this B2C requirement:
 - the site will allow registered users to share reviews about their purchases and interactions with Biblia Poster
 - depending on particular times of the year which depict special Biblical significance, the site will offer users 25% discounts on purchases
 
-As a marketing strategy I have set up a [Facebook Business Page](https://www.facebook.com/profile.php?id=61556537234433) in order to promote **Biblia Posters** to a wider audience.
+For marketing strategy,
+* I have set up a [Facebook Business Page](https://www.facebook.com/profile.php?id=61556537234433) in order to promote **Biblia Posters** to a wider audience.
+* I have set up a Newsletter Subscription option in order to promote special offers and events to customers.
 
 <details>
 <summary>Biblia Posters Facebook Business Page</summary>
@@ -158,9 +160,27 @@ The Kanban Project layout showing the *Twenty-seven User Stories* can be viewed 
 
 Epics, User Stories and their related Tasks are further explained in [TESTING.md](https://github.com/DelroyGayle/Biblia-Posters-PP5/blob/main/TESTING.md)
 
-### Database Design
+### Data Models
 
-The site uses a Back-end database with the usage of [ElephantSQL Postgres](https://www.elephantsql.com/) for the deployed site
+Data modelling
+As mentioned at the beginning, Python code is used with the Django framework to generate the tables in the provisioned database. This project uses a Postgres database, hosted on ElephantSQL.
+
+
+
+
+This website uses the Django framework to generated the models used for the database. The SQL database is thereby hosted on  [ElephantSQL PostgreSQL](https://www.elephantsql.com/). 
+
+This project and its models closely follow Code Institute's Boutique Ado Walkthrough, so there are many similarities.
+For example, instead of a model depecting clothing and household goods, the walkthrough's example model is now used to depict posters.
+
+**Custom models**
+
+The *custom* models that I designed are 
+1. UserPurchasedPosters
+2. Reviews
+3. Wishlist
+4. Special-days
+   
 <details>
 <summary>Database Schema Diagram</summary>
 <br/><br/>  
@@ -241,7 +261,9 @@ This informs the site that this website's purpose is in regards to posters.
 
 ## Features
 
-### Navigation
+### Homepage
+
+#### Navigation
 
 **Desktop navigation bar and hero image**
 
@@ -293,15 +315,13 @@ What follows next on the Navigation Bar is the link to the *live* virtual Shoppi
 Beneath the Navigation Bar is a Banner showing Today's Date
 The Banner is also used to indicate when a **Special Days** Promotion (see below) is active giving the user 25% Discount on purchases of all posters.
 
-Please note: *21st February 2024* is **not the actual date** for Passover, Pentecost nor the Feast of Booths. These depictions of the banner are shown here for demo purposes only; indicating that the banner will change colour from black to green whereby the particular *event* is displayed alongside the offer of 25% Discount - see ###TODO for further details.
+Please note: *21st February 2024* is **not the actual date** for Passover, Pentecost nor the Feast of Booths. These depictions of the banner are shown here for demo purposes only; indicating that the banner will change colour from black to green whereby the particular *event* is displayed alongside the offer of 25% Discount. Because of the submission date of this project, February dates were used for the sake of documentation. See ###TODO for further details.
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/caa6eaa3-5775-45d6-b6a7-c1dbef9d48d0)
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/79989e3c-c76f-4d11-b74d-a9e2682f0943)
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b82b5ae7-b3d7-43f6-b8bc-9e0de6090e4e)
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/92e3b7f2-fc36-44fb-a86d-2440ef99a537)
 
 Lastly, on the Hero Image is the **Shop Now** whereby the user is directed to the **All Posters** page to all available posters for sale.
 
@@ -314,7 +334,9 @@ For the mobile view, the same information is displayed as described above howeve
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c2941752-8f5e-4336-9fa5-16364ddb03c2)
 
-### About Us
+<br><small>(Again, 21st February, 2024 is **not** the date of the Feast of Booths - demo purposes only)</small>
+
+#### About Us
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c05f3896-3e15-44aa-b97a-c13ee85748e0)
 
@@ -355,7 +377,43 @@ The Django Queryset used to query the *special-days* database has been set up, t
 *  If True, change banner to green and display 25% Discount offer - the *Special Days ID* indicates which title to display
 *  If False, display black banner - no discount offered
 
+Because of the submission date of this project, February dates were shown above for the sake of documentation.
+However, anyone visiting *the live site during the true dates as shown above*, will see the banners and discounts in action!
 
+#### Newsletter
+
+<details>
+	<summary>Desktop and Mobile view of Newsletter option</summary>
+
+ ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/968adabb-8852-47d4-b3c6-a758d1ca371d)
+
+ ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/6b7c3336-3e3c-4e61-8128-5010b404d138)
+
+
+</details>
+
+As part of the marketing strategy, what follows on the homepage is the option to subscribe to **Biblia Posters' Newsletter** using [Mailchimp](https://mailchimp.com/)
+
+#### Footer
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/dba0cd78-8062-45aa-b336-0f386219ab6b)
+
+
+The footer 
+* explains some advantages to customers
+* Customer Service contact details
+* has a link to the Privacy Policy page
+* Regards Social Media, 
+* * There is a Link for the Facebook Business Page](https://www.facebook.com/profile.php?id=61556537234433)
+  * There is a Link for Twitter
+  * There is a Link for the related WordPress blog, namely, [AgeToCome](https://agetocome.wordpress.com/)
+
+Then a note explaining that all the poster images used *are in actuality, **Free!*** <br>Moreover, there are available from [Free Bible Images](https://www.freebibleimages.org/)
+
+
+
+
+features a tagline, social contact CTAs and a 'copyright' mark. In mobile view, these three components are stacked.
 ### HEADING
 
 #### Create Posters
@@ -379,6 +437,32 @@ The Django Queryset used to query the *special-days* database has been set up, t
 
 
 </details>
+
+### Toast Messages 
+
+Feedback is delivered at all times to the user via the usage of Bootstrap Toast Messages. *Success* and *Alert/Info* indicators are displayed for *six seconds* before disappearing whilst *Error Message* indicators are displayed for *ten seconds* before disappearing.<br>These messages are always  Login status is always shown in the right hand corner of the screen just below the navigation bar.
+
+<details>
+	<summary>Sample of Messages shown</summary>
+
+ Signed In
+
+ Signed Out
+
+ ### Registration and Authentication
+
+ The [django-allauth](https://docs.allauth.org/en/latest/) is used to cater for registration, login, logout and lost passwords.<br>
+ The user has to select a unique username, email and password which must be confirmed via a link generated by *allauth*. Once confirmed, the user can thereby login to the website in order to 
+ 1. set up a profile
+ 2. Add/Remove posters from a wishlist
+ 3. Write reviews regarding posters that the user has purchased - hence, **verified** purchasers only can add reviews.
+
+Registration/TODO
+
+
+ 
+</details>
+
 
 ### View Posters
 
@@ -837,7 +921,7 @@ Once the user has searched for the relevant poster, the user then has to click *
 * [Django](https://www.djangoproject.com/)   
     * Django was used as the web framework.
 * [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
-* [ElephantSQL Postgres](https://www.elephantsql.com/)
+* [ElephantSQL PostgreSQL](https://www.elephantsql.com/)
     * ElephantSQL was used for hosting the SQL Database
 * [Cloudinary](https://cloudinary.com/)
     * Cloudinary was used for image management.
@@ -847,13 +931,13 @@ Once the user has searched for the relevant poster, the user then has to click *
 * [GitHub](https://github.com/) for hosting the site
 * [Gitpod](https://www.gitpod.io/) for editing the files
 * TODO
-* [Heroku](https://heroku.com) for the initial deployment of the site
-* [Render](https://render.com/) for the final deployment of the site
+* [Heroku](https://heroku.com) for the deployment of the site
 * [Jquery](https://jquery.com/) for scripting purposes
 * [Miro](https://miro.com/) was used to create the wireframes
-* [DrawSQL](https://drawsql.app/) was used to draw the SQL tables
+* [Django Extensions](https://django-extensions.readthedocs.io/en/latest/graph_models.html) was used to draw the Django models
 * [Am I Responsive](http://ami.responsivedesign.is/) was used for creating the multi-device mock-up shown at the top of this README.md file
-* [Favicon](https://favicon.io/) was used to generate the Favicon 
+* [Favicon](https://favicon.io/) was used to generate the Favicon
+* [Mailchimp](https://mailchimp.com/) was used for the Newsletter
 * [Privacy Policy Generator](https://www.privacypolicygenerator.info/) was used to produce the Privacy Policy
 * [Code Institute's GitHub full template](https://github.com/Code-Institute-Org/python-essentials-template) in order to run Django and Python on Heroku/Render
 TODO REQ
