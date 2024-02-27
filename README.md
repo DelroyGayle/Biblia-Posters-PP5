@@ -171,7 +171,26 @@ As mentioned at the beginning, Python code is used with the Django framework to 
 This website uses the Django framework to generated the models used for the database. The SQL database is thereby hosted on  [ElephantSQL PostgreSQL](https://www.elephantsql.com/). 
 
 This project and its models closely follow Code Institute's Boutique Ado Walkthrough, so there are many similarities.
-For example, instead of a model depecting clothing and household goods, the walkthrough's example model is now used to depict posters.
+For example, instead of a model depicting clothing and household goods, the walkthrough's example model is now used to depict posters.
+
+<details>
+<summary>Biblia Posters' Models Schema Diagram</summary>
+<br/><br/>  
+
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e527ae13-9444-45e4-8be1-b6b526f0db87)
+
+Posters with Categories
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/9b21fa28-59b8-4834-8083-50b84174b4ce)
+
+
+Allauth and Django.contrib models are as is. Category, Order, OrderLineItem, Checkout, and UserProfile are as described in the Boutique Ado Walkthrough.
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d82f7eb1-c857-40de-9b04-89fbe59328a9)
+
+</details>
+
 
 **Custom models**
 
@@ -179,45 +198,42 @@ The *custom* models that I designed are
 1. UserPurchasedPosters
 2. Reviews
 3. Wishlist
-4. Special-days
-   
-<details>
-<summary>Database Schema Diagram</summary>
-<br/><br/>  
+4. SpecialDays
 
-TODO
+```1. UserPurchasedPosters```
 
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/cf9d64b8-2cc9-4953-af30-449c408b3412)
 
-</details>
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c532dfb5-cb22-410e-a142-d8ab7a8c7004)
+
+<hr>
+
+``` 2. Reviews and 3. Wishlist ```
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/38db4c32-ea2d-469a-834e-328c37b7a9fe)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/10cd6aa0-b1d4-4c0b-8af5-a74ffa0cef50)
+
+<hr>
+
+```4. SpecialDays```
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/87fa3ffc-85c3-4cb8-9c67-b6f40983b841)
+
+<hr>
+
+* Regarding *UserPurchasedPosters*: To ensure that only *verified* purchasers are allowed to author reviews, each time a *registered* user purchases a poster, the user and poster IDs are written to the UserPurchasedPosters database. If such a record already exists then no further action. If not, a new UserPurchasedPosters record is created with the IDs.
+* Regarding *Reviews*: From that point onwards, when a user views a poster page that the user has purchased, the user is given the option to _add, edit and delete a review_ regarding the post - hence CRUD functionality.
+* Regarding *Wishlist*: A registered user has the option _to add a poster to their wishlist_ or _remove the poster from their wishlist_.
+* Regarding *SpecialDays*: This holds a range of dates where a particular range of days are depicted as _Special!_.
+* This database holds:
+* * the date the range starts - **special_days_firstday** beginning at midnight
+* * The date the range ends - **special_days_lastday** beginning at midnight
+  * *special_days_id* is a number signifying which set of Special Days - *0 for Passover, 1 for Pentecost and 2 for the Feast of Booths.*
+* 
+
 
 ----
-
-### Data Models
-
-The following data models were designed to represent the database usage for this project
-
-#### User Model
-
-The User Model contains information about the user. It is based upon Django's in-built authentication system
-- username
-- email
-- password
-
-#### Model
-
-
-#### Model
-
-
-   
-   
-#### Model/1
-
-####  Model/2
-
-####  Model/3
-
-### Framework
 
 ### Colours
 
@@ -228,13 +244,6 @@ The User Model contains information about the user. It is based upon Django's in
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/925a09d7-f8c1-45d3-a671-0f3ce897c3e2)
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/cd410b7e-35c6-4f8b-9ef0-f305af9346cf)
-
-
-
-
-
-
-
 
 ### Typography
 
