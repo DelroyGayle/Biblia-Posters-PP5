@@ -57,10 +57,12 @@ To meet this B2C requirement:
 As a marketing strategy I have set up a [Facebook Business Page](https://www.facebook.com/profile.php?id=61556537234433) in order to promote **Biblia Posters** to a wider audience.
 
 <details>
-	<summary>Biblia Posters Facebook Business Page</summary>
-	![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7884b3cd-6040-4998-bf38-dc1e5d687e8c)
+<summary>Biblia Posters Facebook Business Page</summary>
 
- 	![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b7d30edb-d2d9-433f-be0f-809de52610bb)
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c5c2ac5d-25e9-4f40-8c80-e6a72908292b)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ae963088-0eb7-4ed5-8ec0-ae777270aefb)
+	
  	
 </details>
 
@@ -199,10 +201,15 @@ The User Model contains information about the user. It is based upon Django's in
 
 ### Colours
 
-Besides Bootstrap 4 colours of *text-danger*, black and white;<br> the main background colours are *#e0fff5* for the homepage and *#adffe4* as the basis.<br> For the foreground colours I have used *#adffe4's* related triadic colours. 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5ebea128-4c43-4511-9b15-ac63f7543396)
+* Foreground Colours: Bootstrap 4 colours of *text-danger*, black and white.
+* Background Colours: For the homepage I used *#e0fff5*.
+* For all the other pages, the background colour is *#adffe4*.
+  
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/925a09d7-f8c1-45d3-a671-0f3ce897c3e2)
 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/34ef5b0a-33b4-4b42-8207-f39badde7034)
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/cd410b7e-35c6-4f8b-9ef0-f305af9346cf)
+
+
 
 
 
@@ -217,8 +224,7 @@ The fonts I have chosen to use are
 
 ### Imagery
 
-Imagery
-The source for my images are the following Stock image sites
+The source for my images are the following Stock image sites:
 
 
 1. [Unspash](https://unsplash.com)<br>
@@ -239,24 +245,116 @@ This informs the site that this website's purpose is in regards to posters.
 
 **Desktop navigation bar and hero image**
 
-The navigation bar shows the *BIBLIA* **POSTERS** Logo which acts as a *Home Button*. By clicking this logo, the user is returned to the Home Page.<br>The rest of the bar are links to 
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/652879f8-d413-40f7-ad23-43eb6a5ce94a)
+
+The homepage opens up with the mission statement ***Proclaiming the message of the Bible one poster at a time***
+<br><br>
+The navigation bar shows the *BIBLIA* **POSTERS** Logo which acts as a *Home Button*. By clicking this logo, the user is returned to the Home Page.<br>The rest of the bar are links to:
 * All available Posters for sale which are further divided into
-* * All available Old Testament Posters
-* * All available New Testament Posters
+* Posters sorted by Pricing
+* Posters sorted by Rating
+* Posters sorted by Category
+* Show All available Posters
+* * All available Old Testament Posters and their Categories
+* * All available New Testament Posters and their Categories
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/1733db73-0941-41ce-8ae4-c97f2e5143a9)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d314399a-602f-4a9f-ad63-df424f34cd5d)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/dfb198b5-3d7f-4cc9-ad62-272b67d1a695)
+
+On the right hand side of the navigation bar is a dropdown menu for:
+*Unregistered* users, with the options
+* To register
+* To Login
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/47b0d5e9-a5c9-4bd7-9922-84ae7e9d4d16)
+
+For *Registered users* with the options
+* To see the user's personal profile
+* See the user's wishlist
+* See a list of all the reviews that the user has authored
+* To Logout
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/1b63e0fe-a930-48ae-8c29-bb06e25f52a9)
+
+In addition, the **Site Admin** user has the option to *add, edit and delete posters* via the Poster Management option i.e. CRUD functionality
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/aaee7834-29a1-4225-b0be-a9cff4cca5fd)
 
 
-On the right hand side of the navigation bar is a dropdown menu for
-* Unregistered users to register
-* The option for the user to Login
-* For registered users to
-* * See a list of all the reviews that the author has authored
-  * See the user's wishlist
-  * In addition, the Site Admin user can add, edit and delete posters
+What follows next on the Navigation Bar is the link to the *live* virtual Shopping Bag showing its current total value
+
+<br>In the middle of the Navigation Bar is the Search Bar whereby the user can perform (*case insensitive*) searches for Posters by title or description.
+
+**Banner and Shop Now**
+
+Beneath the Navigation Bar is a Banner showing Today's Date
+The Banner is also used to indicate when a **Special Days** Promotion (see below) is active giving the user 25% Discount on purchases of all posters.
+
+Please note: *21st February 2024* is **not the actual date** for Passover, Pentecost nor the Feast of Booths. These depictions of the banner are shown here for demo purposes only; indicating that the banner will change colour from black to green whereby the particular *event* is displayed alongside the offer of 25% Discount - see ###TODO for further details.
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/caa6eaa3-5775-45d6-b6a7-c1dbef9d48d0)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/79989e3c-c76f-4d11-b74d-a9e2682f0943)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b82b5ae7-b3d7-43f6-b8bc-9e0de6090e4e)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/92e3b7f2-fc36-44fb-a86d-2440ef99a537)
+
+Lastly, on the Hero Image is the **Shop Now** whereby the user is directed to the **All Posters** page to all available posters for sale.
+
+**Mobile navigation bar and hero image**
+
+For the mobile view, the same information is displayed as described above however the menu becomes a hamburger menu.
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7f5d242a-c315-4ffb-b8c6-577b45a937e8)
 
 
-What follows next is the link to the *live* virtual Shopping Bag showing its total value
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c2941752-8f5e-4336-9fa5-16364ddb03c2)
 
-<br>In the middle of the Navigation Bar is the Search Bar whereby the user can perform a (*case insensitive*) search for a Poster by title or description.
+### About Us
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c05f3896-3e15-44aa-b97a-c13ee85748e0)
+
+A description is given of the type of posters that this online store has to offer. It also points out the advantages of registering on to the site.
+
+#### Special Days
+
+The [USP](https://en.wikipedia.org/wiki/Unique_selling_proposition) of this online store is to offer 25% Discount currently three times a year. Namely, on the occasion of Passover, Pentecost and the Feast of Booths. The *Special Days* section of the homepage gives a summary of these three occasions which are of significant Biblical importance.
+
+According to [Chabad.org](https://www.chabad.org/holidays/JewishNewYear/template_cdo/aid/671894/jewish/When-Is-Sukkot-in-2024-2025-2026-2027-and-2028.htm) the dates of these days for 2024 to 2027 are as follows:
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/80753a4f-278d-4c96-bece-b6ef9ce8e66a)
+
+<details>
+
+<summary>Admin view of the Special Days database</summary>	
+ 
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/984d3715-f5f7-40ee-a7bd-50b2d05f4b59)
+
+| Special Days ID | Name        | 
+| ------------- | ------------- | 
+| 0 | Passover | 
+| 1 | Pentecost | 
+| 2 | Feast of Booths | 
+
+</details>
+
+
+I have chosen to ignore that the events *begin/end at sundown/nightfall* and chosen *midnight* instead.<br>
+In addition, I have given for the sake of *late shoppers* a tolerance of 30 minutes each way.<br>That is, for Passover, 2024;  :-
+* For a user who visits the website and begins shopping *sometime just before Passover*, the promotion will start in actuality, at *11:30pm 21st April, 2024*
+* For a user who visits the website and begins shopping *sometime just before the end of Passover*, the promotion will end in actuality, at **12:30am 1st May, 2024*
+
+The Django Queryset used to query the *special-days* database has been set up, that for each range:
+*  subtract **30 minutes** from midnight of the *FIRSTDAY*
+*  add **24 hours 30 minutes** to midnight of the *LASTDAY*
+*  Then check if the current date and time is between any of the ranges
+*  If True, change banner to green and display 25% Discount offer - the *Special Days ID* indicates which title to display
+*  If False, display black banner - no discount offered
+
 
 ### HEADING
 
@@ -889,6 +987,7 @@ These are the steps in order to deploy on Render:
 + Hero Image Photo of an *Opened Bible on a path during daytime* is by [Aaron Burden](https://unsplash.com/@aaronburden?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) at [Unsplash](https://unsplash.com/photos/opened-book-on-brown-field-during-daytime-4uX_r8OhJ_o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 + Photo of a man showing poster with the inscription *Who says a small poster can't start a big collection?* is by [Anete Lusina](https://www.pexels.com/@anete-lusina/) at [Pexels](https://www.pexels.com/photo/crop-man-showing-poster-with-inscription-on-white-background-6353838/)
 + All the images used for the Posters and the images of Passover, Pentecost and Feast of Booths were sourced from [Free Bible Images](https://www.freebibleimages.org/)
++ Dates used for Passover, Pentecost and Feast of Booths were sourced from [Chabad.org](https://www.chabad.org/holidays/JewishNewYear/template_cdo/aid/671894/jewish/When-Is-Sukkot-in-2024-2025-2026-2027-and-2028.htm)
         
 ## Acknowledgements
 + Code Institute's Boutique Ado Walkthrough Project upon which this project is modelled upon.
