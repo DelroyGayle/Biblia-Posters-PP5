@@ -42,11 +42,9 @@
 15. [Testing](#testing)
     1. [Please Go To TESTING.md](https://github.com/DelroyGayle/Biblia-Posters-PP5/blob/main/TESTING.md)
     2. [Bugs](#bugs)
-     1. [Solved Bugs](#solved-bugs)
-     2. [Known Bugs](#known-bugs)
 16. [Deployment](#deployment)
-17. [How to Fork the Repository]
-18. [How to Clone the Repository]
+17. [How to Fork the Repository](how-to-fork-the-repository)
+18. [How to Clone the Repository](how-to-clone-the-repository)
 19. [Credits](#credits)
 20. [Acknowledgements](#acknowledgements)
 
@@ -1196,11 +1194,6 @@ The registered user has the menu option to logout
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/22b444b2-3c00-43b0-b0ff-23ade8c1709e)
 
 
-* In order for a user to be able to create, read, edit and delete TODO, the user will need to <br/>log into the App using their username and password.
-* Login/Logout is based upon Django's built-in authentication system.
-* When the user logs in, the Home Page will appear to the user.
-
-
 ## Reviews 
 
 <details>
@@ -1561,7 +1554,6 @@ There is a BackToTop button which is displayed on the following pages
 * [ElephantSQL PostgreSQL](https://www.elephantsql.com/) was used for hosting the SQL Database
 * [GitHub](https://github.com/) for hosting the site
 * [Gitpod](https://www.gitpod.io/) for editing the files
-* TODO
 * [Heroku](https://heroku.com) for the deployment of the site
 * [Jquery](https://jquery.com/) for scripting purposes
 * [Miro](https://miro.com/) was used to create the wireframes
@@ -1608,88 +1600,84 @@ Please refer to [TESTING.md](https://github.com/DelroyGayle/Biblia-Posters-PP5/b
 
 ### Bugs
 
-#### Solved Bugs
-
-#### Known Bugs
-
 ------
 
 ## Deployment
 TODO
-The project is deployed on Render.<br> 
-All credit goes to Sophia Iroegbu and her tutorial [How to Deploy a Django App on Render](https://www.freecodecamp.org/news/deploying-a-django-app-to-render/) which worked flawlessly.<br><br>
-These are the steps in order to deploy on Render:
-1. Regarding your project - ensure you have PostgreSQL Database setup - for my project, [ElephantSQL Postgres](https://www.elephantsql.com/) was used
-     + However alternatively there is an option to create a PostgreSQL database within Render
-2. Create a Render account - either via Github itself or use your own email address
-   - Either way, you will need to use your email address to confirm registration with Render
-3. Once you have signed up, then proceed to Set Up a PostgreSQL Database if no setup already exists <br>- *skip Steps 3,5,6 if you already have a Database setup*
-   - go to the Render dashboard and Click the **New +** button, hover over **PostgreSQL**, and click it
-   - Next, define your database settings by giving your *database instance* a unique name
-   - For **Region**, use **Frankfurt (EU Central)** if you are based in Europe
-   - Select the free tier and click on **Create Database**
-   - Once the status on your database shows **Available**, it means the database has been successfully created and is ready to use
-   - Scroll down this page to see your database settings. You will need the **External Database URL**
-4. Once the database is set up, you need to connect it to your Django project
-   - Install dj-database-url by running the command
-   - **pip install dj-database-url**
-5. If you created your Postgres Database setup within Render, <br>then head over to your database settings on Render and copy the **External Database URL**
-6. Copy this into your **env.py** i.e. **os.environ["DATABASE_URL"]="postgres:// ..."**
-- Note: There is no need to do this step, if **os.environ["DATABASE_URL"]** already contains the URL of a previous, working database
-7. Ensure that in your *settings.py* under your sitename the following settings are at the top of the file:
-  ```
-  import dj-database-url
-  import os
 
-  DATABASES = {
-	"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
-  }
-   ```
-8. Confirm everything is installed correctly by running **pip3 install -r requirements.txt**
-9. Next, migrate your tables to your new database to ensure the connection was successful
-   - **python manage.py makemigrations**
-   - **python manage.py migrate**
-10. Create a folder in the root directory called **staticfiles**
-11. Populate this folder by running **python manage.py collectstatic --noinput**
-12. Push your codebase to your Git repo
-13. Head over to your Render dashboard. Click **New +** and **Select Web web-service-name**
-14. Connect your GitHub if you haven't already
-    - This is done by: **Search** for the repo you want to deploy and click the **Connect** button
-15. Give your **web web-service-name** a name and ensure you are connecting to the right branch
-   - Use the same **Region** as used earlier
-   - Build command should be: **pip install -r requirements.txt**
-   - Start command should be: **gunicorn \<sitename\>.wsgi**
-   - (Note: this would be the same entry that follows the word **web:** in a Heroku Procfile; although a Procfile is **not** needed by Render)
-   - Select the free tier and click on **Create Web Service**
-16. Copy the **\<web-service-name\>.com** name that was chosen - that is, *No https://, No URL* - simply **\<web-service-name\>.com**
-   - Enter that into ALLOWED_HOSTS
-   - The entry should be:
-   - ```
-     ALLOWED_HOSTS = ['\<web-service-name\>.com', ...]
-     Ensure
-     DEBUG = False
-     ```
-17. Push your codebase to your Git repo
-18. Once that is done, on the left hand column, click Environment
-   - This is where you enter the contents of **env.py**
-   - You do this by selecting by going to the **Secret Files** option
-   - Under **Filename**, enter **env.py**
-   - Under **Contents** copy and paste the contents of **env.py** into the box provided
-   - Then click **Save Changes**
-19. Everything should now be set up for deployment i.e. the database name, the 'secret' environment variables, <br>the *render.com web service name*
-20. At the top right of the Render Dashboard, click **Manual Deploy** then **Deploy latest commit**
-21. The date, time and *Building In progress* spinner will be displayed
-21. Ensure there are no errors. Render will display the message **Your service is live** in the log,<br>whilst above the log, the word **Live** will be shown in green
-22. Click the URL link of the form **https:\/\/\<web-service-name>.onrender.com/**
+The project is deployed on Heroku.<br> 
+Heroku is used to deploy the final project.
+
+1. You need to create an account at [Heroku](https://signup.heroku.com/).
+2. Once you have logged in, click the button 'New' and select 'Create new app'.
+3. Name your app, then select what region is closest to you and click 'Create App'.
+4. Then on the resources tab, navigate to the 'Add-ons' section and search for 'Heroku Postgres'.
+
+Regarding your Django App, in order to use Postgres you will need to install dj_database_url and psycopg2. 
+
+1. In your IDE type the command:  
+    `pip3 install dj_database_url`
+2. Then once that is installed type the command:  
+    `pip3 install psycopg2-binary`
+3. Then, to make sure Heroku install all your apps requirements when you deploy it, run the command:  
+    `pip3 freeze > requirements.txt`
+4. Next, navigate to your setting.py file in your main project folder. At the top of the file add the line:  
+    ```
+    import dj_database_url
+    ```
+5. Then scroll down the file till you find your database settings. Comment out the default configuration and underneath insert the code:  
+    ```
+    DATABASES = {
+        'default': dj_database_url.parse(*Enter Database URL here*)
+    }
+    ```
+    The database URL can be found in the settings tab of your app in heroku, under Config Vars. 
+6. Once that is saved, you will now need to run migrations in order to connect to a new database. This is done by running the command:  
+    `python3 manage.py migrate`
+   If you have any *fixtures i.e. json files* perform  `./manage.py loaddata <NAME>` in order to import your data into the postgres database
+7. Create a superuser for the new database. The command is:  
+    `python3 manage.py createsuperuser`
+8. Check that all *secret keys* have been removed from settings.py.
+9. Ensure that the DATABASE_URL handling in settings.py has been updated as follows:  when using the app on heroku or sqlite if not. Scroll back to the database section and refactor the code to look like this:  
+    ```
+    if 'DATABASE_URL' in os.environ:
+        DATABASES = {
+            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        }
+    else:
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': BASE_DIR / 'db.sqlite3',
+            }
+    }
+    ```
+10. Install  gunicorn:  
+    `pip3 install gunicorn`
+    Freeze the requirements.txt file with:  
+    `pip3 freeze > requirements.txt`
+11. Create in your root directory, a file called Procfile. This file tells Heroku to create a web dyno. 
+Insert the code:  
+    `web: gunicorn **'your_projects_name_here'**.wsgi:application
+12. Then, back in heroku, navigate to settings and in the config vars input the key DISABLE_COLLECTSTATIC with the value 1, and click 'Add'.
+This is to stop Heroku from collecting any static files when you deploy.
+13. You will also need to add the Heroku app to your allowed hosts in your settings.py.    
+    ```
+    ALLOWED_HOSTS = [<your heroku app name>.herokuapp.com', 'localhost']
+    ```
+16. Now add, commit and push these changes, followed by a push to heroku with the command:  
+    `git push heroku main'
+    Your app will now be deployed
+17. However,using a host such as AWS or Cloudinary, you need to add the necessary host file name in order for the Heroku app to process the *static files* needed by your project.
 
 ## How to Fork the Repository
 1. Log in (or sign up) to Github.
-2. Go to the TODO repository on GitHub.
+2. Go to the repository that you wish to fork on GitHub.
 3. Click the "Fork" button in the top right corner.
 
 ## How to Clone the Repository
 1. Log in (or sign up) to Github.
-2. Go to the TODO repository on GitHub.
+2. Go to the repository that you wish to clone on GitHub
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
