@@ -1603,7 +1603,6 @@ Please refer to [TESTING.md](https://github.com/DelroyGayle/Biblia-Posters-PP5/b
 ------
 
 ## Deployment
-TODO
 
 The project is deployed on Heroku.<br> 
 Heroku is used to deploy the final project.
@@ -1665,10 +1664,10 @@ This is to stop Heroku from collecting any static files when you deploy.
     ```
     ALLOWED_HOSTS = [<your heroku app name>.herokuapp.com', 'localhost']
     ```
-16. Now add, commit and push these changes, followed by a push to heroku with the command:  
+14. Now add, commit and push these changes, followed by a push to heroku with the command:  
     `git push heroku main'
     Your app will now be deployed
-17. However,using a host such as AWS or Cloudinary, you need to add the necessary host file name in order for the Heroku app to process the *static files* needed by your project.
+15. Please note: using a host such as AWS or Cloudinary, you now need to add the necessary host file details to your Heroku config vars in order for the Heroku app to process the *static files* needed for your project.
 
 ## How to Fork the Repository
 1. Log in (or sign up) to Github.
