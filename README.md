@@ -180,7 +180,7 @@ As mentioned at the beginning, Python code is used with the Django framework to 
 
 
 
-This website uses the Django framework to generated the models used for the database. The SQL database is thereby hosted on  [ElephantSQL PostgreSQL](https://www.elephantsql.com/). 
+This website uses the Django framework to generate the models used for the database. The SQL database is thereby hosted on  [ElephantSQL PostgreSQL](https://www.elephantsql.com/). 
 
 This project and its models closely follow Code Institute's Boutique Ado Walkthrough, so there are many similarities.
 For example, instead of a model depicting clothing and household goods, the walkthrough's example model is now used to depict posters.
@@ -361,7 +361,7 @@ For the mobile view, the same information is displayed as described above howeve
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c05f3896-3e15-44aa-b97a-c13ee85748e0)
 
-A description is given of the type of posters that this online store has to offer. It also points out the advantages of registering on to the site.
+A description is given of the type of posters that this online store has to offer. It also points out the advantages of registering on the site.
 
 #### Special Days
 
