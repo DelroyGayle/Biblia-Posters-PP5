@@ -938,10 +938,190 @@ Thank you from Biblia Posters!
 biblia.example.com
 
 
+**Test Txx - Email confirmation**
+
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/bbdf381f-dbe1-4b54-b216-2385515e1fe1)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/55d6f914-3280-4b34-a135-3c889b54974b)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/32394178-b150-48fb-8b30-85aa68961aa7)
+
+Content-Type: text/plain; charset="utf-8"
+
+MIME-Version: 1.0
+
+Content-Transfer-Encoding: 7bit
+
+Subject: Biblia Posters Confirmation for Order Number
+ C22748B55A6544AE8B6BBB07B92553E6
+
+From: biblia@example.com
+To: tester@email.com
+Date: Fri, 09 Feb 2024 17:19:33 -0000
+Message-ID: ...
+
+Hello Testing Confirmation Email!
+
+This is a confirmation of your order at Biblia Posters. Your order information is below:
+
+Order Number: C22748B55A6544AE8B6BBB07B92553E6
+Order Date: Feb. 9, 2024, 5:19 p.m.
+
+Order Total: £5.00
+Delivery: £3.00
+Grand Total: £8.00
+
+Your order will be shipped to 1 Tommy Street in London, GB.
+
+We have got your phone number on file as 123-4567789.
+
+If you have any questions, feel free to contact us at biblia@example.com.
+
+Thank you for your order!
+
+Sincerely,
+
+Biblia Posters
+
 </details>
-TEST
 
 
+### Epic: Reviews
+
+This is broken down into the following
+
+<details>
+  <summary>User Stories</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/0bfd99b5-1b37-46ef-bb47-d1cb1d66335b)
+
+
+</details>
+
+**User Tasks:**
+1. Go through each step of a registered user
+2. Adding an review - ensure review added
+3. Editing an review - ensure review updated
+4. Deleting an review - ensure review deleted
+5. Test the *My Reviews* Page
+
+ <details>
+    <summary>The Tests</summary>
+
+    Option correctly shown to add a review
+
+    ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c7c5becb-f75e-47d6-84f7-09e038669eea)
+
+**Add a Review page - Validations**
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fba15b69-9972-468a-8ddd-46e2abf17ba7)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ebcedfab-4210-4d47-83f5-01fecf94d69f)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/4de39a0d-16a6-45d1-aab7-95264ef12ad8)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/6d4ed713-0c24-4fda-8ff9-7880414bd423)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/41741ac7-cc9e-423f-a174-9189a4ad8cbb)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/0c8eedfe-a2f6-495e-9cf5-b49b6dbf0da0)
+
+**Admin View showing that reviews are being added**
+ 
+ ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/a2e5784c-c247-4e7a-b9a6-70344cf663b4)
+
+ ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f4f005f0-49f5-486f-9ed7-61d825d73ebc)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/94daf51d-4a6c-4e4c-8e04-d556091850a8)
+
+**Review Displayed**
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/a2d6b292-b49a-42d3-aa83-c55d562f963b)
+
+**Test - Add a Review**
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/eaff1f45-84e1-4a38-b498-19cfa73b10f0)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e7f3555e-8e0d-452f-85ce-5fe24811c338)
+
+**Blanked out name correctly display the review as Anonymous**
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/bb7f3dbc-a0b5-49bf-9285-3d26995f16ad)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/83a1d0b8-34a8-4ecf-a337-8d6bbbbb9bba)
+
+**Test - Edit Review - Validations**
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/dce4858a-de22-4b85-9a37-5ece7a8fae9d)
+
+**Admin View - Reviews are being written to the database**
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/50c36c29-869a-454c-b7b6-8bf5a813522e)
+
+**Test - Delete a Review**
+
+* Peter review regarding Moses can be seen
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/57744ead-b9b1-4af2-9806-dffbd643127a)
+
+* Delete it
+ 
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/dd4ac005-ae9f-4957-919f-386555810aea)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b288be1f-11a5-407b-bcd6-8474705244eb)
+
+* Review deleted - Peter's review is gone
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/6d634bdd-e696-498e-95e7-bdaaf85bc03e)
+
+
+
+ </details>
+
+
+### Epic: Wishlists
+
+This is broken down into the following
+
+<details>
+  <summary>User Stories</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/cc1edd96-a183-49f5-8a7f-f8cdb041dddd)
+
+</details>
+
+
+**User Tasks:**
+1. Verify that a registered user can add a poster to their wishlist
+2. Remove a poster from their wishlist
+3. Test the *My Wishlist* Page
+
+<details>
+    <summary>The Tests</summary>
+
+* Wishlist options correctedly displayed
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/2cf8de15-4906-4db4-804f-119e402922a2)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/a50dd550-810f-4bdc-b3d8-79754d9240d9)
+
+
+* Message displayed when poster is added to wishlist
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f894e8de-92ad-4d6c-a8bd-00bfa0e6cbb6)
+
+* Admin View shows Wishlist added
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f4355888-6606-44ca-8988-b05193ba81ff)
+
+
+* Message displayed when poster is removed from wishlist
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f4c89528-346c-45da-91e7-335955ea0af6)
+
+
+ </details>
 
 
 MISC/TODO
