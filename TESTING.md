@@ -9,7 +9,9 @@
    
 ## HTML Validation
 This was performed using [W3C HTML Validator](https://validator.w3.org/nu/)
-The following pages were checked
+
+<details>
+   <summary>The following pages were checked regarding HTML Validation</summary>
 
 * The Home Page **/**
 * /posters/ 
@@ -32,10 +34,11 @@ The following pages were checked
 * /wishlist/my_wishlist/ 
 * /wishlist/remove_from_list/3/ 
 * /reviews/my_reviews/ 
+</details>
 
-No errors shown 
-Only the warning: *<script type="text/javascript"> - Warning: The type attribute is unnecessary for JavaScript resources.*
-I left the type attribute intact
+* No errors shown 
+* Only the warning: *<script type="text/javascript"> - Warning: The type attribute is unnecessary for JavaScript resources.*
+* I left the type attribute intact
 
 ## CSS Validation
 
@@ -767,22 +770,170 @@ This is broken down into the following
 </details>
 
 
+**TODO - Make safe payments**
+
+
+
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T08 | View All Genesis Posters | Select from Menu, Old Testament then select **Genesis**  | All available Genesis posters are to be shown | PASS |
+| T32 | Webhook Handling | After each transaction, check on the Stripe Test website that payments habe succeeded | No failures should be displayed | PASS |
 
 <details>
 
-<summary>Display of Genesis Posters</summary>
+<summary>Webhook Tests</summary>
 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5d86495b-8305-4ad7-9db1-d54acb15bccf)
+* £12.00 transaction
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5cc0287f-95c1-418f-91af-26acfed68310)
+
+* Information from the Stripe test website
+
+  ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ad31d957-92c1-4e23-b323-5375af5c36cd)
+
+  ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f90b8d45-0a34-4409-98b9-22da6d5af870)
+
+  ```
+  {
+"object": {
+"id": "pi_3Ohd6aHPvBtuEw4n0AROP8uq",
+"object": "payment_intent",
+"amount": 1200,
+"amount_capturable": 0,
+"amount_details": {
+"tip": {
+}
+},
+"amount_received": 1200,
+...
+"bag": "{\"23\": 1}",
+"save_info": "true",
+"username": "spuser"
+},
+
+```
+
+* Successful order
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5cb0bbde-ed88-4b1a-86bf-6af504d5ab08)
+
+
 
 </details>
+
+### Epic: User Profile
+
+This is broken down into the following
+
+<details>
+  <summary>User Stories</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c6f95016-dee2-4827-83a1-4a7f7c07639f)
+
+</details>
+
+**User Tasks:**
+1. During the transaction, the user's delivery details ought to be communicated to Stripe
+2. With the checkbox saved option ticked, their delivery address details ought to be saved
+3. An order confirmation ought to be sent to the email address entered
+
+**Test No. Txx**
+
+* Order processed
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f32ed711-6386-4d39-a03f-990319d3b522)
+
+Stripe's metadata
+
+```
+CORRECT AMOUNT SHOWN:
+{
+  "api_version": "2023-10-16",
+  "created": 1707484718,
+  "data": {
+    "object": {
+      "amount": 1200,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {}
+      },
+      "amount_received": 1200,
+   ...
+
+
+   THE USER AND BAG INFO:
+
+         "metadata": {
+        "bag": "{\"4\": 1}",
+        "save_info": "true",
+        "username": "tommy"
+      },
+
+      ...
+
+   THE CORRECT SHIPPING INFO
+
+      "shipping": {
+        "address": {
+          "city": "London",
+          "country": "EC",
+          "line1": "123 Any Street",
+          "line2": "Anywhere",
+          "postal_code": "E21 1XX",
+          "state": "Anywhere"
+        },
+        "carrier": null,
+        "name": "Test Tester",
+        "phone": "00123-456789",
+        "tracking_number": null
+      },
+
+...
+
+PAYMENT INTENT:
+
+INTENT
+{
+  "amount": 1200,
+  "amount_capturable": 0,
+  "amount_details": {
+    "tip": {}
+  },
+  "amount_received": 1200,
+....
+```
+* Confirmation from Stripe website
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/04ddbfa3-68c5-45ce-ade8-c87c394f99e2)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c383f8c0-f402-4228-bac1-f0ce7436976f)
+
+**Txx - Email confirmation**
+
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: [Biblia Posters] Please Confirm Your E-mail Address
+From: webmaster@localhost
+To: qudtpgjpiftxrlkjgc@cazlv.com
+Date: Fri, 09 Feb 2024 14:42:09 -0000
+Message-ID: <170748972900.5816.1061306740501911085@localhost>
+
+Hello from Biblia Posters!
+
+You're receiving this e-mail because user James has given yours as an e-mail address to connect their account.
+
+To confirm this is correct, go to http://8000-delroygayle-bibliaposte-dlbeacwiw6l.ws-eu108.gitpod.io/accounts/confirm-email/NA:1rYS4v:Mv5U9M_waoYg9pr7gmyKZd_yWe0iq-_6S-DZ7NLGy9M/
+
+Thank you from Biblia Posters!
+biblia.example.com
+
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7c1c1823-e705-49d9-97a0-dd19d85e9f69)
 
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T08 | View All Genesis Posters | Select from Menu, Old Testament then select **Genesis**  | All available Genesis posters are to be shown | PASS |
+| Txx | View All Genesis Posters | Select from Menu, Old Testament then select **Genesis**  | All available Genesis posters are to be shown | PASS |
 
 <details>
 
