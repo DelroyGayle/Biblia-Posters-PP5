@@ -1124,13 +1124,207 @@ This is broken down into the following
  </details>
 
 
-MISC/TODO
+
+### Epic: Poster Management
+
+This is broken down into the following
+
+<details>
+  <summary>User Stories</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/4d63e599-bec8-4354-9bd6-3896cd4f6cc0)
+
+</details>
+
+**User Tasks:**
+1. Go through each step of a **Admin Site User** on the **Biblia Posters** website of being able to
+2. Add a poster - ensure poster added
+3. Editing a poster - ensure poster updated
+4. Delete a poster - ensure poster deleted
+
+
+ <details>
+
+    <summary>The Tests</summary>
+
+**Test - Validation**
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f2088369-399a-40c4-81d3-0cef74b7c5b2)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/9a119703-70f4-4dcd-a8bd-7a9db0bbaaa2)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b8ff3494-5d79-4329-98bc-6425d4407f0d)
+
+* User is informed when editing a Poster
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/95ed23c0-e915-42d8-94f8-170f9b167014)
+
+**Test All options**
+
+* Adding
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/3bd2de71-f42b-4dbb-920e-9f19284076c6)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/dc8edaff-5a7a-40d0-b5e0-6a90ecc1bf0a)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/8edd0c19-3f44-421a-8f8c-f5b27099faf7)
+
+
+* Editing
+
+  ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/267345c5-f2ff-4fdc-a818-66bd84091448)
+
+  ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/13189467-9121-47c9-aabb-d5fb83877347)
+
+  * Deleting
+ 
+    ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/bca313d0-cddf-495e-941c-dcad0000e56b)
+
+    ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/11e14c6b-8cc2-4722-b1c7-672054d3e4f8)
+
+</details>
+
+### Testing of Registration and Purchasing in regards to emails
+
+This is broken down into the following
+
+<details>
+  <summary>User Stories</summary>
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/813f8071-f313-40e9-bb16-55dea543239e)
+
+</details>
 
 
 
-### HEADING
+User Tasks: 
+1. On the deployed app verify that the Registration process works correctly
+2. On the deployed app verify that after a purchase, an order confirmation email is correctly sent
 
-**This option shows all 52 Posters**
+<details>
+    <summary>The Tests</summary>
+
+* Sign Up Page
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/683734a1-5b93-4c0f-b5c1-c74d9b1413d6)
+
+* Verification requested
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e309aa04-5943-41f3-9c98-5ed28f143152)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/36d19e4f-0d63-4b82-89af-433033f6ca67)
+
+
+* Email received
+
+  ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/88f236d2-a0ea-4dbb-b937-ecafd780b41a)
+
+
+  [example.com] Please Confirm Your E-mail Address
+
+..@gmail.com (...@gmail.com) 56 seconds ago
+To: awv03895@nezid.com
+
+
+Hello from example.com!
+
+You're receiving this e-mail because user andrew has given yours as an e-mail address to connect their account.
+
+To confirm this is correct, go to *https://biblia-posters-dg-869e3a15ddae.herokuapp.com/accounts/confirm-email/OA:1reeKS:74w94q-VIowG7VtEhLbpwqJQHFyXBFgS-n3m3XG7P3M/*
+
+Thank you from example.com!
+
+example.com
+
+* Confirmation Request
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/83276a18-9782-4e71-a937-345fd1e5518f)
+
+* Confirmed
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fa4219bc-45f1-4c34-888d-48202de8892e)
+
+* User can now sign in
+
+  ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/9cc7ada6-5035-49a4-9cf7-691b232aa9a3)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/a0c37689-a476-44fd-90cc-d16090f35c6c)
+
+**Test order confirmation email**
+
+* Email details entered
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f1b4165f-8b3c-4eb1-8209-b12ca42ffa74)
+
+* Successful order
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/96a6a70e-960a-40da-bc17-183fd1bd292f)
+
+* Email received
+
+  ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/733b2b05-66ec-43ee-8c9d-88302c1db78f)
+
+Hello andrew!
+
+This is a confirmation of your order at Biblia Posters. Your order information is below:
+
+Order Number: ECF7CF8A9CE246FABA9392CC436E4D24
+Order Date: Feb. 26, 2024, 7:57 p.m.
+
+Order Total: £8.00
+Delivery: £3.00
+Grand Total: £11.00
+
+Your order will be shipped to 123 Any Street in London, GB.
+
+We have got your phone number on file as 00123-456789.
+
+If you have any questions, feel free to contact us at ...@gmail.com.
+
+Thank you for your order!
+
+Sincerely,
+
+Biblia Posters
+
+</details>
+
+
+### Epic: Facebook Business page
+
+User Story:
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/0f1af024-5526-4e03-9ee2-38aa26ad015c)
+
+
+**User Tasks:**
+1. On Facebook, add a Facebook Business page
+2. Showing hero image, website address and a Welcome Post
+
+* Steps taken:
+
+  ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/830ef887-8c45-4d0c-a0bc-3d340fa84310)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c3797607-32eb-414b-a9db-b8243bffa799)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e3906c24-0cbf-43ac-8afa-eb3f40692165)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/dd8fc740-8c35-415a-8e43-c048dbe2c558)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/834be01f-143e-45b3-addb-ced12199b07c)
+
+**Result:**
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/3e16998a-da54-495f-b9bb-3dd19f515ad4)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/587b698d-fc06-4d72-b988-2ef345b90284)
+
+
+MISC.
+
+<details>
+   <summary>All 52 Posters for sale on Biblia Posters</summary>
+
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/2f6bc6e8-d2dd-434e-96f7-d8bfebd738c6)
 
@@ -1150,38 +1344,3 @@ MISC/TODO
 
 
 </details>
-
-TODO
-
-That the endpoints are protected - that only logged-in users can use the site
-
-----
-
-
-### Epic: *Register, Login and Logout*
-
-This is broken down into the following
-<details>
-  <summary>User Story</summary>
-
-   ![image]TODO
-   
-  
-</details>
-
-Criteria:
-1. Both Username and Email is necessary to login
-2. Verification by Email is mandatory
-3. Minimum username length is 4 characters
-
-**User Tasks:**
-1. Update the Admin domain of the default site to **biblia.example.com**
-2. Demonstrate that the user can Register using a username and password
-3. Demonstrate that the user can Login to the site
-4. Demonstrate that the user can Logout from the site
-
-
-----
-TODO EPIC - INCLUDE TESTING OF 404
-## Conclusion
-
