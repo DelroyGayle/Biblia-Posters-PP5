@@ -816,8 +816,6 @@ This is broken down into the following
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5cb0bbde-ed88-4b1a-86bf-6af504d5ab08)
 
-
-
 </details>
 
 ### Epic: User Profile
@@ -929,88 +927,6 @@ biblia.example.com
 
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7c1c1823-e705-49d9-97a0-dd19d85e9f69)
-
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| Txx | View All Genesis Posters | Select from Menu, Old Testament then select **Genesis**  | All available Genesis posters are to be shown | PASS |
-
-<details>
-
-<summary>Display of Genesis Posters</summary>
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5d86495b-8305-4ad7-9db1-d54acb15bccf)
-
-</details>
-
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T08 | View All Genesis Posters | Select from Menu, Old Testament then select **Genesis**  | All available Genesis posters are to be shown | PASS |
-
-<details>
-
-<summary>Display of Genesis Posters</summary>
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5d86495b-8305-4ad7-9db1-d54acb15bccf)
-
-</details>
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T02 | View Available Posters | Click the Shop Now button from the Homepage | All available (52) posters are to be shown | PASS |
-
-<details>
-
-<summary></summary>
-
-</details>
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T02 | View Available Posters | Click the Shop Now button from the Homepage | All available (52) posters are to be shown | PASS |
-   
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T03 | FEATURE  | STEPS | EXPECTED | PASS |
-
-| Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
-| ------------- | ------------- | -------------    | ------------- | ------------- |
-| T04 | FEATURE  | STEPS | EXPECTED | PASS |
-
-<details>
-<summary>Screenshot</summary>
-  
-![image]TODO
-
-</details>
-
-----
-
-## Manual Testing of TODO
-
-### Epic: *Create and View*
-
-This is broken down into the following
-<details>
-  <summary>User Stories</summary>
-
-  ![image]TODO
-
-  ![image]TODO
-
-</details>
-
-**User Tasks:**
-1. Implement Navbar 
-2. Demonstrate TODO
-3. TODO
-
-<details>
-  <summary>TODO</summary>
-
-  ![image]TODO
 
 
 MISC/TODO
