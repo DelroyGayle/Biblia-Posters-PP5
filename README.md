@@ -32,22 +32,23 @@
 8. [Reviews](#reviews)
 9. [Wishlist](#wishlist)
 10. [My Profile](#my-profile)
-11. [Poster Management](poster-management)
-12. [Technologies Used](#technologies-used)
+11. [Poster Management](#poster-management)
+12. [Other Features](#other-features)
+13. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
     2. [Libraries and Frameworks](#libraries-and-frameworks)
     3. [requirements.txt](requirements-txt)
-13. [Future Features](#future-features)
-14. [Testing](#testing)
+14. [Future Features](#future-features)
+15. [Testing](#testing)
     1. [Please Go To TESTING.md](https://github.com/DelroyGayle/Biblia-Posters-PP5/blob/main/TESTING.md)
     2. [Bugs](#bugs)
      1. [Solved Bugs](#solved-bugs)
      2. [Known Bugs](#known-bugs)
-15. [Deployment](#deployment)
-16. [How to Fork the Repository]
-17. [How to Clone the Repository]
-18. [Credits](#credits)
-19. [Acknowledgements](#acknowledgements)
+16. [Deployment](#deployment)
+17. [How to Fork the Repository]
+18. [How to Clone the Repository]
+19. [Credits](#credits)
+20. [Acknowledgements](#acknowledgements)
 
 ## Introduction
 
@@ -996,7 +997,7 @@ To select a Poster the user clicks an the image for example after clicking
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/1dda5b39-fe4c-4331-b5ba-f7b02ac2dbc8)
 
-This would be then displayed
+The *Poster Details* page of the selected poster is then displayed
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/573e8fd4-04ac-4795-85fc-958ca365203e)
 
@@ -1528,104 +1529,21 @@ The **Admin Site User** has the option to **Poster - Edit | Delete** from a *Pos
 
 
 
-## TODO
+## Other Features
+
+There is a BackToTop button which is displayed on the following pages
+* The Home Page
+* The All Posters page
+* The Poster Details page
+* The Shopping Bag page
+* The *My Reviews* page
+* The *My Wishlist* page
 
 
-### View Posters Details
-
-
-<details>
-
-<summary>View Poster Details - Desktop</summary>
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/627c0551-ee23-476c-b8c7-4db0f611747b)
-
-</details>
-
-<details>
-
-<summary>View Poster Details - Mobile</summary>
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d466b50b-0db2-44b4-bce5-1d69dccba24d)
-
-</details>
-
-
-### Home Page
-
-### Create ...
-
-
-#### Create ...
-
-
-### Search ...
-
-Note: the Search option is *case-insensitive* <br>
-Once the user has searched for the relevant poster, the user then has to click *View* to see the poster
-
-
-### View Posters
-
-### Edit Posters
-
-### Delete Posters
-
-
-### Validation and Messages
-
+  ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/95beffe9-ed70-436c-acdc-48504281d8d3)
 
 
 ------
-
-
-* When the user logs out, the user will get a success message to confirm.
-* 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/4e061c55-04bc-4ea5-a64f-8c2288a55dfc)
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7b4b1f8c-8cee-4f1e-9c0d-ed3001947436)
-
-## User Walkthrough
-
-MISC
-
-
-#### Create Posters
-
-#### Edit Posters
-
-  
-<details>
-
-<summary>Sample of a poster image: The_Resurrected_Jesus_Shows_His_Disciples_His_Pierced_Hands_And_Feet.jpg</summary>
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/6af9e35d-45e1-403a-a26e-9ac9ca2d3688)
-
-</details>
-
-
-<details>
-   <summary>Navigation Bar</summary>
-
-   IMAGE
-
-
-</details>
-
-### View Posters
-
-
-
-## Poster Management
-
-* In order for a user to be able to create, read, edit and delete TODO, the user will need to register on the site.
-* Registration is based upon Django's built-in authentication system.
-* When the user registers the user will get a success message to confirm.
-
-* In order for a user to be able to create, read, edit and delete TODO, the user will need to <br/>log into the App using their username and password.
-* Login/Logout is based upon Django's built-in authentication system.
-* When the user logs in, the Home Page will appear to the user.
-* When the user logs out, the user will get a success message to confirm.
 
 
 ## Technologies Used
