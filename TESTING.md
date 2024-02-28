@@ -780,7 +780,7 @@ User Story:
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T33 | Webhook Handling | After each transaction, check on the Stripe Test website that payments habe succeeded | No failures should be displayed | PASS |
+| T33 | Webhook Handling | After each transaction, check on the Stripe Test website that payments have succeeded | No failures should be displayed | PASS |
 
 <details>
    <summary>Webhook Tests</summary>
@@ -1082,7 +1082,7 @@ This is broken down into the following
  </details>
 
 
-### Epic: Wishlists
+### Epic: Wishlist
 
 This is broken down into the following
 
@@ -1102,7 +1102,7 @@ This is broken down into the following
 <details>
     <summary>The Tests</summary>
 
-* Wishlist options correctedly displayed
+* Wishlist options correctly displayed
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/2cf8de15-4906-4db4-804f-119e402922a2)
 
