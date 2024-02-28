@@ -424,7 +424,7 @@ The footer
 * Customer Service contact details
 * has a link to the Privacy Policy page
 * Regards Social Media, 
-* * There is a Link for the Facebook Business Page](https://www.facebook.com/profile.php?id=61556537234433)
+* * There is a Link for the [Facebook Business Page](https://www.facebook.com/profile.php?id=61556537234433)
   * There is a Link for Twitter
   * There is a Link for the related WordPress blog, namely, [AgeToCome](https://agetocome.wordpress.com/)
 
@@ -1045,7 +1045,76 @@ Once a user has written a review, any time the user revisits the poster, there i
 
 ### Edit a Review
 
-When the author of a review clicks the Edit option either from the *Poster Details* page or the *My Reviews* page, a message would be displayed to inform the user the title of the poster, the user is currently editing 
+* Reviews are shown on the *Poster Details* page in *descending order*
+* That is, the most recent additions shown at the top, older ones towards the bottom
+* However if the *viewer* of the page happens to be a user who has authored a review of said poster, **the user's review is shown first!**
+* Followed by any other reviews in descending date order.
+* When the author of a review clicks the Edit option either from the *Poster Details* page, a message would be displayed to inform the user, the title of the poster that the user is currently editing 
+* The form with the current Review details are shown
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5a0f9998-ad9a-46eb-ac08-4097b3fe4c17)
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/52da2cde-57a5-4106-a601-9d12e494e9d6)
+
+* Any changes can now be made to the review e.g.
+1) Blank out the reviewer's name
+   
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/77a42e35-55f3-483a-b3ad-496feb2f5fcb)
+
+* Click *Update Review*
+* Message showing a successful update
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/9c37590b-a3fb-4380-a26c-5b0c56346129)
+
+* The Review is updated with the new details.
+* The *Poster Details* page is refreshed showing whatever changes were made with **the user's review shown first**
+* Please note: the review date always reflects the date the review was updated
+* In this exammple, the user is now shown as an *Anonymous* reviewer
+  
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f876bef6-6ffd-40cb-9ac8-8251a15dbc9e)
+
+2) Name changed to Jimmy and Zero rating given
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/73a53fe8-1b8a-4fa9-a511-918eff64f43b)
+
+### Delete a Review
+
+* When the author of a review clicks the Delete option 
+* a summary page is shown displaying the title of the review and up to forty words of the review content
+* With the warning *Are you sure you want to delete?*
+* Also shown are the *Yes* and *Cancel* buttons
+* Pressing *Cancel* will take the user back to the *Poster Details* page
+* Pressing *Yes* - a *Deleted* message is shown
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5d280a9b-9757-4485-a4d7-be275d24e755)
+
+* The *Poster Details* page is refreshed with the user's review now removed
+
+### My Reviews
+
+* Menu option
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5511cde5-e844-4350-afd4-eef61fdefdb2)
+
+* The number of reviews written by the user is shown at the top of the page. The heading is pluralised accordingly
+* The date that the review was created or last updated is shown - The dates are in *descending order*
+* That is, the most recent additions shown at the top, older ones towards the bottom
+* On this page, the user has the option
+* * to **Edit a Review** or
+* * to **Delete a Review**
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/068df20c-6418-449f-a8ec-9039cf478893)
+
+xxxx
+
+
+### Delete a Review
+
+* When the author of a review clicks the Delete option either from the *Poster Details* page or the *My Reviews* page,
+* a summary page is shown displaying the title of the review and up to forty words of the review content
+* With the warning *Are you sure you want to delete?* with a *Yes* or *Cancel* button
+* Pressing *Cancel* will take the user back to the *My Reviews* page
+  
 * The form with the current Review details are shown
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5a0f9998-ad9a-46eb-ac08-4097b3fe4c17)
@@ -1073,15 +1142,20 @@ Any changes can now be made to the review e.g.
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/73a53fe8-1b8a-4fa9-a511-918eff64f43b)
 
-	
+yyyyy
+
+* Empty User's Review Page
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b09f02e7-f6dc-4c69-89a7-b6734e661726)
+
+
+The same messages as described above are shown when the user adds or removes a poster 
+
 </details>
 
 
 
 ## Wishlist
-
-* As a registered user, the user now has the options to add posters to their wishlist and remove posters from their wishlist
-
 
 <details>
 	<summary>Wishlist functionality</summary>
@@ -1118,17 +1192,27 @@ Message when poster removed from wishlist
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/222524c6-d6ce-4eed-8151-b40eeb5c22f8)
 
-User's *My Wishlist* Page
-* On this page, a user has the option to add a poster which is on their wishlist to the Shopping Bag
-* The option to remove the poster from their wishlist
+### My Wishlist
 
+* Menu option
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5511cde5-e844-4350-afd4-eef61fdefdb2)
+
+* The number of posters on a user's wishlist is shown at the top of the page. The heading is pluralised accordingly
+* The date that the poster was added is shown - The dates are in *descending order*
+* That is, the most recent additions shown at the top, older ones towards the bottom
+* On this page, the user has the option
+* * to add a poster which is on their wishlist to the Shopping Bag
+* * to remove the poster from their wishlist
+* The same messages as described above are shown when the user adds or removes a poster 
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/8b38a444-f0c3-4cee-963a-e582f402eac9)
 
-Empty User's Wishlist Page
+* Empty User's Wishlist Page
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/cf2f1c96-dd3a-49cf-a393-efaf5d3504a9)
- 
+
+
 </details>
 
 
