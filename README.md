@@ -1117,7 +1117,7 @@ Once a user has written a review, any time the user revisits the poster, there i
 
 ### Edit Review
 
-* The same functionality as described regarding the *Edit a Review* option on the *Poster Details* page is identical here
+* The same functionality and messaging as described regarding the *Edit a Review* option on the *Poster Details* page is identical here
 * The only difference is that if the user clicks *Cancel*, the user is directed back to the *My Reviews* page 
 * When the author of a review clicks the *Edit Review*, a message would be displayed to inform the user, the title of the poster that the user is currently editing 
 * The form with the current Review details are shown
@@ -1129,71 +1129,18 @@ Once a user has written a review, any time the user revisits the poster, there i
 * Any changes can now be made to the review e.g.
 * Clicking *Cancel* will take the user back to the *Poster Details* page
 
-* Here are two scenarios:
-**1) Blank out the reviewer's name**
-   
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/77a42e35-55f3-483a-b3ad-496feb2f5fcb)
 
-* Click *Update Review*
-* Message showing a successful update
+### Delete Review
 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/9c37590b-a3fb-4380-a26c-5b0c56346129)
-
-* The Review is updated with the new details.
-* The *Poster Details* page is refreshed showing whatever changes were made with **the user's review shown first**
-* Please note: the review date always reflects the date the review was updated
-* In this exammple, the user is now shown as an *Anonymous* reviewer
-  
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f876bef6-6ffd-40cb-9ac8-8251a15dbc9e)
-
-**2
-xxxx
-
-
-### Delete a Review
-
-* When the author of a review clicks the Delete option either from the *Poster Details* page or the *My Reviews* page,
-* a summary page is shown displaying the title of the review and up to forty words of the review content
-* With the warning *Are you sure you want to delete?* with a *Yes* or *Cancel* button
-* Pressing *Cancel* will take the user back to the *My Reviews* page
-  
-* The form with the current Review details are shown
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/5a0f9998-ad9a-46eb-ac08-4097b3fe4c17)
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/52da2cde-57a5-4106-a601-9d12e494e9d6)
-
-Any changes can now be made to the review e.g.
-1) Blank out the reviewer's name
-   
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/77a42e35-55f3-483a-b3ad-496feb2f5fcb)
-
-* Click *Update Review*
-* Message showing a successful update
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/9c37590b-a3fb-4380-a26c-5b0c56346129)
-
-* The Review is updated with the new details. The user is now shown as an *Anonymous* reviewer
-* Please note: the review date always reflects the date the review was updated
-  
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f876bef6-6ffd-40cb-9ac8-8251a15dbc9e)
-
-2) Name changed to Jimmy and Zero rating given
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/41b12fe2-9347-4552-a6d6-3064b4cfe095)
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/73a53fe8-1b8a-4fa9-a511-918eff64f43b)
-
-yyyyy
+* The same functionality and messaging as described regarding the *Delete a Review* option on the *Poster Details* page is identical here
+* If the user clicks *Cancel*, the user is directed back to the *My Reviews* page
+* If the user clicks *Delete*, after the deletion, the user is directed back to the *My Reviews* page 
 
 * Empty User's Review Page
 * * This is shown when the user has *not* authored any reviews
 * * This is also shown when the user has *deleted* all their reviews
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b09f02e7-f6dc-4c69-89a7-b6734e661726)
-
-
-The same messages as described above are shown when the user adds or removes a poster 
 
 </details>
 
