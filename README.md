@@ -400,14 +400,14 @@ The Django Queryset used to query the *SpecialDays* database has been set up, th
 *  If False, display black banner - no discount offered
 
 <details>
-	<summary>Sample Data of 25% Discount Applied</summary>
+	<summary>Sample Data of Special Days 25% Discount Applied</summary>
 
 * **(Because of the submission date of this project, *February dates* were used for testing purposes.)**
 * As aforementioned, when the Django Queryset of *SpecialDays* returns *True*,
-* the banner will turn green and the title of the *Special Days* event is displayed alongside the 25% Discount message
+* The banner will turn green and the title of the *Special Days* event is displayed alongside the 25% Discount message
 * Also, when the order is displayed at checkout
-* a *line of information indicated by a **red asterisk*** is displayed
-* pointing out to the user, that 25% discount has been applied to the order
+* A *line of information indicated by a **red asterisk*** is displayed
+* Pointing out to the user, that 25% discount has been applied to the order
 * The order confirmation email will also be updated with the same line of information
 * Please note: **the delivery cost of £3.00 still remains the same - it is not discounted**
 * Here are some examples
@@ -462,9 +462,14 @@ Biblia Posters
 ```
 
 
+* **Pentecost**
+
+  ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d820595f-7e1d-4bad-a331-53097d0f7872)
+
+
 2)
 
-* Total cost £12.00; however the total has been discounted by 25% to £9.00
+* Total cost pf posters, £12.00; however the total has been discounted by 25% to £9.00
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/2da90504-296e-4336-bb96-8c0436eafcb2)
 
@@ -506,60 +511,11 @@ Biblia Posters
 
 ```
 
-* **Pentecost**
-
-  ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d820595f-7e1d-4bad-a331-53097d0f7872)
-
-
-3)
-
-* Total cost £9.00; however the total has been discounted by 25% to £6.75
-
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/75de389d-fe31-4708-9d8e-d98d849a2883)
-
-* The email
-
-```
-Subject: Biblia Posters Confirmation for Order Number
- 395DD115DF12432FAA98402B536D121F
-From: biblia@example.com
-To: super@example.com
-Date: Wed, 21 Feb 2024 13:37:15 -0000
-Message-ID: ...
-
-Hello Mr B. Smith!
-
-This is a confirmation of your order at Biblia Posters. Your order information is below:
-
-Order Number: 49E1868D1E784F739E5DFB9B457064AB
-Order Date: Feb. 21, 2024, 1:37 p.m.
-
-Order Total: £9.00 *
-Delivery: £3.00
-Grand Total: £12.00
-* Pentecost 25% Discount has been applied to the order
-
-Your order will be shipped to 123 Any Street in London, GB.
-
-We have got your phone number on file as 00123-456789.
-
-If you have any questions, feel free to contact us at biblia@example.com.
-
-Thank you for your order!
-
-Sincerely,
-
-Biblia Posters
-
--------------------------------------------------------------------------------
-```
-
-
 **Feast of Booths**
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/448a44a7-b84b-4a74-9030-494ed261924f)
 
-4)
+3)
 
 * Total cost £9.00; however the total has been discounted by 25% to £6.75
 
