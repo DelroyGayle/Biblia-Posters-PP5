@@ -9,16 +9,33 @@
    
 ## HTML Validation
 This was performed using [W3C HTML Validator](https://validator.w3.org/nu/)
+The following pages were checked
 
-* There were conflicts with the validator and Django Template Language, for example
+* The Home Page **/**
+* /posters/ 
+* /posters/add_poster/ 
+* /posters/edit_poster/1/ 
+* /posters/delete_poster/1/ 
+* /posters/edit_poster/54/ 
+* /posters/54/ 
+* /posters/edit_poster/54/ 
+* /wishlist/my_wishlist/ 
+* /wishlist/remove_from_list/54/ 
+* /bag/ 
+* /posters/9/ i.e. the *Poster Details* page
+* /checkout/checkout_success/83CA4CAA945C47CBA93BECA191C21F60/ 
+* /profile/ 
+* /profile/order_history/83CA4CAA945C47CBA93BECA191C21F60/ 
+* /reviews/add_review/ 
+* /reviews/edit_review/5/ 
+* /reviews/delete_review/5/ 
+* /wishlist/my_wishlist/ 
+* /wishlist/remove_from_list/3/ 
+* /reviews/my_reviews/ 
 
-* TODO
-
-* Spaces following % produced "Non-space characters found without seeing a doctype first."
-
-* Besides these conflicts I changed all my \<article\>'s and \<section\>'s to \<div\>'s
-
-* *Warning: The type attribute is unnecessary for JavaScript resources.*
+No errors shown 
+Only the warning: *<script type="text/javascript"> - Warning: The type attribute is unnecessary for JavaScript resources.*
+I left the type attribute intact
 
 ## CSS Validation
 
@@ -29,11 +46,12 @@ This was performed using [W3C CSS Validator](https://jigsaw.w3.org/css-validator
 ## JavaScript Validation
 
 This was performed using [JSHint](https://jshint.com/)
+No errors
 
 ## Python Validation
 
 I used both Code Institute's [PEP8 Linter](https://pep8ci.herokuapp.com/) and *python3 -m flake8*.<br>
-However I had a very bad UX after making **ALL** the changes pointed out by Flake8. That is, my *Checkout Functionality* failed to worked! So I had to revert. Therefore, I light of this, I have chosen to leave the following migration files and system-generated/imported code intact:
+However I had a very bad UX after making **ALL** the changes pointed out by Flake8. That is, my *Checkout Functionality* failed to worked! So I had to revert. Therefore, in light of this, I have chosen to leave the following migration files and system-generated/imported code intact:
 
  <details>
   <summary>Flask8 flagged code</summary>
@@ -99,9 +117,9 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 <details>
   <summary>Lighthouse Report</summary>
 
-   Home Page
+   Home Page<br>
 
-   ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/4dff288c-a0e5-4164-ab34-8bf57e32655e)
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b698fa3b-ea52-4d6e-bd1e-1eb95ca26466)
 
    Posters Page ... **/posters/**
 
@@ -114,7 +132,22 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 + Carried out tests of the program on both the local terminal and the Code Institute Heroku terminal.
 + Chrome DevTools was used throughout the development process for testing purposes.
 + Added Custom *404 and 500* pages in case any errors occur.
-  
+
+<details>
+   <summary>Custom 404 Page</summary>
+
+   ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/46e4faa0-165c-425c-aaa6-cb05055cde44)
+
+</details>  
+
+
+<details>
+   <summary>Custom 500 Page</summary>
+
+   ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/0be41b0b-e5e8-479d-9224-35dbbad1e48b)
+
+</details>  
+
 ## Manual Testing 
 
 ### Epic: *Register and Login*
