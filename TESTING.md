@@ -35,8 +35,6 @@ This was performed using [JSHint](https://jshint.com/)
 I used both Code Institute's [PEP8 Linter](https://pep8ci.herokuapp.com/) and *python3 -m flake8*.<br>
 However I had a very bad UX after making **ALL** the changes pointed out by Flake8. That is, my *Checkout Functionality* failed to worked! So I had to revert. Therefore, I light of this, I have chosen to leave the following migration files and system-generated/imported code intact:
 
-<details>
- 
  <details>
   <summary>Flask8 flagged code</summary>
 
