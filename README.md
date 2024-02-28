@@ -970,21 +970,20 @@ After a user clicks the **Shop Now** button the *All Posters** page is displayed
 <details>
 	<summary>All Posters Page</summary>
 
- ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/2f6bc6e8-d2dd-434e-96f7-d8bfebd738c6)
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/17e90a6b-4773-4473-a5db-5dc582ede526)
 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e20803a6-0c31-4679-b240-0573579802ac)
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f2f681d8-edcd-411b-879c-ccc82a15757f)
 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/eeb105d4-1521-4b8a-a577-ae254ae8c7e0)
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/369f3601-9eca-4354-ac9b-61c4c168cb67)
 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/a5f6c916-a501-488b-9522-cd8fef3cdb39)
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/46176bc3-5b99-4451-84b4-ff3ff431d766)
 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/262df841-30cd-43c1-8379-fd958a51ea74)
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/46608cf4-7c82-4790-ae67-155e4be2b488)
 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7d0b2762-b03b-44f6-bfbe-5d03fa80e438)
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d375e572-344b-437e-b645-4d21a4b48327)
 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f31eba18-bfe0-4eb7-ae98-a49e4c251a54)
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/11d90f00-dff1-408d-8e88-0920553a2385)
 
-![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7c2f09e3-bca3-4d63-a884-2adfce760a62)
 
 </details>
 
