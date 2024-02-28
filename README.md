@@ -412,11 +412,13 @@ The Django Queryset used to query the *SpecialDays* database has been set up, th
 * Please note: **the delivery cost of £3.00 still remains the same - it is not discounted**
 * Here are some examples
 
+
+1)
+
+
 * **Passover**
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/fd83d329-9082-461b-abc7-75b3d900ec3a)
-
-1)
 
 * At the top of the order, the cost of the poster is shown to be normally £8.00; however the total has been discounted by 25% to £6.00
 * Note the red asterisk and the line *Passover 25% Discount has been applied to the order*
@@ -462,14 +464,14 @@ Biblia Posters
 ```
 
 
+2)
+
+
 * **Pentecost**
 
   ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/d820595f-7e1d-4bad-a331-53097d0f7872)
 
-
-2)
-
-* Total cost pf posters, £12.00; however the total has been discounted by 25% to £9.00
+* Total cost of posters, £12.00; however the total has been discounted by 25% to £9.00
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/2da90504-296e-4336-bb96-8c0436eafcb2)
 
@@ -511,11 +513,13 @@ Biblia Posters
 
 ```
 
+
+3)
+
+
 **Feast of Booths**
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/448a44a7-b84b-4a74-9030-494ed261924f)
-
-3)
 
 * Total cost £9.00; however the total has been discounted by 25% to £6.75
 
@@ -531,7 +535,7 @@ Subject: Biblia Posters Confirmation for Order Number
 From: biblia@example.com
 To: super@example.com
 Date: Wed, 21 Feb 2024 13:42:26 -0000
-Message-ID: <170852294674.7108.6027255235438786382@localhost>
+Message-ID: ...
 
 Hello Mr C. Smith!
 
@@ -561,13 +565,11 @@ Biblia Posters
 
 ```
 
-However, anyone visiting *the live site during the true dates as shown above*, will see the banners and discounts in action!
- 
 </details>
 
 
-Because of the submission date of this project, *February dates* were tested and shown above for the sake of documentation.
-However, anyone visiting *the live site during the true dates as shown above*, will see the banners and discounts in action!
+* Let me reiterate, that because of the submission date of this project, *February dates* were used for testing purposes and for the sake of documentation.
+* However, **anyone visiting *the live site during the true dates of these events as shown above*, will see the banners and discounts in action!**
 
 #### Newsletter
 
@@ -1122,6 +1124,7 @@ example.com
 <details>
 	<summary>Sample of an order confirmation email</summary>
 
+```
 Subject: Biblia Posters Confirmation for Order Number
  0988506B9202410C9A1DB1D803E7450E
 From: biblia@example.com
@@ -1155,19 +1158,21 @@ Biblia Posters
 
 -------------------------------------------------------------------------------
 
+```
+
 </details>
 
 
 
-With the Shopping Bag reset to zero
-
 * As a registered user, a record of each purchase order is recorded for the user's perusal
-* The most recent shown at the top
-* A tooltip is displayed when hoovered over the truncated order number which displays the full order number
+* The most recent shown at the top; that is, the user's order history is shown in *descending date* order
+* A tooltip is displayed when the user hoovers the mouse over the truncated order number which then displays the full order number
+
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c1755582-6f95-4981-8beb-cda6e5d3fd55)
 
-* If the user was to click the *order number url* the *past* purchase order would be displayed
+
+* If the user clicks the *order number url* the *past* purchase order would be displayed
 * With an accompanying message indicating that this is a *past* confirmed order and that an email had been sent e.g.
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e9ca760f-d995-414f-89aa-33ebe3b66bf2)
@@ -1395,6 +1400,32 @@ Once a user has written a review, any time the user revisits the poster, <br>the
 </details>
 
 ## My Profile
+
+* The page shows the *Delivery Details* of the registered user
+* This information is saved and then used subsequently to autofill the user's delivery address details at checkout.
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/a033419c-9193-4bd1-8842-38e22c3079d7)
+
+* When the user clicks *UPDATE INFORMATION*, a *Updated* message is displayed
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/4c039d74-8eb2-4c78-9b8f-ab28995bb96d)
+
+### Order History
+
+On the right hand side of the *My Profile* page, a history of all the registered user's purchase orders are displayed in *descending date* order
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/f1927b97-bb3e-453a-b314-648964ace304)
+
+* A tooltip is displayed when the user hoovers the mouse over the truncated order number which then displays the full order number
+
+* For example,
+  
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c1755582-6f95-4981-8beb-cda6e5d3fd55)
+
+* If the user clicks the *order number url* the *past* purchase order would be displayed
+* With an accompanying message indicating that this is a *past* confirmed order and that an email had been sent e.g.
+
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/e9ca760f-d995-414f-89aa-33ebe3b66bf2)
 
 ## Poster Management
 
