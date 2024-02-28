@@ -31,7 +31,7 @@
 7. [Logout](#logout)
 8. [Reviews](#reviews)
 9. [Wishlist](#wishlist)
-10. [My Profile)(#my-profile)
+10. [My Profile](#my-profile)
 11. [Poster Management](poster-management)
 12. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
@@ -1230,30 +1230,36 @@ Once a user has written a review, any time the user revisits the poster, <br>the
 ## My Profile
 
 ## Poster Management
+
+<details>
+	<summary>Poster Management functionality</summary>
+
+* Menu option
+
 The **Admin Site User** has an additional menu option called *Poster Management*
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/8f57df9b-1059-42d2-ba80-aef1130063ee)
 
-Also when an **Admin Site User** views the *details* page of any poster, the *Poster - Edit | Delete* option is shown
+* As an **Admin Site User**, the user has the option to _add, edit and delete posters_
+* Therefore, when an **Admin Site User** views the *details* page of any poster, the *Poster - Edit | Delete* option is shown
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/b279cf89-9ad0-4a26-8a7c-a1b837e21d42)
 
 ### Add a Poster
-* As an **Admin Site User**, the user has the option to _add, edit and delete posters_
 
-After clicking *Poster Management*, a form is shown for the user to enter consisting of the Poster's
+* After clicking *Poster Management*, a form is shown for the user to enter consisting of the Poster's
 * * Category
   * Sku
   * Name
   * Description
   * Price - up to six digits
-  * Rating any decimal in the range 0 to 5 (Cannot be greater than 5)
-  * Default Rating of 5 is shown
+  * Rating - any decimal number in the range 0 to 5 (Cannot be greater than 5)
+  * The default Rating of 5 is shown
   * Validation is performed on both the Price and Rating fields
   
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/3642dfec-2b25-4689-b6b2-a89ed339b151)
 
-* Regardless of whether the user clicks *Cancel* or *Add Poster*, the user is directed back to the *All Posters* page 
+* Regardless of whether the user clicks *Cancel* or *Add Poster*, the user is directed to the *All Posters* page 
 * A message is shown when a Poster is added
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/ee8b3aa2-2d26-49ce-baa9-8f354780f987)
@@ -1262,27 +1268,27 @@ After clicking *Poster Management*, a form is shown for the user to enter consis
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/908fe052-4dbf-4bc0-989b-f37538f3e300)
 
-* The *Select Image* is present to select an image from the user's computer
+* The *Select Image* is included in order for the user to select an image from their computer
 * So, this example shows a poster with an image
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/8a86e9f3-7e33-43ed-97d0-2929d6c2e4c8)
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/a0080893-fb88-4538-bb94-94518c385fb3)
 
-* From this point onwards, new posters can be view, sorted, purchased just like any other posters
+* From this point onwards, new posters can be view, sorted, purchased, just like any other posters
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/96259fd1-b3f4-456b-b053-a1a161bac58c)
 
 ### Edit a Poster
 
-The **Admin Site User** has the option to **Poster - Edit | Delete**
+The **Admin Site User** has the option to **Poster - Edit | Delete** from a *Poster Details* page
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/9c3567df-08e0-4a57-9b33-b85a7daa7882)
 
 
 * When the user clicks the *Edit* option, a message would be displayed to inform the user, the title of the poster that the user is currently editing 
 * The form with the current Poster details is shown
-* If the poster has an image a clickbox is displayed giving the user the option to remove the image from the poster
+* If the poster has an image, a clickbox is displayed giving the user the option to *Remove* the image from the poster
 * The user also has the *Select Image* option
 * The same validation is performed on both the Price and Rating fields
 
@@ -1294,7 +1300,7 @@ The **Admin Site User** has the option to **Poster - Edit | Delete**
 
 
 * Any changes can now be made to the poster
-* Clicking *Cancel* will take the user back to the *Poster Details* of the Poster in question
+* Clicking *Cancel* will take the user back to the *Poster Details* page of the Poster in question
 * Clicking *Update Poster*
 * Message showing a successful update
 
@@ -1320,6 +1326,7 @@ The **Admin Site User** has the option to **Poster - Edit | Delete**
 
 * The user is taken to the *All Posters* page
 
+</details>
 
 
 
