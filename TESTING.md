@@ -769,14 +769,18 @@ This is broken down into the following
 
 </details>
 
+### Epic: Safe Payments
 
-**TODO - Make safe payments**
+User Story:
 
+![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/8ad8ee53-9cea-4673-bf30-42390e431306)
 
+**User Tasks:**
+1. Test using the Stripe website that transactions events are correctly being communicated from the App's webhook handler to the Stripe website
 
 | Test No. | Feature        | Steps        | Expected Outcome  | Actual Outcome |
 | ------------- | ------------- | -------------    | ------------- | ------------- |
-| T32 | Webhook Handling | After each transaction, check on the Stripe Test website that payments habe succeeded | No failures should be displayed | PASS |
+| T33 | Webhook Handling | After each transaction, check on the Stripe Test website that payments habe succeeded | No failures should be displayed | PASS |
 
 <details>
    <summary>Webhook Tests</summary>
@@ -834,8 +838,6 @@ This is broken down into the following
 
 <details>
    <summary>The Tests</summary>
-
-   **Test No. Txx**
 
 * Order processed
 
@@ -907,7 +909,7 @@ PAYMENT INTENT:
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/c383f8c0-f402-4228-bac1-f0ce7436976f)
 
-**Test Txx - Email confirmation**
+**Test Email confirmation**
 
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/7c1c1823-e705-49d9-97a0-dd19d85e9f69)
@@ -938,7 +940,7 @@ Thank you from Biblia Posters!
 biblia.example.com
 
 
-**Test Txx - Email confirmation**
+**Test Email confirmation No.2**
 
 
 ![image](https://github.com/DelroyGayle/Biblia-Posters-PP5/assets/91061592/bbdf381f-dbe1-4b54-b216-2385515e1fe1)
